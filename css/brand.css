@@ -82,6 +82,8 @@
 }
 
 /* --- Portfolio captions: keep category in technical green ----------- */
+.profile-pic img { border-radius: 6px; }
+
 .folio-item__cat { color: var(--ab-green); letter-spacing:.25em; }
 
 /* --- Buttons: refine the green primary ------------------------------ */
