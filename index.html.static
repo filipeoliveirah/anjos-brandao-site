@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-BR">
+<head>
+
+    <!-- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Anjos Brandão · Coordenação Ambiental Integrada</title>
+    <meta name="description" content="Anjos Brandão — coordenação ambiental integrada à construção civil, infraestrutura e indústria. Licenciamento (LP→LO), gestão, monitoramento, ESG e operações de campo na Bahia.">
+    <meta name="author" content="Anjos Brandão">
+    <meta name="keywords" content="licenciamento ambiental, gestão ambiental, ESG, PGRS, supressão vegetal, INEMA, IBAMA, Bahia, construção civil, infraestrutura, indústria">
+    <link rel="canonical" href="https://www.anjosbrandao.eco.br/">
+    <meta name="theme-color" content="#1E1F22">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph / social
+    ================================================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Anjos Brandão">
+    <meta property="og:title" content="Anjos Brandão · Coordenação Ambiental Integrada">
+    <meta property="og:description" content="Coordenação ambiental integrada à continuidade das obras — construção civil, infraestrutura e indústria.">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://www.anjosbrandao.eco.br/">
+    <meta property="og:image" content="https://www.anjosbrandao.eco.br/images/hero-bg-3000.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anjos Brandão · Coordenação Ambiental Integrada">
+    <meta name="twitter:description" content="Coordenação ambiental integrada à construção civil, infraestrutura e indústria.">
+    <meta name="twitter:image" content="https://www.anjosbrandao.eco.br/images/hero-bg-3000.jpg">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/brand.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- structured data: local business
+    ================================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Anjos Brandão",
+      "description": "Coordenação ambiental integrada à construção civil, infraestrutura e indústria: licenciamento, gestão, monitoramento, ESG e operações de campo.",
+      "url": "https://www.anjosbrandao.eco.br/",
+      "image": "https://www.anjosbrandao.eco.br/images/hero-bg-3000.jpg",
+      "email": "contato@anjosbrandao.eco.br",
+      "telephone": "+55-71-99182-2466",
+      "areaServed": ["Bahia", "Nordeste do Brasil"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Áurea Seixas, 646",
+        "addressLocality": "Dias d'Ávila",
+        "addressRegion": "BA",
+        "postalCode": "42850-000",
+        "addressCountry": "BR"
+      },
+      "knowsAbout": ["Licenciamento ambiental", "EIA/RIMA", "PGRS", "Supressão vegetal", "ESG", "Monitoramento ambiental"]
+    }
+    </script>
+
+</head>
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="ab-wordmark smoothscroll" href="#top" title="Anjos Brandão — início">Anjos <span>Brandão</span></a>
+        </div>
+
+        <div class="header-content">
+
+            <nav class="row header-nav-wrap" aria-label="Navegação principal">
+                <ul class="header-nav">
+                    <li><a class="smoothscroll" href="#hero" title="Início">Início</a></li>
+                    <li><a class="smoothscroll" href="#empresa" title="A empresa">Empresa</a></li>
+                    <li><a class="smoothscroll" href="#capacidades" title="Capacidades">Capacidades</a></li>
+                    <li><a class="smoothscroll" href="#obras" title="Obras">Obras</a></li>
+                    <li><a class="smoothscroll" href="#contato" title="Contato">Contato</a></li>
+                </ul>
+            </nav> <!-- end header-nav-wrap -->
+
+            <a href="#contato" class="btn btn--stroke btn--small smoothscroll">Fale com um consultor</a>
+
+        </div> <!-- end header-content -->
+
+        <a href="#0" class="header-menu-toggle" aria-label="Abrir menu"><span>Menu</span></a>
+
+    </header>
+
+
+    <main id="content">
+
+    <!-- hero
+    ================================================== -->
+    <section id="hero" class="s-hero target-section">
+
+        <video class="hero-video-bg" autoplay muted loop playsinline poster="images/hero-bg-3000.jpg">
+            <source src="images/hero-video.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-content row">
+            <div class="column large-full">
+
+                <h1>
+                Coordenação ambiental <br>
+                integrada à continuidade <br>
+                das obras, em campo, na <br>
+                documentação e na operação.
+                </h1>
+
+                <ul class="hero-sectors" aria-label="Setores de atuação">
+                    <li>Construção civil</li>
+                    <li>Infraestrutura</li>
+                    <li>Indústria</li>
+                </ul> <!-- end hero-sectors -->
+
+            </div>
+
+        </div> <!-- end hero-content -->
+
+        <div class="hero-scroll">
+            <a href="#empresa" class="scroll-link smoothscroll" aria-label="Avançar para a seção A empresa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 24l-8-9h6v-15h4v15h6z"/></svg>
+            </a>
+        </div> <!-- end hero-scroll -->
+
+    </section> <!-- end s-hero -->
+
+
+    <!-- empresa (about)
+    ================================================== -->
+    <section id="empresa" class="s-about target-section">
+
+        <div class="s-about__section s-about__section--profile">
+
+            <div class="right-vert-line"></div>
+
+            <div class="row">
+                <div class="column large-6 medium-8 tab-full">
+
+                    <div class="section-intro" data-num="01" data-aos="fade-up">
+                        <h3 class="subhead">A empresa</h3>
+                        <h1 class="display-1">A gestão ambiental não começa quando o problema aparece, ela está integrada ao projeto desde o início.</h1>
+                    </div>
+
+                    <div class="profile-pic" data-aos="fade-up">
+                        <img src="images/profile-pic.jpg"
+                             srcset="images/profile-pic.jpg 1x, images/profile-pic@2x.jpg 2x"
+                             alt="Equipe técnica da Anjos Brandão em reunião de coordenação de projeto" loading="lazy" decoding="async">
+                    </div>
+
+                    <h3 data-aos="fade-up">Perfil</h3>
+
+                    <p data-aos="fade-up">
+                    A Anjos Brandão coordena a dimensão ambiental de grandes empreendimentos em regime contínuo,
+                    não como consultoria pontual, mas como parte da operação. Atuamos lado a lado com engenharia,
+                    empreiteiras e órgãos licenciadores, presentes em campo, na documentação e na continuidade de cada obra.
+                    Da Licença Prévia à Licença de Operação, conduzimos processos completos, gerimos condicionantes e
+                    mantemos rastreabilidade técnica em todas as frentes. Com base na Bahia, atendemos os setores de
+                    construção civil, infraestrutura e indústria em todo o Nordeste.
+                    </p>
+
+                </div>
+            </div>
+
+        </div> <!-- end s-about__section--profile -->
+
+        <div class="s-about__section">
+
+            <div class="row">
+                <div class="column">
+                    <h3 data-aos="fade-up">Setores de atuação</h3>
+                </div>
+            </div>
+
+            <div class="row block-large-1-2 block-900-full work-positions">
+
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">Construção civil</span>
+                                <span class="position__pos">Loteamentos · edificações · urbanização</span>
+                            </h6>
+                            <div class="position__timeframe">LP · LI · LO · PGRS</div>
+                        </div>
+                        <p>Licenciamento integral integrado ao cronograma de obra e comercialização, com gestão de
+                        resíduos de construção e acompanhamento de condicionantes até a entrega.</p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">Infraestrutura</span>
+                                <span class="position__pos">Rodovias · adutoras · transmissão</span>
+                            </h6>
+                            <div class="position__timeframe">EIA · RIMA · supressão</div>
+                        </div>
+                        <p>Estudos ambientais conduzidos em paralelo ao projeto executivo, ajustando traçado, reduzindo
+                        áreas de supressão e coordenando compensação monitorada.</p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">Indústria</span>
+                                <span class="position__pos">Plantas · pátios · logística</span>
+                            </h6>
+                            <div class="position__timeframe">LO · PGRS · auditorias</div>
+                        </div>
+                        <p>Gestão de Licença de Operação em regime contínuo, com auditorias periódicas, protocolos de
+                        movimentação e rastreabilidade detalhada de resíduos.</p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">Energia</span>
+                                <span class="position__pos">Subestações · linhas · geração</span>
+                            </h6>
+                            <div class="position__timeframe">INEMA · ANEEL</div>
+                        </div>
+                        <p>Licenciamento em fases (LP→LI→LO) integrado à engenharia eletromecânica, com monitoramento de
+                        condicionantes mantido em regime pós-obra.</p>
+                    </div>
+                </div> <!-- end column -->
+
+            </div> <!-- work positions -->
+
+        </div> <!-- end s-about__section -->
+
+    </section> <!-- end s-about -->
+
+
+    <!-- capacidades (services)
+    ================================================== -->
+    <section id="capacidades" class="s-services target-section h-dark-bg">
+
+        <div class="row s-services__content">
+
+            <div class="vert-line"></div>
+
+            <div class="column large-6 s-services__leftcol">
+                <div class="section-intro" data-num="02" data-aos="fade-up">
+                    <h3 class="subhead">Capacidades</h3>
+                    <h1 class="display-1">Estrutura para operações de múltipla complexidade.</h1>
+                </div>
+
+                <p class="lead" data-aos="fade-up">
+                Reunimos licenciamento, gestão, monitoramento e operações de campo em uma única coordenação técnica,
+                de modo que cada etapa avance sem interromper a obra e cada condicionante seja cumprida com rastreabilidade.
+                </p>
+            </div> <!-- end s-services--leftcol -->
+
+            <div class="column large-6">
+                <ul class="services-list" data-aos="fade-up">
+                    <li class="services-list__item is-active">
+                        <div class="services-list__item-header">
+                            <h5>Licenciamento ambiental</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>Processo completo LP → LI → LO junto a IBAMA, INEMA e CEPRAM. Elaboração de EIA, RIMA, RCA e
+                            PCA, renovações, revisões e acompanhamento de condicionantes.</p>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>Gestão e monitoramento</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>Planos de gerenciamento, auditorias periódicas, programas de monitoramento e relatórios
+                            técnicos que mantêm a operação em conformidade ao longo de todo o ciclo do empreendimento.</p>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>PGRS e resíduos</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>Plano de Gerenciamento de Resíduos Sólidos com rastreabilidade detalhada, protocolos de
+                            movimentação e destinação adequada, do canteiro de obras à operação industrial.</p>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>Estratégia ESG</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>Diagnóstico de maturidade, indicadores GRI, SASB e TCFD, planos de ação com métricas e
+                            relatórios de sustentabilidade integrados à realidade operacional do cliente.</p>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>Operações de campo</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>Supressão vegetal monitorada, reflorestamento com mudas nativas, campanhas de pegamento e
+                            presença técnica in loco durante operações críticas.</p>
+                        </div>
+                    </li>
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>Educação ambiental</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>Programas de educação ambiental para equipes operacionais e comunidades, atendendo
+                            condicionantes e fortalecendo a continuidade das boas práticas em campo.</p>
+                        </div>
+                    </li>
+                </ul> <!-- end services-list -->
+            </div>
+
+        </div> <!-- s-services__content -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- obras (portfolio)
+    ================================================== -->
+    <section id="obras" class="s-portfolio target-section">
+
+        <div class="row s-portfolio__header">
+            <div class="column large-6 medium-8 tab-full">
+                <div class="section-intro" data-num="03" data-aos="fade-up">
+                    <h3 class="subhead">Obras</h3>
+                    <h1 class="display-1">Uma seleção de frentes recentes, 14 obras documentadas entre 2019 e 2026.</h1>
+                </div>
+            </div>
+        </div> <!-- s-porfolio__header -->
+
+        <div class="row s-porfolio__list block-large-1-2 block-tab-full collapse">
+
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-patio-logistico.jpg" title="Pátio logístico petroquímico — Camaçari · BA" data-size="1600x1067">
+                            <img src="images/portfolio/patio-logistico.jpg"
+                                 srcset="images/portfolio/patio-logistico.jpg 1x, images/portfolio/patio-logistico@2x.jpg 2x"
+                                 alt="Vista aérea de pátio logístico com caminhões em complexo industrial" loading="lazy" decoding="async">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Indústria · Camaçari · BA</div>
+                        <h4 class="folio-item__title">Pátio logístico petroquímico</h4>
+                    </div>
+                    <div class="folio-item__caption">
+                        <p>Coordenação ambiental na implantação de pátio para movimentação de cargas químicas, gestão de LO, PGRS e protocolos de movimentação. 18.400 m².</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-trecho-rodoviario.jpg" title="Trecho rodoviário 18 km — Recôncavo · BA" data-size="1600x1067">
+                            <img src="images/portfolio/trecho-rodoviario.jpg"
+                                 srcset="images/portfolio/trecho-rodoviario.jpg 1x, images/portfolio/trecho-rodoviario@2x.jpg 2x"
+                                 alt="Rodovia ao entardecer com rastros de luz e malha urbana ao fundo" loading="lazy" decoding="async">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Infraestrutura · Recôncavo · BA</div>
+                        <h4 class="folio-item__title">Trecho rodoviário · 18 km</h4>
+                    </div>
+                    <div class="folio-item__caption">
+                        <p>EIA conduzido em paralelo ao projeto executivo; ajuste de traçado reduziu a área de supressão em 23%. Supressão 34 ha · compensação 68 ha.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-reflorestamento.jpg" title="Reflorestamento compensatório — Mata de São João · BA" data-size="1600x1067">
+                            <img src="images/portfolio/reflorestamento.jpg"
+                                 srcset="images/portfolio/reflorestamento.jpg 1x, images/portfolio/reflorestamento@2x.jpg 2x"
+                                 alt="Mãos segurando muda nativa sobre solo preparado para plantio" loading="lazy" decoding="async">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Compensação · Mata de São João · BA</div>
+                        <h4 class="folio-item__title">Reflorestamento compensatório</h4>
+                    </div>
+                    <div class="folio-item__caption">
+                        <p>92 ha, 38.500 mudas de 42 espécies nativas e três campanhas de monitoramento, taxa de pegamento de 91,4% ao fim do segundo ano.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-galpao-industrial.jpg" title="Galpão industrial 24.000 m² — Simões Filho · BA" data-size="1600x1067">
+                            <img src="images/portfolio/galpao-industrial.jpg"
+                                 srcset="images/portfolio/galpao-industrial.jpg 1x, images/portfolio/galpao-industrial@2x.jpg 2x"
+                                 alt="Interior de galpão logístico com prateleiras e estoque organizado" loading="lazy" decoding="async">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Logística · Simões Filho · BA</div>
+                        <h4 class="folio-item__title">Galpão industrial · 24.000 m²</h4>
+                    </div>
+                    <div class="folio-item__caption">
+                        <p>Gestão de LO em regime contínuo desde 2024: auditorias trimestrais, PGRS, condicionantes e adequação para ampliação sem interromper a operação.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-loteamento.jpg" title="Loteamento residencial 1.200 lotes — Lauro de Freitas · BA" data-size="1600x1067">
+                            <img src="images/portfolio/loteamento.jpg"
+                                 srcset="images/portfolio/loteamento.jpg 1x, images/portfolio/loteamento@2x.jpg 2x"
+                                 alt="Rua de loteamento residencial com casas e área verde" loading="lazy" decoding="async">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Construção civil · Lauro de Freitas · BA</div>
+                        <h4 class="folio-item__title">Loteamento residencial · 1.200 lotes</h4>
+                    </div>
+                    <div class="folio-item__caption">
+                        <p>Licenciamento integral integrado ao cronograma de entrega, LP, LI e LO, gestão de resíduos e protocolo de educação ambiental aos moradores.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-subestacao.jpg" title="Subestação elétrica 230 kV — Alagoinhas · BA" data-size="1600x1067">
+                            <img src="images/portfolio/subestacao.jpg"
+                                 srcset="images/portfolio/subestacao.jpg 1x, images/portfolio/subestacao@2x.jpg 2x"
+                                 alt="Torres de transmissão de energia ao entardecer" loading="lazy" decoding="async">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Energia · Alagoinhas · BA</div>
+                        <h4 class="folio-item__title">Subestação elétrica · 230 kV</h4>
+                    </div>
+                    <div class="folio-item__caption">
+                        <p>Licenciamento integral em três fases ao longo de 14 meses, coordenação junto a INEMA e ANEEL e monitoramento de condicionantes por cinco anos.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+
+        </div> <!-- folio-list -->
+
+    </section> <!-- end obras -->
+
+    </main> <!-- end content -->
+
+
+    <!-- footer / contato
+    ================================================== -->
+    <footer id="contato" class="s-footer h-dark-bg">
+
+        <div class="right-vert-line"></div>
+
+        <div class="row s-footer__main">
+            <div class="column large-6">
+                <div class="section-intro" data-aos="fade-up">
+                    <h3 class="subhead">Contato</h3>
+
+                    <h1 class="display-1">
+                    Nos conte o projeto. A gente mapeia o que é preciso para o licenciamento avançar e apresenta proposta na medida.
+                    </h1>
+                </div>
+
+                <div class="footer-email-us">
+                    <a href="mailto:contato@anjosbrandao.eco.br" class="btn btn--primary h-full-width">Falar com consultor</a>
+                </div>
+            </div>
+
+            <div class="column large-5">
+                <div class="footer-contacts">
+                    <div class="footer-contact-block" data-aos="fade-up">
+                        <h5 class="footer-contact-block__header">E-mail</h5>
+                        <p class="footer-contact-block__content">
+                            <a href="mailto:contato@anjosbrandao.eco.br">contato@anjosbrandao.eco.br</a>
+                        </p>
+                    </div>
+                    <div class="footer-contact-block" data-aos="fade-up">
+                        <h5 class="footer-contact-block__header">Telefone</h5>
+                        <p class="footer-contact-block__content">
+                            <a href="tel:+5571991822466">+55 71 9.9182-2466</a>
+                        </p>
+                    </div>
+                    <br>
+                    <div class="footer-contact-block" data-aos="fade-up">
+                        <h5 class="footer-contact-block__header">Sede</h5>
+                        <p class="footer-contact-block__content">
+                            Av. Áurea Seixas, 646<br>Dias d'Ávila · BA · 42850-000
+                        </p>
+                    </div>
+                    <div class="footer-contact-block" data-aos="fade-up">
+                        <h5 class="footer-contact-block__header">Comercial</h5>
+                        <ul class="footer-contact-block__list">
+                            <li><a href="https://wa.me/5571991822466">WhatsApp</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__main -->
+
+        <div class="row s-footer__bottom">
+            <div class="column large-full ss-copyright">
+                <span>© 2026 Anjos Brandão · Coordenação Ambiental</span>
+                <span>Criado pela <a href="https://www.outlimit.com.br/" target="_blank" rel="noopener noreferrer">Out Limit</a></span>
+            </div> <!-- end ss-copyright -->
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Voltar ao topo" href="#top" aria-label="Voltar ao topo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
+                </a>
+            </div> <!-- end ss-go-top -->
+        </div> <!-- end s-footer__bottom -->
+
+    </footer> <!-- end s-footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Fechar (Esc)"></button> <button class="pswp__button pswp__button--share" title="Compartilhar"></button> <button class="pswp__button pswp__button--fs" title="Tela cheia"></button> <button class="pswp__button pswp__button--zoom" title="Zoom"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Anterior"></button> <button class="pswp__button pswp__button--arrow--right" title="Próxima"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
