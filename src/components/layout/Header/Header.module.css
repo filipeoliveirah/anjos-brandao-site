@@ -1,0 +1,102 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 3.2rem 4rem;
+  transition: background-color .3s, padding .3s;
+}
+
+.sticky {
+  background-color: var(--ab-graphite);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.offset { box-shadow: 0 1px 0 rgba(255,255,255,.05); }
+
+.logo { position: absolute; left: 4rem; }
+
+.wordmark {
+  font-family: "Martel", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: var(--ab-offwhite);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.wordmark span { font-weight: 300; color: var(--ab-green-lt); }
+.sticky .wordmark { font-size: 1.8rem; }
+
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 21rem;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.6);
+  text-decoration: none;
+  transition: color .3s;
+}
+.nav a:hover,
+.nav a.active { color: var(--ab-offwhite); }
+
+.cta { margin-left: auto; }
+
+.menuToggle {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  color: var(--ab-offwhite);
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 900px) {
+  .header { padding: 2rem; }
+  .logo { left: 2rem; }
+  .menuToggle { display: block; }
+
+  .content {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--ab-graphite);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+  .content.open { display: flex; }
+  .nav { flex-direction: column; align-items: center; gap: 2.4rem; }
+  .cta { margin-left: 0; margin-top: 3.2rem; }
+}
