@@ -1,0 +1,118 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  min-height: 82rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(20,21,26,.30) 0%, rgba(20,21,26,.10) 35%, rgba(20,21,26,.55) 80%, rgba(20,21,26,.85) 100%),
+    linear-gradient(90deg, rgba(20,21,26,.75) 0%, rgba(20,21,26,.10) 60%, rgba(20,21,26,0) 100%);
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20vh 4rem 14vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.heading {
+  font-family: "Martel", serif;
+  font-size: 7rem;
+  font-weight: 400;
+  line-height: 1.257;
+  color: var(--ab-offwhite);
+  margin-top: 0;
+  padding-right: 3.2rem;
+  position: relative;
+  text-shadow: 0 1px 30px rgba(0,0,0,.35);
+}
+
+.heading::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 8rem;
+  background: var(--ab-green);
+  position: absolute;
+  left: -10.8rem;
+  top: .55em;
+}
+
+.sectors {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 3.2rem;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .35em;
+  margin: 8rem 0 0 .4rem;
+  padding: 0;
+  color: var(--ab-offwhite);
+}
+
+.sectors li {
+  position: relative;
+  padding-left: 2.4rem;
+  opacity: .9;
+}
+
+.sectors li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .65em;
+  width: 1.2rem;
+  height: 2px;
+  background: var(--ab-green-lt);
+}
+
+.scroll {
+  position: absolute;
+  right: 8rem;
+  bottom: 10rem;
+  z-index: 2;
+}
+
+.scroll a {
+  display: block;
+  color: var(--ab-offwhite);
+  opacity: .4;
+  transition: opacity .3s;
+}
+.scroll a:hover { opacity: 1; }
+.scroll svg { fill: currentColor; display: block; }
+
+@media screen and (max-width: 900px) {
+  .heading { font-size: 4.8rem; }
+  .heading::before { display: none; }
+  .content { padding-left: 2rem; padding-right: 2rem; }
+  .scroll { right: 2rem; bottom: 4rem; }
+}
+
+@media screen and (max-width: 600px) {
+  .heading { font-size: 3.6rem; }
+}
