@@ -1,0 +1,113 @@
+/* ===================================================================
+ * Anjos Brandão — brand layer (loaded after main.css)
+ * Reskin of the Ethos template to the corporate-technical brand:
+ * graphite backgrounds, documental off-white, technical green accent.
+ * Palette: graphite #1E1F22 · concrete #5F6368 · off-white #F3F1EB
+ *          technical green #2E4B3C/#3B6951 · signal green #6D8F72/#8FB096
+ * =================================================================== */
+
+:root {
+  --ab-graphite: #1E1F22;
+  --ab-offwhite: #F3F1EB;
+  --ab-green:    #3B6951;
+  --ab-green-lt: #8FB096;
+  --ab-concrete: #5F6368;
+}
+
+/* --- Header wordmark (replaces the bitmap logo) ---------------------- */
+.header-logo a.ab-wordmark {
+  display: inline-block;
+  font-family: "Martel", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: var(--ab-offwhite);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.header-logo a.ab-wordmark span { font-weight: 300; color: var(--ab-green-lt); }
+.s-header.sticky .header-logo a.ab-wordmark { font-size: 1.8rem; }
+
+/* Clear the wider text wordmark so it never overlaps the nav (desktop) */
+@media screen and (min-width: 901px) {
+  .header-logo { left: 4rem; }
+  .header-nav-wrap { padding-left: 21rem !important; }
+}
+
+/* --- Hero: darken image for legibility (image is bright/busy) -------- */
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.s-hero::before {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(20,21,26,.30) 0%, rgba(20,21,26,.10) 35%, rgba(20,21,26,.55) 80%, rgba(20,21,26,.85) 100%),
+    linear-gradient(90deg, rgba(20,21,26,.75) 0%, rgba(20,21,26,.10) 60%, rgba(20,21,26,0) 100%);
+  opacity: 1;
+}
+.hero-content { position: relative; z-index: 10; }
+.hero-scroll  { z-index: 10; }
+.hero-content h1 { text-shadow: 0 1px 30px rgba(0,0,0,.35); }
+
+/* Repurpose hero-social as sector tags (not links) */
+.hero-sectors { list-style:none; display:flex; flex-flow:row wrap; gap: 0 3.2rem;
+  font-family:"Gothic A1",sans-serif; font-size:1.2rem; font-weight:700;
+  text-transform:uppercase; letter-spacing:.35em; margin:8rem 0 0 .4rem; color:var(--ab-offwhite); }
+.hero-sectors li { position:relative; padding-left:2.4rem; opacity:.9; }
+.hero-sectors li::before { content:""; position:absolute; left:0; top:.65em;
+  width:1.2rem; height:2px; background:var(--ab-green-lt); }
+
+/* --- Accent contrast on dark (graphite) sections -------------------- */
+.h-dark-bg .subhead,
+.s-hero .subhead { color: var(--ab-green-lt); }
+.h-dark-bg a:hover, .s-footer a:hover { color: var(--ab-green-lt); }
+
+/* --- Services: industrial photo backdrop + graphite overlay --------- */
+.s-services {
+  background-color: var(--ab-graphite);
+  background-image:
+    linear-gradient(180deg, rgba(20,21,26,.92), rgba(20,21,26,.97)),
+    url("../images/services-bg-3000.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* --- Portfolio captions: keep category in technical green ----------- */
+.folio-item__cat { color: var(--ab-green); letter-spacing:.25em; }
+
+/* --- Buttons: refine the green primary ------------------------------ */
+.btn.btn--primary, button.btn--primary {
+  background: var(--ab-green); border-color: var(--ab-green); color: var(--ab-offwhite);
+}
+.btn.btn--primary:hover, button.btn--primary:hover {
+  background: var(--ab-green-lt); border-color: var(--ab-green-lt); color: var(--ab-graphite);
+}
+
+/* --- Accessibility: visible keyboard focus -------------------------- */
+a:focus-visible, button:focus-visible,
+.btn:focus-visible, .header-menu-toggle:focus-visible,
+.services-list__item-header:focus-visible {
+  outline: 2px solid var(--ab-green-lt);
+  outline-offset: 3px;
+}
+
+/* --- Respect reduced-motion ----------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; animation-iteration-count: 1 !important;
+      transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .s-services { background-attachment: scroll; }
+  [data-aos] { opacity: 1 !important; transform: none !important; }
+}
+
+/* --- Small polish ---------------------------------------------------- */
+::selection { background: var(--ab-green); color: var(--ab-offwhite); }
+.ss-copyright a { color: var(--ab-green-lt); }
