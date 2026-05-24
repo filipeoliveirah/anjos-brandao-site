@@ -1,0 +1,22 @@
+.card {
+  padding: 3.2rem 0;
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.header h6 { margin: 0 0 .8rem; font-size: 1.5rem; }
+
+.title    { display: block; color: var(--ab-graphite); font-weight: 700; }
+.subtitle { display: block; color: var(--ab-concrete); font-weight: 400; font-size: 1.3rem; }
+
+.timeframe {
+  display: inline-block;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ab-green);
+  margin-bottom: 1.6rem;
+}
+
+.card p { font-size: 1.5rem; color: #636363; margin: 0; line-height: 1.75; }
