@@ -1,0 +1,51 @@
+.item {
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  cursor: pointer;
+}
+.item:first-child { border-top: 1px solid rgba(255,255,255,.08); }
+
+.itemHeader {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.itemHeader h5 {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ab-offwhite);
+  margin: 0;
+  transition: color .3s;
+}
+
+.open .itemHeader h5 { color: var(--ab-green-lt); }
+
+.itemHeader::after {
+  content: "+";
+  font-size: 2rem;
+  color: var(--ab-green-lt);
+  transition: transform .3s;
+  flex-shrink: 0;
+  margin-left: 1.6rem;
+}
+
+.open .itemHeader::after { transform: rotate(45deg); }
+
+.itemBody {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .4s ease;
+}
+
+.open .itemBody { max-height: 20rem; }
+
+.itemBody p {
+  color: rgba(255,255,255,.6);
+  font-size: 1.5rem;
+  line-height: 1.875;
+  padding-bottom: 2rem;
+  margin: 0;
+}

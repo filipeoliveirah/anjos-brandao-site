@@ -1,0 +1,30 @@
+.services {
+  padding: 10rem 0;
+  position: relative;
+  background-color: var(--ab-graphite);
+  background-image:
+    linear-gradient(180deg, rgba(20,21,26,.92), rgba(20,21,26,.97)),
+    url("/images/services-bg-3000.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.leftCol { padding-right: 6rem; }
+
+.leftCol p {
+  font-size: 1.7rem;
+  line-height: 1.882;
+  color: rgba(255,255,255,.5);
+}
+
+.list { list-style: none; padding: 0; margin: 0; }
+
+@media screen and (max-width: 900px) {
+  .services { padding: 6rem 0; background-attachment: scroll; }
+  .leftCol { padding-right: 0; margin-bottom: 4rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services { background-attachment: scroll; }
+}
