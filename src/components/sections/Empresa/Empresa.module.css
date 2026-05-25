@@ -33,14 +33,12 @@
   font-weight: 700;
   color: var(--ab-graphite);
   margin-bottom: 1.6rem;
-  padding-left: 10.8rem;
 }
 
 .profile p {
   font-size: 1.6rem;
   line-height: 1.875;
   color: #636363;
-  padding-left: 10.8rem;
 }
 
 /* Profile pic floats to the right, outside its column */

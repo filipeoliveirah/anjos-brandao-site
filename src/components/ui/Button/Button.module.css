@@ -1,16 +1,19 @@
 .btn {
   display: inline-block;
-  font-family: "Gothic A1", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: .35em;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: .6rem;
   text-transform: uppercase;
-  padding: 1.4rem 3rem;
+  height: 6rem;
+  line-height: 5.6rem;
+  padding: 0 3.2rem;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: background-color .3s, border-color .3s, color .3s;
+  transition: all .3s;
   text-decoration: none;
-  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .primary {
@@ -18,10 +21,12 @@
   border-color: var(--ab-green);
   color: var(--ab-offwhite);
 }
-.primary:hover {
-  background: var(--ab-green-lt);
-  border-color: var(--ab-green-lt);
-  color: var(--ab-graphite);
+/* .btn.primary raises specificity to (0,3,0), beating .h-dark-bg a:hover (0,2,1) */
+.btn.primary:hover,
+.btn.primary:focus {
+  background: var(--ab-graphite);
+  border-color: var(--ab-graphite);
+  color: var(--ab-offwhite);
 }
 
 .stroke {
@@ -39,7 +44,11 @@
   font-size: 1.1rem;
 }
 
-.fullWidth { width: 100%; text-align: center; display: block; }
+.fullWidth { 
+  width: 100%; 
+  text-align: center; 
+  display: block; 
+}
 
 .btn:focus-visible {
   outline: 2px solid var(--ab-green-lt);

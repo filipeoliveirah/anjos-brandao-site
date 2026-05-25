@@ -6,11 +6,12 @@ interface ButtonProps {
   href?: string
   onClick?: () => void
   fullWidth?: boolean
+  className?: string
   children: ReactNode
 }
 
-export default function Button({ variant = 'primary', href, onClick, fullWidth = false, children }: ButtonProps) {
-  const cls = [styles.btn, styles[variant], fullWidth ? styles.fullWidth : '']
+export default function Button({ variant = 'primary', href, onClick, fullWidth = false, className, children }: ButtonProps) {
+  const cls = [styles.btn, styles[variant], fullWidth ? styles.fullWidth : '', className]
     .filter(Boolean)
     .join(' ')
 

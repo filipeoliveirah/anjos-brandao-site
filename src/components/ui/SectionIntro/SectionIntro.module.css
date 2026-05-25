@@ -1,29 +1,35 @@
 .intro {
   position: relative;
-  padding-left: 10.8rem;
-  margin-bottom: 4.8rem;
+  margin-bottom: 12rem;
 }
 
 .intro::before {
   content: attr(data-num);
-  font-family: "Gothic A1", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: .35em;
-  color: var(--ab-concrete);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 30rem;
+  line-height: 1;
+  letter-spacing: -.045em;
+  color: rgba(0, 0, 0, 0.12);
   position: absolute;
-  left: 0;
-  top: .3rem;
+  top: -.25em;
+  left: 4.4rem;
 }
 
-.intro::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 100%;
-  background: var(--ab-concrete);
-  opacity: .3;
-  position: absolute;
-  left: 7.5rem;
-  top: 0;
+:global(.h-dark-bg) .intro::before {
+  color: rgba(255, 255, 255, 0.08);
+}
+
+@media screen and (max-width: 800px) {
+  .intro { margin-bottom: 9.6rem; }
+  .intro::before { font-size: 24rem; }
+}
+
+@media screen and (max-width: 600px) {
+  .intro::before { font-size: 22rem; }
+}
+
+@media screen and (max-width: 400px) {
+  .intro { margin-bottom: 8rem; }
+  .intro::before { font-size: 20rem; }
 }

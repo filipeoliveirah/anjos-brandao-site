@@ -13,23 +13,34 @@ html {
 
 body {
   margin: 0;
-  font-family: "Gothic A1", sans-serif;
+  font-family: "Martel", serif;
   font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.75;
-  color: #39393a;
+  font-size: 1.8rem;
+  line-height: 1.778;
+  color: #1E1F22;
   background: var(--ab-offwhite);
 }
 
 /* ---- typography ---- */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Martel", serif;
+  font-family: "Gothic A1", sans-serif;
   font-weight: 700;
+  color: #1E1F22;
   margin-top: 0;
 }
 
-a { color: var(--ab-green); text-decoration: none; }
-a:hover, a:focus { color: var(--ab-green-lt); }
+h1 { font-size: 3.6rem; line-height: 1.222; }
+h2 { font-size: 3.2rem; line-height: 1.25; }
+h3 { font-size: 2.4rem; line-height: 1.167; }
+h4 { font-size: 2.1rem; line-height: 1.333; }
+h5 { font-size: 1.8rem; line-height: 1.333; }
+h6 { font-size: 1.6rem; line-height: 1.5; }
+
+h1, h2, h3, h4 { margin-bottom: 1.6rem; }
+h5, h6 { margin-bottom: 1.2rem; }
+
+a { color: var(--ab-green); text-decoration: none; transition: all 0.3s ease-in-out; }
+a:hover, a:focus { color: #2E4B3C; }
 
 p { margin-top: 0; }
 
@@ -65,21 +76,22 @@ img { max-width: 100%; height: auto; }
 
 .subhead {
   font-family: "Gothic A1", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.286;
   font-weight: 700;
-  letter-spacing: .35em;
+  letter-spacing: .4em;
   text-transform: uppercase;
   color: var(--ab-green);
-  display: block;
-  margin-bottom: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 6rem;
 }
 .h-dark-bg .subhead { color: var(--ab-green-lt); }
+.h-dark-bg .display-1 { color: var(--ab-offwhite); }
 
 .display-1 {
-  font-family: "Martel", serif;
-  font-size: 5.6rem;
-  font-weight: 300;
-  line-height: 1.2;
+  font-size: 4.8rem;
+  line-height: 1.333;
+  margin-top: 0;
 }
 
 /* ---- decorative lines ---- */
@@ -94,6 +106,20 @@ img { max-width: 100%; height: auto; }
   left: 0; top: 0; bottom: 0;
   width: 1px;
   background: rgba(255,255,255,.08);
+}
+
+/* ---- responsive typography ---- */
+@media screen and (max-width: 800px) {
+  .subhead { font-size: 1.3rem; }
+}
+@media screen and (max-width: 600px) {
+  .display-1 { font-size: 4.2rem; }
+}
+@media screen and (max-width: 500px) {
+  .display-1 { font-size: 4rem; }
+}
+@media screen and (max-width: 360px) {
+  .display-1 { font-size: 3.6rem; }
 }
 
 /* ---- selection ---- */

@@ -72,7 +72,7 @@ export default function Header() {
           </ul>
         </nav>
         <div className={styles.cta}>
-          <Button variant="stroke" href="#contato" onClick={closeMenu}>Fale com a equipe</Button>
+          <Button variant="stroke" href="#contato" onClick={closeMenu}>Fale com um consultor</Button>
         </div>
       </div>
 

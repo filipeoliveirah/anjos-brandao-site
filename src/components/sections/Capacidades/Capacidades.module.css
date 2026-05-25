@@ -1,5 +1,6 @@
 .services {
-  padding: 10rem 0;
+  padding-top: 24rem;
+  padding-bottom: 20rem;
   position: relative;
   background-color: var(--ab-graphite);
   background-image:
@@ -21,7 +22,7 @@
 .list { list-style: none; padding: 0; margin: 0; }
 
 @media screen and (max-width: 900px) {
-  .services { padding: 6rem 0; background-attachment: scroll; }
+  .services { padding-top: 20rem; padding-bottom: 12rem; background-attachment: scroll; }
   .leftCol { padding-right: 0; margin-bottom: 4rem; }
 }
 

@@ -13,7 +13,7 @@ export default function Capacidades() {
     <section id="capacidades" className={`${styles.services} target-section h-dark-bg`}>
       <div className="vert-line" />
       <div className="row">
-        <div className={`column large-6 ${styles.leftCol}`}>
+        <div className={`column large-6 tab-full ${styles.leftCol}`}>
           <SectionIntro
             num="02"
             subhead="Capacidades"
@@ -25,7 +25,7 @@ export default function Capacidades() {
           </p>
         </div>
 
-        <div className="column large-6">
+        <div className="column large-6 tab-full">
           <ul className={styles.list} data-aos="fade-up">
             {services.map((service, i) => (
               <ServiceItem

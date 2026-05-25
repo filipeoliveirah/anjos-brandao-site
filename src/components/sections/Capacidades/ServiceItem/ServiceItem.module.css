@@ -14,8 +14,8 @@
 
 .itemHeader h5 {
   font-family: "Gothic A1", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 3.6rem;
+  font-weight: 400;
   color: var(--ab-offwhite);
   margin: 0;
   transition: color .3s;
