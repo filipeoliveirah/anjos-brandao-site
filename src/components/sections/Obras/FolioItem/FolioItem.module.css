@@ -2,7 +2,60 @@
 
 .thumb { overflow: hidden; }
 
-.thumbLink { display: block; }
+.thumbLink { display: block; position: relative; }
+
+/* Dark overlay on hover */
+.thumbLink::before {
+  z-index: 1;
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+
+/* "+" icon on hover */
+.thumbLink::after {
+  z-index: 1;
+  content: "+";
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  color: var(--ab-offwhite);
+  display: block;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  margin-left: -16px;
+  margin-top: -16px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.thumbLink:hover::before,
+.thumbLink:focus::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.thumbLink:hover::after,
+.thumbLink:focus::after {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
 
 .thumbLink img {
   width: 100%;

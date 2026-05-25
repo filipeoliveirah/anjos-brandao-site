@@ -97,22 +97,56 @@
   z-index: 2;
 }
 
-.scroll a {
+.scroll::after {
+  content: "";
   display: block;
-  color: var(--ab-offwhite);
-  opacity: .4;
-  transition: opacity .3s;
+  width: 2px;
+  height: 7rem;
+  background-color: white;
+  transform: translate3d(50%, 0, 0);
+  position: absolute;
+  right: 50%;
+  bottom: -10rem;
 }
-.scroll a:hover { opacity: 1; }
-.scroll svg { fill: currentColor; display: block; }
+
+.scrollLink {
+  display: block;
+  height: 6.4rem;
+  width: 6.4rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  text-decoration: none;
+  transition: background-color .3s ease-in-out;
+}
+.scrollLink:hover { background-color: var(--ab-green); }
+
+.scrollLink svg {
+  height: 1.2rem;
+  width: 1.2rem;
+  position: absolute;
+  transform: translate3d(-50%, -50%, 0);
+  left: 50%;
+  top: 50%;
+  fill: var(--ab-offwhite);
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .scroll { right: 6rem; }
+  .scroll::after { height: 8rem; }
+  .scrollLink { height: 6rem; width: 6rem; }
+}
 
 @media screen and (max-width: 900px) {
   .heading { font-size: 4.8rem; }
   .heading::before { display: none; }
   .content { padding-left: 2rem; padding-right: 2rem; }
-  .scroll { right: 2rem; bottom: 4rem; }
+  .scroll { right: 3.6rem; }
+  .scrollLink { height: 5.2rem; width: 5.2rem; }
 }
 
 @media screen and (max-width: 600px) {
   .heading { font-size: 3.6rem; }
+  .scroll { right: 2.4rem; }
 }

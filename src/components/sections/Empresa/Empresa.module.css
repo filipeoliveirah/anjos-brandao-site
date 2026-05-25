@@ -1,9 +1,32 @@
-.about { position: relative; }
+.about {
+  position: relative;
+  background-color: var(--ab-offwhite);
+  padding-bottom: 16rem;
+}
+
+/* ---- Profile sub-section ---- */
 
 .profile {
-  padding: 10rem 0 8rem;
+  padding-top: 28rem;
+  padding-bottom: 4rem;
+  min-height: 108rem;
   position: relative;
 }
+
+/* Tinted right panel */
+.profile::before {
+  content: "";
+  display: block;
+  background-color: #b3c2c1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: calc(50% + 12vw);
+}
+
+/* Row must be position:relative so the profile pic can be absolute inside it */
+.profile :global(.row) { position: relative; }
 
 .profile h3 {
   font-size: 1.8rem;
@@ -18,8 +41,16 @@
   color: #636363;
 }
 
-.profilePic { margin: 4rem 0; }
-.profilePic img { width: 100%; max-width: 48rem; border-radius: 6px; display: block; }
+/* Profile pic floats to the right, outside its column */
+.profilePic {
+  width: 24vw;
+  position: absolute;
+  top: 8rem;
+  left: calc(50% + 80px);
+}
+.profilePic img { width: 100%; border-radius: 6px; display: block; }
+
+/* ---- Sectors sub-section ---- */
 
 .sectors { padding: 6rem 0 8rem; }
 
@@ -29,7 +60,24 @@
   gap: 0 6rem;
 }
 
+/* ---- Responsive ---- */
+
+@media screen and (max-width: 1200px) {
+  .profile::before { left: 75%; }
+  .profilePic { width: 26vw; right: 0; left: auto; }
+}
+
 @media screen and (max-width: 900px) {
-  .profile { padding: 6rem 0; }
+  .about { padding-bottom: 10rem; }
   .sectorsGrid { grid-template-columns: 1fr; }
+}
+
+@media screen and (max-width: 800px) {
+  .profile {
+    padding-top: 20rem;
+    padding-bottom: 0;
+    min-height: 0;
+  }
+  .profile::before { display: none; }
+  .profilePic { display: none; }
 }
