@@ -1,0 +1,34 @@
+.item { position: relative; overflow: hidden; }
+
+.thumb { overflow: hidden; }
+
+.thumbLink { display: block; }
+
+.thumbLink img {
+  width: 100%;
+  display: block;
+  transition: transform .6s ease;
+}
+.thumbLink:hover img { transform: scale(1.05); }
+
+.info { padding: 2rem 2rem 1.2rem; }
+
+.category {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--ab-green);
+  display: block;
+  margin-bottom: .6rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--ab-graphite);
+  margin: 0;
+}
+
+.caption { display: none; }
