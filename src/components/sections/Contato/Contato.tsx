@@ -37,7 +37,7 @@ export default function Contato() {
             </div>
             <div className={styles.contactBlock} data-aos="fade-up">
               <h5>Direto</h5>
-              <ul><li><a href="https://wa.me/5571991822466">WhatsApp</a></li></ul>
+              <ul><li><a href="https://wa.me/5571991822466" target="_blank" rel="noopener noreferrer">WhatsApp</a></li></ul>
             </div>
           </div>
         </div>
@@ -45,8 +45,8 @@ export default function Contato() {
 
       <div className={`row ${styles.bottom}`}>
         <div className={styles.copyright}>
-          <span>© 2026 Anjos Brandão · Coordenação Ambiental</span>
-          <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+          <span>© {new Date().getFullYear()} Anjos Brandão</span>
+          <span>Criado pela <a href="https://www.outlimit.com.br/" target="_blank" rel="noopener noreferrer">Out Limit</a></span>
         </div>
         <div className={styles.goTop}>
           <a href="#top" aria-label="Voltar ao topo">
