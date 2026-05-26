@@ -29,11 +29,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-h1 { font-size: 3.6rem; line-height: 1.222; }
-h2 { font-size: 3.2rem; line-height: 1.25; }
+h1 { font-size: 5rem; line-height: 1.2; }
+h2 { font-size: 3.8rem; line-height: 1.25; }
 h3 { font-size: 2.4rem; line-height: 1.167; }
 h4 { font-size: 2.1rem; line-height: 1.333; }
-h5 { font-size: 1.8rem; line-height: 1.333; }
+h5 { font-size: 2.6rem; line-height: 1.333; }
 h6 { font-size: 1.6rem; line-height: 1.5; }
 
 h1, h2, h3, h4 { margin-bottom: 1.6rem; }
@@ -89,7 +89,7 @@ img { max-width: 100%; height: auto; }
 .h-dark-bg .display-1 { color: var(--ab-offwhite); }
 
 .display-1 {
-  font-size: 4.8rem;
+  font-size: 2.8rem;
   line-height: 1.333;
   margin-top: 0;
 }
@@ -113,13 +113,13 @@ img { max-width: 100%; height: auto; }
   .subhead { font-size: 1.3rem; }
 }
 @media screen and (max-width: 600px) {
-  .display-1 { font-size: 4.2rem; }
+  .display-1 { font-size: 2.6rem; }
 }
 @media screen and (max-width: 500px) {
-  .display-1 { font-size: 4rem; }
+  .display-1 { font-size: 2.4rem; }
 }
 @media screen and (max-width: 360px) {
-  .display-1 { font-size: 3.6rem; }
+  .display-1 { font-size: 2.2rem; }
 }
 
 /* ---- selection ---- */

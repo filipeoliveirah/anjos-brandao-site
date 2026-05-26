@@ -1,8 +1,11 @@
 .item {
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
   cursor: pointer;
 }
-.item:first-child { border-top: 1px solid rgba(255,255,255,.08); }
+
+.item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
 
 .itemHeader {
   padding: 2rem 0;
@@ -14,14 +17,16 @@
 
 .itemHeader h5 {
   font-family: "Gothic A1", sans-serif;
-  font-size: 3.6rem;
+  font-size: 2.6rem;
   font-weight: 400;
   color: var(--ab-offwhite);
   margin: 0;
   transition: color .3s;
 }
 
-.open .itemHeader h5 { color: var(--ab-green-lt); }
+.open .itemHeader h5 {
+  color: var(--ab-green-lt);
+}
 
 .itemHeader::after {
   content: "+";
@@ -32,7 +37,9 @@
   margin-left: 1.6rem;
 }
 
-.open .itemHeader::after { transform: rotate(45deg); }
+.open .itemHeader::after {
+  transform: rotate(45deg);
+}
 
 .itemBody {
   overflow: hidden;
@@ -40,10 +47,12 @@
   transition: max-height .4s ease;
 }
 
-.open .itemBody { max-height: 20rem; }
+.open .itemBody {
+  max-height: 20rem;
+}
 
 .itemBody p {
-  color: rgba(255,255,255,.6);
+  color: rgba(255, 255, 255, .6);
   font-size: 1.5rem;
   line-height: 1.875;
   padding-bottom: 2rem;

@@ -12,7 +12,6 @@ export default function Empresa() {
           <div className="column large-6 medium-8 tab-full">
             <SectionIntro
               num="01"
-              subhead="A empresa"
               title="A gestão ambiental não começa quando o problema aparece, ela está integrada ao projeto desde o início."
             />
 
@@ -23,17 +22,12 @@ export default function Empresa() {
                 alt="Equipe técnica da Anjos Brandão em reunião de coordenação de projeto"
                 loading="lazy"
                 decoding="async"
-              />
+                />
             </div>
 
             <h3 data-aos="fade-up">Perfil</h3>
             <p data-aos="fade-up">
-              A Anjos Brandão coordena a dimensão ambiental de grandes empreendimentos em regime contínuo,
-              não como consultoria pontual, mas como parte da operação. Atuamos lado a lado com engenharia,
-              empreiteiras e órgãos licenciadores, presentes em campo, na documentação e na continuidade de cada obra.
-              Da Licença Prévia à Licença de Operação, conduzimos processos completos, gerimos condicionantes e
-              mantemos rastreabilidade técnica em todas as frentes. Com base na Bahia, atendemos os setores de
-              construção civil, infraestrutura e indústria em todo o Nordeste.
+              A Anjos Brandão Soluções Ambientais acredita que desenvolvimento econômico e responsabilidade ambiental devem caminhar juntos. Transformamos exigências ambientais em oportunidades de crescimento, atuando como parceiros estratégicos de empresas por meio de soluções em gestão ambiental, ESG, licenciamento, sustentabilidade e conformidade legal.
             </p>
           </div>
         </div>

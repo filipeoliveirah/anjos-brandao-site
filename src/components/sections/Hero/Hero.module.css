@@ -12,8 +12,8 @@
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(180deg, rgba(20,21,26,.30) 0%, rgba(20,21,26,.10) 35%, rgba(20,21,26,.55) 80%, rgba(20,21,26,.85) 100%),
-    linear-gradient(90deg, rgba(20,21,26,.75) 0%, rgba(20,21,26,.10) 60%, rgba(20,21,26,0) 100%);
+    linear-gradient(180deg, rgba(20, 21, 26, .30) 0%, rgba(20, 21, 26, .10) 35%, rgba(20, 21, 26, .55) 80%, rgba(20, 21, 26, .85) 100%),
+    linear-gradient(90deg, rgba(20, 21, 26, .75) 0%, rgba(20, 21, 26, .10) 60%, rgba(20, 21, 26, 0) 100%);
 }
 
 .video {
@@ -36,15 +36,41 @@
   align-items: flex-end;
 }
 
+.brandContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.brandName {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: var(--ab-green-lt);
+}
+
+.brandTagline {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--ab-offwhite);
+  opacity: 0.75;
+  margin-top: 0.4rem;
+}
+
 .heading {
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: 400;
   line-height: 1.257;
   color: var(--ab-offwhite);
   margin-top: 0;
   padding-right: 3.2rem;
   position: relative;
-  text-shadow: 0 1px 30px rgba(0,0,0,.35);
+  text-shadow: 0 1px 30px rgba(0, 0, 0, .35);
 }
 
 .heading::before {
@@ -118,7 +144,10 @@
   text-decoration: none;
   transition: background-color .3s ease-in-out;
 }
-.scrollLink:hover { background-color: var(--ab-green); }
+
+.scrollLink:hover {
+  background-color: var(--ab-green);
+}
 
 .scrollLink svg {
   height: 1.2rem;
@@ -132,20 +161,50 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .scroll { right: 6rem; }
-  .scroll::after { height: 8rem; }
-  .scrollLink { height: 6rem; width: 6rem; }
+  .scroll {
+    right: 6rem;
+  }
+
+  .scroll::after {
+    height: 8rem;
+  }
+
+  .scrollLink {
+    height: 6rem;
+    width: 6rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
-  .heading { font-size: 4.8rem; }
-  .heading::before { display: none; }
-  .content { padding-left: 2rem; padding-right: 2rem; }
-  .scroll { right: 3.6rem; }
-  .scrollLink { height: 5.2rem; width: 5.2rem; }
+  .heading {
+    font-size: 4.8rem;
+  }
+
+  .heading::before {
+    display: none;
+  }
+
+  .content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .scroll {
+    right: 3.6rem;
+  }
+
+  .scrollLink {
+    height: 5.2rem;
+    width: 5.2rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .heading { font-size: 3.6rem; }
-  .scroll { right: 2.4rem; }
+  .heading {
+    font-size: 3.6rem;
+  }
+
+  .scroll {
+    right: 2.4rem;
+  }
 }

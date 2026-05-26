@@ -20,7 +20,7 @@ export default function Contato() {
           <div data-aos="fade-up">
             <h3 className="subhead">Contato</h3>
             <h1 className="display-1">
-              Nos conte o projeto. A gente mapeia o que é preciso para o licenciamento avançar e apresenta proposta na medida.
+              Nos conte o projeto.<br /> A gente mapeia o que é preciso para o licenciamento avançar e apresenta proposta na medida.
             </h1>
           </div>
           <div className={styles.cta} data-aos="fade-up">
@@ -66,6 +66,6 @@ export default function Contato() {
           </svg>
         </a>
       </div>
-    </footer>
+    </footer >
   )
 }

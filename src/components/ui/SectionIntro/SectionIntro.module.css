@@ -1,6 +1,7 @@
 .intro {
   position: relative;
   margin-bottom: 12rem;
+  max-width: 45rem;
 }
 
 .intro::before {
@@ -21,15 +22,27 @@
 }
 
 @media screen and (max-width: 800px) {
-  .intro { margin-bottom: 9.6rem; }
-  .intro::before { font-size: 24rem; }
+  .intro {
+    margin-bottom: 9.6rem;
+  }
+
+  .intro::before {
+    font-size: 24rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .intro::before { font-size: 22rem; }
+  .intro::before {
+    font-size: 22rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
-  .intro { margin-bottom: 8rem; }
-  .intro::before { font-size: 20rem; }
+  .intro {
+    margin-bottom: 8rem;
+  }
+
+  .intro::before {
+    font-size: 20rem;
+  }
 }

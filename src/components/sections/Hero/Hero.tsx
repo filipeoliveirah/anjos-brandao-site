@@ -18,11 +18,13 @@ export default function Hero() {
 
       <div className={styles.content}>
         <div>
+          <div className={styles.brandContainer}>
+            <span className={styles.brandTagline}>Soluções Ambientais</span>
+          </div>
           <h1 className={styles.heading}>
-            Coordenação ambiental <br />
-            integrada à continuidade <br />
-            das obras, em campo, na <br />
-            documentação e na operação.
+            Coordenação contínua,
+            atuando desde o planejamento pré-obra
+            até a execução e permanência operacional.
           </h1>
           <ul className={styles.sectors} aria-label="Setores de atuação">
             {SECTORS.map((s) => <li key={s}>{s}</li>)}
