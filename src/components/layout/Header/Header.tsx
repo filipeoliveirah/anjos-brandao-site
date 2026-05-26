@@ -4,16 +4,16 @@ import Button from '../../ui/Button/Button'
 import styles from './Header.module.css'
 
 const NAV_ITEMS = [
-  { id: 'hero',        label: 'Início' },
-  { id: 'empresa',     label: 'Empresa' },
+  { id: 'hero', label: 'Início' },
+  { id: 'empresa', label: 'Empresa' },
   { id: 'capacidades', label: 'Capacidades' },
-  { id: 'obras',       label: 'Obras' },
-  { id: 'contato',     label: 'Contato' },
+  { id: 'obras', label: 'Obras' },
+  { id: 'contato', label: 'Contato' },
 ]
 
 export default function Header() {
-  const [isSticky, setIsSticky]     = useState(false)
-  const [isOffset, setIsOffset]     = useState(false)
+  const [isSticky, setIsSticky] = useState(false)
+  const [isOffset, setIsOffset] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const activeId = useScrollSpy(NAV_ITEMS.map((n) => n.id))
 
@@ -21,7 +21,7 @@ export default function Header() {
     const handleScroll = () => {
       const hero = document.getElementById('hero')
       if (!hero) return
-      const trigger = hero.offsetHeight - 170
+      const trigger = hero.offsetHeight - window.innerHeight * 0.9
       const y = window.scrollY
       setIsSticky(y > trigger)
       setIsOffset(y > trigger + 20)
