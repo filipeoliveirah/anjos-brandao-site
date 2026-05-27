@@ -1,7 +1,6 @@
 .hero {
   width: 100%;
   height: 100vh;
-  min-height: 82rem;
   overflow: hidden;
   position: relative;
 }
@@ -115,63 +114,63 @@
   background: var(--ab-green-lt);
 }
 
-.scroll {
-  position: absolute;
-  right: 8rem;
-  bottom: 10rem;
-  z-index: 2;
+.whatsapp {
+  position: fixed;
+  right: 4rem;
+  bottom: 4rem;
+  z-index: 999;
 }
 
-.scroll::after {
-  content: "";
-  display: block;
-  width: 2px;
-  height: 7rem;
-  background-color: white;
-  transform: translate3d(50%, 0, 0);
-  position: absolute;
-  right: 50%;
-  bottom: -10rem;
-}
-
-.scrollLink {
-  display: block;
+.whatsappLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 6.4rem;
   width: 6.4rem;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(37, 211, 102, 1);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   position: relative;
   text-decoration: none;
-  transition: background-color .3s ease-in-out;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.scrollLink:hover {
-  background-color: var(--ab-green);
+.whatsappLink:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 1);
 }
 
-.scrollLink svg {
-  height: 1.2rem;
-  width: 1.2rem;
-  position: absolute;
-  transform: translate3d(-50%, -50%, 0);
-  left: 50%;
-  top: 50%;
+.whatsappLink svg {
+  height: 2.8rem;
+  width: 2.8rem;
   fill: var(--ab-offwhite);
+  transition: fill .3s ease-in-out;
   display: block;
 }
 
+.whatsappLink:hover svg {
+  fill: #fff;
+}
+
 @media screen and (max-width: 1200px) {
-  .scroll {
-    right: 6rem;
+  .whatsapp {
+    right: 3rem;
+    bottom: 3rem;
   }
 
-  .scroll::after {
-    height: 8rem;
-  }
-
-  .scrollLink {
+  .whatsappLink {
     height: 6rem;
     width: 6rem;
+  }
+
+  .whatsappLink svg {
+    height: 2.6rem;
+    width: 2.6rem;
   }
 }
 
@@ -189,13 +188,19 @@
     padding-right: 2rem;
   }
 
-  .scroll {
-    right: 3.6rem;
+  .whatsapp {
+    right: 2rem;
+    bottom: 2rem;
   }
 
-  .scrollLink {
+  .whatsappLink {
     height: 5.2rem;
     width: 5.2rem;
+  }
+
+  .whatsappLink svg {
+    height: 2.2rem;
+    width: 2.2rem;
   }
 }
 
@@ -204,7 +209,8 @@
     font-size: 2.6rem;
   }
 
-  .scroll {
-    right: 2.4rem;
+  .whatsapp {
+    right: 1.5rem;
+    bottom: 1.5rem;
   }
 }
