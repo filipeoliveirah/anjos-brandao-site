@@ -1,16 +1,7 @@
-import { useEffect, useState } from 'react'
 import Button from '../../ui/Button/Button'
 import styles from './Contato.module.css'
 
 export default function Contato() {
-  const [showGoTop, setShowGoTop] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setShowGoTop(window.scrollY > 300)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
   return (
     <footer id="contato" className={`${styles.footer} h-dark-bg`}>
       <div className="right-vert-line" />
@@ -58,8 +49,6 @@ export default function Contato() {
           <span>Criado pela <a href="https://www.outlimit.com.br/" target="_blank" rel="noopener noreferrer">Out Limit</a></span>
         </div>
       </div>
-
-
     </footer >
   )
 }
