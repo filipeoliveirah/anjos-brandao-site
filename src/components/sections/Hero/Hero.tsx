@@ -1,3 +1,4 @@
+import Button from '../../ui/Button/Button'
 import styles from './Hero.module.css'
 
 const SECTORS = ['Construção civil', 'Infraestrutura', 'Indústria']
@@ -29,6 +30,11 @@ export default function Hero() {
           <ul className={styles.sectors} aria-label="Setores de atuação">
             {SECTORS.map((s) => <li key={s}>{s}</li>)}
           </ul>
+          <div className={styles.cta}>
+            <Button variant="primary" href="#contato">
+              Falar com um consultor
+            </Button>
+          </div>
         </div>
       </div>
 

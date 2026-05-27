@@ -114,6 +114,11 @@
   background: var(--ab-green-lt);
 }
 
+.cta {
+  margin-top: 6rem;
+  margin-left: 0.4rem;
+}
+
 .whatsapp {
   position: fixed;
   right: 4rem;
@@ -175,6 +180,10 @@
 }
 
 @media screen and (max-width: 900px) {
+  .cta {
+    margin-top: 4.5rem;
+  }
+
   .heading {
     font-size: 3.8rem;
   }
@@ -205,6 +214,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .cta {
+    margin-top: 3.5rem;
+  }
+
   .heading {
     font-size: 2.6rem;
   }
