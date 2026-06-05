@@ -2,6 +2,14 @@ import Button from '../../ui/Button/Button'
 import styles from './Contato.module.css'
 
 export default function Contato() {
+  const handleWhatsAppClick = () => {
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-17024846270/mPfECNeE2OsaEL6TirY_'
+      });
+    }
+  };
+
   return (
     <footer id="contato" className={`${styles.footer} h-dark-bg`}>
       <div className="right-vert-line" />
@@ -37,7 +45,7 @@ export default function Contato() {
             </div>
             <div className={styles.contactBlock} data-aos="fade-up">
               <h5>Comercial</h5>
-              <ul><li><a href="https://wa.me/5571991822466" target="_blank" rel="noopener noreferrer">WhatsApp</a></li></ul>
+              <ul><li><a href="https://wa.me/5571991822466" target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>WhatsApp</a></li></ul>
             </div>
           </div>
         </div>
