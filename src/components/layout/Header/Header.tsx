@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useScrollSpy } from '../../../hooks/useScrollSpy'
 import Button from '../../ui/Button/Button'
+import { detailedServices } from '../../../data/services'
 import styles from './Header.module.css'
 
 const NAV_ITEMS = [
@@ -10,6 +11,10 @@ const NAV_ITEMS = [
   { id: 'obras', label: 'Obras' },
   { id: 'contato', label: 'Contato' },
 ]
+
+// Sub-links for the 5 priority service pages, shown as a dropdown under "Capacidades".
+// Sourced from detailedServices so the menu can't drift out of sync with the real pages.
+const SERVICE_LINKS = Object.values(detailedServices).map((s) => ({ slug: s.slug, title: s.title }))
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false)
@@ -50,7 +55,7 @@ export default function Header() {
   return (
     <header className={headerCls}>
       <div className={styles.logo}>
-        <a className={styles.wordmark} href="#top" onClick={closeMenu}>
+        <a className={styles.wordmark} href="/" onClick={closeMenu}>
           Anjos <span>Brandão</span>
         </a>
       </div>
@@ -59,20 +64,29 @@ export default function Header() {
         <nav aria-label="Navegação principal">
           <ul className={styles.nav}>
             {NAV_ITEMS.map(({ id, label }) => (
-              <li key={id}>
+              <li key={id} className={id === 'capacidades' ? styles.navItem : undefined}>
                 <a
-                  href={`#${id}`}
+                  href={`/#${id}`}
                   className={activeId === id ? styles.active : undefined}
                   onClick={closeMenu}
                 >
                   {label}
                 </a>
+                {id === 'capacidades' && (
+                  <ul className={styles.submenu}>
+                    {SERVICE_LINKS.map(({ slug, title }) => (
+                      <li key={slug}>
+                        <a href={`/${slug}`} onClick={closeMenu}>{title}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
         </nav>
         <div className={styles.cta}>
-          <Button variant="stroke" href="#contato" onClick={closeMenu}>Contato</Button>
+          <Button variant="stroke" href="/#contato" onClick={closeMenu}>Contato</Button>
         </div>
       </div>
 
