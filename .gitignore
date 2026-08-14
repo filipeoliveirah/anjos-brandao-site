@@ -4,3 +4,5 @@ dist/
 .playwright-mcp/
 docs/
 .claude/
+.superpowers/
+

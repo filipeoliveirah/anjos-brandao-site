@@ -71,7 +71,7 @@ export const detailedServices: Record<string, ServiceDetail> = {
     subhead: 'Condução integral das etapas de LP, LI e LO junto aos órgãos reguladores',
     description:
       'Coordenamos processos completos de Licenciamento Ambiental Prévia (LP), de Instalação (LI) e de Operação (LO) perante IBAMA, INEMA e órgãos municipais, reduzindo prazos e garantindo segurança jurídica.',
-    heroImage: '/images/portfolio/patio-logistico@2x.jpg',
+    heroImage: '/images/services/hero-licenciamento.jpg',
     ctaText: 'Avaliar o processo de licenciamento',
     quandoNecessario: [
       'Implantação de novos empreendimentos industriais, logísticos ou habitacionais.',
@@ -118,7 +118,7 @@ export const detailedServices: Record<string, ServiceDetail> = {
     subhead: 'Gestão, classificação e rastreabilidade total de resíduos da obra à operação',
     description:
       'Desenvolvemos e implantamos o PGRS de acordo com a Política Nacional de Resíduos Sólidos (Lei 12.305/2010), assegurando destinação correta, redução de custos e rastreabilidade total.',
-    heroImage: '/images/portfolio/galpao-industrial@2x.jpg',
+    heroImage: '/images/services/hero-pgrs.jpg',
     ctaText: 'Solicitar análise do empreendimento',
     quandoNecessario: [
       'Empreendimentos geradores de resíduos industriais, de saúde ou da construção civil (PGRCC).',
@@ -160,7 +160,7 @@ export const detailedServices: Record<string, ServiceDetail> = {
     subhead: 'Mapeamento fitossociológico e volumétrico de vegetação para supressão e compensação',
     description:
       'Realizamos o levantamento quantitativo e qualitativo da vegetação nativa com amostragem estatística rigorosa, embasando pedidos de ASV e projetos de compensação florestal.',
-    heroImage: '/images/portfolio/reflorestamento@2x.jpg',
+    heroImage: '/images/services/hero-inventario.jpg',
     ctaText: 'Solicitar avaliação técnica',
     quandoNecessario: [
       'Requisito obrigatório para obtenção da Autorização de Supressão Vegetal (ASV).',
@@ -197,7 +197,7 @@ export const detailedServices: Record<string, ServiceDetail> = {
     subhead: 'Aprovação legal para limpeza de terreno e manejo florestal em canteiros de obras',
     description:
       'Conduzimos todo o processo de aprovação da ASV perante INEMA e órgãos licenciadores, garantindo a liberação das frentes de obra com acompanhamento técnico contínuo.',
-    heroImage: '/images/portfolio/trecho-rodoviario@2x.jpg',
+    heroImage: '/images/services/hero-asv.jpg',
     ctaText: 'Verificar documentação necessária',
     quandoNecessario: [
       'Abertura de estradas, linhas de transmissão ou canteiros de obra em vegetação nativa.',
@@ -231,7 +231,7 @@ export const detailedServices: Record<string, ServiceDetail> = {
     subhead: 'Presença técnica em campo durante a supressão vegetal para salvamento biológico',
     description:
       'Executamos os programas de resgate, afugentamento e monitoramento de fauna e germoplasma vegetal durante a supressão de vegetação, atendendo 100% das condicionantes da ASV.',
-    heroImage: '/images/portfolio/reflorestamento.jpg',
+    heroImage: '/images/services/hero-fauna-flora.jpg',
     ctaText: 'Falar com a equipe técnica',
     quandoNecessario: [
       'Execução de supressão vegetal autorizada por ASV.',
