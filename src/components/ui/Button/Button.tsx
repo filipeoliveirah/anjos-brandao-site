@@ -4,6 +4,8 @@ import styles from './Button.module.css'
 interface ButtonProps {
   variant?: 'primary' | 'stroke' | 'small'
   href?: string
+  target?: string
+  rel?: string
   type?: 'button' | 'submit' | 'reset'
   onClick?: () => void
   fullWidth?: boolean
@@ -11,11 +13,27 @@ interface ButtonProps {
   children: ReactNode
 }
 
-export default function Button({ variant = 'primary', href, type = 'button', onClick, fullWidth = false, className, children }: ButtonProps) {
+export default function Button({
+  variant = 'primary',
+  href,
+  target,
+  rel,
+  type = 'button',
+  onClick,
+  fullWidth = false,
+  className,
+  children,
+}: ButtonProps) {
   const cls = [styles.btn, styles[variant], fullWidth ? styles.fullWidth : '', className]
     .filter(Boolean)
     .join(' ')
 
-  if (href) return <a href={href} className={cls}>{children}</a>
+  if (href) {
+    return (
+      <a href={href} target={target} rel={rel} className={cls} onClick={onClick}>
+        {children}
+      </a>
+    )
+  }
   return <button type={type} className={cls} onClick={onClick}>{children}</button>
 }

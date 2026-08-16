@@ -23,7 +23,15 @@ export default function Contato() {
             </h1>
           </div>
           <div className={styles.cta} data-aos="fade-up">
-            <Button variant="primary" href="mailto:contato@anjosbrandao.eco.br" fullWidth className={styles.buttonAdjust}>
+            <Button
+              variant="primary"
+              href="https://wa.me/5571991822466?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20consultor%20da%20Anjos%20Brand%C3%A3o."
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
+              fullWidth
+              className={styles.buttonAdjust}
+            >
               Falar com consultor
             </Button>
           </div>
