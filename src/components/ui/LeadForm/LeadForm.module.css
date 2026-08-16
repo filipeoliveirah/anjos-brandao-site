@@ -69,20 +69,79 @@ button.submitBtn {
 }
 
 .success {
-  max-width: 48rem;
+  max-width: 52rem;
 }
 
 .success h4 {
   color: var(--ab-offwhite);
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 1.2rem;
 }
 
 .success p {
-  color: rgba(243, 241, 235, .7);
+  color: rgba(243, 241, 235, .8);
   font-size: 1.6rem;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.successActions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.whatsappActionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background-color: #25D366;
+  color: #fff !important;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: 1.6rem 2.8rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  text-align: center;
+}
+
+.whatsappActionBtn:hover {
+  background-color: #20BA5A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsappActionBtn svg {
+  width: 2.2rem;
+  height: 2.2rem;
+  fill: #fff;
+  flex-shrink: 0;
+}
+
+.emailFallbackLink {
+  color: var(--ab-green-lt);
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: color .2s;
+}
+
+.emailFallbackLink:hover {
+  color: var(--ab-offwhite);
 }
 
 .resetBtn {
@@ -97,6 +156,8 @@ button.submitBtn {
   text-transform: uppercase;
   cursor: pointer;
   padding: 0 0 .3rem;
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .resetBtn:hover {
