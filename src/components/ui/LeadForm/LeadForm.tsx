@@ -1,10 +1,72 @@
-import { useState, useEffect, FormEvent } from 'react'
+import { useState, useEffect, FormEvent, ChangeEvent } from 'react'
 import Button from '../Button/Button'
 import styles from './LeadForm.module.css'
 
 interface LeadFormProps {
   defaultDemanda?: string
   ctaText?: string
+}
+
+// Máscara de telefone celular/fixo do Brasil: (XX) XXXXX-XXXX ou (XX) XXXX-XXXX
+export function formatBRPhone(value: string): string {
+  const digits = value.replace(/\D/g, '').slice(0, 11)
+  if (digits.length === 0) return ''
+  if (digits.length <= 2) return `(${digits}`
+  if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`
+  if (digits.length <= 10) {
+    return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`
+  }
+  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7, 11)}`
+}
+
+// Higienização contra XSS e injeção de scripts / tags
+export function sanitizeInput(input: string): string {
+  return input
+    .replace(/<[^>]*>?/gm, '') // Remove tags HTML
+    .replace(/[<>'"&]/g, '')   // Remove caracteres de injeção
+    .trim()
+}
+
+export function validateNomeCompleto(nome: string): string | null {
+  const sanitized = sanitizeInput(nome)
+  if (!sanitized) {
+    return 'Por favor, informe seu nome completo.'
+  }
+  const parts = sanitized.split(/\s+/).filter((part) => part.length >= 2)
+  if (parts.length < 2) {
+    return 'Por favor, informe nome e sobrenome completo.'
+  }
+  const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/
+  if (!nameRegex.test(sanitized)) {
+    return 'O nome contém caracteres especiais inválidos.'
+  }
+  return null
+}
+
+export function validateEmpresa(empresa: string): string | null {
+  const sanitized = sanitizeInput(empresa)
+  if (!sanitized || sanitized.length < 2) {
+    return 'Por favor, informe o nome da empresa ou empreendimento.'
+  }
+  return null
+}
+
+export function validatePhone(phone: string): string | null {
+  const digits = phone.replace(/\D/g, '')
+  if (!digits) {
+    return 'Por favor, informe seu WhatsApp ou telefone.'
+  }
+  if (digits.length < 10 || digits.length > 11) {
+    return 'Informe um número com DDD completo (ex: (71) 99182-2466).'
+  }
+  const ddd = parseInt(digits.slice(0, 2), 10)
+  if (ddd < 11 || ddd > 99) {
+    return 'DDD inválido. Informe um DDD válido do Brasil.'
+  }
+  if (digits.length === 11 && digits[2] !== '9') {
+    return 'Número de celular com 11 dígitos deve começar com 9 após o DDD.'
+  }
+  return null
 }
 
 export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solicitação' }: LeadFormProps) {
@@ -17,20 +79,59 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
     mensagem: '',
   })
 
+  const [touched, setTouched] = useState<{ [key: string]: boolean }>({})
+  const [errors, setErrors] = useState<{ [key: string]: string | null }>({})
+
   useEffect(() => {
     if (defaultDemanda) {
       setFormData((prev) => ({ ...prev, demanda: defaultDemanda }))
     }
   }, [defaultDemanda])
 
+  const handleBlur = (field: string) => {
+    setTouched((prev) => ({ ...prev, [field]: true }))
+    validateField(field, formData[field as keyof typeof formData])
+  }
+
+  const validateField = (field: string, value: string) => {
+    let error: string | null = null
+    if (field === 'nome') error = validateNomeCompleto(value)
+    if (field === 'empresa') error = validateEmpresa(value)
+    if (field === 'telefone') error = validatePhone(value)
+
+    setErrors((prev) => ({ ...prev, [field]: error }))
+    return error
+  }
+
+  const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatBRPhone(e.target.value)
+    setFormData((prev) => ({ ...prev, telefone: formatted }))
+    if (touched.telefone) {
+      validateField('telefone', formatted)
+    }
+  }
+
+  const handleChange = (field: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }))
+    if (touched[field]) {
+      validateField(field, value)
+    }
+  }
+
   const buildMessage = () => {
+    const cleanNome = sanitizeInput(formData.nome)
+    const cleanEmpresa = sanitizeInput(formData.empresa)
+    const cleanTelefone = formData.telefone.trim()
+    const cleanDemanda = formData.demanda
+    const cleanMsg = formData.mensagem.replace(/<[^>]*>?/gm, '').trim()
+
     return [
       `*Solicitação de Avaliação Técnica — Anjos Brandão*`,
-      `*Nome:* ${formData.nome}`,
-      `*Empresa:* ${formData.empresa}`,
-      `*WhatsApp/Telefone:* ${formData.telefone}`,
-      `*Tipo de Demanda:* ${formData.demanda}`,
-      formData.mensagem ? `*Detalhes do Projeto:* ${formData.mensagem}` : '',
+      `*Nome:* ${cleanNome}`,
+      `*Empresa:* ${cleanEmpresa}`,
+      `*WhatsApp/Telefone:* ${cleanTelefone}`,
+      `*Tipo de Demanda:* ${cleanDemanda}`,
+      cleanMsg ? `*Detalhes do Projeto:* ${cleanMsg}` : '',
     ].filter(Boolean).join('\n')
   }
 
@@ -41,12 +142,25 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
 
   const getMailtoUrl = () => {
     const text = buildMessage().replace(/\*/g, '')
-    const subject = `Solicitação de Avaliação Técnica — ${formData.demanda} (${formData.empresa})`
+    const cleanDemanda = formData.demanda
+    const cleanEmpresa = sanitizeInput(formData.empresa)
+    const subject = `Solicitação de Avaliação Técnica — ${cleanDemanda} (${cleanEmpresa})`
     return `mailto:contato@anjosbrandao.eco.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`
   }
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
+
+    const errNome = validateNomeCompleto(formData.nome)
+    const errEmpresa = validateEmpresa(formData.empresa)
+    const errPhone = validatePhone(formData.telefone)
+
+    setTouched({ nome: true, empresa: true, telefone: true })
+    setErrors({ nome: errNome, empresa: errEmpresa, telefone: errPhone })
+
+    if (errNome || errEmpresa || errPhone) {
+      return
+    }
 
     // 1. Disparar eventos de conversão no Google Ads e GTM
     if (typeof (window as any).gtag === 'function') {
@@ -59,7 +173,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
       });
     }
 
-    // 2. Abrir WhatsApp com a mensagem estruturada pronta para envio
+    // 2. Abrir WhatsApp com a mensagem estruturada e sanitizada
     const whatsappUrl = getWhatsAppUrl()
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
 
@@ -67,11 +181,12 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
   }
 
   if (submitted) {
+    const cleanEmpresa = sanitizeInput(formData.empresa)
     return (
       <div className={styles.success}>
         <h4>Solicitação pronta para envio!</h4>
         <p>
-          Registramos sua solicitação de <strong>{formData.demanda}</strong> para a empresa <strong>{formData.empresa}</strong>. Caso o WhatsApp não tenha aberto automaticamente, clique no botão abaixo para iniciar a conversa:
+          Registramos sua solicitação de <strong>{formData.demanda}</strong> para a empresa <strong>{cleanEmpresa}</strong>. Caso o WhatsApp não tenha aberto automaticamente, clique no botão abaixo para iniciar a conversa:
         </p>
 
         <div className={styles.successActions}>
@@ -92,7 +207,14 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
           </a>
         </div>
 
-        <button className={styles.resetBtn} onClick={() => setSubmitted(false)}>
+        <button
+          className={styles.resetBtn}
+          onClick={() => {
+            setSubmitted(false)
+            setTouched({})
+            setErrors({})
+          }}
+        >
           Enviar outra solicitação
         </button>
       </div>
@@ -100,38 +222,57 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <div className={styles.field}>
+    <form className={styles.form} onSubmit={handleSubmit} noValidate>
+      <div className={`${styles.field} ${touched.nome && errors.nome ? styles.hasError : ''}`}>
         <label htmlFor="nome">Nome completo</label>
         <input
           type="text"
           id="nome"
           required
+          autoComplete="name"
+          placeholder="Ex: João da Silva"
           value={formData.nome}
-          onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
+          onChange={(e) => handleChange('nome', e.target.value)}
+          onBlur={() => handleBlur('nome')}
         />
+        {touched.nome && errors.nome && (
+          <span className={styles.errorText}>{errors.nome}</span>
+        )}
       </div>
 
       <div className={styles.fieldRow}>
-        <div className={styles.field}>
+        <div className={`${styles.field} ${touched.empresa && errors.empresa ? styles.hasError : ''}`}>
           <label htmlFor="empresa">Empresa / Empreendimento</label>
           <input
             type="text"
             id="empresa"
             required
+            autoComplete="organization"
+            placeholder="Ex: Construtora Exemplo"
             value={formData.empresa}
-            onChange={(e) => setFormData({ ...formData, empresa: e.target.value })}
+            onChange={(e) => handleChange('empresa', e.target.value)}
+            onBlur={() => handleBlur('empresa')}
           />
+          {touched.empresa && errors.empresa && (
+            <span className={styles.errorText}>{errors.empresa}</span>
+          )}
         </div>
-        <div className={styles.field}>
+
+        <div className={`${styles.field} ${touched.telefone && errors.telefone ? styles.hasError : ''}`}>
           <label htmlFor="telefone">WhatsApp / Telefone</label>
           <input
             type="tel"
             id="telefone"
             required
+            autoComplete="tel"
+            placeholder="(71) 99999-9999"
             value={formData.telefone}
-            onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
+            onChange={handlePhoneChange}
+            onBlur={() => handleBlur('telefone')}
           />
+          {touched.telefone && errors.telefone && (
+            <span className={styles.errorText}>{errors.telefone}</span>
+          )}
         </div>
       </div>
 
@@ -140,7 +281,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
         <select
           id="demanda"
           value={formData.demanda}
-          onChange={(e) => setFormData({ ...formData, demanda: e.target.value })}
+          onChange={(e) => handleChange('demanda', e.target.value)}
         >
           <option value="Licenciamento Ambiental">Licenciamento Ambiental (LP, LI, LO)</option>
           <option value="PGRS">PGRS — Plano de Gerenciamento de Resíduos Sólidos</option>
@@ -156,12 +297,15 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
         <textarea
           id="mensagem"
           rows={3}
+          placeholder="Conte resumidamente o local, fase ou objetivo da obra..."
           value={formData.mensagem}
-          onChange={(e) => setFormData({ ...formData, mensagem: e.target.value })}
+          onChange={(e) => handleChange('mensagem', e.target.value)}
         ></textarea>
       </div>
 
-      <Button variant="primary" type="submit" fullWidth className={styles.submitBtn}>{ctaText}</Button>
+      <Button variant="primary" type="submit" fullWidth className={styles.submitBtn}>
+        {ctaText}
+      </Button>
     </form>
   )
 }

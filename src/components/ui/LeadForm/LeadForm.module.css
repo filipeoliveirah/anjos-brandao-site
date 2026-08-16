@@ -56,6 +56,22 @@
   border-bottom-color: var(--ab-green-lt);
 }
 
+.field.hasError input,
+.field.hasError select,
+.field.hasError textarea {
+  border-bottom-color: #FF8A80 !important;
+}
+
+.errorText {
+  display: block;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FF8A80;
+  margin-top: 0.6rem;
+  line-height: 1.4;
+}
+
 button.submitBtn {
   white-space: normal;
 }
