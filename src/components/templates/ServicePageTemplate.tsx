@@ -34,7 +34,7 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
     provider: {
       '@type': 'ProfessionalService',
       name: 'Anjos Brandão Soluções Ambientais',
-      url: 'https://anjosbrandao.eco.br',
+      url: 'https://www.anjosbrandao.eco.br',
     },
     areaServed: 'BA',
     serviceType: service.title,
@@ -54,11 +54,13 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://anjosbrandao.eco.br' },
-      { '@type': 'ListItem', position: 2, name: 'Serviços', item: 'https://anjosbrandao.eco.br/#capacidades' },
-      { '@type': 'ListItem', position: 3, name: service.title, item: `https://anjosbrandao.eco.br/${service.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.anjosbrandao.eco.br' },
+      { '@type': 'ListItem', position: 2, name: 'Serviços', item: 'https://www.anjosbrandao.eco.br/#capacidades' },
+      { '@type': 'ListItem', position: 3, name: service.title, item: `https://www.anjosbrandao.eco.br/${service.slug}` },
     ],
   }
+
+  const heroImageWebp = service.heroImage.replace(/\.jpg$/, '.webp')
 
   return (
     <div className={styles.page}>
@@ -69,7 +71,16 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
       <Header />
 
       <section id="hero" className={`${styles.hero} h-dark-bg target-section`}>
-        <img className={styles.heroImg} src={service.heroImage} alt={service.title} />
+        <picture>
+          <source type="image/webp" srcSet={heroImageWebp} />
+          <img
+            className={styles.heroImg}
+            src={service.heroImage}
+            alt={service.title}
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
         <div className={styles.heroGrad} />
         <div className={styles.heroContent}>
           <nav className={styles.breadcrumb} aria-label="Breadcrumb">

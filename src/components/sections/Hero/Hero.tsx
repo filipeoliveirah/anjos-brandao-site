@@ -20,7 +20,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/images/hero-bg-3000.jpg"
+        poster="/images/hero-bg-3000.webp"
       >
         <source src="/images/hero-video.mp4" type="video/mp4" />
       </video>
@@ -49,7 +49,7 @@ export default function Hero() {
       <div className={styles.whatsapp}>
         <a
           className={styles.whatsappLink}
-          href="https://wa.me/557196150067"
+          href="https://wa.me/5571991822466"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp"

@@ -16,13 +16,21 @@ export default function Empresa() {
             />
 
             <div className={styles.profilePic} data-aos="fade-up">
-              <img
-                src="/images/profile-pic.jpg"
-                srcSet="/images/profile-pic.jpg 1x, /images/profile-pic@2x.jpg 2x"
-                alt="Equipe técnica da Anjos Brandão em reunião de coordenação de projeto"
-                loading="lazy"
-                decoding="async"
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="/images/profile-pic.webp 1x, /images/profile-pic@2x.webp 2x"
                 />
+                <img
+                  src="/images/profile-pic.jpg"
+                  srcSet="/images/profile-pic.jpg 1x, /images/profile-pic@2x.jpg 2x"
+                  alt="Equipe técnica da Anjos Brandão em reunião de coordenação de projeto"
+                  width={667}
+                  height={1000}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
 
             <h3 data-aos="fade-up">Perfil</h3>
