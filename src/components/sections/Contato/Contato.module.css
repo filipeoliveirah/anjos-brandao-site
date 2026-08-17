@@ -13,7 +13,7 @@
 .leftColumn {
   display: flex;
   flex-direction: column;
-  gap: 12rem;
+  gap: 4rem;
 }
 
 .leftColumn h1 {
@@ -22,15 +22,6 @@
 
 .cta {
   margin-top: 0;
-}
-
-.buttonAdjust {
-  height: auto;
-  min-height: 6rem;
-  line-height: 1.4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 }
 
