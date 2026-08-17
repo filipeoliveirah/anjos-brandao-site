@@ -49,7 +49,7 @@ export default function Hero() {
       <div className={styles.whatsapp}>
         <a
           className={styles.whatsappLink}
-          href="https://wa.me/5571991822466"
+          href="https://wa.me/5571996150067"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp"

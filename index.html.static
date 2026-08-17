@@ -89,7 +89,7 @@
       "url": "https://www.anjosbrandao.eco.br/",
       "image": "https://www.anjosbrandao.eco.br/images/hero-bg-3000.jpg",
       "email": "contato@anjosbrandao.eco.br",
-      "telephone": "+55-71-99182-2466",
+      "telephone": "+55-71-99615-0067",
       "areaServed": ["Bahia", "Nordeste do Brasil"],
       "address": {
         "@type": "PostalAddress",
@@ -551,7 +551,7 @@
                     <div class="footer-contact-block" data-aos="fade-up">
                         <h5 class="footer-contact-block__header">Telefone</h5>
                         <p class="footer-contact-block__content">
-                            <a href="tel:+5571991822466">+55 71 9.9182-2466</a>
+                            <a href="tel:+5571996150067">+55 71 9.9615-0067</a>
                         </p>
                     </div>
                     <br>
@@ -564,7 +564,7 @@
                     <div class="footer-contact-block" data-aos="fade-up">
                         <h5 class="footer-contact-block__header">Comercial</h5>
                         <ul class="footer-contact-block__list">
-                            <li><a href="https://wa.me/5571991822466" onclick="return gtag_report_conversion('https://wa.me/5571991822466');">WhatsApp</a></li>
+                            <li><a href="https://wa.me/5571996150067" onclick="return gtag_report_conversion('https://wa.me/5571996150067');">WhatsApp</a></li>
                         </ul>
                     </div>
                 </div>

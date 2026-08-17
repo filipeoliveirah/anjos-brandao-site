@@ -35,7 +35,7 @@ export default function Contato() {
             </div>
             <div className={styles.contactBlock} data-aos="fade-up">
               <h5>Telefone</h5>
-              <p><a href="tel:+5571991822466">+55 71 9.9182-2466</a></p>
+              <p><a href="tel:+5571996150067">+55 71 9.9615-0067</a></p>
             </div>
             <div className={styles.contactBlock} data-aos="fade-up">
               <h5>Sede</h5>
@@ -43,7 +43,7 @@ export default function Contato() {
             </div>
             <div className={styles.contactBlock} data-aos="fade-up">
               <h5>Comercial</h5>
-              <ul><li><a href="https://wa.me/5571991822466" target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>WhatsApp</a></li></ul>
+              <ul><li><a href="https://wa.me/5571996150067" target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>WhatsApp</a></li></ul>
             </div>
           </div>
         </div>

@@ -57,7 +57,7 @@ export function validatePhone(phone: string): string | null {
     return 'Por favor, informe seu WhatsApp ou telefone.'
   }
   if (digits.length < 10 || digits.length > 11) {
-    return 'Informe um número com DDD completo (ex: (71) 99182-2466).'
+    return 'Informe um número com DDD completo (ex: (71) 99615-0067).'
   }
   const ddd = parseInt(digits.slice(0, 2), 10)
   if (ddd < 11 || ddd > 99) {
@@ -137,7 +137,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
 
   const getWhatsAppUrl = () => {
     const text = buildMessage()
-    return `https://wa.me/5571991822466?text=${encodeURIComponent(text)}`
+    return `https://wa.me/5571996150067?text=${encodeURIComponent(text)}`
   }
 
   const getMailtoUrl = () => {
