@@ -22,6 +22,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const activeId = useScrollSpy(NAV_ITEMS.map((n) => n.id))
 
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : ''
+  const currentSlug = currentPath.replace(/^\//, '').replace(/\/$/, '')
+  const isServicePage = Boolean(detailedServices[currentSlug])
+
   useEffect(() => {
     const handleScroll = () => {
       const hero = document.getElementById('hero')
@@ -40,7 +44,11 @@ export default function Header() {
   }, [isMenuOpen])
 
   useEffect(() => {
-    const close = () => { if (window.innerWidth >= 901) setIsMenuOpen(false) }
+    const close = () => {
+      if (window.innerWidth >= 901) {
+        setIsMenuOpen(false)
+      }
+    }
     window.addEventListener('resize', close)
     return () => window.removeEventListener('resize', close)
   }, [])
@@ -50,7 +58,9 @@ export default function Header() {
 
   const contentCls = [styles.content, isMenuOpen && styles.open].filter(Boolean).join(' ')
 
-  const closeMenu = () => setIsMenuOpen(false)
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
 
   return (
     <header className={headerCls}>
@@ -63,26 +73,92 @@ export default function Header() {
       <div className={contentCls}>
         <nav aria-label="Navegação principal">
           <ul className={styles.nav}>
-            {NAV_ITEMS.map(({ id, label }) => (
-              <li key={id} className={id === 'capacidades' ? styles.navItem : undefined}>
-                <a
-                  href={`/#${id}`}
-                  className={activeId === id ? styles.active : undefined}
-                  onClick={closeMenu}
-                >
-                  {label}
-                </a>
-                {id === 'capacidades' && (
-                  <ul className={styles.submenu}>
-                    {SERVICE_LINKS.map(({ slug, title }) => (
-                      <li key={slug}>
-                        <a href={`/${slug}`} onClick={closeMenu}>{title}</a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
+            {NAV_ITEMS.map(({ id, label }) => {
+              const isCapacidades = id === 'capacidades'
+              const isParentActive = isCapacidades
+                ? (activeId === 'capacidades' || isServicePage)
+                : (activeId === id)
+
+              if (isCapacidades) {
+                return (
+                  <li key={id} className={styles.navItem}>
+                    <a
+                      href={`/#${id}`}
+                      className={`${styles.navLink} ${isParentActive ? styles.active : ''}`}
+                      onClick={closeMenu}
+                    >
+                      <span>{label}</span>
+                      <svg
+                        className={styles.chevron}
+                        viewBox="0 0 10 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M1 1L5 5L9 1"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </a>
+
+                    {/* Dropdown for Desktop */}
+                    <div className={styles.dropdown}>
+                      <div className={styles.dropdownInner}>
+                        <div className={styles.dropdownHeading}>Serviços Técnicos</div>
+                        <ul className={styles.dropdownList}>
+                          {SERVICE_LINKS.map(({ slug, title }) => {
+                            const isCurrent = currentSlug === slug
+                            return (
+                              <li key={slug}>
+                                <a
+                                  href={`/${slug}`}
+                                  className={`${styles.dropdownLink} ${isCurrent ? styles.dropdownLinkActive : ''}`}
+                                  onClick={closeMenu}
+                                >
+                                  {title}
+                                </a>
+                              </li>
+                            )
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* Indented Submenu for Mobile Drawer */}
+                    <ul className={styles.mobileSubmenu}>
+                      {SERVICE_LINKS.map(({ slug, title }) => (
+                        <li key={slug}>
+                          <a
+                            href={`/${slug}`}
+                            className={`${styles.mobileSubLink} ${currentSlug === slug ? styles.mobileSubLinkActive : ''}`}
+                            onClick={closeMenu}
+                          >
+                            <span className={styles.mobileSubDash}>—</span>
+                            <span>{title}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                )
+              }
+
+              return (
+                <li key={id} className={styles.navItem}>
+                  <a
+                    href={`/#${id}`}
+                    className={`${styles.navLink} ${isParentActive ? styles.active : ''}`}
+                    onClick={closeMenu}
+                  >
+                    {label}
+                  </a>
+                </li>
+              )
+            })}
           </ul>
         </nav>
         <div className={styles.cta}>
