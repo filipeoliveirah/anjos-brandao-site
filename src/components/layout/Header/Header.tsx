@@ -30,15 +30,18 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const hero = document.getElementById('hero')
-      if (!hero) return
-      const trigger = hero.offsetHeight - window.innerHeight * 0.9
+      const trigger = hero
+        ? Math.max(hero.offsetHeight - window.innerHeight * 0.9, 40)
+        : 40
       const y = window.scrollY
       setIsSticky(y > trigger)
       setIsOffset(y > trigger + 20)
     }
+
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [currentPath])
 
   useEffect(() => {
     document.body.classList.toggle('menu-is-open', isMenuOpen)

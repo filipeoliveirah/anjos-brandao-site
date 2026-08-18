@@ -53,7 +53,7 @@ export default function BlogListTemplate({ posts, categories }: BlogListTemplate
 
       <Header />
 
-      <section className={styles.hero}>
+      <section id="hero" className={`${styles.hero} h-dark-bg target-section`}>
         <div className="row">
           <div className="column large-full">
             <nav className={styles.breadcrumb} aria-label="Breadcrumb">

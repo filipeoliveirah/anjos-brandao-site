@@ -92,7 +92,7 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
 
       <Header />
 
-      <header className={styles.hero}>
+      <header id="hero" className={`${styles.hero} h-dark-bg target-section`}>
         <div className="row">
           <div className="column large-full">
             <nav className={styles.breadcrumb} aria-label="Breadcrumb">
