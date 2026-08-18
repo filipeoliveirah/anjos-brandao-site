@@ -1,0 +1,84 @@
+.section {
+  padding: 14rem 0 12rem 0;
+  background: #ECE9DF;
+  position: relative;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 6rem;
+  width: 100%;
+}
+
+.headingCol {
+  max-width: 680px;
+}
+
+.sectionTitle {
+  font-size: 3.8rem;
+  line-height: 1.25;
+  color: var(--ab-graphite);
+  margin-bottom: 1.6rem;
+}
+
+.sectionSubtitle {
+  font-family: "Martel", serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #4A4D52;
+  margin: 0;
+}
+
+.ctaCol {
+  flex-shrink: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+  width: 100%;
+}
+
+.mobileCta {
+  display: none;
+  margin-top: 4rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  .ctaCol {
+    display: none;
+  }
+  .mobileCta {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 10rem 0 8rem 0;
+  }
+  .sectionTitle {
+    font-size: 3rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+}

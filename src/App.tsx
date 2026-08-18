@@ -6,9 +6,14 @@ import Hero from './components/sections/Hero/Hero'
 import Empresa from './components/sections/Empresa/Empresa'
 import Capacidades from './components/sections/Capacidades/Capacidades'
 import Obras from './components/sections/Obras/Obras'
+import BlogSection from './components/sections/Blog/BlogSection'
 import Contato from './components/sections/Contato/Contato'
 import ServicePageTemplate from './components/templates/ServicePageTemplate'
+import BlogListTemplate from './components/templates/BlogListTemplate'
+import BlogPostTemplate from './components/templates/BlogPostTemplate'
 import { detailedServices } from './data/services'
+import { getAllPosts, getAllCategories, getPostBySlug } from './data/blog'
+import { Post, PostDetail, Category } from './types/blog'
 
 const BASE_URL = 'https://www.anjosbrandao.eco.br'
 
@@ -40,26 +45,131 @@ export default function App() {
   const [loaded, setLoaded] = useState(false)
   const [pathname, setPathname] = useState(window.location.pathname)
 
+  // Blog State
+  const [blogPosts, setBlogPosts] = useState<Post[]>([])
+  const [blogCategories, setBlogCategories] = useState<Category[]>([])
+  const [currentPost, setCurrentPost] = useState<PostDetail | null>(null)
+  const [blogLoading, setBlogLoading] = useState(false)
+
   useEffect(() => {
     AOS.init({ duration: 600, once: true, offset: 100, easing: 'ease-in-out', disable: 'mobile' })
 
     const handlePopState = () => setPathname(window.location.pathname)
     window.addEventListener('popstate', handlePopState)
 
-    // Agilizar descarte do preloader para FCP imediato
     const timer = setTimeout(() => setLoaded(true), 150)
+
+    // Intercept internal link clicks for instant SPA routing
+    const handleLinkClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest('a')
+      if (!target) return
+      const href = target.getAttribute('href')
+      if (!href) return
+
+      if (
+        href.startsWith('http') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('tel:') ||
+        target.getAttribute('target') === '_blank'
+      ) {
+        return
+      }
+
+      if (href.startsWith('#')) return
+
+      if (href.startsWith('/')) {
+        const isHashOnHome = href.startsWith('/#')
+        const currentIsHome = window.location.pathname === '/'
+
+        if (isHashOnHome && currentIsHome) {
+          return
+        }
+
+        e.preventDefault()
+        window.history.pushState({}, '', href)
+        setPathname(window.location.pathname)
+        window.scrollTo(0, 0)
+      }
+    }
+
+    document.addEventListener('click', handleLinkClick)
 
     return () => {
       clearTimeout(timer)
       window.removeEventListener('popstate', handlePopState)
+      document.removeEventListener('click', handleLinkClick)
     }
   }, [])
 
-  const slug = pathname.replace(/^\//, '').replace(/\/$/, '')
-  const activeService = detailedServices[slug]
+  const cleanPath = pathname.replace(/^\//, '').replace(/\/$/, '')
+  const isBlogList = cleanPath === 'blog'
+  const isBlogPost = cleanPath.startsWith('blog/')
+  const blogPostSlug = isBlogPost ? cleanPath.replace(/^blog\//, '') : ''
+  const activeService = detailedServices[cleanPath]
 
+  // Carregar dados de Blog
   useEffect(() => {
-    if (activeService) {
+    if (isBlogList) {
+      setBlogLoading(true)
+      Promise.all([getAllPosts(), getAllCategories()]).then(([posts, categories]) => {
+        setBlogPosts(posts)
+        setBlogCategories(categories)
+        setBlogLoading(false)
+      })
+    } else if (isBlogPost && blogPostSlug) {
+      setBlogLoading(true)
+      getPostBySlug(blogPostSlug).then((post) => {
+        setCurrentPost(post)
+        setBlogLoading(false)
+      })
+    }
+  }, [isBlogList, isBlogPost, blogPostSlug])
+
+  // Gerenciamento dinâmico de SEO / Meta Tags
+  useEffect(() => {
+    if (isBlogPost && currentPost) {
+      const pageTitle = currentPost.seo?.metaTitle || `${currentPost.title} | Blog Anjos Brandão`
+      const pageDesc = currentPost.seo?.metaDescription || currentPost.excerpt
+      const pageUrl = `${BASE_URL}/blog/${currentPost.slug}`
+      const pageImage = currentPost.seo?.shareImageUrl || currentPost.mainImageUrl || `${BASE_URL}/images/hero-bg-3000.webp`
+
+      document.title = pageTitle
+      updateMetaTag('meta[name="description"]', 'content', pageDesc)
+      updateMetaTag('link[rel="canonical"]', 'href', pageUrl)
+
+      // Open Graph
+      updateMetaTag('meta[property="og:type"]', 'content', 'article')
+      updateMetaTag('meta[property="og:title"]', 'content', pageTitle)
+      updateMetaTag('meta[property="og:description"]', 'content', pageDesc)
+      updateMetaTag('meta[property="og:url"]', 'content', pageUrl)
+      updateMetaTag('meta[property="og:image"]', 'content', pageImage)
+
+      // Twitter
+      updateMetaTag('meta[name="twitter:title"]', 'content', pageTitle)
+      updateMetaTag('meta[name="twitter:description"]', 'content', pageDesc)
+      updateMetaTag('meta[name="twitter:image"]', 'content', pageImage)
+    } else if (isBlogList) {
+      const pageTitle = 'Blog & Publicações Técnicas | Anjos Brandão Soluções Ambientais'
+      const pageDesc = 'Artigos, análises e guias práticos sobre licenciamento ambiental no INEMA, PGRS, ASV, inventário florestal e ESG na Bahia.'
+      const pageUrl = `${BASE_URL}/blog`
+      const pageImage = `${BASE_URL}/images/hero-bg-3000.webp`
+
+      document.title = pageTitle
+      updateMetaTag('meta[name="description"]', 'content', pageDesc)
+      updateMetaTag('link[rel="canonical"]', 'href', pageUrl)
+
+      // Open Graph
+      updateMetaTag('meta[property="og:type"]', 'content', 'website')
+      updateMetaTag('meta[property="og:title"]', 'content', pageTitle)
+      updateMetaTag('meta[property="og:description"]', 'content', pageDesc)
+      updateMetaTag('meta[property="og:url"]', 'content', pageUrl)
+      updateMetaTag('meta[property="og:image"]', 'content', pageImage)
+
+      // Twitter
+      updateMetaTag('meta[name="twitter:title"]', 'content', pageTitle)
+      updateMetaTag('meta[name="twitter:description"]', 'content', pageDesc)
+      updateMetaTag('meta[name="twitter:image"]', 'content', pageImage)
+    } else if (activeService) {
       const pageTitle = `${activeService.title} | Anjos Brandão Soluções Ambientais`
       const pageDesc = activeService.description
       const pageUrl = `${BASE_URL}/${activeService.slug}`
@@ -70,6 +180,7 @@ export default function App() {
       updateMetaTag('link[rel="canonical"]', 'href', pageUrl)
 
       // Open Graph
+      updateMetaTag('meta[property="og:type"]', 'content', 'website')
       updateMetaTag('meta[property="og:title"]', 'content', pageTitle)
       updateMetaTag('meta[property="og:description"]', 'content', pageDesc)
       updateMetaTag('meta[property="og:url"]', 'content', pageUrl)
@@ -90,6 +201,7 @@ export default function App() {
       updateMetaTag('link[rel="canonical"]', 'href', homeUrl)
 
       // Open Graph
+      updateMetaTag('meta[property="og:type"]', 'content', 'website')
       updateMetaTag('meta[property="og:title"]', 'content', homeTitle)
       updateMetaTag('meta[property="og:description"]', 'content', homeDesc)
       updateMetaTag('meta[property="og:url"]', 'content', homeUrl)
@@ -100,7 +212,33 @@ export default function App() {
       updateMetaTag('meta[name="twitter:description"]', 'content', homeDesc)
       updateMetaTag('meta[name="twitter:image"]', 'content', homeImage)
     }
-  }, [activeService, pathname])
+  }, [isBlogList, isBlogPost, currentPost, activeService, pathname])
+
+  // Renderização Condicional de Rotas
+  if (isBlogPost) {
+    if (currentPost) {
+      return <BlogPostTemplate post={currentPost} />
+    }
+    return (
+      <div style={{ minHeight: '100vh', background: 'var(--ab-offwhite)' }}>
+        <Header />
+        <div style={{ paddingTop: '20rem', textAlign: 'center', fontFamily: 'Gothic A1, sans-serif' }}>
+          <h2>{blogLoading ? 'Carregando publicação...' : 'Artigo não encontrado'}</h2>
+          {!blogLoading && (
+            <p style={{ marginTop: '2rem' }}>
+              <a href="/blog" style={{ color: 'var(--ab-green)', fontWeight: 700 }}>
+                ← Voltar para o Blog
+              </a>
+            </p>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  if (isBlogList) {
+    return <BlogListTemplate posts={blogPosts} categories={blogCategories} />
+  }
 
   if (activeService) {
     return <ServicePageTemplate service={activeService} />
@@ -115,6 +253,7 @@ export default function App() {
         <Empresa />
         <Capacidades />
         <Obras />
+        <BlogSection />
       </main>
       <Contato />
     </>

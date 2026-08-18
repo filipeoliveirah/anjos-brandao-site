@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { id: 'empresa', label: 'Empresa' },
   { id: 'capacidades', label: 'Capacidades' },
   { id: 'obras', label: 'Obras' },
+  { id: 'blog', label: 'Blog' },
   { id: 'contato', label: 'Contato' },
 ]
 
@@ -75,9 +76,14 @@ export default function Header() {
           <ul className={styles.nav}>
             {NAV_ITEMS.map(({ id, label }) => {
               const isCapacidades = id === 'capacidades'
+              const isBlog = id === 'blog'
               const isParentActive = isCapacidades
                 ? (activeId === 'capacidades' || isServicePage)
+                : isBlog
+                ? currentPath.startsWith('/blog')
                 : (activeId === id)
+
+              const itemHref = isBlog ? '/blog' : `/#${id}`
 
               if (isCapacidades) {
                 return (
@@ -150,7 +156,7 @@ export default function Header() {
               return (
                 <li key={id} className={styles.navItem}>
                   <a
-                    href={`/#${id}`}
+                    href={itemHref}
                     className={`${styles.navLink} ${isParentActive ? styles.active : ''}`}
                     onClick={closeMenu}
                   >
