@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --port 5174",
     "build": "node scripts/generate-sitemap.mjs && tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "seed:sanity": "node scripts/seed-sanity.mjs"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.4",
