@@ -59,6 +59,9 @@
 
 .thumbLink img {
   width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   display: block;
   transition: transform .6s ease;
 }

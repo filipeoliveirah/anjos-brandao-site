@@ -18,7 +18,6 @@ export default function PostCard({ post }: PostCardProps) {
 
   const categoryName = post.categories?.[0]?.title ?? 'Artigo Técnico'
 
-  // Image resolution priority: direct URL -> Sanity Builder -> placeholder
   let imageUrl = post.mainImageUrl || '/images/hero-bg-3000.webp'
   if (post.mainImage && !post.mainImageUrl) {
     const built = urlForImage(post.mainImage)
@@ -34,6 +33,8 @@ export default function PostCard({ post }: PostCardProps) {
           src={imageUrl}
           alt={post.mainImageAlt || post.title}
           className={styles.image}
+          width={800}
+          height={450}
           loading="lazy"
           decoding="async"
         />

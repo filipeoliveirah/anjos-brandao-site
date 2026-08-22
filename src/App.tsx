@@ -41,25 +41,77 @@ function updateMetaTag(selector: string, attr: string, value: string) {
   }
 }
 
+export function scrollToAnchor(targetId: string, smooth = true) {
+  const cleanId = targetId.replace(/^#/, '').replace(/^\/#/, '')
+  if (!cleanId) return
+
+  let attempts = 0
+  const maxAttempts = 30
+
+  const doScroll = () => {
+    attempts++
+    const element = document.getElementById(cleanId)
+    if (element) {
+      const headerEl = document.querySelector('header')
+      const headerHeight = headerEl ? headerEl.offsetHeight : 80
+      const elementTop = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = Math.max(0, elementTop - headerHeight + 5)
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: smooth ? 'smooth' : 'auto',
+      })
+
+      setTimeout(() => {
+        if (typeof (window as any).AOS?.refresh === 'function') {
+          (window as any).AOS.refresh()
+        }
+      }, 350)
+    } else if (attempts < maxAttempts) {
+      setTimeout(doScroll, 60)
+    }
+  }
+
+  requestAnimationFrame(doScroll)
+}
+
 export default function App() {
   const [loaded, setLoaded] = useState(false)
   const [pathname, setPathname] = useState(window.location.pathname)
 
-  // Blog State
   const [blogPosts, setBlogPosts] = useState<Post[]>([])
   const [blogCategories, setBlogCategories] = useState<Category[]>([])
   const [currentPost, setCurrentPost] = useState<PostDetail | null>(null)
   const [blogLoading, setBlogLoading] = useState(false)
 
   useEffect(() => {
-    AOS.init({ duration: 600, once: true, offset: 100, easing: 'ease-in-out', disable: 'mobile' })
+    AOS.init({
+      duration: 600,
+      once: true,
+      offset: 60,
+      easing: 'ease-in-out',
+      debounceDelay: 50,
+      throttleDelay: 99,
+    })
 
-    const handlePopState = () => setPathname(window.location.pathname)
+    const handleWindowLoad = () => {
+      AOS.refresh()
+    }
+    window.addEventListener('load', handleWindowLoad)
+
+    const handlePopState = () => {
+      setPathname(window.location.pathname)
+      if (window.location.hash) {
+        scrollToAnchor(window.location.hash, true)
+      }
+    }
     window.addEventListener('popstate', handlePopState)
 
-    const timer = setTimeout(() => setLoaded(true), 150)
+    const timer = setTimeout(() => {
+      setLoaded(true)
+      AOS.refresh()
+    }, 150)
 
-    // Intercept internal link clicks for instant SPA routing
     const handleLinkClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement).closest('a')
       if (!target) return
@@ -75,13 +127,29 @@ export default function App() {
         return
       }
 
-      if (href.startsWith('#')) return
+      if (href.startsWith('#')) {
+        const hash = href.substring(1)
+        if (hash) {
+          e.preventDefault()
+          window.history.pushState({}, '', href)
+          scrollToAnchor(hash, true)
+        }
+        return
+      }
 
       if (href.startsWith('/')) {
         const isHashOnHome = href.startsWith('/#')
-        const currentIsHome = window.location.pathname === '/'
 
-        if (isHashOnHome && currentIsHome) {
+        if (isHashOnHome) {
+          e.preventDefault()
+          const hash = href.replace(/^\/#/, '')
+          window.history.pushState({}, '', href)
+
+          if (window.location.pathname !== '/') {
+            setPathname('/')
+          }
+
+          scrollToAnchor(hash, true)
           return
         }
 
@@ -89,6 +157,12 @@ export default function App() {
         window.history.pushState({}, '', href)
         setPathname(window.location.pathname)
         window.scrollTo(0, 0)
+
+        setTimeout(() => {
+          if (typeof (window as any).AOS?.refresh === 'function') {
+            (window as any).AOS.refresh()
+          }
+        }, 100)
       }
     }
 
@@ -96,10 +170,17 @@ export default function App() {
 
     return () => {
       clearTimeout(timer)
+      window.removeEventListener('load', handleWindowLoad)
       window.removeEventListener('popstate', handlePopState)
       document.removeEventListener('click', handleLinkClick)
     }
   }, [])
+
+  useEffect(() => {
+    if (window.location.hash && pathname === '/') {
+      scrollToAnchor(window.location.hash, false)
+    }
+  }, [pathname])
 
   const cleanPath = pathname.replace(/^\//, '').replace(/\/$/, '')
   const isBlogList = cleanPath === 'blog'

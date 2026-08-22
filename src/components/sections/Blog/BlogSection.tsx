@@ -2,19 +2,24 @@ import { useEffect, useState } from 'react'
 import PostCard from '../../blog/PostCard/PostCard'
 import Button from '../../ui/Button/Button'
 import { Post } from '../../../types/blog'
-import { getRecentPosts } from '../../../data/blog'
+import { getRecentPosts, INITIAL_POSTS } from '../../../data/blog'
 import styles from './BlogSection.module.css'
 
 export default function BlogSection() {
-  const [posts, setPosts] = useState<Post[]>([])
+  const [posts, setPosts] = useState<Post[]>(INITIAL_POSTS.slice(0, 3))
 
   useEffect(() => {
     getRecentPosts(3).then((res) => {
-      setPosts(res)
+      if (res && res.length > 0) {
+        setPosts(res)
+        setTimeout(() => {
+          if (typeof (window as any).AOS?.refresh === 'function') {
+            (window as any).AOS.refresh()
+          }
+        }, 150)
+      }
     })
   }, [])
-
-  if (posts.length === 0) return null
 
   return (
     <section id="blog" className={`${styles.section} target-section`}>
@@ -29,7 +34,7 @@ export default function BlogSection() {
               </p>
             </div>
             <div className={styles.ctaCol} data-aos="fade-up">
-              <Button variant="stroke" href="/blog">
+              <Button variant="darkStroke" href="/blog">
                 Acessar o Blog Completo →
               </Button>
             </div>
@@ -44,7 +49,7 @@ export default function BlogSection() {
           </div>
 
           <div className={styles.mobileCta}>
-            <Button variant="stroke" href="/blog">
+            <Button variant="darkStroke" href="/blog">
               Acessar o Blog Completo →
             </Button>
           </div>

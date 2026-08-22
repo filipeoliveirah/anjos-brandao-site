@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import styles from './Button.module.css'
 
 interface ButtonProps {
-  variant?: 'primary' | 'stroke' | 'small'
+  variant?: 'primary' | 'stroke' | 'darkStroke' | 'small'
   href?: string
   target?: string
   rel?: string

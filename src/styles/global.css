@@ -135,3 +135,10 @@ img { max-width: 100%; height: auto; }
   }
   [data-aos] { opacity: 1 !important; transform: none !important; }
 }
+
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

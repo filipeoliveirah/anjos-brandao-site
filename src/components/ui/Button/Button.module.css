@@ -22,7 +22,6 @@
   color: var(--ab-offwhite);
 }
 
-/* .btn.primary raises specificity to (0,3,0), beating .h-dark-bg a:hover (0,2,1) */
 .btn.primary:hover,
 .btn.primary:focus {
   background: var(--ab-offwhite);
@@ -39,6 +38,19 @@
 .stroke:hover {
   background: var(--ab-offwhite);
   color: var(--ab-graphite);
+}
+
+.darkStroke {
+  background: transparent;
+  border-color: var(--ab-graphite);
+  color: var(--ab-graphite);
+}
+
+.btn.darkStroke:hover,
+.btn.darkStroke:focus {
+  background: var(--ab-green);
+  border-color: var(--ab-green);
+  color: var(--ab-offwhite);
 }
 
 .small {
