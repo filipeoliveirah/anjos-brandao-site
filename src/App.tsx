@@ -11,6 +11,7 @@ import Contato from './components/sections/Contato/Contato'
 import ServicePageTemplate from './components/templates/ServicePageTemplate'
 import BlogListTemplate from './components/templates/BlogListTemplate'
 import BlogPostTemplate from './components/templates/BlogPostTemplate'
+import WhatsAppButton from './components/ui/WhatsAppButton/WhatsAppButton'
 import { detailedServices } from './data/services'
 import { getAllPosts, getAllCategories, getPostBySlug } from './data/blog'
 import { Post, PostDetail, Category } from './types/blog'
@@ -296,47 +297,49 @@ export default function App() {
   }, [isBlogList, isBlogPost, currentPost, activeService, pathname])
 
   // Renderização Condicional de Rotas
-  if (isBlogPost) {
-    if (currentPost) {
-      return <BlogPostTemplate post={currentPost} />
-    }
-    return (
-      <div style={{ minHeight: '100vh', background: 'var(--ab-offwhite)' }}>
-        <Header />
-        <div style={{ paddingTop: '20rem', textAlign: 'center', fontFamily: 'Gothic A1, sans-serif' }}>
-          <h2>{blogLoading ? 'Carregando publicação...' : 'Artigo não encontrado'}</h2>
-          {!blogLoading && (
-            <p style={{ marginTop: '2rem' }}>
-              <a href="/blog" style={{ color: 'var(--ab-green)', fontWeight: 700 }}>
-                ← Voltar para o Blog
-              </a>
-            </p>
-          )}
-        </div>
-      </div>
-    )
-  }
-
-  if (isBlogList) {
-    return <BlogListTemplate posts={blogPosts} categories={blogCategories} />
-  }
-
-  if (activeService) {
-    return <ServicePageTemplate service={activeService} />
-  }
-
   return (
     <>
       <Preloader visible={!loaded} />
-      <Header />
-      <main id="content">
-        <Hero />
-        <Empresa />
-        <Capacidades />
-        <Obras />
-        <BlogSection />
-      </main>
-      <Contato />
+
+      {isBlogPost && (
+        currentPost ? (
+          <BlogPostTemplate post={currentPost} />
+        ) : (
+          <div style={{ minHeight: '100vh', background: 'var(--ab-offwhite)' }}>
+            <Header />
+            <div style={{ paddingTop: '20rem', textAlign: 'center', fontFamily: 'Gothic A1, sans-serif' }}>
+              <h2>{blogLoading ? 'Carregando publicação...' : 'Artigo não encontrado'}</h2>
+              {!blogLoading && (
+                <p style={{ marginTop: '2rem' }}>
+                  <a href="/blog" style={{ color: 'var(--ab-green)', fontWeight: 700 }}>
+                    ← Voltar para o Blog
+                  </a>
+                </p>
+              )}
+            </div>
+          </div>
+        )
+      )}
+
+      {isBlogList && <BlogListTemplate posts={blogPosts} categories={blogCategories} />}
+
+      {activeService && <ServicePageTemplate service={activeService} />}
+
+      {!isBlogPost && !isBlogList && !activeService && (
+        <>
+          <Header />
+          <main id="content">
+            <Hero />
+            <Empresa />
+            <Capacidades />
+            <Obras />
+            <BlogSection />
+          </main>
+          <Contato />
+        </>
+      )}
+
+      <WhatsAppButton />
     </>
   )
 }
