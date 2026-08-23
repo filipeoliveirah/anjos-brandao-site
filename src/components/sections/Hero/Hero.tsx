@@ -47,7 +47,7 @@ export default function Hero() {
             {SECTORS.map((s) => <li key={s}>{s}</li>)}
           </ul>
           <div className={styles.cta}>
-            <Button variant="primary" href="#contato">
+            <Button variant="primary" href="/#contato">
               Falar com um consultor
             </Button>
           </div>

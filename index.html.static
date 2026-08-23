@@ -137,15 +137,15 @@
 
             <nav class="row header-nav-wrap" aria-label="Navegação principal">
                 <ul class="header-nav">
-                    <li><a class="smoothscroll" href="#hero" title="Início">Início</a></li>
-                    <li><a class="smoothscroll" href="#empresa" title="A empresa">Empresa</a></li>
-                    <li><a class="smoothscroll" href="#capacidades" title="Capacidades">Capacidades</a></li>
-                    <li><a class="smoothscroll" href="#obras" title="Obras">Obras</a></li>
-                    <li><a class="smoothscroll" href="#contato" title="Contato">Contato</a></li>
+                    <li><a class="smoothscroll" href="/#hero" title="Início">Início</a></li>
+                    <li><a class="smoothscroll" href="/#empresa" title="A empresa">Empresa</a></li>
+                    <li><a class="smoothscroll" href="/#capacidades" title="Capacidades">Capacidades</a></li>
+                    <li><a class="smoothscroll" href="/#obras" title="Obras">Obras</a></li>
+                    <li><a class="smoothscroll" href="/#contato" title="Contato">Contato</a></li>
                 </ul>
             </nav> <!-- end header-nav-wrap -->
 
-            <a href="#contato" class="btn btn--stroke btn--small smoothscroll">Fale com um consultor</a>
+            <a href="/#contato" class="btn btn--stroke btn--small smoothscroll">Fale com um consultor</a>
 
         </div> <!-- end header-content -->
 

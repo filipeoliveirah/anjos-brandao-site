@@ -132,8 +132,15 @@ export default function App() {
         const hash = href.substring(1)
         if (hash) {
           e.preventDefault()
-          window.history.pushState({}, '', href)
-          scrollToAnchor(hash, true)
+          const targetEl = document.getElementById(hash)
+          if (targetEl || window.location.pathname === '/') {
+            window.history.pushState({}, '', href)
+            scrollToAnchor(hash, true)
+          } else {
+            window.history.pushState({}, '', `/#${hash}`)
+            setPathname('/')
+            scrollToAnchor(hash, true)
+          }
         }
         return
       }
