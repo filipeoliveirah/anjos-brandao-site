@@ -47,7 +47,7 @@ export function scrollToAnchor(targetId: string, smooth = true) {
   if (!cleanId) return
 
   let attempts = 0
-  const maxAttempts = 30
+  const maxAttempts = 60
 
   const doScroll = () => {
     attempts++
@@ -69,11 +69,11 @@ export function scrollToAnchor(targetId: string, smooth = true) {
         }
       }, 350)
     } else if (attempts < maxAttempts) {
-      setTimeout(doScroll, 60)
+      setTimeout(doScroll, 40)
     }
   }
 
-  requestAnimationFrame(doScroll)
+  setTimeout(doScroll, 20)
 }
 
 export default function App() {
@@ -128,49 +128,53 @@ export default function App() {
         return
       }
 
+      // 1. Pure in-page hash links (e.g. #empresa, #contato, #detalhes, #formulario)
       if (href.startsWith('#')) {
         const hash = href.substring(1)
-        if (hash) {
-          e.preventDefault()
-          const targetEl = document.getElementById(hash)
-          if (targetEl || window.location.pathname === '/') {
-            window.history.pushState({}, '', href)
-            scrollToAnchor(hash, true)
-          } else {
-            window.history.pushState({}, '', `/#${hash}`)
-            setPathname('/')
-            scrollToAnchor(hash, true)
-          }
+        if (!hash) return
+        e.preventDefault()
+
+        const targetEl = document.getElementById(hash)
+        if (targetEl || pathname === '/') {
+          window.history.pushState({}, '', href)
+          scrollToAnchor(hash, true)
+        } else {
+          window.history.pushState({}, '', `/#${hash}`)
+          setPathname('/')
+          scrollToAnchor(hash, true)
         }
         return
       }
 
-      if (href.startsWith('/')) {
-        const isHashOnHome = href.startsWith('/#')
-
-        if (isHashOnHome) {
-          e.preventDefault()
-          const hash = href.replace(/^\/#/, '')
-          window.history.pushState({}, '', href)
-
-          if (window.location.pathname !== '/') {
-            setPathname('/')
-          }
-
-          scrollToAnchor(hash, true)
-          return
-        }
-
+      // 2. Home hash links (e.g. /#empresa, /#capacidades, /#obras, /#contato)
+      if (href.startsWith('/#')) {
         e.preventDefault()
+        const hash = href.substring(2)
         window.history.pushState({}, '', href)
-        setPathname(window.location.pathname)
-        window.scrollTo(0, 0)
+        setPathname('/')
+        scrollToAnchor(hash, true)
+        return
+      }
+
+      // 3. Full pathname routes (e.g. /, /blog, /licenciamento-ambiental)
+      if (href.startsWith('/')) {
+        e.preventDefault()
+        const url = new URL(href, window.location.origin)
+        window.history.pushState({}, '', href)
+        setPathname(url.pathname)
+
+        if (url.hash) {
+          scrollToAnchor(url.hash, true)
+        } else {
+          window.scrollTo(0, 0)
+        }
 
         setTimeout(() => {
           if (typeof (window as any).AOS?.refresh === 'function') {
             (window as any).AOS.refresh()
           }
         }, 100)
+        return
       }
     }
 
@@ -182,7 +186,7 @@ export default function App() {
       window.removeEventListener('popstate', handlePopState)
       document.removeEventListener('click', handleLinkClick)
     }
-  }, [])
+  }, [pathname])
 
   useEffect(() => {
     if (window.location.hash && pathname === '/') {
