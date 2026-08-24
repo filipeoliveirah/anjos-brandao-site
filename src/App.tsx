@@ -287,7 +287,7 @@ export default function App() {
       const homeTitle = 'Anjos Brandão · Soluções e Gestão Ambiental'
       const homeDesc = 'Anjos Brandão — Soluções ambientais para empresas e empreendimentos. Licenciamento e gestão ambiental integrados à operação. Construção Civil, Infraestrutura e Indústria na Bahia.'
       const homeUrl = `${BASE_URL}/`
-      const homeImage = `${BASE_URL}/images/hero-bg-3000.webp`
+      const homeImage = `${BASE_URL}/images/hero-poster.webp`
 
       document.title = homeTitle
       updateMetaTag('meta[name="description"]', 'content', homeDesc)

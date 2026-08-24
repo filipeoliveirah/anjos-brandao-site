@@ -1,24 +1,9 @@
-import { useState, useEffect } from 'react'
 import Button from '../../ui/Button/Button'
 import styles from './Hero.module.css'
 
 const SECTORS = ['Construção Civil', 'Infraestrutura', 'Indústria']
 
 export default function Hero() {
-  const [loadVideo, setLoadVideo] = useState(false)
-
-  useEffect(() => {
-    const isSaveData = (navigator as any).connection?.saveData
-    const isSlow = ['slow-2g', '2g', '3g'].includes((navigator as any).connection?.effectiveType)
-
-    if (!isSaveData && !isSlow) {
-      const timer = setTimeout(() => {
-        setLoadVideo(true)
-      }, 800)
-      return () => clearTimeout(timer)
-    }
-  }, [])
-
   return (
     <section id="hero" className={`${styles.hero} target-section`}>
       <video
@@ -27,10 +12,11 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/images/hero-bg-3000.webp"
-        preload="none"
+        poster="/images/hero-poster.webp"
+        preload="metadata"
+        aria-hidden="true"
       >
-        {loadVideo && <source src="/images/hero-video.mp4" type="video/mp4" />}
+        <source src="/images/hero-video.mp4" type="video/mp4" />
       </video>
 
       <div className={styles.content}>

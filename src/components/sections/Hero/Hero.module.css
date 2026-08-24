@@ -5,6 +5,11 @@
   position: relative;
   display: flex;
   align-items: center;
+  background-color: var(--ab-graphite);
+  background-image: url('/images/hero-poster.webp');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero::before {
