@@ -68,3 +68,19 @@
   outline: 2px solid var(--ab-green-lt);
   outline-offset: 3px;
 }
+
+@media screen and (max-width: 600px) {
+  .btn {
+    font-size: 1.2rem;
+    letter-spacing: 0.12rem;
+    padding: 1.4rem 2rem;
+    max-width: 100%;
+    white-space: normal;
+    height: auto;
+    min-height: 5.2rem;
+    line-height: 1.35;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -284,8 +284,8 @@ export default function App() {
       updateMetaTag('meta[name="twitter:description"]', 'content', pageDesc)
       updateMetaTag('meta[name="twitter:image"]', 'content', pageImage)
     } else {
-      const homeTitle = 'Anjos Brandão · Coordenação Ambiental Integrada'
-      const homeDesc = 'Anjos Brandão — coordenação ambiental integrada à construção civil, infraestrutura e indústria. Licenciamento (LP→LO), gestão, monitoramento, ESG e operações de campo na Bahia.'
+      const homeTitle = 'Anjos Brandão · Soluções e Gestão Ambiental'
+      const homeDesc = 'Anjos Brandão — Soluções ambientais para empresas e empreendimentos. Licenciamento e gestão ambiental integrados à operação. Construção Civil, Infraestrutura e Indústria na Bahia.'
       const homeUrl = `${BASE_URL}/`
       const homeImage = `${BASE_URL}/images/hero-bg-3000.webp`
 

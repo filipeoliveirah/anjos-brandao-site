@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Button from '../../ui/Button/Button'
 import styles from './Hero.module.css'
 
-const SECTORS = ['Construção civil', 'Infraestrutura', 'Indústria']
+const SECTORS = ['Construção Civil', 'Infraestrutura', 'Indústria']
 
 export default function Hero() {
   const [loadVideo, setLoadVideo] = useState(false)
@@ -34,21 +34,27 @@ export default function Hero() {
       </video>
 
       <div className={styles.content}>
-        <div>
+        <div className={styles.inner}>
           <div className={styles.brandContainer}>
-            <span className={styles.brandTagline}>Soluções Ambientais</span>
+            <span className={styles.brandTagline}>
+              Soluções ambientais para empresas e empreendimentos
+            </span>
           </div>
           <h1 className={styles.heading}>
-            Coordenação contínua,
-            atuando desde o planejamento pré-obra
-            até a execução e permanência operacional.
+            Licenciamento e gestão ambiental integrados à operação do seu negócio.
           </h1>
-          <ul className={styles.sectors} aria-label="Setores de atuação">
-            {SECTORS.map((s) => <li key={s}>{s}</li>)}
-          </ul>
+          <p className={styles.description}>
+            Do planejamento à operação, coordenamos licenças, estudos, condicionantes e serviços ambientais para manter o empreendimento em conformidade e avançando.
+          </p>
+          <div className={styles.sectorsContainer}>
+            <span className={styles.sectorsPrefix}>Atuamos em:</span>
+            <ul className={styles.sectors} aria-label="Setores de atuação">
+              {SECTORS.map((s) => <li key={s}>{s}</li>)}
+            </ul>
+          </div>
           <div className={styles.cta}>
             <Button variant="primary" href="/#contato">
-              Falar com um consultor
+              Solicitar avaliação do projeto
             </Button>
           </div>
         </div>
