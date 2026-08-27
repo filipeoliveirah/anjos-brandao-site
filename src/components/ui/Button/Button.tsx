@@ -10,6 +10,7 @@ interface ButtonProps {
   onClick?: () => void
   fullWidth?: boolean
   className?: string
+  disabled?: boolean
   children: ReactNode
 }
 
@@ -22,6 +23,7 @@ export default function Button({
   onClick,
   fullWidth = false,
   className,
+  disabled = false,
   children,
 }: ButtonProps) {
   const cls = [styles.btn, styles[variant], fullWidth ? styles.fullWidth : '', className]
@@ -35,5 +37,9 @@ export default function Button({
       </a>
     )
   }
-  return <button type={type} className={cls} onClick={onClick}>{children}</button>
+  return (
+    <button type={type} className={cls} onClick={onClick} disabled={disabled}>
+      {children}
+    </button>
+  )
 }

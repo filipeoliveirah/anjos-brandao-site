@@ -1,45 +1,48 @@
-import { defineConfig, loadEnv } from 'vite'
-import react from '@vitejs/plugin-react'
+export default async function handler(req: any, res: any) {
+  // Configuração de CORS
+  res.setHeader('Access-Control-Allow-Credentials', 'true')
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
 
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '')
+  if (req.method === 'OPTIONS') {
+    res.status(200).end()
+    return
+  }
 
-  return {
-    plugins: [
-      react(),
-      {
-        name: 'resend-dev-middleware',
-        configureServer(server) {
-          server.middlewares.use(async (req, res, next) => {
-            if (req.url === '/api/send-lead' && req.method === 'POST') {
-              let body = ''
-              req.on('data', (chunk) => {
-                body += chunk
-              })
-              req.on('end', async () => {
-                try {
-                  const data = JSON.parse(body)
-                  const apiKey = env.RESEND_API_KEY
-                  if (!apiKey) {
-                    res.setHeader('Content-Type', 'application/json')
-                    res.statusCode = 500
-                    res.end(JSON.stringify({ error: 'RESEND_API_KEY não configurada no ambiente local' }))
-                    return
-                  }
-                  const toEmail = env.RESEND_TO_EMAIL || 'contato@anjosbrandao.eco.br'
-                  const fromEmail = env.RESEND_FROM_EMAIL || 'Anjos Brandão <onboarding@resend.dev>'
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Método não permitido. Utilize POST.' })
+  }
 
-                  const cleanNome = String(data.nome || '').replace(/<[^>]*>?/gm, '').trim()
-                  const cleanEmpresa = String(data.empresa || '').replace(/<[^>]*>?/gm, '').trim()
-                  const cleanTelefone = String(data.telefone || '').trim()
-                  const cleanDemanda = String(data.demanda || 'Licenciamento Ambiental').replace(/<[^>]*>?/gm, '').trim()
-                  const cleanMensagem = data.mensagem ? String(data.mensagem).replace(/<[^>]*>?/gm, '').trim() : 'Não informado'
+  try {
+    const { nome, empresa, telefone, demanda, mensagem } = req.body || {}
 
-                  const now = new Date().toLocaleString('pt-BR', { timeZone: 'America/Bahia' })
-                  const waCleanNumber = cleanTelefone.replace(/\D/g, '')
-                  const waLink = `https://wa.me/55${waCleanNumber}`
+    if (!nome || !empresa || !telefone) {
+      return res.status(400).json({ error: 'Campos obrigatórios ausentes (nome, empresa, telefone).' })
+    }
 
-                  const htmlContent = `
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      console.warn('⚠️ RESEND_API_KEY não configurada no ambiente.')
+      return res.status(500).json({ error: 'Configuração de e-mail não disponível' })
+    }
+    const toEmail = process.env.RESEND_TO_EMAIL || 'contato@anjosbrandao.eco.br'
+    const fromEmail = process.env.RESEND_FROM_EMAIL || 'Anjos Brandão <onboarding@resend.dev>'
+
+    const cleanNome = String(nome).replace(/<[^>]*>?/gm, '').trim()
+    const cleanEmpresa = String(empresa).replace(/<[^>]*>?/gm, '').trim()
+    const cleanTelefone = String(telefone).trim()
+    const cleanDemanda = String(demanda || 'Licenciamento Ambiental').replace(/<[^>]*>?/gm, '').trim()
+    const cleanMensagem = mensagem ? String(mensagem).replace(/<[^>]*>?/gm, '').trim() : 'Não informado'
+
+    const now = new Date().toLocaleString('pt-BR', { timeZone: 'America/Bahia' })
+    const waCleanNumber = cleanTelefone.replace(/\D/g, '')
+    const waLink = `https://wa.me/55${waCleanNumber}`
+
+    const htmlContent = `
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -113,37 +116,31 @@ export default defineConfig(({ mode }) => {
 </html>
 `
 
-                  const response = await fetch('https://api.resend.com/emails', {
-                    method: 'POST',
-                    headers: {
-                      'Authorization': `Bearer ${apiKey}`,
-                      'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                      from: fromEmail,
-                      to: [toEmail],
-                      reply_to: toEmail,
-                      subject: `[Novo Lead] ${cleanDemanda} — ${cleanEmpresa} (${cleanNome})`,
-                      html: htmlContent,
-                    }),
-                  })
-
-                  const result = await response.json()
-                  res.setHeader('Content-Type', 'application/json')
-                  res.statusCode = response.status
-                  res.end(JSON.stringify(result))
-                } catch (err: any) {
-                  res.setHeader('Content-Type', 'application/json')
-                  res.statusCode = 500
-                  res.end(JSON.stringify({ error: err.message }))
-                }
-              })
-              return
-            }
-            next()
-          })
-        },
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
       },
-    ],
+      body: JSON.stringify({
+        from: fromEmail,
+        to: [toEmail],
+        reply_to: toEmail,
+        subject: `[Novo Lead] ${cleanDemanda} — ${cleanEmpresa} (${cleanNome})`,
+        html: htmlContent,
+      }),
+    })
+
+    const data = await response.json()
+
+    if (!response.ok) {
+      console.error('❌ Erro da API Resend:', data)
+      return res.status(response.status).json({ error: 'Erro ao despachar e-mail via Resend', details: data })
+    }
+
+    return res.status(200).json({ success: true, id: data.id })
+  } catch (error: any) {
+    console.error('❌ Erro no handler de envio:', error)
+    return res.status(500).json({ error: 'Erro interno ao processar envio', details: error.message })
   }
-})
+}

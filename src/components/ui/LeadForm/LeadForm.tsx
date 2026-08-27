@@ -71,6 +71,8 @@ export function validatePhone(phone: string): string | null {
 
 export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solicitação' }: LeadFormProps) {
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [emailSent, setEmailSent] = useState(false)
   const [formData, setFormData] = useState({
     nome: '',
     empresa: '',
@@ -148,7 +150,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
     return `mailto:contato@anjosbrandao.eco.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`
   }
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
 
     const errNome = validateNomeCompleto(formData.nome)
@@ -162,6 +164,8 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
       return
     }
 
+    setIsSubmitting(true)
+
     // 1. Disparar eventos de conversão no Google Ads e GTM
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', 'generate_lead', {
@@ -173,7 +177,26 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
       });
     }
 
-    // 2. Abrir WhatsApp com a mensagem estruturada e sanitizada
+    // 2. Enviar e-mail de notificação em background via Resend API
+    try {
+      const response = await fetch('/api/send-lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setEmailSent(true)
+      }
+    } catch (err) {
+      console.warn('⚠️ Erro ao enviar e-mail via Resend:', err)
+    } finally {
+      setIsSubmitting(false)
+    }
+
+    // 3. Abrir WhatsApp com a mensagem estruturada
     const whatsappUrl = getWhatsAppUrl()
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
 
@@ -184,9 +207,9 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
     const cleanEmpresa = sanitizeInput(formData.empresa)
     return (
       <div className={styles.success}>
-        <h4>Solicitação pronta para envio!</h4>
+        <h4>✓ Solicitação registrada com sucesso!</h4>
         <p>
-          Registramos sua solicitação de <strong>{formData.demanda}</strong> para a empresa <strong>{cleanEmpresa}</strong>. Caso o WhatsApp não tenha aberto automaticamente, clique no botão abaixo para iniciar a conversa:
+          Registramos sua solicitação de <strong>{formData.demanda}</strong> para a empresa <strong>{cleanEmpresa}</strong>. {emailSent ? 'Um e-mail com os detalhes do seu projeto foi encaminhado à nossa equipe técnica.' : 'Os dados da sua solicitação foram processados com sucesso.'} Para iniciar o atendimento direto com nossos consultores no WhatsApp, clique no botão abaixo:
         </p>
 
         <div className={styles.successActions}>
@@ -211,6 +234,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
           className={styles.resetBtn}
           onClick={() => {
             setSubmitted(false)
+            setEmailSent(false)
             setTouched({})
             setErrors({})
           }}
@@ -303,8 +327,14 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
         ></textarea>
       </div>
 
-      <Button variant="primary" type="submit" fullWidth className={styles.submitBtn}>
-        {ctaText}
+      <Button
+        variant="primary"
+        type="submit"
+        fullWidth
+        className={styles.submitBtn}
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? 'Registrando solicitação...' : ctaText}
       </Button>
     </form>
   )
