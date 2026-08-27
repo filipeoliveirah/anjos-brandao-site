@@ -23,6 +23,10 @@ const FALLBACK_BLOG_SLUGS = [
   'guia-licenciamento-ambiental-inema-bahia',
   'pgrs-construcao-civil-reducao-custos-conformidade',
   'inventario-florestal-asv-supressao-vegetal-segura',
+  'renovacao-licenca-operacao-lo-prazos-documentos-inema',
+  'resgate-fauna-supressao-vegetal-requisitos-inema',
+  'mtr-online-gestao-residuos-perigosos-classe-1',
+  'due-diligence-ambiental-compra-terrenos-loteamentos',
 ]
 
 async function fetchSanityPosts() {
