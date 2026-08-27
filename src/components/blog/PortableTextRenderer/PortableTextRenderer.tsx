@@ -1,5 +1,6 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import { urlForImage } from '../../../lib/sanity'
+import { slugify, extractTextFromBlock } from '../../../utils/toc'
 import styles from './PortableTextRenderer.module.css'
 
 interface PortableTextRendererProps {
@@ -9,8 +10,16 @@ interface PortableTextRendererProps {
 const portableTextComponents: PortableTextComponents = {
   block: {
     normal: ({ children }) => <p>{children}</p>,
-    h2: ({ children }) => <h2>{children}</h2>,
-    h3: ({ children }) => <h3>{children}</h3>,
+    h2: ({ value, children }) => {
+      const text = extractTextFromBlock(value)
+      const id = slugify(text)
+      return <h2 id={id}>{children}</h2>
+    },
+    h3: ({ value, children }) => {
+      const text = extractTextFromBlock(value)
+      const id = slugify(text)
+      return <h3 id={id}>{children}</h3>
+    },
     h4: ({ children }) => <h4>{children}</h4>,
     blockquote: ({ children }) => <blockquote>{children}</blockquote>,
   },

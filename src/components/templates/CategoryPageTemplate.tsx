@@ -1,54 +1,45 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo } from 'react'
 import Header from '../layout/Header/Header'
 import PostCard from '../blog/PostCard/PostCard'
 import Pagination from '../ui/Pagination/Pagination'
 import Button from '../ui/Button/Button'
 import { Post, Category } from '../../types/blog'
-import styles from './BlogListTemplate.module.css'
+import styles from './CategoryPageTemplate.module.css'
 
-interface BlogListTemplateProps {
+interface CategoryPageTemplateProps {
+  category: Category
   posts: Post[]
-  categories: Category[]
-  initialCategory?: string
+  allCategories: Category[]
 }
 
 const ITEMS_PER_PAGE = 6
+const BASE_URL = 'https://www.anjosbrandao.eco.br'
 
-export default function BlogListTemplate({ posts, categories, initialCategory = 'all' }: BlogListTemplateProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory)
+export default function CategoryPageTemplate({
+  category,
+  posts,
+  allCategories,
+}: CategoryPageTemplateProps) {
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [currentPage, setCurrentPage] = useState<number>(1)
 
-  useEffect(() => {
-    setSelectedCategory(initialCategory)
-    setCurrentPage(1)
-  }, [initialCategory])
+  // Filtrar posts pertencentes a esta categoria
+  const categoryPosts = useMemo(() => {
+    return posts.filter((post) =>
+      post.categories?.some((c) => c.slug === category.slug)
+    )
+  }, [posts, category.slug])
 
   const filteredPosts = useMemo(() => {
-    return posts.filter((post) => {
-      const matchesCategory =
-        selectedCategory === 'all' ||
-        post.categories?.some((c) => c.slug === selectedCategory)
+    if (!searchQuery.trim()) return categoryPosts
 
-      const matchesSearch =
-        searchQuery.trim() === '' ||
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
-
-      return matchesCategory && matchesSearch
-    })
-  }, [posts, selectedCategory, searchQuery])
-
-  // Resetar página quando a busca ou categoria mudar
-  const handleCategoryChange = (slug: string) => {
-    setSelectedCategory(slug)
-    setCurrentPage(1)
-  }
-
-  const handleSearchChange = (query: string) => {
-    setSearchQuery(query)
-    setCurrentPage(1)
-  }
+    const query = searchQuery.toLowerCase()
+    return categoryPosts.filter(
+      (post) =>
+        post.title.toLowerCase().includes(query) ||
+        post.excerpt.toLowerCase().includes(query)
+    )
+  }, [categoryPosts, searchQuery])
 
   const totalPages = Math.ceil(filteredPosts.length / ITEMS_PER_PAGE)
   const paginatedPosts = useMemo(() => {
@@ -56,31 +47,39 @@ export default function BlogListTemplate({ posts, categories, initialCategory = 
     return filteredPosts.slice(startIndex, startIndex + ITEMS_PER_PAGE)
   }, [filteredPosts, currentPage])
 
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query)
+    setCurrentPage(1)
+  }
+
   const handlePageChange = (page: number) => {
     setCurrentPage(page)
-    const filterEl = document.getElementById('grid-topo')
+    const filterEl = document.getElementById('grid-categoria')
     if (filterEl) {
       filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' })
     } else {
-      window.scrollTo({ top: 400, behavior: 'smooth' })
+      window.scrollTo({ top: 380, behavior: 'smooth' })
     }
   }
+
+  const canonicalUrl = `${BASE_URL}/blog/categoria/${category.slug}`
 
   const schemaBreadcrumbs = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.anjosbrandao.eco.br' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.anjosbrandao.eco.br/blog' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE_URL}/blog` },
+      { '@type': 'ListItem', position: 3, name: category.title, item: canonicalUrl },
     ],
   }
 
   const schemaCollection = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Blog Técnico e Regulatório · Anjos Brandão',
-    description: 'Artigos, análises e guias sobre licenciamento ambiental, PGRS, ASV, inventário florestal e ESG na Bahia.',
-    url: 'https://www.anjosbrandao.eco.br/blog',
+    name: `${category.title} · Artigos e Publicações | Anjos Brandão`,
+    description: category.description || `Artigos técnicos e regulatórios sobre ${category.title} na Bahia.`,
+    url: canonicalUrl,
   }
 
   return (
@@ -94,18 +93,19 @@ export default function BlogListTemplate({ posts, categories, initialCategory = 
         <div className="row">
           <div className="column large-full">
             <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-              <a href="/">Home</a> / <span>Blog</span>
+              <a href="/">Home</a> / <a href="/blog">Blog</a> / <span>{category.title}</span>
             </nav>
-            <p className={`subhead ${styles.eyebrow}`}>Conhecimento Técnico & Regulatório</p>
-            <h1 className={styles.title}>Artigos, Análises e Guias Ambientais</h1>
+            <span className={styles.categoryBadge}>Categoria Temática</span>
+            <h1 className={styles.title}>{category.title}</h1>
             <p className={styles.subtitle}>
-              Conteúdos práticos sobre licenciamento, PGRS, inventário florestal e conformidade ambiental para construção civil, infraestrutura e indústria na Bahia.
+              {category.description ||
+                `Publicações especializadas, análises regulatórias e guias de conformidade sobre ${category.title} na Bahia.`}
             </p>
           </div>
         </div>
       </section>
 
-      <section id="grid-topo" className={styles.filterSection}>
+      <section id="grid-categoria" className={styles.filterSection}>
         <div className="row">
           <div className="column large-full">
             <div className={styles.filterControls}>
@@ -127,45 +127,29 @@ export default function BlogListTemplate({ posts, categories, initialCategory = 
                 </svg>
                 <input
                   type="text"
-                  placeholder="Buscar artigos por palavra-chave..."
+                  placeholder={`Buscar em ${category.title}...`}
                   value={searchQuery}
                   onChange={(e) => handleSearchChange(e.target.value)}
                   className={styles.searchInput}
-                  aria-label="Buscar artigos"
+                  aria-label={`Buscar em ${category.title}`}
                 />
               </div>
 
-              <div className={styles.categoryPills} role="tablist" aria-label="Filtrar por categoria">
-                <a
-                  href="/blog"
-                  className={`${styles.pill} ${selectedCategory === 'all' ? styles.pillActive : ''}`}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    window.history.pushState({}, '', '/blog')
-                    handleCategoryChange('all')
-                  }}
-                  role="tab"
-                  aria-selected={selectedCategory === 'all'}
-                >
-                  Todos os Artigos ({posts.length})
+              <div className={styles.categoryPills} role="tablist" aria-label="Navegar por categorias">
+                <a href="/blog" className={styles.pill}>
+                  ← Todos os Artigos ({posts.length})
                 </a>
-                {categories.map((category) => {
-                  const count = posts.filter((p) => p.categories?.some((c) => c.slug === category.slug)).length
-                  const isSelected = selectedCategory === category.slug
+                {allCategories.map((cat) => {
+                  const count = posts.filter((p) => p.categories?.some((c) => c.slug === cat.slug)).length
+                  const isCurrent = cat.slug === category.slug
                   return (
                     <a
-                      key={category.slug}
-                      href={`/blog/categoria/${category.slug}`}
-                      className={`${styles.pill} ${isSelected ? styles.pillActive : ''}`}
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.history.pushState({}, '', `/blog/categoria/${category.slug}`)
-                        handleCategoryChange(category.slug)
-                      }}
-                      role="tab"
-                      aria-selected={isSelected}
+                      key={cat.slug}
+                      href={`/blog/categoria/${cat.slug}`}
+                      className={`${styles.pill} ${isCurrent ? styles.pillActive : ''}`}
+                      aria-current={isCurrent ? 'page' : undefined}
                     >
-                      {category.title} {count > 0 ? `(${count})` : ''}
+                      {cat.title} {count > 0 ? `(${count})` : ''}
                     </a>
                   )
                 })}
@@ -198,16 +182,10 @@ export default function BlogListTemplate({ posts, categories, initialCategory = 
               <div className={styles.emptyState}>
                 <h3 className={styles.emptyTitle}>Nenhum artigo encontrado</h3>
                 <p className={styles.emptyText}>
-                  Não encontramos publicações correspondentes aos filtros selecionados.
+                  Não encontramos artigos nesta categoria com o termo buscado.
                 </p>
-                <button
-                  className={styles.resetBtn}
-                  onClick={() => {
-                    handleCategoryChange('all')
-                    handleSearchChange('')
-                  }}
-                >
-                  Limpar filtros
+                <button className={styles.resetBtn} onClick={() => setSearchQuery('')}>
+                  Limpar busca
                 </button>
               </div>
             )}
@@ -220,12 +198,14 @@ export default function BlogListTemplate({ posts, categories, initialCategory = 
           <div className="column large-full">
             <div className={styles.ctaInner}>
               <p className="subhead">Assessoria Técnica Especializada</p>
-              <h2 className={styles.ctaTitle}>Precisa de apoio para o licenciamento ou gestão da sua obra?</h2>
+              <h2 className={styles.ctaTitle}>
+                Precisa de suporte em {category.title} para seu projeto?
+              </h2>
               <p className={styles.ctaSubtitle}>
-                Nossa equipe técnica atua diretamente em campo para viabilizar e proteger seu empreendimento.
+                Nossa equipe multidisciplinar elabora estudos, diagnósticos e projetos com presença em campo em toda a Bahia.
               </p>
               <Button variant="primary" href="/#contato">
-                Fale com nossos especialistas
+                Solicitar atendimento técnico
               </Button>
             </div>
             <div className={styles.footerBottom}>

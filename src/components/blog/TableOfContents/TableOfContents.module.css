@@ -1,0 +1,186 @@
+.tocCard {
+  position: relative;
+  background: var(--ab-white, #ffffff);
+  border: 1px solid rgba(23, 52, 38, 0.12);
+  border-radius: 1.2rem;
+  margin: 3.5rem 0;
+  padding: 2.2rem 2.4rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.tocCard:hover {
+  border-color: rgba(61, 136, 71, 0.35);
+}
+
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ab-green, #3d8847), var(--ab-lime, #a4cc5c));
+  transition: width 0.15s ease-out;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  user-select: none;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.icon {
+  color: var(--ab-green, #3d8847);
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--font-primary, sans-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ab-dark-green, #173426);
+  letter-spacing: -0.01em;
+}
+
+.countBadge {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background: rgba(61, 136, 71, 0.1);
+  color: var(--ab-green, #3d8847);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: lowercase;
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: rgba(0, 0, 0, 0.04);
+  border: none;
+  border-radius: 50%;
+  color: var(--ab-dark-green, #173426);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggleBtn:hover {
+  background: rgba(61, 136, 71, 0.15);
+  color: var(--ab-green, #3d8847);
+}
+
+.chevron {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.nav {
+  margin-top: 1.8rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.item {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.itemH2 {
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+.itemH3 {
+  font-size: 1.35rem;
+  font-weight: 400;
+  padding-left: 2rem;
+}
+
+.link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  color: #444444;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.6rem;
+  transition: all 0.2s ease;
+  line-height: 1.45;
+}
+
+.bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  margin-top: 0.7rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.itemH3 .bullet {
+  width: 4px;
+  height: 4px;
+}
+
+.text {
+  flex: 1;
+}
+
+.link:hover {
+  color: var(--ab-green, #3d8847);
+  background: rgba(61, 136, 71, 0.06);
+}
+
+.link:hover .bullet {
+  background: var(--ab-green, #3d8847);
+  transform: scale(1.3);
+}
+
+.itemActive .link {
+  color: var(--ab-dark-green, #173426);
+  font-weight: 700;
+  background: rgba(61, 136, 71, 0.12);
+}
+
+.itemActive .bullet {
+  background: var(--ab-green, #3d8847);
+  box-shadow: 0 0 8px rgba(61, 136, 71, 0.6);
+  transform: scale(1.4);
+}
+
+@media (max-width: 768px) {
+  .tocCard {
+    padding: 1.8rem 1.8rem;
+    margin: 2.5rem 0;
+  }
+
+  .title {
+    font-size: 1.45rem;
+  }
+}

@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import Header from '../layout/Header/Header'
 import LeadForm from '../ui/LeadForm/LeadForm'
 import PortableTextRenderer from '../blog/PortableTextRenderer/PortableTextRenderer'
+import TableOfContents from '../blog/TableOfContents/TableOfContents'
 import AuthorBio from '../blog/AuthorBio/AuthorBio'
 import PostCard from '../blog/PostCard/PostCard'
 import { PostDetail } from '../../types/blog'
 import { urlForImage } from '../../lib/sanity'
+import { extractHeadingsFromPortableText } from '../../utils/toc'
 import styles from './BlogPostTemplate.module.css'
 
 interface BlogPostTemplateProps {
@@ -28,6 +30,8 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
   const canonicalUrl = post.seo?.canonicalUrl || `${BASE_URL}/blog/${post.slug}`
   const primaryCategory = post.categories?.[0]
   const readTime = post.estimatedReadTime || 5
+
+  const tocItems = useMemo(() => extractHeadingsFromPortableText(post.body), [post.body])
 
   let imageUrl = post.mainImageUrl || '/images/hero-bg-3000.webp'
   if (post.mainImage && !post.mainImageUrl) {
@@ -96,11 +100,22 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
         <div className="row">
           <div className="column large-full">
             <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-              <a href="/">Home</a> / <a href="/blog">Blog</a> / <span>{primaryCategory?.title || 'Artigo'}</span>
+              <a href="/">Home</a> / <a href="/blog">Blog</a> /{' '}
+              {primaryCategory ? (
+                <a href={`/blog/categoria/${primaryCategory.slug}`}>{primaryCategory.title}</a>
+              ) : (
+                <span>Artigo</span>
+              )}
             </nav>
 
             {primaryCategory && (
-              <span className={styles.categoryBadge}>{primaryCategory.title}</span>
+              <a
+                href={`/blog/categoria/${primaryCategory.slug}`}
+                className={styles.categoryBadge}
+                title={`Ver todos os artigos em ${primaryCategory.title}`}
+              >
+                {primaryCategory.title}
+              </a>
             )}
 
             <h1 className={styles.title}>{post.title}</h1>
@@ -158,6 +173,8 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
         <div className="row">
           <div className="column large-full">
             <div className={styles.articleContainer}>
+              <TableOfContents items={tocItems} />
+
               <PortableTextRenderer value={post.body} />
 
               <div className={styles.shareBar}>

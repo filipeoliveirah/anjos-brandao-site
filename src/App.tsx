@@ -11,9 +11,10 @@ import Contato from './components/sections/Contato/Contato'
 import ServicePageTemplate from './components/templates/ServicePageTemplate'
 import BlogListTemplate from './components/templates/BlogListTemplate'
 import BlogPostTemplate from './components/templates/BlogPostTemplate'
+import CategoryPageTemplate from './components/templates/CategoryPageTemplate'
 import WhatsAppButton from './components/ui/WhatsAppButton/WhatsAppButton'
 import { detailedServices } from './data/services'
-import { getAllPosts, getAllCategories, getPostBySlug } from './data/blog'
+import { getAllPosts, getAllCategories, getPostBySlug, INITIAL_CATEGORIES } from './data/blog'
 import { Post, PostDetail, Category } from './types/blog'
 
 const BASE_URL = 'https://www.anjosbrandao.eco.br'
@@ -196,13 +197,21 @@ export default function App() {
 
   const cleanPath = pathname.replace(/^\//, '').replace(/\/$/, '')
   const isBlogList = cleanPath === 'blog'
-  const isBlogPost = cleanPath.startsWith('blog/')
+  const isBlogCategory = cleanPath.startsWith('blog/categoria/')
+  const blogCategorySlug = isBlogCategory ? cleanPath.replace(/^blog\/categoria\//, '') : ''
+  const isBlogPost = cleanPath.startsWith('blog/') && !isBlogCategory
   const blogPostSlug = isBlogPost ? cleanPath.replace(/^blog\//, '') : ''
   const activeService = detailedServices[cleanPath]
 
+  // Encontrar a categoria atual ativa (se estiver em rota de categoria)
+  const currentCategory = isBlogCategory
+    ? blogCategories.find((c) => c.slug === blogCategorySlug) ||
+      INITIAL_CATEGORIES.find((c) => c.slug === blogCategorySlug)
+    : null
+
   // Carregar dados de Blog
   useEffect(() => {
-    if (isBlogList) {
+    if (isBlogList || isBlogCategory) {
       setBlogLoading(true)
       Promise.all([getAllPosts(), getAllCategories()]).then(([posts, categories]) => {
         setBlogPosts(posts)
@@ -216,7 +225,7 @@ export default function App() {
         setBlogLoading(false)
       })
     }
-  }, [isBlogList, isBlogPost, blogPostSlug])
+  }, [isBlogList, isBlogCategory, isBlogPost, blogPostSlug])
 
   // Gerenciamento dinâmico de SEO / Meta Tags
   useEffect(() => {
@@ -232,6 +241,27 @@ export default function App() {
 
       // Open Graph
       updateMetaTag('meta[property="og:type"]', 'content', 'article')
+      updateMetaTag('meta[property="og:title"]', 'content', pageTitle)
+      updateMetaTag('meta[property="og:description"]', 'content', pageDesc)
+      updateMetaTag('meta[property="og:url"]', 'content', pageUrl)
+      updateMetaTag('meta[property="og:image"]', 'content', pageImage)
+
+      // Twitter
+      updateMetaTag('meta[name="twitter:title"]', 'content', pageTitle)
+      updateMetaTag('meta[name="twitter:description"]', 'content', pageDesc)
+      updateMetaTag('meta[name="twitter:image"]', 'content', pageImage)
+    } else if (isBlogCategory && currentCategory) {
+      const pageTitle = `${currentCategory.title} · Artigos e Publicações | Anjos Brandão`
+      const pageDesc = currentCategory.description || `Artigos técnicos, guias e análises sobre ${currentCategory.title} na Bahia.`
+      const pageUrl = `${BASE_URL}/blog/categoria/${currentCategory.slug}`
+      const pageImage = `${BASE_URL}/images/hero-bg-3000.webp`
+
+      document.title = pageTitle
+      updateMetaTag('meta[name="description"]', 'content', pageDesc)
+      updateMetaTag('link[rel="canonical"]', 'href', pageUrl)
+
+      // Open Graph
+      updateMetaTag('meta[property="og:type"]', 'content', 'website')
       updateMetaTag('meta[property="og:title"]', 'content', pageTitle)
       updateMetaTag('meta[property="og:description"]', 'content', pageDesc)
       updateMetaTag('meta[property="og:url"]', 'content', pageUrl)
@@ -305,7 +335,7 @@ export default function App() {
       updateMetaTag('meta[name="twitter:description"]', 'content', homeDesc)
       updateMetaTag('meta[name="twitter:image"]', 'content', homeImage)
     }
-  }, [isBlogList, isBlogPost, currentPost, activeService, pathname])
+  }, [isBlogList, isBlogCategory, currentCategory, isBlogPost, currentPost, activeService, pathname])
 
   // Renderização Condicional de Rotas
   return (
@@ -332,11 +362,35 @@ export default function App() {
         )
       )}
 
+      {isBlogCategory && (
+        currentCategory ? (
+          <CategoryPageTemplate
+            category={currentCategory}
+            posts={blogPosts}
+            allCategories={blogCategories}
+          />
+        ) : (
+          <div style={{ minHeight: '100vh', background: 'var(--ab-offwhite)' }}>
+            <Header />
+            <div style={{ paddingTop: '20rem', textAlign: 'center', fontFamily: 'Gothic A1, sans-serif' }}>
+              <h2>{blogLoading ? 'Carregando categoria...' : 'Categoria não encontrada'}</h2>
+              {!blogLoading && (
+                <p style={{ marginTop: '2rem' }}>
+                  <a href="/blog" style={{ color: 'var(--ab-green)', fontWeight: 700 }}>
+                    ← Voltar para o Blog
+                  </a>
+                </p>
+              )}
+            </div>
+          </div>
+        )
+      )}
+
       {isBlogList && <BlogListTemplate posts={blogPosts} categories={blogCategories} />}
 
       {activeService && <ServicePageTemplate service={activeService} />}
 
-      {!isBlogPost && !isBlogList && !activeService && (
+      {!isBlogPost && !isBlogCategory && !isBlogList && !activeService && (
         <>
           <Header />
           <main id="content">
@@ -354,3 +408,4 @@ export default function App() {
     </>
   )
 }
+

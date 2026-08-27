@@ -17,6 +17,11 @@ const STATIC_ROUTES = [
   { path: 'autorizacao-supressao-vegetal', priority: '0.9', changefreq: 'monthly' },
   { path: 'resgate-fauna-flora', priority: '0.9', changefreq: 'monthly' },
   { path: 'blog', priority: '0.9', changefreq: 'daily' },
+  { path: 'blog/categoria/licenciamento-ambiental', priority: '0.8', changefreq: 'weekly' },
+  { path: 'blog/categoria/pgrs-residuos', priority: '0.8', changefreq: 'weekly' },
+  { path: 'blog/categoria/inventario-asv', priority: '0.8', changefreq: 'weekly' },
+  { path: 'blog/categoria/fauna-flora', priority: '0.8', changefreq: 'weekly' },
+  { path: 'blog/categoria/esg-compliance', priority: '0.8', changefreq: 'weekly' },
 ]
 
 const FALLBACK_BLOG_SLUGS = [
