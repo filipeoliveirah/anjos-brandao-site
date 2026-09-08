@@ -46,9 +46,9 @@ function callout(type, title, text) {
   }
 }
 
-export const RICH_POSTS = [
+export const RAW_RICH_POSTS = [
   // ==========================================
-  // ARTIGO 1: Licenciamento Ambiental no INEMA (Bahia)
+  // ARTIGO 1: Licenciamento Ambiental no INEMA (Bahia) [PESSOAS EM CAMPO]
   // ==========================================
   {
     _id: 'post-1',
@@ -646,4 +646,446 @@ export const RICH_POSTS = [
       keywords: ['due diligence ambiental na compra de terrenos', 'due diligence ambiental compra terrenos', 'passivo ambiental propter rem sumula 623 stj', 'investigação ambiental preliminar NBR 15515', 'avaliação passivo ambiental terreno loteamento', 'risco contaminação solo água subterrânea'],
     },
   },
+
+  // ==========================================
+  // ARTIGO 8: Passagem de Fauna e Monitoramento em Infraestrutura
+  // ==========================================
+  {
+    _id: 'post-8',
+    title: 'Passagem de Fauna em Rodovias e Grandes Obras: Estratégias e Exigências do INEMA',
+    slug: 'passagem-de-fauna-monitoramento-obras-infraestrutura',
+    excerpt: 'Guia técnico sobre passagens de fauna, conectividade de dossel e monitoramento biótico em obras de infraestrutura na Bahia. Evite embargos com engenharia ambiental integrada.',
+    publishedAt: '2026-08-25T09:00:00Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-8-passagem-fauna-infraestrutura.webp',
+    mainImageAlt: 'Passagem de fauna monumental e viaduto ecológico integrado em floresta tropical na Bahia',
+    mainImageCaption: 'Estrutura de conectividade ecológica e viaduto verde para travessia segura de fauna silvestre em rodovia.',
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categoryIndexes: [3, 0], // Fauna e Flora, Licenciamento
+    body: [
+      p('A implantação de obras lineares de grande porte — como rodovias, ferrovias, minerodutos e linhas de transmissão de energia — impõe um dos maiores desafios ecológicos e regulatórios à engenharia moderna: a fragmentação de habitats. O seccionamento de maciços florestais isola populações de animais silvestres, eleva os índices de atropelamento e compromete o fluxo gênico das espécies nativas.'),
+      p('Nos processos de licenciamento ambiental conduzidos perante o INEMA e o IBAMA na Bahia, a exigência de passagens de fauna e programas contínuos de monitoramento biótico deixou de ser uma recomendação genérica para se tornar condicionante técnica estrita da Licença de Instalação (LI) e da Licença de Operação (LO). Obras que negligenciam a modelagem de conectividade de paisagem enfrentam atrasos severos na emissão de licenças, multas administrativas e ordens de paralisação de frentes de serviço.'),
+
+      h2('O Que São Passagens de Fauna e Qual a sua Base Normativa?'),
+      p('Passagens de fauna são estruturas de engenharia projetadas especificamente para permitir a travessia segura de animais silvestres sob, sobre ou através de barreiras antrópicas lineares, restabelecendo a continuidade dos corredores ecológicos.'),
+      p('No Brasil, a obrigatoriedade dessas medidas decorre diretamente da Lei Federal nº 6.938/1981 (Política Nacional do Meio Ambiente), da Lei Federal nº 5.197/1967 (Proteção à Fauna) e da Instrução Normativa IBAMA nº 03/2014, complementada na Bahia pela Lei Estadual nº 10.431/2006. O órgão ambiental condiciona a liberação das obras à comprovação de que o traçado do empreendimento minimizou o efeito de borda e mitigou os pontos críticos de colisão com a fauna.'),
+
+      callout('legal', 'Exigência Técnica nas Condicionantes de LI e LO', 'A autorização para operação de rodovias e ferrovias fica expressamente vinculada à comprovação da eficácia das passagens instaladas, mensurada por meio de relatórios sazonais de monitoramento biótico protocolados no SEIA.'),
+
+      h2('Tipologia Estrutural de Passagens de Fauna na Infraestrutura'),
+      p('A escolha do modelo de passagem depende do porte dos animais-alvo, do tipo de relevo e das características ecológicas do bioma (Mata Atlântica, Cerrado ou Caatinga):'),
+
+      h3('1. Overpasses (Viadutos Verdes e Pontes Ecológicas)'),
+      p('São viadutos monumentais construídos sobre rodovias ou ferrovias, totalmente recobertos por solo, gramíneas, arbustos e árvores de pequeno porte.'),
+      bullet('Animais atendidos: Médios e grandes mamíferos (onças, antas, cervos, lobos-guará) que rejeitam transitar por ambientes confinados e escuros;'),
+      bullet('Engenharia e dimensões: Largura média de 30 a 60 metros, com barreiras visuais e acústicas laterais para bloquear os faróis e o ruído do tráfego;'),
+      bullet('Conectividade: Integração direta com as matas ciliares e fragmentos florestais adjacentes.'),
+
+      h3('2. Underpasses (Túneis e Passagens Inferiores)'),
+      p('Estruturas subterrâneas sob a pista de rolamento, frequentemente integradas com sistemas de drenagem pluvial adaptados.'),
+      bullet('Animais atendidos: Pequenos e médios mamíferos (tatus, quatis, lontras), répteis e anfíbios;'),
+      bullet('Adaptações técnicas: Instalação de banquetas laterais secas em bueiros de drenagem celular, garantindo travessia mesmo em períodos de cheia;'),
+      bullet('Atratividade: Substrato de terra natural e plantio de vegetação atrativa nas embocaduras.'),
+
+      h3('3. Passagens de Dossel (Pontes Aéreas e Cordas de Conectividade)'),
+      p('Estruturas suspensas que interligam as copas das árvores em ambos os lados da via.'),
+      bullet('Animais atendidos: Primatas (micos, bugios), preguiças, roedores arborícolas e marsupiais;'),
+      bullet('Materiais: Malhas de cabos de aço revestidos, cordas de alta resistência UV e pontes de tela com sensores de peso.'),
+
+      callout('warning', 'O Risco dos Bueiros sem Banqueta Seca', 'Utilizar bueiros comuns de drenagem hidráulica sem banquetas secas elevadas inviabiliza a passagem da fauna durante 6 meses do ano na Bahia, gerando notificações de não conformidade no INEMA.'),
+
+      h2('Fases do Programa de Monitoramento Biótico e Afugentamento'),
+      p('A eficácia das passagens de fauna depende de uma metodologia científica em três etapas temporais:'),
+      bullet('Fase Pré-Obra (Baseline de Fauna): Instalação de armadilhas fotográficas (camera traps), transectos diurnos e noturnos e modelagem espacial para identificar os "hotspots" de travessia antes da terraplenagem;'),
+      bullet('Fase de Obra (Resgate e Afugentamento): Presença contínua de biólogos e médicos veterinários na frente de supressão vegetal, com veículos de resgate e caixas de transporte climatizadas;'),
+      bullet('Fase Pós-Obra (Monitoramento de Eficácia): Monitoramento contínuo por no mínimo 24 meses pós-inauguração com sensores infravermelhos para validar a taxa de transposição e comprovar o cumprimento das condicionantes da LO.'),
+
+      h2('Como a Consultoria Anjos Brandão Garante a Aprovação Técnica'),
+      p('A equipe multidisciplinar da Anjos Brandão une engenharia estrutural e biologia de conservação, entregando:'),
+      bullet('Projetos executivos de passagens de fauna integrados à geometria da rodovia;'),
+      bullet('Relatórios estatísticos de monitoramento compatíveis com o padrão exigido pelo INEMA;'),
+      bullet('Treinamento e sensibilização de motoristas e operadores de máquinas pesadas.'),
+
+      h2('Perguntas Frequentes sobre Passagem de Fauna (FAQ)'),
+      h3('Toda rodovia é obrigada a implantar viadutos verdes?'),
+      p('Não. A exigência de viadutos verdes ocorre principalmente em rodovias que cruzam Unidades de Conservação (UCs) ou áreas de alta densidade de grandes mamíferos. Na maioria dos trechos, túneis inferiores adaptados e passagens aéreas atendem perfeitamente aos requisitos legais.'),
+      h3('Qual o tempo mínimo de monitoramento exigido pelo INEMA após a conclusão da obra?'),
+      p('O monitoramento pós-obra geralmente é exigido por um período de 2 a 5 anos, com relatórios semestrais de eficiência de uso das passagens.'),
+      h3('Quem deve assinar o plano de resgate e monitoramento de fauna?'),
+      p('Biólogos e médicos veterinários devidamente registrados no CRBio / CRMV com ART/TRT ativa perante o conselho de classe.'),
+    ],
+    seo: {
+      metaTitle: 'Passagem de Fauna em Rodovias e Obras: Guia INEMA',
+      metaDescription: 'Guia técnico sobre passagens de fauna e monitoramento biótico em obras de infraestrutura na Bahia. Conheça as exigências do INEMA e evite embargos.',
+      keywords: ['passagem de fauna rodovias', 'passagem de fauna infraestrutura bahia', 'monitoramento de fauna inema', 'viadutos verdes corredor ecologico', 'afugentamento e resgate de fauna obra', 'licenciamento ambiental obras lineares'],
+    },
+  },
+
+  // ==========================================
+  // ARTIGO 9: Resgate de Germoplasma e Flora Nativa (PRAD)
+  // ==========================================
+  {
+    _id: 'post-9',
+    title: 'Resgate de Germoplasma e Flora Nativa: Da Coleta ao Cumprimento de PRAD no INEMA',
+    slug: 'resgate-de-germoplasma-flora-nativa-prad-inema',
+    excerpt: 'Descubra como estruturar o resgate de flora, viveiros de mudas nativas e o cumprimento de PRAD para atender às exigências florestais do INEMA na Bahia.',
+    publishedAt: '2026-08-28T11:00:00Z',
+    estimatedReadTime: 10,
+    featured: false,
+    mainImageUrl: '/images/blog/post-9-resgate-germoplasma-flora-prad.webp',
+    mainImageAlt: 'Pavilhões arquitetônicos e viveiro técnico de conservação de flora nativa na Bahia',
+    mainImageCaption: 'Estrutura técnica para aclimatização de germoplasma e produção de mudas nativas para recuperação florestal.',
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categoryIndexes: [3, 2], // Fauna e Flora, Inventário & ASV
+    body: [
+      p('O resgate de flora e germoplasma vegetal é uma das condicionantes mais rigorosas e tecnicamente exigentes vinculadas à Autorização de Supressão de Vegetação (ASV) em empreendimentos na Bahia. Longe de ser apenas um procedimento acessório de corte de árvores, o resgate de germoplasma assegura a conservação genética de espécies ameaçadas, raras ou de valor econômico e ecológico nos biomas Mata Atlântica, Caatinga e Cerrado.'),
+      p('Apresentar um plano deficiente ao INEMA acarreta o travamento do processo no SEIA, a suspensão da autorização de supressão e o indeferimento de fases posteriores do licenciamento. Neste guia prático, abordamos as metodologias de coleta de sementes, resgate de epífitas, transplante de mudas e como integrar esse material ao Plano de Recuperação de Áreas Degradadas (PRAD) para garantir taxas de pegamento superiores a 90%.'),
+
+      h2('O Que É Resgate de Germoplasma e Qual a sua Exigência Legal?'),
+      p('Germoplasma é o conjunto de materiais genéticos vegetais (sementes, propágulos, estacas, mudas jovens e indivíduos adultos) capazes de perpetuar uma espécie botânica. O resgate de germoplasma consiste na coleta sistemática e preservação desse patrimônio antes do avanço das máquinas de supressão e terraplenagem.'),
+      p('A fundamentação legal na Bahia inclui:'),
+      bullet('Lei Federal nº 11.428/2006 (Lei da Mata Atlântica): Proteção especial para espécies clímax e em perigo de extinção;'),
+      bullet('Portaria MMA nº 148/2022: Lista Oficial de Espécies Ameaçadas da Flora Brasileira;'),
+      bullet('Lei Estadual da Bahia nº 10.431/2006 e Decreto nº 14.024/2012: Regulamentação das compensações florestais e diretrizes de PRAD perante o INEMA.'),
+
+      callout('legal', 'Proibição de Supressão sem Resgate Prévia', 'O corte de vegetação sem o resgate prévio de espécies imunes ao corte ou protegidas por lei configura crime ambiental grave, gerando autuação com multas cumulativas por hectare suprimido.'),
+
+      h2('Etapas Metodológicas do Resgate de Flora em Campo'),
+      p('O trabalho de campo da equipe de botânicos e engenheiros florestais segue quatro etapas coordenadas:'),
+
+      h3('1. Mapeamento e Marcação de Matrizes Botânicas'),
+      p('Antes do início da supressão, a equipe percorre 100% da área diretamente afetada (ADA), georreferenciando com GPS submétrico as árvores matrizes produtoras de sementes vigorosas e as espécies raras.'),
+
+      h3('2. Resgate de Epífitas e Bromélias'),
+      p('As espécies epifíticas (bromélias, orquídeas, cactos e pteridófitas) que vivem sobre os troncos das árvores a serem suprimidas são resgatadas manualmente com técnicas de escalada segura.'),
+      bullet('Armazenamento temporário: Acomodação em caixas teladas e umidificadas para evitar estresse hídrico;'),
+      bullet('Destinação: Reassentamento direto em fragmentos florestais preservados ou transferência para viveiros de conservação.'),
+
+      h3('3. Coleta e Beneficiamento de Sementes e Frutos'),
+      p('Coleta de lotes de sementes em diferentes matrizes para garantir alta variabilidade genética, seguida de secagem controlada, beneficiamento e testes de germinação em laboratório.'),
+
+      h3('4. Transplante de Mudas Jovens e Regenerantes'),
+      p('Indivíduos jovens do sub-bosque em perfeito estado fitossanitário são retirados com torrão preservado e transportados para viveiros de aclimatação.'),
+
+      h2('Integração com o PRAD (Plano de Recuperação de Áreas Degradadas)'),
+      p('O material resgatado constitui a matéria-prima biológica mais valiosa para o cumprimento das obrigações compensatórias do empreendimento:'),
+      bullet('Restauração de Áreas de Preservação Permanente (APP) e Reserva Legal (RL);'),
+      bullet('Recuperação de taludes de corte e aterro e áreas de jazida de solo;'),
+      bullet('Enriquecimento de florestas secundárias empobrecidas no entorno da obra.'),
+
+      callout('tip', 'Garantia de Alta Taxa de Pegamento', 'A utilização de mudas produzidas a partir do germoplasma local do próprio terreno aumenta a taxa de sobrevivência do PRAD para índices acima de 90%, uma vez que o material genético já está perfeitamente adaptado ao solo e ao microclima da região.'),
+
+      h2('Métricas de Acompanhamento Exigidas pelo INEMA'),
+      p('Os relatórios de cumprimento do PRAD devem comprovar a evolução dos seguintes indicadores ecológicos ao longo dos anos:'),
+      bullet('Densidade de indivíduos/ha (mínimo de 1.100 a 1.660 mudas/ha);'),
+      bullet('Riqueza de espécies nativas (mínimo de 30 a 40 espécies de diferentes grupos ecológicos - pioneiras, secundárias e clímax);'),
+      bullet('Porcentagem de cobertura de copa e ausência de espécies exóticas invasoras.'),
+
+      h2('Perguntas Frequentes sobre Resgate de Flora (FAQ)'),
+      h3('Para onde vão as mudas e epífitas resgatadas se o empreendimento não tiver viveiro próprio?'),
+      p('A consultoria ambiental estabelece parcerias com viveiros credenciados na região ou realiza a doação técnica para Unidades de Conservação e jardins botânicos estaduais cadastrados perante o INEMA.'),
+      h3('Quanto tempo antes da supressão o resgate de sementes deve começar?'),
+      p('Recomenda-se iniciar a coleta de sementes de 3 a 6 meses antes da supressão para abranger os diferentes períodos fenológicos de floração e frutificação das espécies.'),
+      h3('Qual profissional tem competência legal para emitir o laudo de resgate de flora?'),
+      p('Engenheiros florestais, agrônomos e biólogos com especialização em botânica, com registro no CREA / CRBio e emissão de ART/TRT.'),
+    ],
+    seo: {
+      metaTitle: 'Resgate de Germoplasma e Flora Nativa: Guia PRAD INEMA',
+      metaDescription: 'Descubra como estruturar o resgate de flora, viveiros de mudas nativas e o cumprimento de PRAD para atender às exigências florestais do INEMA na Bahia.',
+      keywords: ['resgate de germoplasma bahia', 'resgate de flora supressao vegetal', 'plano de recuperacao areas degradadas PRAD inema', 'coleta de sementes nativas bahia', 'resgate de epifitas e bromelias', 'compensacao florestal ASV inema'],
+    },
+  },
+
+  // ==========================================
+  // ARTIGO 10: Governança ESG e Mitigação de Riscos
+  // ==========================================
+  {
+    _id: 'post-10',
+    title: 'Governança ESG e Mitigação de Riscos Ambientais em Grandes Empreendimentos',
+    slug: 'governanca-esg-mitigacao-riscos-ambientais',
+    excerpt: 'Descubra como a governança ESG e a gestão integrada de passivos blindam grandes obras e indústrias contra embargos e atraem crédito verde na Bahia.',
+    publishedAt: '2026-09-02T10:00:00Z',
+    estimatedReadTime: 11,
+    featured: true,
+    mainImageUrl: '/images/blog/post-10-esg-governanca-riscos.webp',
+    mainImageAlt: 'Edifício corporativo monumental de engenharia e sustentabilidade ambiental ao entardecer',
+    mainImageCaption: 'Governança corporativa integrada e matriz preventiva de compliance ambiental na Bahia.',
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categoryIndexes: [4, 0], // ESG & Compliance, Licenciamento
+    body: [
+      p('A consolidação dos critérios ESG (Environmental, Social, and Governance) transformou radicalmente a gestão de riscos na construção civil pesada, na indústria e no setor de infraestrutura no Brasil. Se no passado a conformidade ambiental era tratada apenas como um custo reativo de obtenção de licenças, hoje a governança ambiental é o pilar que determina a liquidez financeira, a atração de fundos institucionais e a blindagem jurídica contra paralisações de obras.'),
+      p('Na Bahia, o cruzamento contínuo de dados de fiscalização pelo INEMA e pelo Ministério Público exige das diretorias executivas uma postura preventiva. Falhas pontuais no cumprimento de condicionantes da Licença de Operação (LO) ou passivos em canteiros de obras não geram apenas multas: resultam na suspensão imediata de Certidões Negativas de Débitos Ambientais e no bloqueio de repasses de financiamentos bancários.'),
+
+      h2('O Que É Governança ESG no Contexto da Engenharia e Operações?'),
+      p('A governança ambiental vai muito além de relatórios de sustentabilidade teóricos: ela representa a estruturação de processos operacionais auditáveis que garantem o cumprimento rigoroso de toda a legislação ambiental aplicável.'),
+      bullet('Matriz de Risco Ambiental: Mapeamento em tempo real de todas as condicionantes de LP, LI e LO com responsáveis técnicos e prazos críticos;'),
+      bullet('Auditorias Preventivas Periódicas: Vistorias in loco com emissão de relatórios de não conformidade antes de fiscalizações oficiais;'),
+      bullet('Cadeia de Fornecedores Homologada: Controle rigoroso de licenças e manifestos (MTR) de transportadores e destinadores finais de resíduos.'),
+
+      callout('legal', 'Responsabilidade Solidária dos Administradores', 'A Lei de Crimes Ambientais (Lei Federal nº 9.605/1998) estabelece no Art. 2º que diretores, gerentes e administradores respondem pessoalmente por infrações ambientais cometidas pela empresa caso tenham ciência da conduta e deixem de impedi-la.'),
+
+      h2('Como a Governança Ambiental Facilita o Acesso a Crédito Verde'),
+      p('Bancos de desenvolvimento (BNDES, BNB) e fundos de investimento imobiliário e de infraestrutura exigem a comprovação de due diligence ambiental estrita para a concessão de empréstimos com taxas subsidiadas (Green Bonds):'),
+      bullet('Redução de Spread Bancário: Empreendimentos com matriz de compliance ativa alcançam reduções de 0,5% a 1,5% nas taxas anuais de financiamento;'),
+      bullet('Seguro Garantia e Apólices de Risco de Engenharia: Prêmios substancialmente menores para obras com gestão ambiental integrada;'),
+      bullet('Certificações Internacionais: Facilidade na obtenção de selos LEED, AQUA-HQE e EDGE para edifícios corporativos e industriais.'),
+
+      h2('Perguntas Frequentes sobre Governança ESG (FAQ)'),
+      h3('Qual a diferença entre ESG e Licenciamento Ambiental tradicional?'),
+      p('O licenciamento ambiental é a obrigação legal mínima imposta pelos órgãos ambientais. O ESG engloba o licenciamento, mas adiciona governança interna contínua, metas de descarbonização, eficiência hídrica e gestão de riscos reputacionais.'),
+      h3('Com que frequência as auditorias de compliance ambiental devem ser realizadas?'),
+      p('Recomenda-se a realização de auditorias trimestrais em canteiros de obras e auditorias semestrais em plantas industriais operacionais.'),
+    ],
+    seo: {
+      metaTitle: 'Governança ESG e Mitigação de Riscos Ambientais em Obras',
+      metaDescription: 'Descubra como a governança ESG e a gestão integrada de passivos blindam grandes obras e indústrias contra embargos e atraem crédito verde na Bahia.',
+      keywords: ['governança ESG ambiental', 'compliance ambiental grandes obras', 'mitigação de riscos ambientais bahia', 'crédito verde financiamento obras', 'auditoria ambiental preventiva'],
+    },
+  },
+
+  // ==========================================
+  // ARTIGO 11: Licenciamento para Energia Renovável (Solar e Eólica)
+  // ==========================================
+  {
+    _id: 'post-11',
+    title: 'Licenciamento Ambiental de Parques Solares e Eólicos na Bahia: Ritos e Exigências do INEMA',
+    slug: 'licenciamento-ambiental-energia-solar-eolica-inema',
+    excerpt: 'Guia completo sobre o licenciamento ambiental de parques solares e eólicos na Bahia. Conheça as etapas do SEIA, estudos bióticos e como evitar atrasos na conexão à rede.',
+    publishedAt: '2026-09-03T14:00:00Z',
+    estimatedReadTime: 12,
+    featured: false,
+    mainImageUrl: '/images/blog/post-11-energia-solar-eolica-inema.webp',
+    mainImageAlt: 'Subestação monumental e infraestrutura de energia renovável ao entardecer sob névoa',
+    mainImageCaption: 'Complexo de geração de energia limpa e subestação com licenciamento ambiental integrado na Bahia.',
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categoryIndexes: [0, 2], // Licenciamento, Inventário & ASV
+    body: [
+      p('A Bahia consolidou-se como o epicentro nacional da transição energética, liderando a geração de energia eólica e solar fotovoltaica no Brasil. No entanto, a viabilização econômica de parques de geração centralizada e projetos de minigeração distribuída depende diretamente da celeridade e robustez técnica do licenciamento ambiental perante o INEMA.'),
+      p('Atrasos na emissão da Licença Prévia (LP) ou Licença de Instalação (LI) colocam em risco os contratos de compra de energia no mercado livre (ACL) e os prazos rigorosos de conexão à rede básica estabelecidos pelo ONS (Operador Nacional do Sistema Elétrico).'),
+
+      h2('Ritos de Licenciamento no SEIA: Ordinário vs. Simplificado'),
+      p('O enquadramento processual no INEMA varia conforme a potência instalada e a sensibilidade ambiental da área:'),
+      bullet('Licença Ambiental Unificada (LU) / Simplificada: Aplicável a usinas solares de menor porte em áreas antrópicas com baixo impacto;'),
+      bullet('Rito Ordinário Trifásico (LP, LI, LO): Exigido para grandes complexos solares e eólicos que demandam abertura de dezenas de quilômetros de acessos, linhas de transmissão dedicadas e subestações elevadoras.'),
+
+      h2('Estudos Ambientais Críticos para Energia Eólica e Solar'),
+      p('Para obter a aprovação do INEMA sem notificações sucessivas, os estudos devem focar nas particularidades do semiárido baiano:'),
+      bullet('Monitoramento de Avifauna e Quirópteros: Levantamento sazonal de rotas migratórias de aves e morcegos, avaliando o risco de colisão com as pás dos aerogeradores;'),
+      bullet('Inventário Florestal e ASV em Caatinga: Levantamento fitossociológico detalhado para autorização de supressão nos acessos e praças de montagem;'),
+      bullet('Estudo de Sombreamento, Ruído e Efeito Estroboscópico: Modelagem acústica e de reflexão solar para proteção de comunidades tradicionais vizinhas.'),
+
+      callout('tip', 'Coordenação Simultânea de Linhas de Transmissão', 'O erro mais comum é licenciar o parque gerador e deixar a linha de transmissão (LT) associada para uma segunda etapa. A Anjos Brandão realiza o licenciamento simultâneo e integrado de usinas e LTs, evitando que a usina fique pronta sem poder escoar a energia gerada.'),
+
+      h2('Perguntas Frequentes sobre Licenciamento Renovável (FAQ)'),
+      h3('Qual o tempo médio de tramitação de um parque solar no INEMA?'),
+      p('Com estudos bem elaborados e sem pendências documentais, o processo ordinário de LP e LI tramita em média entre 8 e 14 meses.'),
+      h3('É necessária outorga de água para usinas solares?'),
+      p('Sim, é necessária outorga de uso de água superficial ou subterrânea junto ao INEMA para a fase de umectação de acessos na obra e posterior lavagem periódica dos módulos fotovoltaicos.'),
+    ],
+    seo: {
+      metaTitle: 'Licenciamento Ambiental Solar e Eólica na Bahia: Guia INEMA',
+      metaDescription: 'Guia completo sobre o licenciamento ambiental de parques solares e eólicos na Bahia. Conheça as etapas do SEIA, estudos bióticos e como evitar atrasos.',
+      keywords: ['licenciamento ambiental energia solar bahia', 'licenciamento parque eolico inema', 'estudo de avifauna parque eolico', 'autorizacao supressao vegetal parque solar', 'conexao ONS licenciamento ambiental'],
+    },
+  },
+
+  // ==========================================
+  // ARTIGO 12: Inventário Florestal Contínuo e Manejo
+  // ==========================================
+  {
+    _id: 'post-12',
+    title: 'Inventário Florestal Contínuo e Manejo Sustentável: Redução de Custos de Compensação',
+    slug: 'inventario-florestal-continuo-manejo-sustentavel',
+    excerpt: 'Entenda como o inventário florestal de precisão otimiza o traçado de obras, reduz as taxas de corte e minimiza os custos de compensação ambiental no INEMA.',
+    publishedAt: '2026-09-04T09:30:00Z',
+    estimatedReadTime: 10,
+    featured: false,
+    mainImageUrl: '/images/blog/post-12-inventario-florestal-continuo.webp',
+    mainImageAlt: 'Passarela técnica de pesquisa e observação florestal em meio à Mata Atlântica preservada',
+    mainImageCaption: 'Levantamento dendrométrico de precisão e manejo florestal sustentável em biomas baianos.',
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categoryIndexes: [2, 3], // Inventário & ASV, Fauna e Flora
+    body: [
+      p('O inventário florestal é frequentemente encarado apenas como uma obrigação burocrática para a emissão da ASV (Autorização de Supressão de Vegetação). No entanto, quando conduzido com metodologia estatística avançada e tecnologia LiDAR/drones, o inventário florestal contínuo transforma-se em uma poderosa ferramenta de engenharia econômica para empreendimentos na Bahia.'),
+      p('Identificar com exatidão a distribuição volumétrica de madeira, o estágio sucessional da vegetação e a localização precisa de espécies protegidas permite refinar o projeto executivo da obra, desviando de maciços florestais nobres e reduzindo em até 30% os custos com compensação ambiental.'),
+
+      h2('Metodologias de Amostragem Dendrométrica e Fitossociológica'),
+      p('A precisão do inventário perante o INEMA exige o cumprimento de parâmetros estatísticos rígidos:'),
+      bullet('Amostragem Estratificada com Parcelas Fixas: Distribuição georreferenciada de parcelas no terreno com erro de amostragem inferior a 10% com probabilidade de 95%;'),
+      bullet('Mensuração de DAP (Diâmetro à Altura do Peito) e Altura Total: Cubagem rigorosa de volume de fuste e galhos;'),
+      bullet('Mapeamento Individual de Espécies Imunes de Corte: Identificação de jacarandás, jequitibás e braúnas para integração ao plano de resgate.'),
+
+      h2('Como a Precisão do Inventário Reduz Custos de Compensação'),
+      p('A compensação ambiental por supressão na Mata Atlântica (Lei 11.428/2006) é calculada com base na área suprimida e no estágio de regeneração (inicial, médio ou avançado). Um laudo florestal inconsistente pode superestimar o estágio sucessional, obrigando o empreendedor a plantar o dobro de hectares de compensação florestal.'),
+
+      h2('Perguntas Frequentes sobre Inventário Florestal (FAQ)'),
+      h3('Qual a validade de um inventário florestal perante o INEMA?'),
+      p('Geralmente o inventário florestal tem validade de 2 a 3 anos, desde que não tenham ocorrido queimadas ou alterações antrópicas substanciais no maciço florestal.'),
+      h3('O que é o PAF (Plano de Aproveitamento Florestal)?'),
+      p('É o documento técnico que define a destinação econômica ou ecológica da madeira cortada (lenha, estacas, doação ou trituração para compostagem).'),
+    ],
+    seo: {
+      metaTitle: 'Inventário Florestal Contínuo e Manejo: Guia Técnico',
+      metaDescription: 'Entenda como o inventário florestal de precisão otimiza o traçado de obras, reduz as taxas de corte e minimiza os custos de compensação ambiental no INEMA.',
+      keywords: ['inventário florestal contínuo', 'manejo florestal sustentavel bahia', 'reduzir custos compensacao florestal ASV', 'levantamento fitossociologico INEMA', 'plano aproveitamento florestal PAF'],
+    },
+  },
+
+  // ==========================================
+  // ARTIGO 13: Economia Circular e PGRS na Indústria
+  // ==========================================
+  {
+    _id: 'post-13',
+    title: 'Economia Circular e PGRS na Indústria Química e Pesada: Da Redução à Valorização de Resíduos',
+    slug: 'economia-circular-pgrs-industria-pesada-quimica',
+    excerpt: 'Aprenda como aplicar a economia circular e otimizar o PGRS na indústria química e pesada, transformando resíduos industriais em ativos na Bahia.',
+    publishedAt: '2026-09-05T11:00:00Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-13-economia-circular-pgrs-industria.webp',
+    mainImageAlt: 'Complexo industrial monumental de reciclagem e economia circular ao entardecer sob névoa',
+    mainImageCaption: 'Gestão avançada de resíduos industriais e economia circular em polos petroquímicos e industriais.',
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categoryIndexes: [1, 4], // PGRS & Resíduos, ESG & Compliance
+    body: [
+      p('O gerenciamento de resíduos industriais no Polo de Camaçari, no Centro Industrial de Aratu (CIA) e nos distritos industriais da Bahia atingiu um novo patamar de exigência técnica. A simples destinação de resíduos industriais para aterros Classe I ou incineração tradicional deixou de ser economicamente viável diante dos altos custos logísticos e das pressões globais de sustentabilidade.'),
+      p('A integração dos princípios da Economia Circular ao Plano de Gerenciamento de Resíduos Sólidos (PGRS) permite fechar o ciclo de materiais, transformando subprodutos de processos químicos e metalúrgicos em matéria-prima secundária de alto valor.'),
+
+      h2('Pilares da Economia Circular Aplicados ao PGRS Industrial'),
+      p('A hierarquia de resíduos da Política Nacional de Resíduos Sólidos (Lei 12.305/2010) é estruturada em:'),
+      bullet('Minimização e Redução na Fonte: Otimização de processos produtivos para diminuir a geração de borras e efluentes perigosos;'),
+      bullet('Coprocessamento em Fábricas de Cimento: Destinação de resíduos com alto poder calorífico como substitutos energéticos de combustíveis fósseis;'),
+      bullet('Simbiose Industrial: Parcerias estratégicas onde o resíduo de uma indústria petroquímica abastece como insumo uma indústria cerâmica ou cimenteira vizinha.'),
+
+      h2('Rastreabilidade Total com MTR Online e Auditoria de Destinadores'),
+      p('Para garantir a conformidade legal e a pontuação ESG, as indústrias devem realizar auditorias in loco regulares nas empresas recicladoras e coprocessadoras contratadas, verificando a validade da Licença de Operação e a emissão tempestiva dos CDFs (Certificados de Destinação Final) no SINIR.'),
+
+      h2('Perguntas Frequentes sobre PGRS Industrial (FAQ)'),
+      h3('O que é simbiose industrial e como legalizá-la no INEMA?'),
+      p('É a transferência de resíduos de uma empresa para ser usado como matéria-prima por outra. O processo exige aprovação no processo de licenciamento ou cadastro específico de reaproveitamento de subprodutos no SEIA.'),
+      h3('Qual o risco de manter resíduos perigosos armazenados por mais de 1 ano?'),
+      p('A norma ABNT NBR 12235 estabelece limites para armazenamento temporário. Exceder os prazos sem autorização expressa do órgão ambiental gera multas por estocagem irregular de resíduos perigosos.'),
+    ],
+    seo: {
+      metaTitle: 'Economia Circular e PGRS na Indústria: Guia Prático',
+      metaDescription: 'Aprenda como aplicar a economia circular e otimizar o PGRS na indústria química e pesada, transformando resíduos industriais em ativos na Bahia.',
+      keywords: ['economia circular industria quimica', 'PGRS industrial polo camacari', 'coprocessamento residuos classe 1', 'simbiose industrial bahia', 'gestao de residuos perigosos SINIR'],
+    },
+  },
+
+  // ==========================================
+  // ARTIGO 14: Corredores Ecológicos Urbanos
+  // ==========================================
+  {
+    _id: 'post-14',
+    title: 'Corredores Ecológicos Urbanos: Conservação e Valorização Imobiliária em Loteamentos',
+    slug: 'corredores-ecologicos-urbanos-loteamentos-masterplans',
+    excerpt: 'Descubra como o planejamento de corredores ecológicos e áreas verdes em loteamentos acelera a aprovação ambiental e valoriza empreendimentos imobiliários.',
+    publishedAt: '2026-09-06T15:00:00Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-14-corredores-ecologicos-urbanos.webp',
+    mainImageAlt: 'Passarela ecológica suspensa monumental integrando loteamento imobiliário e floresta nativa',
+    mainImageCaption: 'Corredores ecológicos e integração harmoniosa entre urbanismo de alto padrão e preservação da biodiversidade.',
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categoryIndexes: [3, 0], // Fauna e Flora, Licenciamento
+    body: [
+      p('O desenvolvimento de loteamentos residenciais fechados, bairros planejados e masterplans imobiliários no Litoral Norte e nas principais regiões metropolitanas da Bahia exige um novo modelo de urbanismo ecológico. O antigo modelo de terraplenar toda a gleba e confinar a vegetação em fragmentos isolados tornou-se inviável tanto do ponto de vista regulatório quanto comercial.'),
+      p('Projetar corredores ecológicos contínuos conectando Áreas de Preservação Permanente (APPs), Reservas Legais e áreas verdes institucionais é o fator decisivo que viabiliza a aprovação das licenças ambientais nos municípios e no INEMA, ao mesmo tempo em que eleva substancialmente o valor do metro quadrado dos lotes.'),
+
+      h2('O Que São Corredores Ecológicos em Empreendimentos Imobiliários?'),
+      p('São faixas contínuas de vegetação nativa preservada ou reflorestada que interligam fragmentos florestais isolados dentro do masterplan do loteamento, permitindo o livre deslocamento de aves, pequenos mamíferos e polinizadores.'),
+      bullet('Microclima e Conforto Térmico: Redução comprovada de 2°C a 4°C na temperatura média do empreendimento;'),
+      bullet('Drenagem Sustentável (NBS - Nature-based Solutions): As matas dos corredores atuam como bacias naturais de amortecimento de cheias e recarga de aquíferos;'),
+      bullet('Valorização e Apelo de Mercado: Imóveis integrados a trilhas ecológicas e visuais preservadas registram velocidade de vendas até 40% superior.'),
+
+      h2('Aprovação Técnica e Regularização de APPs'),
+      p('A definição dos corredores ecológicos deve respeitar estritamente o Código Florestal (Lei Federal nº 12.651/2012) e a Lei da Mata Atlântica (Lei nº 11.428/2006). A equipe de engenharia ambiental da Anjos Brandão atua desde os primeiros estudos de viabilidade urbanística para garantir que o parcelamento do solo não invada áreas restritas.'),
+
+      h2('Perguntas Frequentes sobre Corredores Ecológicos (FAQ)'),
+      h3('É permitido implantar trilhas de pedestres dentro de APPs de corredores ecológicos?'),
+      p('O Código Florestal permite intervenções de baixo impacto ambiental em APPs, como trilhas ecológicas permeáveis e passarelas suspensas de contemplação, desde que aprovadas formalmente pelo órgão ambiental.'),
+      h3('Como os corredores ecológicos influenciam no IPTU e taxas ambientais?'),
+      p('Diversos municípios baianos já oferecem incentivos como o "IPTU Verde" para condomínios e loteamentos que preservam percentuais de áreas permeáveis e corredores ecológicos acima do mínimo legal.'),
+    ],
+    seo: {
+      metaTitle: 'Corredores Ecológicos em Loteamentos: Guia Urbanismo Verde',
+      metaDescription: 'Descubra como o planejamento de corredores ecológicos e áreas verdes em loteamentos acelera a aprovação ambiental e valoriza empreendimentos imobiliários.',
+      keywords: ['corredores ecologicos loteamentos', 'urbanismo sustentavel bahia', 'aprovacao ambiental loteamento fechado', 'nature based solutions masterplan', 'preservacao APP loteamento litoral norte'],
+    },
+  },
 ]
+
+// ==========================================
+// ORDENAÇÃO ALTERNADA: Cenário / Paisagem ↔ Pessoas em Campo
+// ==========================================
+const ALTERNATING_ORDER = [
+  'post-10', // [Cenário] Governança ESG Monumental
+  'post-1',  // [Pessoas] Licenciamento Ambiental no INEMA
+  'post-8',  // [Cenário] Viaduto Verde e Passagem de Fauna
+  'post-2',  // [Pessoas] PGRS na Construção Civil
+  'post-11', // [Cenário] Energia Solar e Eólica Subestação
+  'post-3',  // [Pessoas] Inventário Florestal e ASV
+  'post-9',  // [Cenário] Viveiro Técnico de Flora e PRAD
+  'post-4',  // [Pessoas] Renovação de Licença de Operação (LO)
+  'post-12', // [Cenário] Inventário Florestal Contínuo e Passarela
+  'post-5',  // [Pessoas] Resgate de Fauna em Obras
+  'post-13', // [Cenário] Economia Circular e PGRS Industrial
+  'post-7',  // [Pessoas] Due Diligence Ambiental em Terrenos
+  'post-14', // [Cenário] Corredores Ecológicos Urbanos
+  'post-6',  // [Pessoas] MTR Online e Resíduos Perigosos
+]
+
+const baseDate = new Date('2026-09-08T12:00:00Z')
+const rawMap = new Map(RAW_RICH_POSTS.map(p => [p._id, p]))
+
+export const RICH_POSTS = ALTERNATING_ORDER.map((id, index) => {
+  const post = rawMap.get(id)
+  if (!post) throw new Error(`Post ${id} não encontrado na lista RAW!`)
+  
+  // Clonar para não alterar referência direta
+  const cloned = { ...post }
+  const postDate = new Date(baseDate.getTime() - index * 86400000 * 2)
+  cloned.publishedAt = postDate.toISOString()
+  cloned.featured = index === 0
+  return cloned
+})
+
+
+

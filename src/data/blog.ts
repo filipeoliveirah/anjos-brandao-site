@@ -142,13 +142,215 @@ export const INITIAL_CATEGORIES: Category[] = [
 
 export const INITIAL_POSTS: PostDetail[] = [
   {
+    _id: 'post-10',
+    title: "Governança ESG e Mitigação de Riscos Ambientais em Grandes Empreendimentos",
+    slug: "governanca-esg-mitigacao-riscos-ambientais",
+    excerpt: "Descubra como a governança ESG e a gestão integrada de passivos blindam grandes obras e indústrias contra embargos e atraem crédito verde na Bahia.",
+    publishedAt: '2026-09-08T12:00:00.000Z',
+    estimatedReadTime: 11,
+    featured: true,
+    mainImageUrl: '/images/blog/post-10-esg-governanca-riscos.webp',
+    mainImageAlt: "Edifício corporativo monumental de engenharia e sustentabilidade ambiental ao entardecer",
+    mainImageCaption: "Governança corporativa integrada e matriz preventiva de compliance ambiental na Bahia.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[4], INITIAL_CATEGORIES[0]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A consolidação dos critérios ESG (Environmental, Social, and Governance) transformou radicalmente a gestão de riscos na construção civil pesada, na indústria e no setor de infraestrutura no Brasil. Se no passado a conformidade ambiental era tratada apenas como um custo reativo de obtenção de licenças, hoje a governança ambiental é o pilar que determina a liquidez financeira, a atração de fundos institucionais e a blindagem jurídica contra paralisações de obras."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Na Bahia, o cruzamento contínuo de dados de fiscalização pelo INEMA e pelo Ministério Público exige das diretorias executivas uma postura preventiva. Falhas pontuais no cumprimento de condicionantes da Licença de Operação (LO) ou passivos em canteiros de obras não geram apenas multas: resultam na suspensão imediata de Certidões Negativas de Débitos Ambientais e no bloqueio de repasses de financiamentos bancários."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Que É Governança ESG no Contexto da Engenharia e Operações?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A governança ambiental vai muito além de relatórios de sustentabilidade teóricos: ela representa a estruturação de processos operacionais auditáveis que garantem o cumprimento rigoroso de toda a legislação ambiental aplicável."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Matriz de Risco Ambiental: Mapeamento em tempo real de todas as condicionantes de LP, LI e LO com responsáveis técnicos e prazos críticos;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Auditorias Preventivas Periódicas: Vistorias in loco com emissão de relatórios de não conformidade antes de fiscalizações oficiais;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Cadeia de Fornecedores Homologada: Controle rigoroso de licenças e manifestos (MTR) de transportadores e destinadores finais de resíduos."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "legal",
+                "title": "Responsabilidade Solidária dos Administradores",
+                "text": "A Lei de Crimes Ambientais (Lei Federal nº 9.605/1998) estabelece no Art. 2º que diretores, gerentes e administradores respondem pessoalmente por infrações ambientais cometidas pela empresa caso tenham ciência da conduta e deixem de impedi-la."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Como a Governança Ambiental Facilita o Acesso a Crédito Verde"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Bancos de desenvolvimento (BNDES, BNB) e fundos de investimento imobiliário e de infraestrutura exigem a comprovação de due diligence ambiental estrita para a concessão de empréstimos com taxas subsidiadas (Green Bonds):"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Redução de Spread Bancário: Empreendimentos com matriz de compliance ativa alcançam reduções de 0,5% a 1,5% nas taxas anuais de financiamento;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Seguro Garantia e Apólices de Risco de Engenharia: Prêmios substancialmente menores para obras com gestão ambiental integrada;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Certificações Internacionais: Facilidade na obtenção de selos LEED, AQUA-HQE e EDGE para edifícios corporativos e industriais."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Perguntas Frequentes sobre Governança ESG (FAQ)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Qual a diferença entre ESG e Licenciamento Ambiental tradicional?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O licenciamento ambiental é a obrigação legal mínima imposta pelos órgãos ambientais. O ESG engloba o licenciamento, mas adiciona governança interna contínua, metas de descarbonização, eficiência hídrica e gestão de riscos reputacionais."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Com que frequência as auditorias de compliance ambiental devem ser realizadas?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Recomenda-se a realização de auditorias trimestrais em canteiros de obras e auditorias semestrais em plantas industriais operacionais."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Governança ESG e Mitigação de Riscos Ambientais em Obras",
+      metaDescription: "Descubra como a governança ESG e a gestão integrada de passivos blindam grandes obras e indústrias contra embargos e atraem crédito verde na Bahia.",
+      keywords: ["governança ESG ambiental","compliance ambiental grandes obras","mitigação de riscos ambientais bahia","crédito verde financiamento obras","auditoria ambiental preventiva"],
+    },
+  },
+  {
     _id: 'post-1',
     title: "Guia do Licenciamento Ambiental no INEMA (Bahia): Da LP à LO sem embargos",
     slug: "guia-licenciamento-ambiental-inema-bahia",
     excerpt: "Guia definitivo sobre o licenciamento ambiental no INEMA na Bahia. Conheça as etapas LP, LI e LO, prazos, estudos exigidos e como evitar embargos na sua obra.",
-    publishedAt: '2026-08-10T10:00:00Z',
+    publishedAt: '2026-09-06T12:00:00.000Z',
     estimatedReadTime: 10,
-    featured: true,
+    featured: false,
     mainImageUrl: '/images/blog/post-1-licenciamento-inema.webp',
     mainImageAlt: "Engenheiros ambientais realizando vistoria técnica e licenciamento ambiental no INEMA na Bahia",
     mainImageCaption: "Inspeção técnica e conformidade de condicionantes da LP, LI e LO em obras na Bahia.",
@@ -646,11 +848,429 @@ export const INITIAL_POSTS: PostDetail[] = [
     },
   },
   {
+    _id: 'post-8',
+    title: "Passagem de Fauna em Rodovias e Grandes Obras: Estratégias e Exigências do INEMA",
+    slug: "passagem-de-fauna-monitoramento-obras-infraestrutura",
+    excerpt: "Guia técnico sobre passagens de fauna, conectividade de dossel e monitoramento biótico em obras de infraestrutura na Bahia. Evite embargos com engenharia ambiental integrada.",
+    publishedAt: '2026-09-04T12:00:00.000Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-8-passagem-fauna-infraestrutura.webp',
+    mainImageAlt: "Passagem de fauna monumental e viaduto ecológico integrado em floresta tropical na Bahia",
+    mainImageCaption: "Estrutura de conectividade ecológica e viaduto verde para travessia segura de fauna silvestre em rodovia.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[3], INITIAL_CATEGORIES[0]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A implantação de obras lineares de grande porte — como rodovias, ferrovias, minerodutos e linhas de transmissão de energia — impõe um dos maiores desafios ecológicos e regulatórios à engenharia moderna: a fragmentação de habitats. O seccionamento de maciços florestais isola populações de animais silvestres, eleva os índices de atropelamento e compromete o fluxo gênico das espécies nativas."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Nos processos de licenciamento ambiental conduzidos perante o INEMA e o IBAMA na Bahia, a exigência de passagens de fauna e programas contínuos de monitoramento biótico deixou de ser uma recomendação genérica para se tornar condicionante técnica estrita da Licença de Instalação (LI) e da Licença de Operação (LO). Obras que negligenciam a modelagem de conectividade de paisagem enfrentam atrasos severos na emissão de licenças, multas administrativas e ordens de paralisação de frentes de serviço."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Que São Passagens de Fauna e Qual a sua Base Normativa?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Passagens de fauna são estruturas de engenharia projetadas especificamente para permitir a travessia segura de animais silvestres sob, sobre ou através de barreiras antrópicas lineares, restabelecendo a continuidade dos corredores ecológicos."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "No Brasil, a obrigatoriedade dessas medidas decorre diretamente da Lei Federal nº 6.938/1981 (Política Nacional do Meio Ambiente), da Lei Federal nº 5.197/1967 (Proteção à Fauna) e da Instrução Normativa IBAMA nº 03/2014, complementada na Bahia pela Lei Estadual nº 10.431/2006. O órgão ambiental condiciona a liberação das obras à comprovação de que o traçado do empreendimento minimizou o efeito de borda e mitigou os pontos críticos de colisão com a fauna."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "legal",
+                "title": "Exigência Técnica nas Condicionantes de LI e LO",
+                "text": "A autorização para operação de rodovias e ferrovias fica expressamente vinculada à comprovação da eficácia das passagens instaladas, mensurada por meio de relatórios sazonais de monitoramento biótico protocolados no SEIA."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Tipologia Estrutural de Passagens de Fauna na Infraestrutura"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A escolha do modelo de passagem depende do porte dos animais-alvo, do tipo de relevo e das características ecológicas do bioma (Mata Atlântica, Cerrado ou Caatinga):"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "1. Overpasses (Viadutos Verdes e Pontes Ecológicas)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "São viadutos monumentais construídos sobre rodovias ou ferrovias, totalmente recobertos por solo, gramíneas, arbustos e árvores de pequeno porte."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Animais atendidos: Médios e grandes mamíferos (onças, antas, cervos, lobos-guará) que rejeitam transitar por ambientes confinados e escuros;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Engenharia e dimensões: Largura média de 30 a 60 metros, com barreiras visuais e acústicas laterais para bloquear os faróis e o ruído do tráfego;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Conectividade: Integração direta com as matas ciliares e fragmentos florestais adjacentes."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "2. Underpasses (Túneis e Passagens Inferiores)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Estruturas subterrâneas sob a pista de rolamento, frequentemente integradas com sistemas de drenagem pluvial adaptados."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Animais atendidos: Pequenos e médios mamíferos (tatus, quatis, lontras), répteis e anfíbios;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Adaptações técnicas: Instalação de banquetas laterais secas em bueiros de drenagem celular, garantindo travessia mesmo em períodos de cheia;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Atratividade: Substrato de terra natural e plantio de vegetação atrativa nas embocaduras."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "3. Passagens de Dossel (Pontes Aéreas e Cordas de Conectividade)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Estruturas suspensas que interligam as copas das árvores em ambos os lados da via."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Animais atendidos: Primatas (micos, bugios), preguiças, roedores arborícolas e marsupiais;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Materiais: Malhas de cabos de aço revestidos, cordas de alta resistência UV e pontes de tela com sensores de peso."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "warning",
+                "title": "O Risco dos Bueiros sem Banqueta Seca",
+                "text": "Utilizar bueiros comuns de drenagem hidráulica sem banquetas secas elevadas inviabiliza a passagem da fauna durante 6 meses do ano na Bahia, gerando notificações de não conformidade no INEMA."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Fases do Programa de Monitoramento Biótico e Afugentamento"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A eficácia das passagens de fauna depende de uma metodologia científica em três etapas temporais:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Fase Pré-Obra (Baseline de Fauna): Instalação de armadilhas fotográficas (camera traps), transectos diurnos e noturnos e modelagem espacial para identificar os \"hotspots\" de travessia antes da terraplenagem;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Fase de Obra (Resgate e Afugentamento): Presença contínua de biólogos e médicos veterinários na frente de supressão vegetal, com veículos de resgate e caixas de transporte climatizadas;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Fase Pós-Obra (Monitoramento de Eficácia): Monitoramento contínuo por no mínimo 24 meses pós-inauguração com sensores infravermelhos para validar a taxa de transposição e comprovar o cumprimento das condicionantes da LO."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Como a Consultoria Anjos Brandão Garante a Aprovação Técnica"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A equipe multidisciplinar da Anjos Brandão une engenharia estrutural e biologia de conservação, entregando:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Projetos executivos de passagens de fauna integrados à geometria da rodovia;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Relatórios estatísticos de monitoramento compatíveis com o padrão exigido pelo INEMA;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Treinamento e sensibilização de motoristas e operadores de máquinas pesadas."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Perguntas Frequentes sobre Passagem de Fauna (FAQ)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Toda rodovia é obrigada a implantar viadutos verdes?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Não. A exigência de viadutos verdes ocorre principalmente em rodovias que cruzam Unidades de Conservação (UCs) ou áreas de alta densidade de grandes mamíferos. Na maioria dos trechos, túneis inferiores adaptados e passagens aéreas atendem perfeitamente aos requisitos legais."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Qual o tempo mínimo de monitoramento exigido pelo INEMA após a conclusão da obra?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O monitoramento pós-obra geralmente é exigido por um período de 2 a 5 anos, com relatórios semestrais de eficiência de uso das passagens."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Quem deve assinar o plano de resgate e monitoramento de fauna?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Biólogos e médicos veterinários devidamente registrados no CRBio / CRMV com ART/TRT ativa perante o conselho de classe."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Passagem de Fauna em Rodovias e Obras: Guia INEMA",
+      metaDescription: "Guia técnico sobre passagens de fauna e monitoramento biótico em obras de infraestrutura na Bahia. Conheça as exigências do INEMA e evite embargos.",
+      keywords: ["passagem de fauna rodovias","passagem de fauna infraestrutura bahia","monitoramento de fauna inema","viadutos verdes corredor ecologico","afugentamento e resgate de fauna obra","licenciamento ambiental obras lineares"],
+    },
+  },
+  {
     _id: 'post-2',
     title: "PGRS na Construção Civil: Como Reduzir Custos e Garantir Conformidade",
     slug: "pgrs-construcao-civil-reducao-custos-conformidade",
     excerpt: "Aprenda a estruturar o PGRS na construção civil, classificar resíduos Classe A a D conforme o CONAMA 307 e economizar na destinação de RCC.",
-    publishedAt: '2026-08-04T14:30:00Z',
+    publishedAt: '2026-09-02T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-2-pgrs-construcao-civil.webp',
@@ -1090,11 +1710,203 @@ export const INITIAL_POSTS: PostDetail[] = [
     },
   },
   {
+    _id: 'post-11',
+    title: "Licenciamento Ambiental de Parques Solares e Eólicos na Bahia: Ritos e Exigências do INEMA",
+    slug: "licenciamento-ambiental-energia-solar-eolica-inema",
+    excerpt: "Guia completo sobre o licenciamento ambiental de parques solares e eólicos na Bahia. Conheça as etapas do SEIA, estudos bióticos e como evitar atrasos na conexão à rede.",
+    publishedAt: '2026-08-31T12:00:00.000Z',
+    estimatedReadTime: 12,
+    featured: false,
+    mainImageUrl: '/images/blog/post-11-energia-solar-eolica-inema.webp',
+    mainImageAlt: "Subestação monumental e infraestrutura de energia renovável ao entardecer sob névoa",
+    mainImageCaption: "Complexo de geração de energia limpa e subestação com licenciamento ambiental integrado na Bahia.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[0], INITIAL_CATEGORIES[2]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Bahia consolidou-se como o epicentro nacional da transição energética, liderando a geração de energia eólica e solar fotovoltaica no Brasil. No entanto, a viabilização econômica de parques de geração centralizada e projetos de minigeração distribuída depende diretamente da celeridade e robustez técnica do licenciamento ambiental perante o INEMA."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Atrasos na emissão da Licença Prévia (LP) ou Licença de Instalação (LI) colocam em risco os contratos de compra de energia no mercado livre (ACL) e os prazos rigorosos de conexão à rede básica estabelecidos pelo ONS (Operador Nacional do Sistema Elétrico)."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Ritos de Licenciamento no SEIA: Ordinário vs. Simplificado"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O enquadramento processual no INEMA varia conforme a potência instalada e a sensibilidade ambiental da área:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Licença Ambiental Unificada (LU) / Simplificada: Aplicável a usinas solares de menor porte em áreas antrópicas com baixo impacto;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Rito Ordinário Trifásico (LP, LI, LO): Exigido para grandes complexos solares e eólicos que demandam abertura de dezenas de quilômetros de acessos, linhas de transmissão dedicadas e subestações elevadoras."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Estudos Ambientais Críticos para Energia Eólica e Solar"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Para obter a aprovação do INEMA sem notificações sucessivas, os estudos devem focar nas particularidades do semiárido baiano:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Monitoramento de Avifauna e Quirópteros: Levantamento sazonal de rotas migratórias de aves e morcegos, avaliando o risco de colisão com as pás dos aerogeradores;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Inventário Florestal e ASV em Caatinga: Levantamento fitossociológico detalhado para autorização de supressão nos acessos e praças de montagem;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Estudo de Sombreamento, Ruído e Efeito Estroboscópico: Modelagem acústica e de reflexão solar para proteção de comunidades tradicionais vizinhas."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "tip",
+                "title": "Coordenação Simultânea de Linhas de Transmissão",
+                "text": "O erro mais comum é licenciar o parque gerador e deixar a linha de transmissão (LT) associada para uma segunda etapa. A Anjos Brandão realiza o licenciamento simultâneo e integrado de usinas e LTs, evitando que a usina fique pronta sem poder escoar a energia gerada."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Perguntas Frequentes sobre Licenciamento Renovável (FAQ)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Qual o tempo médio de tramitação de um parque solar no INEMA?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Com estudos bem elaborados e sem pendências documentais, o processo ordinário de LP e LI tramita em média entre 8 e 14 meses."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "É necessária outorga de água para usinas solares?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Sim, é necessária outorga de uso de água superficial ou subterrânea junto ao INEMA para a fase de umectação de acessos na obra e posterior lavagem periódica dos módulos fotovoltaicos."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Licenciamento Ambiental Solar e Eólica na Bahia: Guia INEMA",
+      metaDescription: "Guia completo sobre o licenciamento ambiental de parques solares e eólicos na Bahia. Conheça as etapas do SEIA, estudos bióticos e como evitar atrasos.",
+      keywords: ["licenciamento ambiental energia solar bahia","licenciamento parque eolico inema","estudo de avifauna parque eolico","autorizacao supressao vegetal parque solar","conexao ONS licenciamento ambiental"],
+    },
+  },
+  {
     _id: 'post-3',
     title: "Inventário Florestal e ASV: Estratégias para Supressão Vegetal Segura",
     slug: "inventario-florestal-asv-supressao-vegetal-segura",
     excerpt: "Guia completo de inventário florestal e Autorização de Supressão Vegetal (ASV) no INEMA. Evite embargos com levantamento fitossociológico de precisão.",
-    publishedAt: '2026-07-28T09:15:00Z',
+    publishedAt: '2026-08-29T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-3-inventario-florestal-asv.webp',
@@ -1514,11 +2326,419 @@ export const INITIAL_POSTS: PostDetail[] = [
     },
   },
   {
+    _id: 'post-9',
+    title: "Resgate de Germoplasma e Flora Nativa: Da Coleta ao Cumprimento de PRAD no INEMA",
+    slug: "resgate-de-germoplasma-flora-nativa-prad-inema",
+    excerpt: "Descubra como estruturar o resgate de flora, viveiros de mudas nativas e o cumprimento de PRAD para atender às exigências florestais do INEMA na Bahia.",
+    publishedAt: '2026-08-27T12:00:00.000Z',
+    estimatedReadTime: 10,
+    featured: false,
+    mainImageUrl: '/images/blog/post-9-resgate-germoplasma-flora-prad.webp',
+    mainImageAlt: "Pavilhões arquitetônicos e viveiro técnico de conservação de flora nativa na Bahia",
+    mainImageCaption: "Estrutura técnica para aclimatização de germoplasma e produção de mudas nativas para recuperação florestal.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[3], INITIAL_CATEGORIES[2]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O resgate de flora e germoplasma vegetal é uma das condicionantes mais rigorosas e tecnicamente exigentes vinculadas à Autorização de Supressão de Vegetação (ASV) em empreendimentos na Bahia. Longe de ser apenas um procedimento acessório de corte de árvores, o resgate de germoplasma assegura a conservação genética de espécies ameaçadas, raras ou de valor econômico e ecológico nos biomas Mata Atlântica, Caatinga e Cerrado."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Apresentar um plano deficiente ao INEMA acarreta o travamento do processo no SEIA, a suspensão da autorização de supressão e o indeferimento de fases posteriores do licenciamento. Neste guia prático, abordamos as metodologias de coleta de sementes, resgate de epífitas, transplante de mudas e como integrar esse material ao Plano de Recuperação de Áreas Degradadas (PRAD) para garantir taxas de pegamento superiores a 90%."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Que É Resgate de Germoplasma e Qual a sua Exigência Legal?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Germoplasma é o conjunto de materiais genéticos vegetais (sementes, propágulos, estacas, mudas jovens e indivíduos adultos) capazes de perpetuar uma espécie botânica. O resgate de germoplasma consiste na coleta sistemática e preservação desse patrimônio antes do avanço das máquinas de supressão e terraplenagem."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A fundamentação legal na Bahia inclui:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Lei Federal nº 11.428/2006 (Lei da Mata Atlântica): Proteção especial para espécies clímax e em perigo de extinção;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Portaria MMA nº 148/2022: Lista Oficial de Espécies Ameaçadas da Flora Brasileira;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Lei Estadual da Bahia nº 10.431/2006 e Decreto nº 14.024/2012: Regulamentação das compensações florestais e diretrizes de PRAD perante o INEMA."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "legal",
+                "title": "Proibição de Supressão sem Resgate Prévia",
+                "text": "O corte de vegetação sem o resgate prévio de espécies imunes ao corte ou protegidas por lei configura crime ambiental grave, gerando autuação com multas cumulativas por hectare suprimido."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Etapas Metodológicas do Resgate de Flora em Campo"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O trabalho de campo da equipe de botânicos e engenheiros florestais segue quatro etapas coordenadas:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "1. Mapeamento e Marcação de Matrizes Botânicas"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Antes do início da supressão, a equipe percorre 100% da área diretamente afetada (ADA), georreferenciando com GPS submétrico as árvores matrizes produtoras de sementes vigorosas e as espécies raras."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "2. Resgate de Epífitas e Bromélias"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "As espécies epifíticas (bromélias, orquídeas, cactos e pteridófitas) que vivem sobre os troncos das árvores a serem suprimidas são resgatadas manualmente com técnicas de escalada segura."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Armazenamento temporário: Acomodação em caixas teladas e umidificadas para evitar estresse hídrico;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Destinação: Reassentamento direto em fragmentos florestais preservados ou transferência para viveiros de conservação."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "3. Coleta e Beneficiamento de Sementes e Frutos"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Coleta de lotes de sementes em diferentes matrizes para garantir alta variabilidade genética, seguida de secagem controlada, beneficiamento e testes de germinação em laboratório."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "4. Transplante de Mudas Jovens e Regenerantes"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Indivíduos jovens do sub-bosque em perfeito estado fitossanitário são retirados com torrão preservado e transportados para viveiros de aclimatação."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Integração com o PRAD (Plano de Recuperação de Áreas Degradadas)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O material resgatado constitui a matéria-prima biológica mais valiosa para o cumprimento das obrigações compensatórias do empreendimento:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Restauração de Áreas de Preservação Permanente (APP) e Reserva Legal (RL);"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Recuperação de taludes de corte e aterro e áreas de jazida de solo;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Enriquecimento de florestas secundárias empobrecidas no entorno da obra."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "tip",
+                "title": "Garantia de Alta Taxa de Pegamento",
+                "text": "A utilização de mudas produzidas a partir do germoplasma local do próprio terreno aumenta a taxa de sobrevivência do PRAD para índices acima de 90%, uma vez que o material genético já está perfeitamente adaptado ao solo e ao microclima da região."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Métricas de Acompanhamento Exigidas pelo INEMA"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Os relatórios de cumprimento do PRAD devem comprovar a evolução dos seguintes indicadores ecológicos ao longo dos anos:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Densidade de indivíduos/ha (mínimo de 1.100 a 1.660 mudas/ha);"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Riqueza de espécies nativas (mínimo de 30 a 40 espécies de diferentes grupos ecológicos - pioneiras, secundárias e clímax);"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Porcentagem de cobertura de copa e ausência de espécies exóticas invasoras."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Perguntas Frequentes sobre Resgate de Flora (FAQ)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Para onde vão as mudas e epífitas resgatadas se o empreendimento não tiver viveiro próprio?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A consultoria ambiental estabelece parcerias com viveiros credenciados na região ou realiza a doação técnica para Unidades de Conservação e jardins botânicos estaduais cadastrados perante o INEMA."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Quanto tempo antes da supressão o resgate de sementes deve começar?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Recomenda-se iniciar a coleta de sementes de 3 a 6 meses antes da supressão para abranger os diferentes períodos fenológicos de floração e frutificação das espécies."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Qual profissional tem competência legal para emitir o laudo de resgate de flora?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Engenheiros florestais, agrônomos e biólogos com especialização em botânica, com registro no CREA / CRBio e emissão de ART/TRT."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Resgate de Germoplasma e Flora Nativa: Guia PRAD INEMA",
+      metaDescription: "Descubra como estruturar o resgate de flora, viveiros de mudas nativas e o cumprimento de PRAD para atender às exigências florestais do INEMA na Bahia.",
+      keywords: ["resgate de germoplasma bahia","resgate de flora supressao vegetal","plano de recuperacao areas degradadas PRAD inema","coleta de sementes nativas bahia","resgate de epifitas e bromelias","compensacao florestal ASV inema"],
+    },
+  },
+  {
     _id: 'post-4',
     title: "Renovação de Licença de Operação (LO): Prazos, Documentos e Como Evitar a Paralisação de Atividades",
     slug: "renovacao-licenca-operacao-lo-prazos-documentos-inema",
     excerpt: "Guia prático para renovação da Licença de Operação (LO) no INEMA. Conheça a regra dos 120 dias da LC 140/2011, documentos e condicionantes.",
-    publishedAt: '2026-08-18T10:00:00Z',
+    publishedAt: '2026-08-25T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-4-renovacao-licenca-lo.webp',
@@ -1968,11 +3188,177 @@ export const INITIAL_POSTS: PostDetail[] = [
     },
   },
   {
+    _id: 'post-12',
+    title: "Inventário Florestal Contínuo e Manejo Sustentável: Redução de Custos de Compensação",
+    slug: "inventario-florestal-continuo-manejo-sustentavel",
+    excerpt: "Entenda como o inventário florestal de precisão otimiza o traçado de obras, reduz as taxas de corte e minimiza os custos de compensação ambiental no INEMA.",
+    publishedAt: '2026-08-23T12:00:00.000Z',
+    estimatedReadTime: 10,
+    featured: false,
+    mainImageUrl: '/images/blog/post-12-inventario-florestal-continuo.webp',
+    mainImageAlt: "Passarela técnica de pesquisa e observação florestal em meio à Mata Atlântica preservada",
+    mainImageCaption: "Levantamento dendrométrico de precisão e manejo florestal sustentável em biomas baianos.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[2], INITIAL_CATEGORIES[3]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O inventário florestal é frequentemente encarado apenas como uma obrigação burocrática para a emissão da ASV (Autorização de Supressão de Vegetação). No entanto, quando conduzido com metodologia estatística avançada e tecnologia LiDAR/drones, o inventário florestal contínuo transforma-se em uma poderosa ferramenta de engenharia econômica para empreendimentos na Bahia."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Identificar com exatidão a distribuição volumétrica de madeira, o estágio sucessional da vegetação e a localização precisa de espécies protegidas permite refinar o projeto executivo da obra, desviando de maciços florestais nobres e reduzindo em até 30% os custos com compensação ambiental."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Metodologias de Amostragem Dendrométrica e Fitossociológica"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A precisão do inventário perante o INEMA exige o cumprimento de parâmetros estatísticos rígidos:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Amostragem Estratificada com Parcelas Fixas: Distribuição georreferenciada de parcelas no terreno com erro de amostragem inferior a 10% com probabilidade de 95%;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Mensuração de DAP (Diâmetro à Altura do Peito) e Altura Total: Cubagem rigorosa de volume de fuste e galhos;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Mapeamento Individual de Espécies Imunes de Corte: Identificação de jacarandás, jequitibás e braúnas para integração ao plano de resgate."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Como a Precisão do Inventário Reduz Custos de Compensação"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A compensação ambiental por supressão na Mata Atlântica (Lei 11.428/2006) é calculada com base na área suprimida e no estágio de regeneração (inicial, médio ou avançado). Um laudo florestal inconsistente pode superestimar o estágio sucessional, obrigando o empreendedor a plantar o dobro de hectares de compensação florestal."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Perguntas Frequentes sobre Inventário Florestal (FAQ)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Qual a validade de um inventário florestal perante o INEMA?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Geralmente o inventário florestal tem validade de 2 a 3 anos, desde que não tenham ocorrido queimadas ou alterações antrópicas substanciais no maciço florestal."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que é o PAF (Plano de Aproveitamento Florestal)?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "É o documento técnico que define a destinação econômica ou ecológica da madeira cortada (lenha, estacas, doação ou trituração para compostagem)."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Inventário Florestal Contínuo e Manejo: Guia Técnico",
+      metaDescription: "Entenda como o inventário florestal de precisão otimiza o traçado de obras, reduz as taxas de corte e minimiza os custos de compensação ambiental no INEMA.",
+      keywords: ["inventário florestal contínuo","manejo florestal sustentavel bahia","reduzir custos compensacao florestal ASV","levantamento fitossociologico INEMA","plano aproveitamento florestal PAF"],
+    },
+  },
+  {
     _id: 'post-5',
     title: "Resgate de Fauna e Supressão Vegetal em Obras: Requisitos Legais, Equipe de Campo e Protocolos",
     slug: "resgate-fauna-supressao-vegetal-requisitos-inema",
     excerpt: "Como estruturar o resgate e afugentamento de fauna na supressão vegetal de obras. Protocolos de campo, salvamento de flora e exigências do INEMA.",
-    publishedAt: '2026-08-21T11:00:00Z',
+    publishedAt: '2026-08-21T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-5-resgate-fauna-supressao.webp',
@@ -2472,11 +3858,777 @@ export const INITIAL_POSTS: PostDetail[] = [
     },
   },
   {
+    _id: 'post-13',
+    title: "Economia Circular e PGRS na Indústria Química e Pesada: Da Redução à Valorização de Resíduos",
+    slug: "economia-circular-pgrs-industria-pesada-quimica",
+    excerpt: "Aprenda como aplicar a economia circular e otimizar o PGRS na indústria química e pesada, transformando resíduos industriais em ativos na Bahia.",
+    publishedAt: '2026-08-19T12:00:00.000Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-13-economia-circular-pgrs-industria.webp',
+    mainImageAlt: "Complexo industrial monumental de reciclagem e economia circular ao entardecer sob névoa",
+    mainImageCaption: "Gestão avançada de resíduos industriais e economia circular em polos petroquímicos e industriais.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[1], INITIAL_CATEGORIES[4]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O gerenciamento de resíduos industriais no Polo de Camaçari, no Centro Industrial de Aratu (CIA) e nos distritos industriais da Bahia atingiu um novo patamar de exigência técnica. A simples destinação de resíduos industriais para aterros Classe I ou incineração tradicional deixou de ser economicamente viável diante dos altos custos logísticos e das pressões globais de sustentabilidade."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A integração dos princípios da Economia Circular ao Plano de Gerenciamento de Resíduos Sólidos (PGRS) permite fechar o ciclo de materiais, transformando subprodutos de processos químicos e metalúrgicos em matéria-prima secundária de alto valor."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Pilares da Economia Circular Aplicados ao PGRS Industrial"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A hierarquia de resíduos da Política Nacional de Resíduos Sólidos (Lei 12.305/2010) é estruturada em:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Minimização e Redução na Fonte: Otimização de processos produtivos para diminuir a geração de borras e efluentes perigosos;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Coprocessamento em Fábricas de Cimento: Destinação de resíduos com alto poder calorífico como substitutos energéticos de combustíveis fósseis;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Simbiose Industrial: Parcerias estratégicas onde o resíduo de uma indústria petroquímica abastece como insumo uma indústria cerâmica ou cimenteira vizinha."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Rastreabilidade Total com MTR Online e Auditoria de Destinadores"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Para garantir a conformidade legal e a pontuação ESG, as indústrias devem realizar auditorias in loco regulares nas empresas recicladoras e coprocessadoras contratadas, verificando a validade da Licença de Operação e a emissão tempestiva dos CDFs (Certificados de Destinação Final) no SINIR."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Perguntas Frequentes sobre PGRS Industrial (FAQ)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que é simbiose industrial e como legalizá-la no INEMA?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "É a transferência de resíduos de uma empresa para ser usado como matéria-prima por outra. O processo exige aprovação no processo de licenciamento ou cadastro específico de reaproveitamento de subprodutos no SEIA."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Qual o risco de manter resíduos perigosos armazenados por mais de 1 ano?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A norma ABNT NBR 12235 estabelece limites para armazenamento temporário. Exceder os prazos sem autorização expressa do órgão ambiental gera multas por estocagem irregular de resíduos perigosos."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Economia Circular e PGRS na Indústria: Guia Prático",
+      metaDescription: "Aprenda como aplicar a economia circular e otimizar o PGRS na indústria química e pesada, transformando resíduos industriais em ativos na Bahia.",
+      keywords: ["economia circular industria quimica","PGRS industrial polo camacari","coprocessamento residuos classe 1","simbiose industrial bahia","gestao de residuos perigosos SINIR"],
+    },
+  },
+  {
+    _id: 'post-7',
+    title: "Due Diligence Ambiental na Compra de Terrenos: Como Identificar Passivos e Evitar Embargos",
+    slug: "due-diligence-ambiental-compra-terrenos-loteamentos",
+    excerpt: "Descubra como a Due Diligence Ambiental na compra de terrenos evita passivos milionários, contaminações e embargos em loteamentos e indústrias.",
+    publishedAt: '2026-08-17T12:00:00.000Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-7-due-diligence-terrenos.webp',
+    mainImageAlt: "Equipe de engenharia ambiental coletando amostras de solo e água subterrânea para Due Diligence",
+    mainImageCaption: "Investigação preliminar e confirmatória NBR 15515 para diagnóstico de passivos em terrenos.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[4], INITIAL_CATEGORIES[0]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A realização de uma due diligence ambiental na compra de terrenos tornou-se o procedimento preventivo mais estratégico e mandatório para incorporadoras imobiliárias, fundos de investimento (FIIs), loteadoras e indústrias. A aquisição de glebas rurais ou terrenos urbanos para o desenvolvimento de condomínios fechados, galpões logísticos ou plantas industriais carrega riscos invisíveis que nunca aparecem nas certidões tradicionais de cartório de registro de imóveis."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "No ordenamento jurídico brasileiro, os passivos ambientais — como solos contaminados por produtos químicos, águas subterrâneas poluídas ou desmatamentos ilegais pretéritos — possuem natureza legal sui generis. Quem adquire a área herda integralmente a obrigação financeira de remediar o dano. Neste artigo aprofundado, detalhamos os fundamentos da responsabilidade propter rem, a Súmula 623 do STJ, as etapas de Avaliação Fase I e Fase II (NBR 15515) e como utilizar o laudo para blindar contratos de compra e venda."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Obrigação Propter Rem e a Súmula 623 do STJ"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A maior armadilha jurídica na compra de imóveis reside no princípio da responsabilidade civil ambiental objetiva e na sua natureza propter rem (obrigação que adere à coisa e acompanha o imóvel, independentemente de quem causou a degradação):"
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "legal",
+                "title": "Súmula 623 do Superior Tribunal de Justiça (STJ)",
+                "text": "As obrigações ambientais possuem natureza propter rem, sendo admissível cobrá-las do proprietário ou possuidor atual e/ou dos anteriores, à escolha do credor (Ministério Público ou órgão ambiental)."
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Isso significa que, se sua empresa adquirir um terreno onde há 30 anos funcionou um posto de combustíveis com tanques furados, uma fábrica com descarte clandestino de solventes ou um curtume antigo, a obrigação de desembolsar milhões de reais para remediação recairá direta e imediatamente sobre a sua empresa, mesmo que você seja um adquirente de boa-fé."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "As Fases Técnicas da Due Diligence Ambiental (ABNT NBR 15515)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A auditoria de conformidade e investigação de passivos segue rigorosos padrões metodológicos internacionais (normas ASTM E1527 e ABNT NBR 15515):"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "1. Avaliação Ambiental Preliminar (Fase I - NBR 15515-1)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Fase I é um diagnóstico documental, histórico e visual minucioso, sem a execução de perfurações de solo. Seu objetivo é identificar Áreas com Potencial de Contaminação (AP):"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Análise Multitemporal de Satélite: Avaliação de imagens orbitais e fotografias aéreas históricas desde a década de 1970 para mapear antigas lagoas de decantação, aterros ou depósitos de resíduos soterrados;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Checagem em Bancos de Dados Públicos: Consulta formal a certidões de autos de infração e termos de embargo no IBAMA, INEMA e Secretarias Municipais;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Entrevistas Estruturadas: Coleta de depoimentos de vizinhos antigos, ex-funcionários e moradores do entorno;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Vistoria Técnica In Loco: Inspeção visual de trincas em pisos industriais, manchas de óleo no solo, vegetação com sinais de estresse fitotóxico e odores característicos."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "2. Investigação Confirmatória de Solo e Água (Fase II - NBR 15515-2)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Se a Fase I apontar indícios de contaminação, a Fase II é obrigatória antes da assinatura da escritura:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Sondagens Mecanizadas de Solo: Perfurações georreferenciadas com coleta de testemunhos de solo em diversas profundidades;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Instalação de Poços de Monitoramento: Perfuração de poços piezométricos para amostragem de água subterrânea do lençol freático;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Análises Laboratoriais Acreditadas: Ensaios químicos para hidrocarbonetos de petróleo (BTEX, HPA), metais pesados (chumbo, cromo, mercúrio), pesticidas organoclorados e solventes clorados (VOCs), comparando os resultados com os Valores Orientadores da Resolução CONAMA nº 420/2009."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "warning",
+                "title": "Custos Astronômicos de Remediação Ambiental",
+                "text": "O processo de remediação de solos e aquíferos por técnicas de dessorção térmica, oxidação química ou bombeamento e tratamento pode facilmente ultrapassar o valor de mercado da própria área imobiliária, inviabilizando o empreendimento."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Diagnóstico de Restrições Florestais, APP e CAR/CEFIR"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Além do passivo de contaminação química, a due diligence ambiental na compra de terrenos avalia o aproveitamento físico real da gleba:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Demarcação de Áreas de Preservação Permanente (APP): Identificação georreferenciada de nascentes, cursos hídricos perenes ou intermitentes, topos de morro e manguezais, calculando a área não edificável obrigatória;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Estágio de Regeneração da Mata Atlântica: Classificação dos fragmentos florestais conforme a Lei Federal nº 11.428/2006 para determinar se o INEMA autorizará a supressão para o loteamento;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Análise do Cadastro Florestal (CAR / CEFIR): Verificação de sobreposições de Reserva Legal, litígios possessórios com vizinhos e proximidade de Unidades de Conservação e terras indígenas ou quilombolas."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Uso Estratégico do Laudo de Due Diligence na Negociação Comercial"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A due diligence ambiental na compra de terrenos é uma poderosa ferramenta de proteção de capital e poder de barganha:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Desconto Expressivo no Preço de Aquisição: Desconto no valor da gleba proporcional ao custo orçado para regularização ambiental e remediação;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Cláusulas de Indenização (Indemnity Clauses): Redação de cláusulas de responsabilidade expressa do vendedor por passivos ambientais pretéritos em contrato de compra e venda;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Retenção de Preço em Conta Escrow: Retenção de parte do pagamento em conta caução até a emissão formal da Licença Prévia ou certidão de baixa de passivo pelo órgão ambiental."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "tip",
+                "title": "Laudo Técnico Padrão IFC e Bancos Internacionais",
+                "text": "O laudo de due diligence ambiental emitido pela Anjos Brandão segue os padrões do IFC (International Finance Corporation) e os Princípios do Equador, conferindo credibilidade máxima para captação de debêntures e fundos imobiliários."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Perguntas Frequentes sobre Due Diligence Ambiental (FAQ)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Quanto tempo leva para realizar uma Due Diligence Ambiental Fase I?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O levantamento histórico documental e vistoria de campo da Fase I costuma ser finalizado no prazo de 10 a 20 dias úteis."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que fazer se a Fase II confirmar contaminação no terreno?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A empresa adquirente tem três caminhos: desistir formalmente da compra sem penalidades contratuais, renegociar o valor do imóvel deduzindo o custo integral do plano de remediação ou condicionar a escritura à descontaminação prévia pelo vendedor."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Qual a validade de um laudo de Due Diligence Ambiental?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Recomenda-se que o laudo tenha sido emitido há no máximo 6 a 12 meses antes do fechamento da transação imobiliária para garantir que nenhuma nova atividade poluidora tenha ocorrido no período."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Quem é o profissional habilitado para emitir o laudo?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Engenheiros ambientais, geólogos, engenheiros civis e sanitaristas com registro profissional ativo no CREA e emissão obrigatória de ART."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Due Diligence substitui a Certidão Negativa de Débitos Ambientais?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Não. A certidão negativa atesta apenas que não há multas pendentes inscritas em dívida ativa no nome do proprietário. A Due Diligence investiga a condição física real do solo e da água, identificando passivos que o próprio órgão ambiental ainda desconhece."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Due Diligence Ambiental na Compra de Terrenos: Guia",
+      metaDescription: "Descubra como a Due Diligence Ambiental na compra de terrenos evita passivos milionários, contaminações e embargos em loteamentos e indústrias.",
+      keywords: ["due diligence ambiental na compra de terrenos","due diligence ambiental compra terrenos","passivo ambiental propter rem sumula 623 stj","investigação ambiental preliminar NBR 15515","avaliação passivo ambiental terreno loteamento","risco contaminação solo água subterrânea"],
+    },
+  },
+  {
+    _id: 'post-14',
+    title: "Corredores Ecológicos Urbanos: Conservação e Valorização Imobiliária em Loteamentos",
+    slug: "corredores-ecologicos-urbanos-loteamentos-masterplans",
+    excerpt: "Descubra como o planejamento de corredores ecológicos e áreas verdes em loteamentos acelera a aprovação ambiental e valoriza empreendimentos imobiliários.",
+    publishedAt: '2026-08-15T12:00:00.000Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-14-corredores-ecologicos-urbanos.webp',
+    mainImageAlt: "Passarela ecológica suspensa monumental integrando loteamento imobiliário e floresta nativa",
+    mainImageCaption: "Corredores ecológicos e integração harmoniosa entre urbanismo de alto padrão e preservação da biodiversidade.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[3], INITIAL_CATEGORIES[0]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O desenvolvimento de loteamentos residenciais fechados, bairros planejados e masterplans imobiliários no Litoral Norte e nas principais regiões metropolitanas da Bahia exige um novo modelo de urbanismo ecológico. O antigo modelo de terraplenar toda a gleba e confinar a vegetação em fragmentos isolados tornou-se inviável tanto do ponto de vista regulatório quanto comercial."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Projetar corredores ecológicos contínuos conectando Áreas de Preservação Permanente (APPs), Reservas Legais e áreas verdes institucionais é o fator decisivo que viabiliza a aprovação das licenças ambientais nos municípios e no INEMA, ao mesmo tempo em que eleva substancialmente o valor do metro quadrado dos lotes."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Que São Corredores Ecológicos em Empreendimentos Imobiliários?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "São faixas contínuas de vegetação nativa preservada ou reflorestada que interligam fragmentos florestais isolados dentro do masterplan do loteamento, permitindo o livre deslocamento de aves, pequenos mamíferos e polinizadores."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Microclima e Conforto Térmico: Redução comprovada de 2°C a 4°C na temperatura média do empreendimento;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Drenagem Sustentável (NBS - Nature-based Solutions): As matas dos corredores atuam como bacias naturais de amortecimento de cheias e recarga de aquíferos;"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Valorização e Apelo de Mercado: Imóveis integrados a trilhas ecológicas e visuais preservadas registram velocidade de vendas até 40% superior."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Aprovação Técnica e Regularização de APPs"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A definição dos corredores ecológicos deve respeitar estritamente o Código Florestal (Lei Federal nº 12.651/2012) e a Lei da Mata Atlântica (Lei nº 11.428/2006). A equipe de engenharia ambiental da Anjos Brandão atua desde os primeiros estudos de viabilidade urbanística para garantir que o parcelamento do solo não invada áreas restritas."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Perguntas Frequentes sobre Corredores Ecológicos (FAQ)"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "É permitido implantar trilhas de pedestres dentro de APPs de corredores ecológicos?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Código Florestal permite intervenções de baixo impacto ambiental em APPs, como trilhas ecológicas permeáveis e passarelas suspensas de contemplação, desde que aprovadas formalmente pelo órgão ambiental."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Como os corredores ecológicos influenciam no IPTU e taxas ambientais?"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Diversos municípios baianos já oferecem incentivos como o \"IPTU Verde\" para condomínios e loteamentos que preservam percentuais de áreas permeáveis e corredores ecológicos acima do mínimo legal."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Corredores Ecológicos em Loteamentos: Guia Urbanismo Verde",
+      metaDescription: "Descubra como o planejamento de corredores ecológicos e áreas verdes em loteamentos acelera a aprovação ambiental e valoriza empreendimentos imobiliários.",
+      keywords: ["corredores ecologicos loteamentos","urbanismo sustentavel bahia","aprovacao ambiental loteamento fechado","nature based solutions masterplan","preservacao APP loteamento litoral norte"],
+    },
+  },
+  {
     _id: 'post-6',
     title: "MTR Online e Gestão de Resíduos Classe I (Perigosos): Guia Prático para Canteiros e Indústrias",
     slug: "mtr-online-gestao-residuos-perigosos-classe-1",
     excerpt: "Guia passo a passo para emissão de MTR Online no SINIR e gestão de resíduos perigosos Classe 1. Evite multas em canteiros e indústrias na Bahia.",
-    publishedAt: '2026-08-23T08:30:00Z',
+    publishedAt: '2026-08-13T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-6-mtr-residuos-perigosos.webp',
@@ -2913,440 +5065,6 @@ export const INITIAL_POSTS: PostDetail[] = [
       metaTitle: "MTR Online e Resíduos Perigosos Classe 1: Guia SINIR",
       metaDescription: "Guia passo a passo para emissão de MTR Online no SINIR e gestão de resíduos perigosos Classe 1. Evite multas em canteiros e indústrias na Bahia.",
       keywords: ["MTR online e resíduos perigosos classe 1","MTR online resíduos perigosos classe 1","MTR online sinir bahia","gestão de resíduos classe I perigosos","emissão MTR eletrônico","certificado destinação final CDF","armazenamento resíduos perigosos NBR 12235"],
-    },
-  },
-  {
-    _id: 'post-7',
-    title: "Due Diligence Ambiental na Compra de Terrenos: Como Identificar Passivos e Evitar Embargos",
-    slug: "due-diligence-ambiental-compra-terrenos-loteamentos",
-    excerpt: "Descubra como a Due Diligence Ambiental na compra de terrenos evita passivos milionários, contaminações e embargos em loteamentos e indústrias.",
-    publishedAt: '2026-08-25T15:00:00Z',
-    estimatedReadTime: 11,
-    featured: false,
-    mainImageUrl: '/images/blog/post-7-due-diligence-terrenos.webp',
-    mainImageAlt: "Equipe de engenharia ambiental coletando amostras de solo e água subterrânea para Due Diligence",
-    mainImageCaption: "Investigação preliminar e confirmatória NBR 15515 para diagnóstico de passivos em terrenos.",
-    author: {
-      name: 'Coordenação Técnica Anjos Brandão',
-      role: 'Equipe de Engenharia e Consultoria Ambiental',
-      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
-      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
-    },
-    categories: [INITIAL_CATEGORIES[4], INITIAL_CATEGORIES[0]],
-    body: [
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "A realização de uma due diligence ambiental na compra de terrenos tornou-se o procedimento preventivo mais estratégico e mandatório para incorporadoras imobiliárias, fundos de investimento (FIIs), loteadoras e indústrias. A aquisição de glebas rurais ou terrenos urbanos para o desenvolvimento de condomínios fechados, galpões logísticos ou plantas industriais carrega riscos invisíveis que nunca aparecem nas certidões tradicionais de cartório de registro de imóveis."
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "No ordenamento jurídico brasileiro, os passivos ambientais — como solos contaminados por produtos químicos, águas subterrâneas poluídas ou desmatamentos ilegais pretéritos — possuem natureza legal sui generis. Quem adquire a área herda integralmente a obrigação financeira de remediar o dano. Neste artigo aprofundado, detalhamos os fundamentos da responsabilidade propter rem, a Súmula 623 do STJ, as etapas de Avaliação Fase I e Fase II (NBR 15515) e como utilizar o laudo para blindar contratos de compra e venda."
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "h2",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "A Obrigação Propter Rem e a Súmula 623 do STJ"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "A maior armadilha jurídica na compra de imóveis reside no princípio da responsabilidade civil ambiental objetiva e na sua natureza propter rem (obrigação que adere à coisa e acompanha o imóvel, independentemente de quem causou a degradação):"
-                      }
-                ]
-          },
-          {
-                "_type": "callout",
-                "type": "legal",
-                "title": "Súmula 623 do Superior Tribunal de Justiça (STJ)",
-                "text": "As obrigações ambientais possuem natureza propter rem, sendo admissível cobrá-las do proprietário ou possuidor atual e/ou dos anteriores, à escolha do credor (Ministério Público ou órgão ambiental)."
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Isso significa que, se sua empresa adquirir um terreno onde há 30 anos funcionou um posto de combustíveis com tanques furados, uma fábrica com descarte clandestino de solventes ou um curtume antigo, a obrigação de desembolsar milhões de reais para remediação recairá direta e imediatamente sobre a sua empresa, mesmo que você seja um adquirente de boa-fé."
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "h2",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "As Fases Técnicas da Due Diligence Ambiental (ABNT NBR 15515)"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "A auditoria de conformidade e investigação de passivos segue rigorosos padrões metodológicos internacionais (normas ASTM E1527 e ABNT NBR 15515):"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "h3",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "1. Avaliação Ambiental Preliminar (Fase I - NBR 15515-1)"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "A Fase I é um diagnóstico documental, histórico e visual minucioso, sem a execução de perfurações de solo. Seu objetivo é identificar Áreas com Potencial de Contaminação (AP):"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Análise Multitemporal de Satélite: Avaliação de imagens orbitais e fotografias aéreas históricas desde a década de 1970 para mapear antigas lagoas de decantação, aterros ou depósitos de resíduos soterrados;"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Checagem em Bancos de Dados Públicos: Consulta formal a certidões de autos de infração e termos de embargo no IBAMA, INEMA e Secretarias Municipais;"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Entrevistas Estruturadas: Coleta de depoimentos de vizinhos antigos, ex-funcionários e moradores do entorno;"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Vistoria Técnica In Loco: Inspeção visual de trincas em pisos industriais, manchas de óleo no solo, vegetação com sinais de estresse fitotóxico e odores característicos."
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "h3",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "2. Investigação Confirmatória de Solo e Água (Fase II - NBR 15515-2)"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Se a Fase I apontar indícios de contaminação, a Fase II é obrigatória antes da assinatura da escritura:"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Sondagens Mecanizadas de Solo: Perfurações georreferenciadas com coleta de testemunhos de solo em diversas profundidades;"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Instalação de Poços de Monitoramento: Perfuração de poços piezométricos para amostragem de água subterrânea do lençol freático;"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Análises Laboratoriais Acreditadas: Ensaios químicos para hidrocarbonetos de petróleo (BTEX, HPA), metais pesados (chumbo, cromo, mercúrio), pesticidas organoclorados e solventes clorados (VOCs), comparando os resultados com os Valores Orientadores da Resolução CONAMA nº 420/2009."
-                      }
-                ]
-          },
-          {
-                "_type": "callout",
-                "type": "warning",
-                "title": "Custos Astronômicos de Remediação Ambiental",
-                "text": "O processo de remediação de solos e aquíferos por técnicas de dessorção térmica, oxidação química ou bombeamento e tratamento pode facilmente ultrapassar o valor de mercado da própria área imobiliária, inviabilizando o empreendimento."
-          },
-          {
-                "_type": "block",
-                "style": "h2",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Diagnóstico de Restrições Florestais, APP e CAR/CEFIR"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Além do passivo de contaminação química, a due diligence ambiental na compra de terrenos avalia o aproveitamento físico real da gleba:"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Demarcação de Áreas de Preservação Permanente (APP): Identificação georreferenciada de nascentes, cursos hídricos perenes ou intermitentes, topos de morro e manguezais, calculando a área não edificável obrigatória;"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Estágio de Regeneração da Mata Atlântica: Classificação dos fragmentos florestais conforme a Lei Federal nº 11.428/2006 para determinar se o INEMA autorizará a supressão para o loteamento;"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Análise do Cadastro Florestal (CAR / CEFIR): Verificação de sobreposições de Reserva Legal, litígios possessórios com vizinhos e proximidade de Unidades de Conservação e terras indígenas ou quilombolas."
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "h2",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Uso Estratégico do Laudo de Due Diligence na Negociação Comercial"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "A due diligence ambiental na compra de terrenos é uma poderosa ferramenta de proteção de capital e poder de barganha:"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Desconto Expressivo no Preço de Aquisição: Desconto no valor da gleba proporcional ao custo orçado para regularização ambiental e remediação;"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Cláusulas de Indenização (Indemnity Clauses): Redação de cláusulas de responsabilidade expressa do vendedor por passivos ambientais pretéritos em contrato de compra e venda;"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "bullet",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Retenção de Preço em Conta Escrow: Retenção de parte do pagamento em conta caução até a emissão formal da Licença Prévia ou certidão de baixa de passivo pelo órgão ambiental."
-                      }
-                ]
-          },
-          {
-                "_type": "callout",
-                "type": "tip",
-                "title": "Laudo Técnico Padrão IFC e Bancos Internacionais",
-                "text": "O laudo de due diligence ambiental emitido pela Anjos Brandão segue os padrões do IFC (International Finance Corporation) e os Princípios do Equador, conferindo credibilidade máxima para captação de debêntures e fundos imobiliários."
-          },
-          {
-                "_type": "block",
-                "style": "h2",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Perguntas Frequentes sobre Due Diligence Ambiental (FAQ)"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "h3",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Quanto tempo leva para realizar uma Due Diligence Ambiental Fase I?"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "O levantamento histórico documental e vistoria de campo da Fase I costuma ser finalizado no prazo de 10 a 20 dias úteis."
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "h3",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "O que fazer se a Fase II confirmar contaminação no terreno?"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "A empresa adquirente tem três caminhos: desistir formalmente da compra sem penalidades contratuais, renegociar o valor do imóvel deduzindo o custo integral do plano de remediação ou condicionar a escritura à descontaminação prévia pelo vendedor."
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "h3",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Qual a validade de um laudo de Due Diligence Ambiental?"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Recomenda-se que o laudo tenha sido emitido há no máximo 6 a 12 meses antes do fechamento da transação imobiliária para garantir que nenhuma nova atividade poluidora tenha ocorrido no período."
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "h3",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Quem é o profissional habilitado para emitir o laudo?"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Engenheiros ambientais, geólogos, engenheiros civis e sanitaristas com registro profissional ativo no CREA e emissão obrigatória de ART."
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "h3",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "A Due Diligence substitui a Certidão Negativa de Débitos Ambientais?"
-                      }
-                ]
-          },
-          {
-                "_type": "block",
-                "style": "normal",
-                "children": [
-                      {
-                            "_type": "span",
-                            "text": "Não. A certidão negativa atesta apenas que não há multas pendentes inscritas em dívida ativa no nome do proprietário. A Due Diligence investiga a condição física real do solo e da água, identificando passivos que o próprio órgão ambiental ainda desconhece."
-                      }
-                ]
-          }
-    ],
-    seo: {
-      metaTitle: "Due Diligence Ambiental na Compra de Terrenos: Guia",
-      metaDescription: "Descubra como a Due Diligence Ambiental na compra de terrenos evita passivos milionários, contaminações e embargos em loteamentos e indústrias.",
-      keywords: ["due diligence ambiental na compra de terrenos","due diligence ambiental compra terrenos","passivo ambiental propter rem sumula 623 stj","investigação ambiental preliminar NBR 15515","avaliação passivo ambiental terreno loteamento","risco contaminação solo água subterrânea"],
     },
   },
 ]

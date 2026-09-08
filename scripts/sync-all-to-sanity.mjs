@@ -112,6 +112,13 @@ async function runSync() {
   const imgPost5 = await uploadImage('images/blog/post-5-resgate-fauna-supressao.webp', 'post-5-resgate-fauna-supressao.webp')
   const imgPost6 = await uploadImage('images/blog/post-6-mtr-residuos-perigosos.webp', 'post-6-mtr-residuos-perigosos.webp')
   const imgPost7 = await uploadImage('images/blog/post-7-due-diligence-terrenos.webp', 'post-7-due-diligence-terrenos.webp')
+  const imgPost8 = await uploadImage('images/blog/post-8-passagem-fauna-infraestrutura.webp', 'post-8-passagem-fauna-infraestrutura.webp')
+  const imgPost9 = await uploadImage('images/blog/post-9-resgate-germoplasma-flora-prad.webp', 'post-9-resgate-germoplasma-flora-prad.webp')
+  const imgPost10 = await uploadImage('images/blog/post-10-esg-governanca-riscos.webp', 'post-10-esg-governanca-riscos.webp')
+  const imgPost11 = await uploadImage('images/blog/post-11-energia-solar-eolica-inema.webp', 'post-11-energia-solar-eolica-inema.webp')
+  const imgPost12 = await uploadImage('images/blog/post-12-inventario-florestal-continuo.webp', 'post-12-inventario-florestal-continuo.webp')
+  const imgPost13 = await uploadImage('images/blog/post-13-economia-circular-pgrs-industria.webp', 'post-13-economia-circular-pgrs-industria.webp')
+  const imgPost14 = await uploadImage('images/blog/post-14-corredores-ecologicos-urbanos.webp', 'post-14-corredores-ecologicos-urbanos.webp')
 
   const imageMap = {
     '/images/blog/post-1-licenciamento-inema.webp': imgPost1,
@@ -121,6 +128,13 @@ async function runSync() {
     '/images/blog/post-5-resgate-fauna-supressao.webp': imgPost5,
     '/images/blog/post-6-mtr-residuos-perigosos.webp': imgPost6,
     '/images/blog/post-7-due-diligence-terrenos.webp': imgPost7,
+    '/images/blog/post-8-passagem-fauna-infraestrutura.webp': imgPost8,
+    '/images/blog/post-9-resgate-germoplasma-flora-prad.webp': imgPost9,
+    '/images/blog/post-10-esg-governanca-riscos.webp': imgPost10,
+    '/images/blog/post-11-energia-solar-eolica-inema.webp': imgPost11,
+    '/images/blog/post-12-inventario-florestal-continuo.webp': imgPost12,
+    '/images/blog/post-13-economia-circular-pgrs-industria.webp': imgPost13,
+    '/images/blog/post-14-corredores-ecologicos-urbanos.webp': imgPost14,
   }
 
   // 2. Criar / Atualizar Autor
