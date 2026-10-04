@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { createClient } from '@sanity/client'
+import { RICH_POSTS } from './generate-rich-blog-posts.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -24,15 +25,7 @@ const STATIC_ROUTES = [
   { path: 'blog/categoria/esg-compliance', priority: '0.8', changefreq: 'weekly' },
 ]
 
-const FALLBACK_BLOG_SLUGS = [
-  'guia-licenciamento-ambiental-inema-bahia',
-  'pgrs-construcao-civil-reducao-custos-conformidade',
-  'inventario-florestal-asv-supressao-vegetal-segura',
-  'renovacao-licenca-operacao-lo-prazos-documentos-inema',
-  'resgate-fauna-supressao-vegetal-requisitos-inema',
-  'mtr-online-gestao-residuos-perigosos-classe-1',
-  'due-diligence-ambiental-compra-terrenos-loteamentos',
-]
+const FALLBACK_BLOG_SLUGS = RICH_POSTS.map((p) => p.slug)
 
 async function fetchSanityPosts() {
   const projectId = process.env.VITE_SANITY_PROJECT_ID

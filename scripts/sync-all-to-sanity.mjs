@@ -119,6 +119,12 @@ async function runSync() {
   const imgPost12 = await uploadImage('images/blog/post-12-inventario-florestal-continuo.webp', 'post-12-inventario-florestal-continuo.webp')
   const imgPost13 = await uploadImage('images/blog/post-13-economia-circular-pgrs-industria.webp', 'post-13-economia-circular-pgrs-industria.webp')
   const imgPost14 = await uploadImage('images/blog/post-14-corredores-ecologicos-urbanos.webp', 'post-14-corredores-ecologicos-urbanos.webp')
+  const imgPost15 = await uploadImage('images/blog/post-15-outorga-recursos-hidricos-inema.webp', 'post-15-outorga-recursos-hidricos-inema.webp')
+  const imgPost16 = await uploadImage('images/blog/post-16-bioengenharia-solos-prad-taludes.webp', 'post-16-bioengenharia-solos-prad-taludes.webp')
+  const imgPost17 = await uploadImage('images/blog/post-17-pca-rca-licenciamento-mineracao-inema.webp', 'post-17-pca-rca-licenciamento-mineracao-inema.webp')
+  const imgPost18 = await uploadImage('images/blog/post-18-logistica-reversa-dmr-sinir-residuos.webp', 'post-18-logistica-reversa-dmr-sinir-residuos.webp')
+  const imgPost19 = await uploadImage('images/blog/post-19-monitoramento-fauna-linhas-transmissao.webp', 'post-19-monitoramento-fauna-linhas-transmissao.webp')
+  const imgPost20 = await uploadImage('images/blog/post-20-auditoria-ambiental-cepram-inema.webp', 'post-20-auditoria-ambiental-cepram-inema.webp')
 
   const imageMap = {
     '/images/blog/post-1-licenciamento-inema.webp': imgPost1,
@@ -135,6 +141,12 @@ async function runSync() {
     '/images/blog/post-12-inventario-florestal-continuo.webp': imgPost12,
     '/images/blog/post-13-economia-circular-pgrs-industria.webp': imgPost13,
     '/images/blog/post-14-corredores-ecologicos-urbanos.webp': imgPost14,
+    '/images/blog/post-15-outorga-recursos-hidricos-inema.webp': imgPost15,
+    '/images/blog/post-16-bioengenharia-solos-prad-taludes.webp': imgPost16,
+    '/images/blog/post-17-pca-rca-licenciamento-mineracao-inema.webp': imgPost17,
+    '/images/blog/post-18-logistica-reversa-dmr-sinir-residuos.webp': imgPost18,
+    '/images/blog/post-19-monitoramento-fauna-linhas-transmissao.webp': imgPost19,
+    '/images/blog/post-20-auditoria-ambiental-cepram-inema.webp': imgPost20,
   }
 
   // 2. Criar / Atualizar Autor

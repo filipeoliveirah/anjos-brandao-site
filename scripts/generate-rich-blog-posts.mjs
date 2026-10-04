@@ -1050,29 +1050,551 @@ export const RAW_RICH_POSTS = [
       keywords: ['corredores ecologicos loteamentos', 'urbanismo sustentavel bahia', 'aprovacao ambiental loteamento fechado', 'nature based solutions masterplan', 'preservacao APP loteamento litoral norte'],
     },
   },
+  // =========================================================================
+  // POST 15: OUTORGA DE RECURSOS HÍDRICOS NO INEMA (CENÁRIO)
+  // =========================================================================
+  {
+    _id: "post-15",
+    title: "Outorga de Uso de Recursos Hídricos no INEMA: Guia Prático para Captação Superficial e Subterrânea sem Risco de Embargo",
+    slug: "outorga-recursos-hidricos-inema-bahia-captacao",
+    excerpt: "Conheça os ritos do SEIA, estudos hidrológicos de vazão de referência, testes de bombeamento em poços tubulares e como cumprir as condicionantes da Portaria de Outorga na Bahia.",
+    publishedAt: "2026-09-24T10:00:00Z",
+    estimatedReadTime: 9,
+    featured: false,
+    mainImageUrl: "/images/blog/post-15-outorga-recursos-hidricos-inema.webp",
+    mainImageAlt: "Estação de captação e recalque de água em bacia hidrográfica na Bahia com tubulações e hidrômetros em meio à vegetação nativa",
+    mainImageCaption: "Infraestrutura técnica de captação e monitoramento de vazão em corpo hídrico outorgado na Bahia.",
+    categoryIndexes: [0, 4],
+    body: [
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A água é o insumo operacional mais crítico para canteiros de obras de infraestrutura, plantas industriais, complexos minerários e empreendimentos agroindustriais na Bahia. No entanto, a captação de recursos hídricos — seja em rios perenes, riachos sazonais, barramentos ou em aquíferos profundos por poços tubulares — sem a devida autorização do Instituto do Meio Ambiente e Recursos Hídricos (INEMA) constitui infração gravíssima sujeita a multas pesadas, lacração imediata de bombas e paralisação das atividades." }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Regulamentada pela Lei Estadual nº 11.612/2009 e pelo Decreto Estadual nº 14.024/2012, a Política Estadual de Recursos Hídricos da Bahia estabelece critérios técnicos rigorosos para garantir que o uso da água por um empreendimento não comprometa a sustentabilidade hídrica da bacia e o abastecimento de comunidades a jusante." }],
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Modalidades de Outorga Hídrica no INEMA" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "O empreendedor precisa identificar com precisão a modalidade legal adequada para o seu regime de captação ou intervenção hídrica:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "• Outorga Prévia (Preventiva): Declara a disponibilidade hídrica para a vazão requerida durante a fase de planejamento e licenciamento prévio (LP), assegurando a reserva da água sem autorizar ainda a sua captação direta.\n• Outorga de Direito de Uso: Autoriza formalmente o início da derivação, captação ou lançamento de efluentes tratados por prazo determinado (normalmente até 5 anos, renováveis).\n• Dispensa de Outorga: Aplicável exclusivamente a vazões insignificantes definidas por portaria específica de cada comitê de bacia hidrográfica (CBH), devendo ser formalmente cadastrada e atestada no SEIA." }],
+      },
+      {
+        _type: "callout",
+        type: "tip",
+        title: "Integração entre Outorga e Licenciamento Ambiental",
+        text: "A obtenção da Licença de Instalação (LI) e da Licença de Operação (LO) pelo INEMA é estritamente condicionada à apresentação da Portaria de Outorga de Direito de Uso ou da Dispensa de Outorga válida.",
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Captação Subterrânea: Teste de Bombeamento em Poços Tubulares" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A perfuração de poços artesianos no cristalino baiano ou na Bacia Sedimentar do Recôncavo exige Licença de Perfuração prévia. Concluída a obra civil do poço, a concessão da outorga de uso depende obrigatoriamente da execução de um ensaio hidrodinâmico de bombeamento (rebaixamento e recuperação contínua por 12 a 24 horas), atestado por geólogo ou engenheiro de minas habilitado via ART." }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "O laudo hidrogeológico deve demonstrar o nível estático (NE), nível dinâmico (ND), a vazão estabilizada (m³/h) e o raio de interferência em poços vizinhos, além de laudos laboratoriais de qualidade físico-química e bacteriológica da água coletada conforme os padrões da Portaria GM/MS nº 888/2021." }],
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Captação Superficial e Lançamento de Efluentes: Estudos Hidrológicos" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Para captação em cursos d água e barramentos, o INEMA exige o cálculo da vazão de referência Q90 (vazão com 90% de permanência no tempo) ou Q7,10 (vazão mínima média de 7 dias consecutivos com tempo de retorno de 10 anos). Em bacias com balanço hídrico crítico, como a do Rio São Francisco, Itapicuru ou Paraguaçu, o limite máximo outorgável por derivação é rigorosamente fixado como fração dessa vazão ecológica." }],
+      },
+      {
+        _type: "callout",
+        type: "warning",
+        title: "Atenção às Condicionantes da Portaria de Outorga",
+        text: "Toda portaria publicada no Diário Oficial exige instalação de hidrômetro calibrado e horímetro no ponto de bombeamento, com envio semestral de planilhas de leitura e medições do nível piezométrico ao INEMA.",
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Como a Anjos Brandão Viabiliza sua Outorga Hídrica" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A equipe de hidrogeólogos e engenheiros da Anjos Brandão realiza levantamentos batimétricos, estudos de regionalização de vazões, ensaios de bombeamento in loco com equipamentos de telemetria e protocola processos completos no SEIA com acompanhamento até a publicação da Portaria no DOE." }],
+      },
+    ],
+    seo: {
+      metaTitle: "Outorga de Recursos Hídricos no INEMA: Captação de Água na Bahia | Anjos Brandão",
+      metaDescription: "Guia completo de outorga de água no INEMA: captação subterrânea e superficial, testes de vazão, enquadramento SEIA e gestão de condicionantes.",
+      keywords: ["outorga de recursos hidricos inema", "captacao de agua bahia seia", "teste de bombeamento poco tubular", "outorga preventiva direito de uso", "legislacao recursos hidricos bahia"],
+    },
+  },
+
+  // =========================================================================
+  // POST 16: BIOENGENHARIA DE SOLOS E PRAD (PESSOAS)
+  // =========================================================================
+  {
+    _id: "post-16",
+    title: "Bioengenharia de Solos e PRAD: Técnicas Vivas para Estabilização de Taludes e Recuperação de Cavas na Bahia",
+    slug: "bioengenharia-solos-prad-recuperacao-taludes-cavas",
+    excerpt: "Saiba como aliar mantas de fibra vegetal, hidrossemeadura com espécies nativas e drenagem sustentável para estabilizar taludes e cumprir condicionantes de PRAD no INEMA.",
+    publishedAt: "2026-09-22T10:00:00Z",
+    estimatedReadTime: 10,
+    featured: false,
+    mainImageUrl: "/images/blog/post-16-bioengenharia-solos-prad-taludes.webp",
+    mainImageAlt: "Engenheira florestal e engenheiro ambiental com prancheta e tablet vistoriando talude com biomanta e hidrossemeadura em obra na Bahia",
+    mainImageCaption: "Equipe técnica da Anjos Brandão em campo monitorando o pegamento vegetal e a estabilidade geotécnica de talude bioengenhado.",
+    categoryIndexes: [2, 3],
+    body: [
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Cortes de estradas, cavas de empréstimo de terra, áreas de bota-fora e frentes de lavra mineral deixam o solo desprovido de vegetação e exposto ao impacto direto das chuvas tropicais. Na Bahia, onde tempestades de verão e períodos de estiagem alternam regimes extremos de umidade, a desproteção do solo deflagra ravinamentos severos, voçorocas e deslizamentos de talude que ameaçam a infraestrutura civil e provocam o assoreamento de mananciais." }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Embora a engenharia tradicional recorra frequentemente ao concreto projetado e gabiões de alto custo, a bioengenharia de solos desponta como a solução técnica mais sustentável, esteticamente integrada e financeiramente eficiente para restauração de taludes e atendimento rigoroso aos Planos de Recuperação de Áreas Degradadas (PRAD) exigidos pelo INEMA." }],
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Principais Técnicas Vivas Aplicadas na Prática" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A bioengenharia combina materiais biodegradáveis e estruturas vegetais vivas capazes de criar um sistema radicular denso que ancora o solo mecanicamente:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "• Biomantas Antierosivas de Fibra de Coco: Telas tecidas ou costuradas que cobrem o solo imediatamente após a conformação mecânica, amortecendo a energia cinética das gotas de chuva e mantendo a umidade para germinação.\n• Hidrossemeadura Mecanizada: Aplicação pressurizada de chorume viscoso contendo fertilizantes orgânicos, fixadores hidroretentores e consórcio de sementes (gramíneas estoloníferas e leguminosas fixadoras de nitrogênio adaptadas ao semiárido ou litoral).\n• Biorretentores e Fascionas Vivas: Cordões de fibra e feixes de galhos vivos instalados em curvas de nível para reter o sedimento e quebrar a velocidade do escoamento superficial da água." }],
+      },
+      {
+        _type: "callout",
+        type: "tip",
+        title: "Aproveitamento do Topsoil Resgatado na ASV",
+        text: "A camada superficial de solo fértil (topsoil) e serapilheira estocada durante a Autorização de Supressão Vegetal (ASV) contém o banco de sementes nativas autóctones mais rico para acelerar a regeneração natural.",
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Recuperação de Cavas de Mineração e Bota-Fora" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A recuperação de áreas mineradas ou cavas de empréstimo requer primeiro a retaludamento mecânico (suavização das declividades para ângulos estáveis, geralmente 1:1,5 ou 1:2) e construção de canaletas de drenagem em degraus (bermas). Em seguida, a camada de solo fértil é espalhada e procede-se à semeadura direta conjugada com plantio em ilhas de diversidade (nucleação)." }],
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Critérios do INEMA para Quitação do PRAD" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Para obter o termo de encerramento do PRAD e liberar a caução ou garantia bancária depositada no órgão ambiental, o empreendedor deve apresentar relatórios de monitoramento periódicos comprovando:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "1. Taxa de cobertura vegetal do solo superior a 80% nos primeiros 12 a 24 meses.\n2. Estabilidade geotécnica sem presença de sulcos de erosão ativa ou risco de rastejo de massa.\n3. Fixação e regeneração natural de espécies arbustivas e arbóreas nativas da fitofisionomia local (Caatinga ou Mata Atlântica).\n4. Ausência de espécies exóticas invasoras em percentuais danosos ao ecossistema." }],
+      },
+      {
+        _type: "callout",
+        type: "info",
+        title: "Suporte Integrado da Anjos Brandão",
+        text: "Planejamos e executamos o PRAD desde a modelagem topográfica do talude até a aplicação de biomantas e o acompanhamento fitossociológico dos plantios até a baixa definitiva das condicionantes no INEMA.",
+      },
+    ],
+    seo: {
+      metaTitle: "Bioengenharia de Solos e PRAD: Estabilização de Taludes na Bahia | Anjos Brandão",
+      metaDescription: "Técnicas de bioengenharia de solos, biomantas e hidrossemeadura para recuperação de taludes e cavas no cumprimento de PRAD perante o INEMA.",
+      keywords: ["bioengenharia de solos bahia", "prad inema recuperacao taludes", "hidrossemeadura talude rodovia", "biomanta fibra de coco cavas", "recuperacao de areas degradadas prad"],
+    },
+  },
+
+  // =========================================================================
+  // POST 17: PCA E RCA EM MINERAÇÃO E INDÚSTRIA (CENÁRIO)
+  // =========================================================================
+  {
+    _id: "post-17",
+    title: "PCA e RCA no Licenciamento de Mineração e Indústria no INEMA: Como Antecipar a Licença de Instalação (LI)",
+    slug: "pca-rca-licenciamento-mineracao-industria-inema",
+    excerpt: "Aprenda a estruturar o Relatório de Controle Ambiental (RCA) e o Plano de Controle Ambiental (PCA) com rigor técnico para acelerar a aprovação da LI no INEMA.",
+    publishedAt: "2026-09-20T10:00:00Z",
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: "/images/blog/post-17-pca-rca-licenciamento-mineracao-inema.webp",
+    mainImageAlt: "Complexo de extração mineral com bacias de contenção de sedimentos, aspersores de poeira e vegetação nativa preservada na Bahia",
+    mainImageCaption: "Infraestrutura de controle ambiental de mineração no interior da Bahia: bacias de decantação e controle de emissões.",
+    categoryIndexes: [0, 4],
+    body: [
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A Bahia consolidou-se como um dos maiores polos mínero-industriais do Brasil, liderando a produção de ouro, níquel, cromo, ferro, magnésio, pedras ornamentais e minerais estratégicos para a transição energética. No entanto, o avanço das frentes de lavra e a implantação de plantas de beneficiamento e indústrias pesadas exigem estudos ambientais de alto calibre para garantir que as emissões, efluentes e pilhas de estéril não colidam com a legislação do INEMA." }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Nesse rito, o Relatório de Controle Ambiental (RCA) e o Plano de Controle Ambiental (PCA) são os documentos mestres que sustentam, respectivamente, a viabilidade da Licença Prévia (LP) e a autorização executiva da Licença de Instalação (LI)." }],
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "A Diferença Crucial entre RCA e PCA" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Embora muitos empreendedores confundam os escopos, RCA e PCA atendem a fases complementares do licenciamento:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "• RCA (Fase de LP): Diagnostica as características do meio físico, biótico e socioeconômico da jazida ou planta, identifica os impactos potenciais da atividade e propõe as diretrizes gerais de controle ambiental.\n• PCA (Fase de LI): Traduz essas diretrizes em projetos executivos e planos de engenharia detalhados, com dimensionamento de bacias de decantação, sistemas de filtragem de particulados, isolamento acústico e monitoramento operacional contínuo." }],
+      },
+      {
+        _type: "callout",
+        type: "tip",
+        title: "Rito Simplificado de Licença Unificada (LU)",
+        text: "Para certos portes e classes de lavra mineral previstos no Regulamento da Lei 10.431/2006, o INEMA admite o protocolo conjunto de RCA e PCA para obtenção célere de Licença Unificada (LU).",
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Programas Essenciais em um PCA Minerário e Industrial" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Para evitar exigências complementares que atrasam a emissão da LI em meses, o PCA deve cobrir com nível de detalhamento executivo:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "1. Programa de Controle de Emissões Atmosféricas e Poeira Fugitiva: Aspersão mecanizada de vias internas, lavadores de pneus de caminhões fora-de-estrada e enclausuramento de correias transportadoras e britadores.\n2. Programa de Drenagem e Controle de Sedimentação: Dimensionamento hidrológico de canaletas periféricas e bacias de decantação de sólidos suspensos com impermeabilização adequada.\n3. Monitoramento Sismográfico e Ruído de Desmonte: Para operações com uso de explosivos, definição de malha de monitoramento de vibração do terreno e sobrepressão acústica conforme a ABNT NBR 9653.\n4. Gerenciamento de Pilhas de Estéril e Rejeito: Estudo de estabilidade geotécnica de taludes e laudo de classificação de resíduos (NBR 10.004) para descartar riscos de drenagem ácida de mina (DAM)." }],
+      },
+      {
+        _type: "callout",
+        type: "warning",
+        title: "Atenção à Portaria Interministerial e Comunidades",
+        text: "Se o empreendimento estiver no raio de influência de terras indígenas, áreas quilombolas ou cavidades naturais subterrâneas (espeleologia), o PCA deve contemplar anuências específicas do IPHAN, ICMBio e Fundação Palmares.",
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Consultoria Técnica Integrada da Anjos Brandão" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Nossa equipe multidisciplinar de engenheiros de minas, civis e ambientais elabora o RCA/PCA com medições em campo, modelagem matemática de dispersão de poluentes e defesa técnica ágil perante a comissão técnica do INEMA." }],
+      },
+    ],
+    seo: {
+      metaTitle: "PCA e RCA no Licenciamento de Mineração e Indústria no INEMA | Anjos Brandão",
+      metaDescription: "Guia técnico para elaboração de PCA e RCA no INEMA: mineração, indústrias, controle de particulados, bacias de contenção e emissão de LI.",
+      keywords: ["pca rca inema mineracao bahia", "plano de controle ambiental industria", "relatorio controle ambiental seia", "licenciamento minerario bahia li", "bacia decantacao mineracao rca"],
+    },
+  },
+
+  // =========================================================================
+  // POST 18: LOGÍSTICA REVERSA E DMR NO SINIR (PESSOAS)
+  // =========================================================================
+  {
+    _id: "post-18",
+    title: "Logística Reversa e DMR no SINIR: Guia de Conformidade Legal para Geradores e Transportadores na Bahia",
+    slug: "logistica-reversa-dmr-sinir-residuos-bahia",
+    excerpt: "Entenda o cruzamento eletrônico entre MTR, CDF e a Declaração de Movimentação de Resíduos (DMR) no SINIR e como estruturar a logística reversa na sua operação.",
+    publishedAt: "2026-09-18T10:00:00Z",
+    estimatedReadTime: 8,
+    featured: false,
+    mainImageUrl: "/images/blog/post-18-logistica-reversa-dmr-sinir-residuos.webp",
+    mainImageAlt: "Especialistas ambientais brasileiros conferindo manifestos de resíduos e baias de triagem e logística reversa em centro industrial na Bahia",
+    mainImageCaption: "Supervisores ambientais da Anjos Brandão conferindo conformidade de MTRs e baias de triagem para elaboração de DMR.",
+    categoryIndexes: [1, 4],
+    body: [
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A fiscalização ambiental sobre a geração, transporte e destinação final de resíduos industriais e da construção civil entrou na era do cruzamento eletrônico de dados em tempo real. Com a integração nacional consolidada pelo Sistema Nacional de Informações sobre a Gestão dos Resíduos Sólidos (SINIR) e a atuação fiscalizatória do INEMA e do Ministério Público na Bahia, inconsistências no rastro dos resíduos geram autuações automáticas e bloqueios no licenciamento da empresa." }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Duas ferramentas são os pilares dessa conformidade legal: a Declaração de Movimentação de Resíduos (DMR) e o cumprimento das metas setoriais de Logística Reversa estipuladas pela Política Nacional de Resíduos Sólidos (Lei Federal nº 12.305/2010)." }],
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "O que é a DMR e Quem Deve Declarar?" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A DMR é o documento eletrônico que consolida todas as operações de geração, armazenamento temporário, transporte e destinação de resíduos realizadas por um empreendimento ao longo de um semestre ou ano civil. Devem declarar obrigatoriamente no SINIR:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "• Geradores sujeitos a PGRS (indústrias, construtoras, usinas solares/eólicas, mineradoras, portos e hospitais).\n• Transportadores de resíduos sólidos e perigosos.\n• Destinadores finais (aterros industriais, coprocessadores de clínquer, compostagens e recicladores)." }],
+      },
+      {
+        _type: "callout",
+        type: "tip",
+        title: "A Regra de Ouro do Fechamento da DMR",
+        text: "Cada MTR (Manifesto de Transporte de Resíduos) emitido na saída da sua carga deve possuir o respectivo CDF (Certificado de Destinação Final) emitido pelo receptor homologado no sistema, sem saldo de resíduos órfãos.",
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Logística Reversa Obrigatória na Operação" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Canteiros de obras e indústrias consomem insumos cujas embalagens e pós-consumo entram em cadeias obrigatórias de logística reversa. Os principais fluxos monitorados na Bahia incluem:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "1. Óleos Lubrificantes Usados ou Contaminados (OLUC) e suas embalagens plásticas (Resolução CONAMA 362/2005).\n2. Baterias automotivas de chumbo-ácido e pilhas industriais.\n3. Pneus inservíveis de frotas pesadas e caminhões basculantes.\n4. Lâmpadas a vapor de mercúrio e equipamentos eletroeletrônicos.\n5. Embalagens vazias de tintas, solventes, aditivos químicos e defensivos agrícolas." }],
+      },
+      {
+        _type: "callout",
+        type: "warning",
+        title: "Responsabilidade Compartilhada e Solidária",
+        text: "A contratação de transportadores terceirizados que descartem resíduos em locais clandestinos não isenta o gerador original. Pela lei ambiental brasileira, o poluidor-pagador responde civil e criminalmente de forma solidária.",
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Gestão de Resíduos e DMR com a Anjos Brandão" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A Anjos Brandão assume a coordenação operacional do seu pátio de resíduos, padroniza as baias de segregação, audita os destinadores parceiros, faz a gestão contínua de MTRs eletrônicos e emite a DMR anual sem erros de conciliação perante o SINIR e INEMA." }],
+      },
+    ],
+    seo: {
+      metaTitle: "Logística Reversa e DMR no SINIR na Bahia: Guia Legal | Anjos Brandão",
+      metaDescription: "Como fazer a Declaração de Movimentação de Resíduos (DMR) no SINIR e cumprir a Logística Reversa em indústrias e construtoras na Bahia.",
+      keywords: ["dmr sinir bahia residuos", "logistica reversa empresas salvador", "mtr cdf conciliacao de residuos", "pgrs gestao residuos perigosos inema", "declaracao movimentacao residuos sinir"],
+    },
+  },
+
+  // =========================================================================
+  // POST 19: FAUNA EM LINHAS DE TRANSMISSÃO (CENÁRIO)
+  // =========================================================================
+  {
+    _id: "post-19",
+    title: "Monitoramento e Afugentamento de Fauna em Linhas de Transmissão (LT): Protocolos para Faixas de Servidão",
+    slug: "monitoramento-afugentamento-fauna-linhas-transmissao-inema",
+    excerpt: "Descubra como estruturar os programas de afugentamento de fauna na supressão e monitoramento de colisões de avifauna nas faixas de servidão de linhas de transmissão na Bahia.",
+    publishedAt: "2026-09-16T10:00:00Z",
+    estimatedReadTime: 9,
+    featured: false,
+    mainImageUrl: "/images/blog/post-19-monitoramento-fauna-linhas-transmissao.webp",
+    mainImageAlt: "Linha de transmissão de alta tensão cortando colinas e vegetação nativa preservada na Bahia ao pôr do sol com sinalizadores de avifauna",
+    mainImageCaption: "Faixa de servidão de linha de transmissão na Bahia equipada com sinalizadores anti-colisão de avifauna.",
+    categoryIndexes: [3, 0],
+    body: [
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A expansão acelerada dos parques eólicos e solares no interior da Bahia impulsionou a construção de milhares de quilômetros de linhas de transmissão (LT) de alta e extra-alta tensão (230 kV e 500 kV) para escoar a energia gerada até a rede básica nacional. Contudo, cruzar serras, vales fluviais e fragmentos preservados de Caatinga e Cerrado impõe desafios ambientais críticos para a proteção da fauna silvestre." }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Durante a abertura da faixa de servidão e a implantação das torres, o afugentamento e resgate de fauna são exigências intransigíveis do INEMA e do IBAMA. Posteriormente, na fase operacional, o foco recai sobre a mitigação de colisões e eletrocussão de aves de grande porte e espécies migratórias." }],
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Fase de Obra: Afugentamento Prévio e Resgate em Praças de Torre" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Diferente de grandes reservatórios hidrelétricos, a supressão de vegetação para linhas de transmissão é linear e localizada (acessos e praças de ancoragem das torres). O protocolo biológico em campo exige:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "• Varredura Lenta e Afugentamento Ativo: Os biólogos da equipe percorrem a faixa com antecedência à frente de tratores e motosserristas, emitindo ruídos controlados para induzir o deslocamento espontâneo de mamíferos e aves para matas laterais seguras.\n• Busca Ativa e Captura Manual de Herpetofauna: Serpentes, lagartos e anfíbios com baixa mobilidade que buscam refúgio sob pedras ou troncos ocos são capturados com pinças e ganchos herpetológicos, examinados biometricamente e soltos em áreas de soltura georreferenciadas.\n• Resgate de Ninhos e Filhotes: Localização de ninhos ativos com ovos ou filhotes de aves e abrigos de quirópteros (morcegos), com transporte para centros de triagem (CETAS) quando a translocação in loco for inviável." }],
+      },
+      {
+        _type: "callout",
+        type: "tip",
+        title: "Identificação de Espécies Ameaçadas",
+        text: "No sertão baiano, atenção especial é dedicada a espécies vulneráveis como o tatu-bola (Tolypeutes tricinctus), arara-azul-de-lear (Anodorhynchus leari) e a onça-parda (Puma concolor), cujos registros exigem protocolos especiais de reporte imediato ao órgão ambiental.",
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Fase de Operação: Mitigação de Colisões e Sinalizadores de Avifauna" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Na operação da LT, os cabos para-raios (OPGW) — finos e localizados no topo das torres — representam a principal causa de colisão em voo para aves crepusculares ou migratórias em trechos de serra e proximidades de lagoas. Para mitigar o impacto:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "1. Instalação de Desviadores de Voo: Instalação de sinalizadores espirais de PVC ou módulos reflexivos fluorescentes intercalados a cada 10 a 15 metros nos vãos críticos identificados no EIA/RIMA.\n2. Monitoramento Sistemático de Carcaças: Campanhas periódicas com busca padronizada sob os vãos com taxa de remoção por predadores e eficiência de detecção devidamente calibradas estatisticamente." }],
+      },
+      {
+        _type: "callout",
+        type: "info",
+        title: "Atuação Técnica da Anjos Brandão em Linhas de Transmissão",
+        text: "Fornecemos equipes completas de biólogos e veterinários de campo com veículos 4x4, kits de resgate biológico e emissão de laudos de conformidade técnica para cumprimento ágil das condicionantes de LI e LO.",
+      },
+    ],
+    seo: {
+      metaTitle: "Fauna em Linhas de Transmissão na Bahia: Afugentamento e Monitoramento | Anjos Brandão",
+      metaDescription: "Protocolos biológicos de resgate de fauna e sinalização de avifauna em faixas de servidão de linhas de transmissão perante o INEMA e IBAMA.",
+      keywords: ["fauna linhas de transmissao bahia", "afugentamento fauna supressao faixa servidao", "sinalizador avifauna cabo linha transmissao", "resgate biologico obra energia inema", "condicionantes fauna linhas transmissao"],
+    },
+  },
+
+  // =========================================================================
+  // POST 20: AUDITORIA AMBIENTAL COMPULSÓRIA CEPRAM (PESSOAS)
+  // =========================================================================
+  {
+    _id: "post-20",
+    title: "Auditoria Ambiental Compulsória (Resolução CEPRAM): Como Estruturar o Plano de Ação e Evitar Multas",
+    slug: "auditoria-ambiental-compulsoria-cepram-inema-plano-acao",
+    excerpt: "Guia completo sobre a auditoria ambiental periódica obrigatória na Bahia: escopo metodológico, identificação de não-conformidades e protocolo do PAC no INEMA.",
+    publishedAt: "2026-09-14T10:00:00Z",
+    estimatedReadTime: 10,
+    featured: false,
+    mainImageUrl: "/images/blog/post-20-auditoria-ambiental-cepram-inema.webp",
+    mainImageAlt: "Equipe de auditores ambientais com capacete e prancheta inspecionando estação de tratamento e conformidade em planta industrial na Bahia",
+    mainImageCaption: "Auditores ambientais da Anjos Brandão checando parâmetros de efluentes e plano de ação em vistoria técnica.",
+    categoryIndexes: [4, 0],
+    body: [
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Na Bahia, a conformidade ambiental de empreendimentos industriais, minerários, portuários e de saneamento de médio e alto potencial poluidor não se esgota na conquista da Licença de Operação (LO). A legislação estadual exige que essas atividades sejam submetidas periodicamente a Auditorias Ambientais Compulsórias, conduzidas por equipes de auditores independentes, com registro e protocolo formal dos relatórios perante o INEMA." }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Regida pela Lei Estadual nº 10.431/2006 e disciplinada pela Resolução CEPRAM nº 3.925/2009 e normas correlatas, a auditoria compulsória é o instrumento com maior poder de identificar passivos ocultos e prevenir penalidades administrativas graves antes que uma fiscalização do Estado lavre auto de infração." }],
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Quais Empreendimentos Devem Realizar a Auditoria?" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "A periodicidade (geralmente bienal ou trienal) e a obrigatoriedade da auditoria abrangem:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "• Complexos petroquímicos, químicos, metalúrgicos e de fertilizantes.\n• Empreendimentos de mineração de médio e grande porte e usinas de beneficiamento.\n• Portos, terminais marítimos de combustíveis e dutos de transporte de hidrocarbonetos.\n• Sistemas de tratamento e disposição de resíduos perigosos (Classe I) e aterros industriais.\n• Empreendimentos cujo ato de licenciamento tenha estipulado a auditoria como condicionante expressa." }],
+      },
+      {
+        _type: "callout",
+        type: "warning",
+        title: "Requisito Legal: Auditoria Independente",
+        text: "A auditoria ambiental compulsória não pode ser realizada pelo corpo técnico interno do próprio empreendimento. O órgão ambiental exige que o relatório seja subscrito por consultoria externa independente com ART devidamente registrada no CREA/CRBio.",
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "Escopo Metodológico da Inspeção de Conformidade" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "Durante a auditoria, a equipe técnica checa sistematicamente as evidências operacionais de 4 pilares centrais:" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "1. Cumprimento Integral de Condicionantes da LO: Análise de relatórios de monitoramento de efluentes líquidos, chaminés, ruído e piezometria.\n2. Outorgas Hídricas e Intervenções: Verificação das leituras de hidrômetros de captação e descarte com a vazão outorgada em diário oficial.\n3. Gerenciamento de Resíduos Sólidos e SINIR: Conformidade das baias de armazenamento temporário, laudos de periculosidade e balanço de MTR/CDF.\n4. Planos de Atendimento a Emergências (PAE): Eficácia de bacias de contenção de vazamentos de óleo/produtos químicos, treinamentos de brigada e sistemas de combate a incêndio." }],
+      },
+      {
+        _type: "block",
+        style: "h2",
+        children: [{ _type: "span", text: "O Plano de Ação Corretiva (PAC)" }],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [{ _type: "span", text: "O produto final da auditoria não é apenas apontar não-conformidades, mas elaborar o Plano de Ação Corretiva (PAC). Nele, cada desvio detectado recebe uma medida mitigatória com cronograma físico-financeiro e indicação do responsável técnico. O PAC é protocolado no INEMA junto ao Relatório de Auditoria, servindo de compromisso legal do empreendedor perante o órgão regulador." }],
+      },
+      {
+        _type: "callout",
+        type: "info",
+        title: "Auditoria Ambiental Estratégica com a Anjos Brandão",
+        text: "A Anjos Brandão conduz auditorias ambientais compulsórias e de due diligence com visão integrada de engenharia, preparando sua empresa para renovações de licença tranquilas e zero passivos regulatórios.",
+      },
+    ],
+    seo: {
+      metaTitle: "Auditoria Ambiental Compulsória CEPRAM na Bahia: Guia Prático | Anjos Brandão",
+      metaDescription: "Como funciona a Auditoria Ambiental Compulsória do CEPRAM/INEMA na Bahia: escopo, plano de ação corretiva (PAC) e gestão de conformidade de LO.",
+      keywords: ["auditoria ambiental compulsoria cepram", "auditoria ambiental inema bahia", "resolucao cepram 3925 auditoria", "plano de acao corretiva pac inema", "consultoria auditoria ambiental salvador"],
+    },
+  },
+
 ]
 
 // ==========================================
 // ORDENAÇÃO ALTERNADA: Cenário / Paisagem ↔ Pessoas em Campo
 // ==========================================
 const ALTERNATING_ORDER = [
-  'post-10', // [Cenário] Governança ESG Monumental
-  'post-1',  // [Pessoas] Licenciamento Ambiental no INEMA
-  'post-8',  // [Cenário] Viaduto Verde e Passagem de Fauna
-  'post-2',  // [Pessoas] PGRS na Construção Civil
-  'post-11', // [Cenário] Energia Solar e Eólica Subestação
-  'post-3',  // [Pessoas] Inventário Florestal e ASV
-  'post-9',  // [Cenário] Viveiro Técnico de Flora e PRAD
-  'post-4',  // [Pessoas] Renovação de Licença de Operação (LO)
-  'post-12', // [Cenário] Inventário Florestal Contínuo e Passarela
-  'post-5',  // [Pessoas] Resgate de Fauna em Obras
-  'post-13', // [Cenário] Economia Circular e PGRS Industrial
-  'post-7',  // [Pessoas] Due Diligence Ambiental em Terrenos
-  'post-14', // [Cenário] Corredores Ecológicos Urbanos
-  'post-6',  // [Pessoas] MTR Online e Resíduos Perigosos
+  "post-15", // [Cenário] Outorga de Recursos Hídricos no INEMA
+  "post-16", // [Pessoas] Bioengenharia de Solos e PRAD
+  "post-17", // [Cenário] PCA e RCA em Mineração e Indústria
+  "post-18", // [Pessoas] Logística Reversa e DMR no SINIR
+  "post-19", // [Cenário] Fauna em Linhas de Transmissão
+  "post-20", // [Pessoas] Auditoria Ambiental Compulsória CEPRAM
+  "post-10", // [Cenário] Governança ESG Monumental
+  "post-1",  // [Pessoas] Licenciamento Ambiental no INEMA
+  "post-8",  // [Cenário] Viaduto Verde e Passagem de Fauna
+  "post-2",  // [Pessoas] PGRS na Construção Civil
+  "post-11", // [Cenário] Energia Solar e Eólica Subestação
+  "post-3",  // [Pessoas] Inventário Florestal e ASV
+  "post-9",  // [Cenário] Viveiro Técnico de Flora e PRAD
+  "post-4",  // [Pessoas] Renovação de Licença de Operação (LO)
+  "post-12", // [Cenário] Inventário Florestal Contínuo e Passarela
+  "post-5",  // [Pessoas] Resgate de Fauna em Obras
+  "post-13", // [Cenário] Economia Circular e PGRS Industrial
+  "post-7",  // [Pessoas] Due Diligence Ambiental em Terrenos
+  "post-14", // [Cenário] Corredores Ecológicos Urbanos
+  "post-6",  // [Pessoas] MTR Online e Resíduos Perigosos
 ]
 
-const baseDate = new Date('2026-09-08T12:00:00Z')
+const baseDate = new Date("2026-10-04T18:00:00Z")
 const rawMap = new Map(RAW_RICH_POSTS.map(p => [p._id, p]))
 
 export const RICH_POSTS = ALTERNATING_ORDER.map((id, index) => {
@@ -1086,6 +1608,3 @@ export const RICH_POSTS = ALTERNATING_ORDER.map((id, index) => {
   cloned.featured = index === 0
   return cloned
 })
-
-
-
