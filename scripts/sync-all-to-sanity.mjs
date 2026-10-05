@@ -242,7 +242,22 @@ async function runSync() {
     await client.createOrReplace(formattedDoc)
   }
 
-  console.log('🎉 [Sanity Sync] Sucesso! Todos os 7 artigos (1000+ palavras), categorias e autor foram atualizados no Sanity!')
+  // 5. Limpeza de documentos legados
+  const legacyIds = [
+    'post-inventario-florestal-asv',
+    'post-licenciamento-inema-bahia',
+    'post-pgrs-construcao-civil'
+  ]
+  for (const legId of legacyIds) {
+    try {
+      console.log(`🧹 Removendo documento legado do Sanity: ${legId}...`)
+      await client.delete(legId)
+    } catch (e) {
+      // Ignora se não existir
+    }
+  }
+
+  console.log(`🎉 [Sanity Sync] Sucesso! Todos os ${RICH_POSTS.length} artigos (1000+ palavras), categorias e autor foram atualizados no Sanity!`)
 }
 
 runSync().catch((err) => {

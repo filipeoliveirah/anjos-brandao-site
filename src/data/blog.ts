@@ -3571,7 +3571,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     publishedAt: '2026-09-22T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
-    mainImageUrl: '/images/blog/post-10-governanca-esg-canteiro.webp',
+    mainImageUrl: '/images/blog/post-10-esg-governanca-riscos.webp',
     mainImageAlt: "Reunião de diretoria executiva e equipe de campo analisando governança ESG riscos ambientais na Bahia",
     mainImageCaption: "Alinhamento estratégico entre conselho executivo e engenharia ambiental para mitigação de riscos ESG na Bahia.",
     author: {
@@ -5717,7 +5717,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     publishedAt: '2026-09-14T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
-    mainImageUrl: '/images/blog/post-11-parque-solar-eolico-licenciamento.webp',
+    mainImageUrl: '/images/blog/post-11-energia-solar-eolica-inema.webp',
     mainImageAlt: "Complexo de energia solar e eólica em operação com subestação no semiárido da Bahia",
     mainImageCaption: "Usinas fotovoltaicas e parque eólico integrado no sertão baiano com linha de transmissão licenciada.",
     author: {
@@ -6722,7 +6722,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     publishedAt: '2026-09-10T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
-    mainImageUrl: '/images/blog/post-9-viveiro-flora-resgate-germoplasma.webp',
+    mainImageUrl: '/images/blog/post-9-resgate-germoplasma-flora-prad.webp',
     mainImageAlt: "Viveiro de mudas florestais nativas para resgate de germoplasma bahia e cumprimento de PRAD",
     mainImageCaption: "Infraestrutura de viveiro técnico e aclimatação de espécies nativas resgatadas para recuperação florestal na Bahia.",
     author: {
@@ -7743,7 +7743,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     publishedAt: '2026-09-06T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
-    mainImageUrl: '/images/blog/post-12-inventario-continuo-passarela.webp',
+    mainImageUrl: '/images/blog/post-12-inventario-florestal-continuo.webp',
     mainImageAlt: "Equipe técnica realizando inventário florestal contínuo e manejo biométrico na Mata Atlântica da Bahia",
     mainImageCaption: "Levantamento biométrico contínuo de biomassa e parcelas permanentes georreferenciadas na Bahia.",
     author: {
@@ -9765,7 +9765,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     publishedAt: '2026-08-29T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
-    mainImageUrl: '/images/blog/post-14-corredor-ecologico-loteamento.webp',
+    mainImageUrl: '/images/blog/post-14-corredores-ecologicos-urbanos.webp',
     mainImageAlt: "Masterplan de loteamento residencial sustentável com corredores ecológicos loteamentos no Litoral Norte da Bahia",
     mainImageCaption: "Integração de áreas verdes contínuas, lagoas e biovaletas de drenagem em loteamento fechado na Bahia.",
     author: {
