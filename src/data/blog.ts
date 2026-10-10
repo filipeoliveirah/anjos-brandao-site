@@ -839,7 +839,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Extração Multifásica (MPE / Dual-Phase Extraction): aplicação de alto vácuo para remoção simultânea de vapores voláteis e líquidos em aquíferos freáticos rasos, comumente adotada em postos de combustíveis e terminais de distribuição."
+                            "text": "Extração Multifásica de Alto Vácuo: aplicação de sucção profunda para remoção simultânea de vapores voláteis e líquidos em aquíferos freáticos rasos, comumente adotada em postos de combustíveis e terminais de distribuição."
                       }
                 ]
           },
@@ -849,7 +849,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Biorremediação e Bioestimulação in situ: injeção de nutrientes, aceptores de elétrons e microrganismos autóctones para degradação aeróbica ou anaeróbica de hidrocarbonetos e solventes clorados."
+                            "text": "Biorremediação com bioestimulação local: injeção de nutrientes minerais, aceptores de elétrons e microrganismos autóctones para degradação aeróbica ou anaeróbica de hidrocarbonetos e solventes clorados."
                       }
                 ]
           },
@@ -859,7 +859,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Oxidação Química In Situ (ISCO): aplicação de oxidantes como permanganato de potássio, persulfato de sódio ativado ou reagente de Fenton para rápida destruição de compostos recalcitrantes em plumas concentradas."
+                            "text": "Oxidação Química em Subsuperfície: aplicação direta de oxidantes minerais, como permanganato de potássio ou persulfato ativado, para rápida destruição de compostos recalcitrantes em plumas concentradas."
                       }
                 ]
           },
@@ -869,7 +869,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Atenuação Natural Monitorada (MNA): monitoramento hidrogeoquímico contínuo da diluição, dispersão, adsorção e biodegradação intrínseca quando a velocidade de recuo da pluma é comprovada cientificamente."
+                            "text": "Atenuação Natural Monitorada: acompanhamento hidrogeoquímico sistemático da diluição, dispersão, adsorção e degradação biológica intrínseca quando a estabilização da pluma é comprovada cientificamente."
                       }
                 ]
           },
@@ -925,7 +925,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Método de Baixa Vazão (Low-Flow Purging): técnica que minimiza a turbidez e preserva os compostos orgânicos voláteis (VOCs) dissolvidos na água subterrânea, utilizando bombas de bexiga (bladder pump) e medidores multiparâmetros com célula de fluxo fechada."
+                            "text": "Método de Baixa Vazão: técnica de purga controlada que preserva a integridade de compostos voláteis e evita turbidez excessiva na água subterrânea, com medição em células de fluxo herméticas e sensores multiparâmetros."
                       }
                 ]
           },
@@ -945,7 +945,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Amostragem de Vapores do Solo (Soil Gas Sampling): instalação de sondas sub-slab em galpões e edifícios industriais para verificar a intrusão de vapores cancerígenos nos ambientes de trabalho."
+                            "text": "Amostragem de Vapores do Solo: instalação de sondas sob lajes e pisos industriais para verificar a intrusão de gases nocivos nos ambientes de trabalho e edificações fechadas."
                       }
                 ]
           },
@@ -1106,7 +1106,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                       },
                       {
                             "_type": "span",
-                            "text": " representa uma das áreas mais complexas e multidisciplinares do direito ambiental e da engenharia costeira no Brasil. Com mais de 1.100 km de litoral e abrigando a Baía de Todos os Santos — a maior baía tropical do mundo — o estado da Bahia concentra terminais portuários privados (TUPs), estaleiros, portos públicos e marinas turísticas que demandam dragagens regulares de aprofundamento e manutenção para garantir calado operacional e segurança na navegação internacional."
+                            "text": " representa uma das áreas mais complexas e multidisciplinares do direito ambiental e da engenharia costeira no Brasil. Com mais de 1.100 km de litoral e abrigando a Baía de Todos os Santos, a maior baía tropical do mundo, o estado da Bahia concentra terminais portuários privados (TUPs), estaleiros, portos públicos e marinas turísticas que demandam dragagens regulares de aprofundamento e manutenção para garantir calado operacional e segurança na navegação internacional."
                       }
                 ]
           },
@@ -1191,7 +1191,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Nível 2 (Acima do Limite de Investigação): sedimentos contaminados por hidrocarbonetos policíclicos aromáticos (HPAs), bifenilas policloradas (PCBs) ou metais pesados provenientes de efluentes industriais históricos. Exigem confinamento subaquático em cavas seladas (CAD - Confined Aquatic Disposal) ou destinação terrestre controlada com MTR."
+                            "text": "Nível 2 (Acima do Limite de Investigação): sedimentos contaminados por hidrocarbonetos policíclicos aromáticos (HPAs), bifenilas policloradas (PCBs) ou metais pesados provenientes de efluentes industriais históricos. Exigem confinamento subaquático em cavas seladas e isoladas com geomembrana ou destinação terrestre controlada com MTR."
                       }
                 ]
           },
@@ -1201,7 +1201,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Coletar testemunhos indeformados de fundo marinho com amostradores vibrocore ou pistão em alto mar exige equipe especializada e embarcações homologadas pela Marinha, prevenindo invalidação amostral perante o corpo técnico do INEMA."
+                            "text": "Coletar testemunhos indeformados de fundo marinho com amostradores de testemunho contínuo por vibração ou pistão em alto mar exige equipe especializada e embarcações homologadas pela Marinha, prevenindo invalidação amostral perante o corpo técnico do INEMA."
                       }
                 ]
           },
@@ -1301,7 +1301,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Monitoramento da Pluma de Sedimento e Turbidez: medições em tempo real de turbidez, oxigênio dissolvido e sólidos suspensos na água, com instalação obrigatória de cortinas flutuantes de turbidez (silt curtains) em torno de colônias de corais e berçários estuarinos."
+                            "text": "Monitoramento da Pluma de Sedimento e Turbidez: medições em tempo real de turbidez, oxigênio dissolvido e sólidos suspensos na água, com instalação obrigatória de cortinas flutuantes de turbidez em torno de colônias de corais e berçários estuarinos."
                       }
                 ]
           },
@@ -1550,7 +1550,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Plano de Gerenciamento de Riscos (PGR / APR): identifica os perigos, mapeia cenários acidentais e calcula a vulnerabilidade das instalações e comunidades circunvizinhas antes do início das operações através de matrizes de risco Bow-Tie ou HazOp."
+                            "text": "Plano de Gerenciamento de Riscos (PGR / APR): identifica os perigos, mapeia cenários acidentais e calcula a vulnerabilidade das instalações e comunidades circunvizinhas antes do início das operações através de matrizes consagradas de análise preliminar de perigos e operabilidade."
                       }
                 ]
           },
@@ -1590,7 +1590,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "A aprovação do PAE e do PEI pelas autoridades fiscalizadoras depende da perfeita consonância com o Auto de Vistoria do Corpo de Bombeiros (AVCB) emitido pelo CBMBA. As Instruções Técnicas (ITs) estaduais — em especial a IT-25 (Líquidos Inflamáveis e Combustíveis) e IT-28 (Manipulação e Armazenamento de Produtos Perigosos) — definem os padrões de bacias de contenção secundária, sistemas de dilúvio por espuma e reservatórios de água dedicados para combate a sinistros. Um plano de emergência que ignora as especificações do CBMBA é sumariamente rejeitado pelo INEMA durante vistorias conjuntas de renovação de licença."
+                            "text": "A aprovação do PAE e do PEI pelas autoridades fiscalizadoras depende da perfeita consonância com o Auto de Vistoria do Corpo de Bombeiros (AVCB) emitido pelo CBMBA. As Instruções Técnicas (ITs) estaduais, em especial a IT-25 (Líquidos Inflamáveis e Combustíveis) e a IT-28 (Manipulação e Armazenamento de Produtos Perigosos), definem os padrões de bacias de contenção secundária, sistemas de dilúvio por espuma e reservatórios de água dedicados para combate a sinistros. Um plano de emergência que ignora as especificações do CBMBA é sumariamente rejeitado pelo INEMA durante vistorias conjuntas de renovação de licença."
                       }
                 ]
           },
@@ -1641,7 +1641,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "2. Cenários Acidentais e Modelagem de Dispersão: simulação hidrodinâmica e atmosférica de dispersão de poluentes em caso de vazamento súbito (Worst-Case Scenario) e vazamento crônico em canais de drenagem pluvial."
+                            "text": "2. Cenários Acidentais e Modelagem de Dispersão: simulação hidrodinâmica e atmosférica de dispersão de poluentes em caso de vazamento súbito (cenário acidental mais crítico ou de maior gravidade) e vazamento crônico em canais de drenagem pluvial."
                       }
                 ]
           },
@@ -1707,7 +1707,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Briefing de Segurança e Alinhamento: reunião preliminar com a brigada de emergência, operadores de máquinas e equipes de apoio externo."
+                            "text": "Alinhamento Preliminar de Segurança: reunião com a brigada de emergência, operadores de máquinas e equipes de apoio operacional."
                       }
                 ]
           },
@@ -1747,7 +1747,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Debriefing e Relatório de Desempenho: compilação dos tempos de resposta, identificação de gargalos de comunicação e plano de ação corretivo."
+                            "text": "Avaliação Pós-Simulado e Relatório de Desempenho: compilação dos tempos de resposta, identificação de pontos de melhoria de comunicação e plano de ação corretivo."
                       }
                 ]
           },
@@ -1799,7 +1799,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "O material utilizado na contenção de um vazamento — como barreiras saturadas de óleo, solo contaminado retirado da cava e EPIs descartáveis — é classificado como Resíduo Classe I (Perigoso) segundo a ABNT NBR 10004. O transporte e a destinação final desse passivo devem ser rastreados no SINIR e MTR Online. Aprofunde seus conhecimentos no "
+                            "text": "O material utilizado na contenção de um vazamento, a exemplo de barreiras saturadas de óleo, solo contaminado retirado da cava e EPIs descartáveis, é classificado como Resíduo Classe I (Perigoso) segundo a ABNT NBR 10004. O transporte e a destinação final desse passivo devem ser rastreados no SINIR e MTR Online. Aprofunde seus conhecimentos no "
                       },
                       {
                             "_type": "span",
@@ -2102,7 +2102,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "A maioria dos atrasos na tramitação da Licença Unificada ocorre por erros cadastrais básicos e falta de certidões preliminares no SEIA. Para garantir o rito acelerado sem exigências complementares, nossa equipe adota um checklist preventivo:"
+                            "text": "A maioria dos atrasos na tramitação da Licença Unificada ocorre por erros cadastrais básicos e falta de certidões preliminares no SEIA. Para garantir o rito acelerado sem exigências complementares, nossa equipe adota um roteiro de verificação preventiva:"
                       }
                 ]
           },
@@ -2825,7 +2825,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Ao contrário de soluções puramente cinzas de alvenaria e concreto projetado — que apresentam custos astronômicos e descolamento precoce por pressão de poros —, as técnicas de bioengenharia criam um manto radicular vivo que se fortalece com o passar dos anos. Conheça as bases da nossa assessoria em "
+                            "text": "Ao contrário de soluções puramente cinzas de alvenaria e concreto projetado, que apresentam custos astronômicos e descolamento precoce por pressão de poros, as técnicas de bioengenharia criam um manto radicular vivo que se fortalece com o passar dos anos. Conheça as bases da nossa assessoria em "
                       },
                       {
                             "_type": "span",
@@ -2930,7 +2930,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Drenagem e Porosidade Natural: Enquanto o concreto aprisiona a água no interior do talude — gerando sobrepressão hidrostática que frequentemente rompe a estrutura —, as raízes das plantas favorecem a infiltração lenta e a transpiração contínua."
+                            "text": "Drenagem e Porosidade Natural: Enquanto o concreto aprisiona a água no interior do talude, gerando sobrepressão hidrostática que frequentemente rompe a estrutura, as raízes das plantas favorecem a infiltração lenta e a transpiração contínua."
                       }
                 ]
           },
@@ -3391,7 +3391,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                       },
                       {
                             "_type": "span",
-                            "text": " e grandes complexos fabris na Bahia é a etapa crítica que determina se o cronograma de implantação física do projeto sairá do papel no prazo previsto ou ficará paralisado por exigências infindáveis no SEIA. O setor minerário e industrial baiano — com destaque para a extração de ferro, ouro, níquel, rochas ornamentais e indústrias de transformação química — demanda rigor absoluto na concepção dos estudos ambientais."
+                            "text": " e grandes complexos fabris na Bahia é a etapa crítica que determina se o cronograma de implantação física do projeto sairá do papel no prazo previsto ou ficará paralisado por exigências infindáveis no SEIA. O setor minerário e industrial baiano, com destaque para a extração de ferro, ouro, níquel, rochas ornamentais e indústrias de transformação química, demanda rigor absoluto na concepção dos estudos ambientais."
                       }
                 ]
           },
@@ -6275,7 +6275,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Historicamente, a condução inadequada de processos de licenciamento ambiental inema bahia — com falhas na instrução processual do SEIA (Sistema Estadual de Informações Ambientais e de Recursos Hídricos) ou estudos ambientais incompletos — acarreta atrasos de meses no cronograma de obras, notificações punitivas e riscos severos de embargo. Este guia técnico detalha o passo a passo completo das etapas de Licença Prévia (LP), Licença de Instalação (LI) e Licença de Operação (LO), além de apresentar estratégias práticas para o cumprimento contínuo de condicionantes."
+                            "text": "Historicamente, a condução inadequada de processos de licenciamento ambiental inema bahia, com falhas na instrução processual do SEIA (Sistema Estadual de Informações Ambientais e de Recursos Hídricos) ou estudos ambientais incompletos, acarreta atrasos de meses no cronograma de obras, notificações punitivas e riscos severos de embargo. Este guia técnico detalha o passo a passo completo das etapas de Licença Prévia (LP), Licença de Instalação (LI) e Licença de Operação (LO), além de apresentar estratégias práticas para o cumprimento contínuo de condicionantes."
                       }
                 ]
           },
@@ -6295,7 +6295,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "O licenciamento ambiental é um procedimento administrativo complexo pelo qual o órgão ambiental competente — no âmbito estadual baiano, o Instituto do Meio Ambiente e Recursos Hídricos (INEMA) — licencia a localização, instalação, ampliação e a operação de empreendimentos e atividades utilizadoras de recursos ambientais, consideradas efetiva ou potencialmente poluidoras."
+                            "text": "O licenciamento ambiental é um procedimento administrativo complexo pelo qual o órgão ambiental competente, no âmbito estadual baiano o Instituto do Meio Ambiente e Recursos Hídricos (INEMA), licencia a localização, instalação, ampliação e a operação de empreendimentos e atividades utilizadoras de recursos ambientais, consideradas efetiva ou potencialmente poluidoras."
                       }
                 ]
           },
@@ -10391,7 +10391,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "A execução de programas técnicos de resgate de fauna na supressão vegetal é uma exigência mandatória estabelecida pelos órgãos ambientais em todo o território nacional. Empreendimentos de grande porte — como a implantação de parques solares, parques eólicos, loteamentos fechados, minerodutos, rodovias e linhas de transmissão de energia na Bahia — alteram profundamente a dinâmica dos ecossistemas locais e exigem a presença de biólogos e veterinários de campo durante toda a operação de máquinas pesadas."
+                            "text": "A execução de programas técnicos de resgate de fauna na supressão vegetal é uma exigência mandatória estabelecida pelos órgãos ambientais em todo o território nacional. Empreendimentos de grande porte, como a implantação de parques solares, parques eólicos, loteamentos fechados, minerodutos, rodovias e linhas de transmissão de energia na Bahia, alteram profundamente a dinâmica dos ecossistemas locais e exigem a presença de biólogos e veterinários de campo durante toda a operação de máquinas pesadas."
                       }
                 ]
           },
@@ -11452,7 +11452,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "No ordenamento jurídico brasileiro, os passivos ambientais — como solos contaminados por produtos químicos, águas subterrâneas poluídas ou desmatamentos ilegais pretéritos — possuem natureza legal sui generis. Quem adquire a área herda integralmente a obrigação financeira de remediar o dano. Neste artigo aprofundado, detalhamos os fundamentos da responsabilidade propter rem, a Súmula 623 do STJ, as etapas de Avaliação Fase I e Fase II (NBR 15515) e como utilizar o laudo para blindar contratos de compra e venda."
+                            "text": "No ordenamento jurídico brasileiro, os passivos ambientais, como solos contaminados por produtos químicos, águas subterrâneas poluídas ou desmatamentos ilegais pretéritos, possuem natureza legal sui generis. Quem adquire a área herda integralmente a obrigação financeira de remediar o dano. Neste artigo aprofundado, detalhamos os fundamentos da responsabilidade propter rem, a Súmula 623 do STJ, as etapas de Avaliação Fase I e Fase II (NBR 15515) e como utilizar o laudo para blindar contratos de compra e venda."
                       }
                 ]
           },

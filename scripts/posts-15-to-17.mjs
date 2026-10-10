@@ -130,7 +130,7 @@ export const POST_16 = {
       { text: ' (Plano de Recuperação de Áreas Degradadas) representa a solução mais moderna, eficiente e sustentável para conter processos erosivos severos, escorregamentos de terra e assoreamento de mananciais hídricos na Bahia. Em obras rodoviárias, loteamentos residenciais, ferrovias e cavas de mineração, a exposição de taludes desnudados à agressividade das chuvas torrenciais exige intervenções de engenharia natural que integrem materiais inertes e vegetação viva nativa.' },
     ]),
     pLink([
-      { text: 'Ao contrário de soluções puramente cinzas de alvenaria e concreto projetado — que apresentam custos astronômicos e descolamento precoce por pressão de poros —, as técnicas de bioengenharia criam um manto radicular vivo que se fortalece com o passar dos anos. Conheça as bases da nossa assessoria em ' },
+      { text: 'Ao contrário de soluções puramente cinzas de alvenaria e concreto projetado, que apresentam custos astronômicos e descolamento precoce por pressão de poros, as técnicas de bioengenharia criam um manto radicular vivo que se fortalece com o passar dos anos. Conheça as bases da nossa assessoria em ' },
       { text: 'autorização de supressão vegetal (ASV)', link: '/autorizacao-supressao-vegetal' },
       { text: ' e veja como o resgate de solo superficial potencializa a recuperação ecológica.' },
     ]),
@@ -148,7 +148,7 @@ export const POST_16 = {
     h2('Comparativo Técnico e Financeiro: Bioengenharia vs. Concreto Projetado'),
     p('A substituição de métodos convencionais por engenharia viva gera benefícios operacionais indiscutíveis:'),
     bullet('Redução de Custos de até 60%: O custo de metro quadrado instalado de biomantas vegetadas com hidrossemeadura é consideravelmente inferior ao custo de telas metálicas ancoradas com concreto projetado.'),
-    bullet('Drenagem e Porosidade Natural: Enquanto o concreto aprisiona a água no interior do talude — gerando sobrepressão hidrostática que frequentemente rompe a estrutura —, as raízes das plantas favorecem a infiltração lenta e a transpiração contínua.'),
+    bullet('Drenagem e Porosidade Natural: Enquanto o concreto aprisiona a água no interior do talude, gerando sobrepressão hidrostática que frequentemente rompe a estrutura, as raízes das plantas favorecem a infiltração lenta e a transpiração contínua.'),
     bullet('Conforto Térmico e Microclima: A cobertura vegetal reduz em até 15 °C a temperatura da superfície da encosta, permitindo o retorno de insetos polinizadores, aves e pequenos animais silvestres.'),
 
     h2('Principais Soluções e Técnicas Vivas de Bioengenharia'),
@@ -240,7 +240,7 @@ export const POST_17 = {
     pLink([
       { text: 'A aprovação técnica de ' },
       { text: 'PCA e RCA no INEMA para mineração', strong: true },
-      { text: ' e grandes complexos fabris na Bahia é a etapa crítica que determina se o cronograma de implantação física do projeto sairá do papel no prazo previsto ou ficará paralisado por exigências infindáveis no SEIA. O setor minerário e industrial baiano — com destaque para a extração de ferro, ouro, níquel, rochas ornamentais e indústrias de transformação química — demanda rigor absoluto na concepção dos estudos ambientais.' },
+      { text: ' e grandes complexos fabris na Bahia é a etapa crítica que determina se o cronograma de implantação física do projeto sairá do papel no prazo previsto ou ficará paralisado por exigências infindáveis no SEIA. O setor minerário e industrial baiano, com destaque para a extração de ferro, ouro, níquel, rochas ornamentais e indústrias de transformação química, demanda rigor absoluto na concepção dos estudos ambientais.' },
     ]),
     pLink([
       { text: 'Erros conceituais no dimensionamento de bacias de decantação, no controle de poeira e na caracterização de pilhas de estéril geram indeferimentos sumários e adiam a emissão da Licença de Instalação (LI). Conheça as fases do ' },

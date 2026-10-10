@@ -156,10 +156,10 @@ export const POST_22 = {
     pLink([
       { text: 'Se o risco for intolerável para os receptores atuais ou futuros, submete-se ao INEMA o Plano de Intervenção. As tecnologias selecionadas dependem da geologia local, condutividade hidráulica e da natureza do contaminante:' },
     ]),
-    bullet('Extração Multifásica (MPE / Dual-Phase Extraction): aplicação de alto vácuo para remoção simultânea de vapores voláteis e líquidos em aquíferos freáticos rasos, comumente adotada em postos de combustíveis e terminais de distribuição.'),
-    bullet('Biorremediação e Bioestimulação in situ: injeção de nutrientes, aceptores de elétrons e microrganismos autóctones para degradação aeróbica ou anaeróbica de hidrocarbonetos e solventes clorados.'),
-    bullet('Oxidação Química In Situ (ISCO): aplicação de oxidantes como permanganato de potássio, persulfato de sódio ativado ou reagente de Fenton para rápida destruição de compostos recalcitrantes em plumas concentradas.'),
-    bullet('Atenuação Natural Monitorada (MNA): monitoramento hidrogeoquímico contínuo da diluição, dispersão, adsorção e biodegradação intrínseca quando a velocidade de recuo da pluma é comprovada cientificamente.'),
+    bullet('Extração Multifásica de Alto Vácuo: aplicação de sucção profunda para remoção simultânea de vapores voláteis e líquidos em aquíferos freáticos rasos, comumente adotada em postos de combustíveis e terminais de distribuição.'),
+    bullet('Biorremediação com bioestimulação local: injeção de nutrientes minerais, aceptores de elétrons e microrganismos autóctones para degradação aeróbica ou anaeróbica de hidrocarbonetos e solventes clorados.'),
+    bullet('Oxidação Química em Subsuperfície: aplicação direta de oxidantes minerais, como permanganato de potássio ou persulfato ativado, para rápida destruição de compostos recalcitrantes em plumas concentradas.'),
+    bullet('Atenuação Natural Monitorada: acompanhamento hidrogeoquímico sistemático da diluição, dispersão, adsorção e degradação biológica intrínseca quando a estabilização da pluma é comprovada cientificamente.'),
     h3('5. Monitoramento de Encerramento e Termo de Reabilitação (Fase V)'),
     pLink([
       { text: 'Atingidas as Metas de Remediação e constatada a estabilidade do aquífero por quatro campanhas trimestrais consecutivas, o INEMA emite o Termo de Reabilitação para o Uso Declarado, desclassificando o imóvel do cadastro de áreas contaminadas e liberando-o plenamente para construções residenciais, comerciais ou industriais.' },
@@ -169,9 +169,9 @@ export const POST_22 = {
     pLink([
       { text: 'A confiabilidade dos laudos periciais submetidos ao INEMA repousa no rigor metodológico de campo. Nossos especialistas empregam métodos internacionalmente padronizados:' },
     ]),
-    bullet('Método de Baixa Vazão (Low-Flow Purging): técnica que minimiza a turbidez e preserva os compostos orgânicos voláteis (VOCs) dissolvidos na água subterrânea, utilizando bombas de bexiga (bladder pump) e medidores multiparâmetros com célula de fluxo fechada.'),
+    bullet('Método de Baixa Vazão: técnica de purga controlada que preserva a integridade de compostos voláteis e evita turbidez excessiva na água subterrânea, com medição em células de fluxo herméticas e sensores multiparâmetros.'),
     bullet('Preservação Térmica e Cadeia de Custódia Rastreável: transporte imediato das amostras em caixas térmicas com temperatura rigorosamente entre 2ºC e 6ºC e selos invioláveis para garantir validade jurídica das análises em disputas judiciais.'),
-    bullet('Amostragem de Vapores do Solo (Soil Gas Sampling): instalação de sondas sub-slab em galpões e edifícios industriais para verificar a intrusão de vapores cancerígenos nos ambientes de trabalho.'),
+    bullet('Amostragem de Vapores do Solo: instalação de sondas sob lajes e pisos industriais para verificar a intrusão de gases nocivos nos ambientes de trabalho e edificações fechadas.'),
     h2('Responsabilidade Civil Objetiva e Solidária na Legislação Brasileira'),
     pLink([
       { text: 'O regime jurídico brasileiro de reparação por passivos ambientais em solo e águas subterrâneas é fundamentado no Art. 14, § 1º da Lei nº 6.938/1981 (Política Nacional do Meio Ambiente). Trata-se da teoria do risco integral, onde a obrigação de reparar independe de culpa ou dolo. O adquirente de um imóvel contaminado na Bahia responde civilmente pelos custos integrais de remediação, mesmo que a contaminação tenha sido gerada por ocupantes anteriores há décadas (obrigação propter rem). Além disso, o Supremo Tribunal Federal (STF) fixou tese vinculante no Tema 999 declarando a imprescritibilidade das ações de reparação civil por danos ambientais.' },
@@ -228,7 +228,7 @@ export const POST_23 = {
     pLink([
       { text: 'O ' },
       { text: 'licenciamento dragagem obras portuárias inema', strong: true },
-      { text: ' representa uma das áreas mais complexas e multidisciplinares do direito ambiental e da engenharia costeira no Brasil. Com mais de 1.100 km de litoral e abrigando a Baía de Todos os Santos — a maior baía tropical do mundo — o estado da Bahia concentra terminais portuários privados (TUPs), estaleiros, portos públicos e marinas turísticas que demandam dragagens regulares de aprofundamento e manutenção para garantir calado operacional e segurança na navegação internacional.' },
+      { text: ' representa uma das áreas mais complexas e multidisciplinares do direito ambiental e da engenharia costeira no Brasil. Com mais de 1.100 km de litoral e abrigando a Baía de Todos os Santos, a maior baía tropical do mundo, o estado da Bahia concentra terminais portuários privados (TUPs), estaleiros, portos públicos e marinas turísticas que demandam dragagens regulares de aprofundamento e manutenção para garantir calado operacional e segurança na navegação internacional.' },
     ]),
     pLink([
       { text: 'Todavia, a intervenção na lâmina d’água costeira e a remoção de sedimentos de fundo marinho geram impactos significativos sobre ecossistemas ultrassensíveis, como manguezais, recifes de coral e bancos de fanerógamas marinhas. Para mitigar esses efeitos e assegurar que as atividades transcorram sem embargos, as empresas devem navegar por um rito coordenado entre o INEMA, a Capitania dos Portos (Marinha do Brasil), a Secretaria do Patrimônio da União (SPU) e, em casos federais, o IBAMA. Conheça as estratégias de campo da nossa equipe no ' },
@@ -243,9 +243,9 @@ export const POST_23 = {
       { text: ' é o Plano de Amostragem de Sedimentos, que divide o material em dois níveis:' },
     ]),
     bullet('Nível 1 (Abaixo do Limite de Alerta): sedimentos limpos com baixos teores de poluentes, compatíveis com dispersão controlada em polígonos marinhos de bota-fora devidamente licenciados ou reaproveitamento benéfico (engordamento de praias e aterros hidráulicos).'),
-    bullet('Nível 2 (Acima do Limite de Investigação): sedimentos contaminados por hidrocarbonetos policíclicos aromáticos (HPAs), bifenilas policloradas (PCBs) ou metais pesados provenientes de efluentes industriais históricos. Exigem confinamento subaquático em cavas seladas (CAD - Confined Aquatic Disposal) ou destinação terrestre controlada com MTR.'),
+    bullet('Nível 2 (Acima do Limite de Investigação): sedimentos contaminados por hidrocarbonetos policíclicos aromáticos (HPAs), bifenilas policloradas (PCBs) ou metais pesados provenientes de efluentes industriais históricos. Exigem confinamento subaquático em cavas seladas e isoladas com geomembrana ou destinação terrestre controlada com MTR.'),
     pLink([
-      { text: 'Coletar testemunhos indeformados de fundo marinho com amostradores vibrocore ou pistão em alto mar exige equipe especializada e embarcações homologadas pela Marinha, prevenindo invalidação amostral perante o corpo técnico do INEMA.' },
+      { text: 'Coletar testemunhos indeformados de fundo marinho com amostradores de testemunho contínuo por vibração ou pistão em alto mar exige equipe especializada e embarcações homologadas pela Marinha, prevenindo invalidação amostral perante o corpo técnico do INEMA.' },
     ]),
     h2('Competências Jurisdicionais: INEMA, SPU e Marinha do Brasil'),
     pLink([
@@ -262,7 +262,7 @@ export const POST_23 = {
     pLink([
       { text: 'A emissão da Licença de Instalação (LI) e Licença de Operação (LO) para obras portuárias e dragagens no litoral baiano é condicionada à implementação rigorosa de Programas de Controle Ambiental (PCA) no meio biótico e físico:' },
     ]),
-    bullet('Monitoramento da Pluma de Sedimento e Turbidez: medições em tempo real de turbidez, oxigênio dissolvido e sólidos suspensos na água, com instalação obrigatória de cortinas flutuantes de turbidez (silt curtains) em torno de colônias de corais e berçários estuarinos.'),
+    bullet('Monitoramento da Pluma de Sedimento e Turbidez: medições em tempo real de turbidez, oxigênio dissolvido e sólidos suspensos na água, com instalação obrigatória de cortinas flutuantes de turbidez em torno de colônias de corais e berçários estuarinos.'),
     bullet('Monitoramento de Cetáceos e Tartarugas Marinhas: afugentamento passivo e observadores de bordo (MMOs) capacitados para paralisar as bombas de sucção da draga na aproximação de baleias-jubarte (Megaptera novaeangliae), golfinhos e quelônios em período reprodutivo.'),
     bullet('Controle de Espécies Exóticas Invasoras (Coral-Sol): vistorias subaquáticas minuciosas por mergulhadores científicos nos cascos de dragas e batelões para evitar a dispersão de Tubastraea spp. nos costões rochosos da Baía de Todos os Santos.'),
     bullet('Gestão de Efluentes Sanitários e Oleosos de Embarcações: cumprimento compulsório da Convenção MARPOL 73/78, impedindo qualquer descarte de água de porão sem separador de água e óleo homologado.'),
@@ -334,12 +334,12 @@ export const POST_24 = {
     pLink([
       { text: 'A gestão integrada de riscos em canteiros e parques industriais requer a compreensão das funções de cada instrumento regulatório:' },
     ]),
-    bullet('Plano de Gerenciamento de Riscos (PGR / APR): identifica os perigos, mapeia cenários acidentais e calcula a vulnerabilidade das instalações e comunidades circunvizinhas antes do início das operações através de matrizes de risco Bow-Tie ou HazOp.'),
+    bullet('Plano de Gerenciamento de Riscos (PGR / APR): identifica os perigos, mapeia cenários acidentais e calcula a vulnerabilidade das instalações e comunidades circunvizinhas antes do início das operações através de matrizes consagradas de análise preliminar de perigos e operabilidade.'),
     bullet('Plano de Ação de Emergência (PAE): focado na resposta rápida no nível das instalações terrestres da empresa, detalhando rotas de fuga, alarmes, brigada de incêndio interna, primeiros socorros e contenção imediata com materiais de primeiro combate.'),
     bullet('Plano de Emergência Individual (PEI): obrigatório para instalações que movimentam petróleo e seus derivados, produtos químicos perigosos ou efluentes industriais em volumes críticos, com dimensionamento formal de recursos de contenção, recolhimento e destinação ambiental.'),
     h2('Integração com o Corpo de Bombeiros da Bahia (CBMBA) e AVCB'),
     pLink([
-      { text: 'A aprovação do PAE e do PEI pelas autoridades fiscalizadoras depende da perfeita consonância com o Auto de Vistoria do Corpo de Bombeiros (AVCB) emitido pelo CBMBA. As Instruções Técnicas (ITs) estaduais — em especial a IT-25 (Líquidos Inflamáveis e Combustíveis) e IT-28 (Manipulação e Armazenamento de Produtos Perigosos) — definem os padrões de bacias de contenção secundária, sistemas de dilúvio por espuma e reservatórios de água dedicados para combate a sinistros. Um plano de emergência que ignora as especificações do CBMBA é sumariamente rejeitado pelo INEMA durante vistorias conjuntas de renovação de licença.' },
+      { text: 'A aprovação do PAE e do PEI pelas autoridades fiscalizadoras depende da perfeita consonância com o Auto de Vistoria do Corpo de Bombeiros (AVCB) emitido pelo CBMBA. As Instruções Técnicas (ITs) estaduais, em especial a IT-25 (Líquidos Inflamáveis e Combustíveis) e a IT-28 (Manipulação e Armazenamento de Produtos Perigosos), definem os padrões de bacias de contenção secundária, sistemas de dilúvio por espuma e reservatórios de água dedicados para combate a sinistros. Um plano de emergência que ignora as especificações do CBMBA é sumariamente rejeitado pelo INEMA durante vistorias conjuntas de renovação de licença.' },
     ]),
     h2('Estrutura Técnica Mínima Exigida pelo INEMA para o PEI e PAE'),
     pLink([
@@ -348,7 +348,7 @@ export const POST_24 = {
       { text: ' aprovado pelo INEMA e validado junto ao CBMBA deve contemplar os seguintes capítulos técnicos detalhados:' },
     ]),
     bullet('1. Identificação da Instalação e Caracterização das Cargas: inventário químico atualizado com fichas FDS (antiga FISPQ) em conformidade com o GHS e NBR 14725 para cada substância manuseada no canteiro ou indústria.'),
-    bullet('2. Cenários Acidentais e Modelagem de Dispersão: simulação hidrodinâmica e atmosférica de dispersão de poluentes em caso de vazamento súbito (Worst-Case Scenario) e vazamento crônico em canais de drenagem pluvial.'),
+    bullet('2. Cenários Acidentais e Modelagem de Dispersão: simulação hidrodinâmica e atmosférica de dispersão de poluentes em caso de vazamento súbito (cenário acidental mais crítico ou de maior gravidade) e vazamento crônico em canais de drenagem pluvial.'),
     bullet('3. Matriz de Notificação e Fluxograma de Comunicação: lista de acionamento imediato com escalonamento de responsáveis em até 2 horas para INEMA, Defesa Civil, Polícia Rodoviária Federal e Estadual e órgãos de saúde pública.'),
     bullet('4. Dimensionamento de Recursos Materiais e Humanos: kits de mitigação (barreiras absorventes sintéticas, turfa orgânica biodegradável, mantas oleofílicas, bombas de transferência pneumáticas antideflagrantes e EPIs nível A, B e C).'),
     bullet('5. Procedimentos de Descontaminação e Destinação de Resíduos: logística reversa e incineração ou coprocessamento dos resíduos perigosos gerados no combate com emissão imediata de MTR Online no SINIR.'),
@@ -357,18 +357,18 @@ export const POST_24 = {
     pLink([
       { text: 'Para garantir validade perante os fiscais ambientais e auditores do INEMA, o simulado deve seguir uma rotina estrita em campo:' },
     ]),
-    bullet('Briefing de Segurança e Alinhamento: reunião preliminar com a brigada de emergência, operadores de máquinas e equipes de apoio externo.'),
+    bullet('Alinhamento Preliminar de Segurança: reunião com a brigada de emergência, operadores de máquinas e equipes de apoio operacional.'),
     bullet('Disparo do Alarme e Acionamento da Cadeia de Comando: teste real de sirenes, comunicação via rádio e evacuação ordenada dos postos de trabalho.'),
     bullet('Confinamento e Bloqueio de Drenagens: instalação imediata de barreiras absorventes nas canaletas pluviais para impedir que o produto químico atinja corpos hídricos vizinhos.'),
     bullet('Neutralização e Recolhimento: aplicação de agentes neutralizantes e aspiração do produto derramado para tambores homologados pelo INMETRO.'),
-    bullet('Debriefing e Relatório de Desempenho: compilação dos tempos de resposta, identificação de gargalos de comunicação e plano de ação corretivo.'),
+    bullet('Avaliação Pós-Simulado e Relatório de Desempenho: compilação dos tempos de resposta, identificação de pontos de melhoria de comunicação e plano de ação corretivo.'),
     h2('Planos de Auxílio Mútuo (PAM) nos Polos Industriais da Bahia'),
     pLink([
       { text: 'Em complexos como o Polo Industrial de Camaçari, o Centro Industrial de Aratu (CIA) e a região portuária de Candeias e Madre de Deus, a adesão ao Plano de Auxílio Mútuo (PAM) é altamente recomendada e frequentemente exigida nas condicionantes de licença ambiental. O PAM permite que empresas vizinhas compartilhem viaturas de combate, ambulâncias e estoques estratégicos de espuma química e barreiras de contenção em ocorrências de grande escala, reduzindo drasticamente o tempo de resposta e evitando que um acidente pontual se transforme em tragédia regional.' },
     ]),
     h2('Logística Reversa e Descarte dos Resíduos Pós-Acidente'),
     pLink([
-      { text: 'O material utilizado na contenção de um vazamento — como barreiras saturadas de óleo, solo contaminado retirado da cava e EPIs descartáveis — é classificado como Resíduo Classe I (Perigoso) segundo a ABNT NBR 10004. O transporte e a destinação final desse passivo devem ser rastreados no SINIR e MTR Online. Aprofunde seus conhecimentos no ' },
+      { text: 'O material utilizado na contenção de um vazamento, a exemplo de barreiras saturadas de óleo, solo contaminado retirado da cava e EPIs descartáveis, é classificado como Resíduo Classe I (Perigoso) segundo a ABNT NBR 10004. O transporte e a destinação final desse passivo devem ser rastreados no SINIR e MTR Online. Aprofunde seus conhecimentos no ' },
       { text: 'guia de logística reversa e DMR no SINIR', link: '/blog/logistica-reversa-dmr-sinir-residuos-bahia' },
       { text: ' e no ' },
       { text: 'artigo sobre MTR online e gestão de resíduos Classe I', link: '/blog/mtr-online-gestao-residuos-perigosos-classe-1' },
@@ -448,7 +448,7 @@ export const POST_25 = {
     bullet('Análise de Risco e Medidas Mitigadoras: catálogo exaustivo dos impactos gerados na fase de obras e operação, correlacionados às medidas atenuadoras imediatas.'),
     h2('Como Evitar Pendências e Notificações no SEIA'),
     pLink([
-      { text: 'A maioria dos atrasos na tramitação da Licença Unificada ocorre por erros cadastrais básicos e falta de certidões preliminares no SEIA. Para garantir o rito acelerado sem exigências complementares, nossa equipe adota um checklist preventivo:' },
+      { text: 'A maioria dos atrasos na tramitação da Licença Unificada ocorre por erros cadastrais básicos e falta de certidões preliminares no SEIA. Para garantir o rito acelerado sem exigências complementares, nossa equipe adota um roteiro de verificação preventiva:' },
     ]),
     bullet('Certidão de Uso e Ocupação do Solo Municipal: documento emitido pela Prefeitura local atestando que o empreendimento é compatível com o Plano Diretor Urbano (PDDU) e zoneamento municipal.'),
     bullet('Dispensa de Outorga ou Portaria de Outorga Hídrica: comprovação de abastecimento público pela EMBASA ou outorga de poço tubular outorgada pelo INEMA para o volume de água demandado na operação.'),
