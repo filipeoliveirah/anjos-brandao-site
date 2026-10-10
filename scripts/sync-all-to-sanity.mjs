@@ -125,6 +125,11 @@ async function runSync() {
   const imgPost18 = await uploadImage('images/blog/post-18-logistica-reversa-dmr-sinir-residuos.webp', 'post-18-logistica-reversa-dmr-sinir-residuos.webp')
   const imgPost19 = await uploadImage('images/blog/post-19-monitoramento-fauna-linhas-transmissao.webp', 'post-19-monitoramento-fauna-linhas-transmissao.webp')
   const imgPost20 = await uploadImage('images/blog/post-20-auditoria-ambiental-cepram-inema.webp', 'post-20-auditoria-ambiental-cepram-inema.webp')
+  const imgPost21 = await uploadImage('images/blog/post-21-compensacao-reserva-legal-car-inema.webp', 'post-21-compensacao-reserva-legal-car-inema.webp')
+  const imgPost22 = await uploadImage('images/blog/post-22-gerenciamento-areas-contaminadas-gac-inema.webp', 'post-22-gerenciamento-areas-contaminadas-gac-inema.webp')
+  const imgPost23 = await uploadImage('images/blog/post-23-licenciamento-dragagem-obras-portuarias-bahia.webp', 'post-23-licenciamento-dragagem-obras-portuarias-bahia.webp')
+  const imgPost24 = await uploadImage('images/blog/post-24-plano-emergencia-individual-pei-pae-bahia.webp', 'post-24-plano-emergencia-individual-pei-pae-bahia.webp')
+  const imgPost25 = await uploadImage('images/blog/post-25-licenca-unificada-lu-rap-inema-bahia.webp', 'post-25-licenca-unificada-lu-rap-inema-bahia.webp')
 
   const imageMap = {
     '/images/blog/post-1-licenciamento-inema.webp': imgPost1,
@@ -147,6 +152,11 @@ async function runSync() {
     '/images/blog/post-18-logistica-reversa-dmr-sinir-residuos.webp': imgPost18,
     '/images/blog/post-19-monitoramento-fauna-linhas-transmissao.webp': imgPost19,
     '/images/blog/post-20-auditoria-ambiental-cepram-inema.webp': imgPost20,
+    '/images/blog/post-21-compensacao-reserva-legal-car-inema.webp': imgPost21,
+    '/images/blog/post-22-gerenciamento-areas-contaminadas-gac-inema.webp': imgPost22,
+    '/images/blog/post-23-licenciamento-dragagem-obras-portuarias-bahia.webp': imgPost23,
+    '/images/blog/post-24-plano-emergencia-individual-pei-pae-bahia.webp': imgPost24,
+    '/images/blog/post-25-licenca-unificada-lu-rap-inema-bahia.webp': imgPost25,
   }
 
   // 2. Criar / Atualizar Autor

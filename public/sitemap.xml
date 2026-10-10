@@ -5,193 +5,223 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://www.anjosbrandao.eco.br/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/licenciamento-ambiental</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/pgrs</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/inventario-florestal</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/autorizacao-supressao-vegetal</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/resgate-fauna-flora</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/categoria/licenciamento-ambiental</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/categoria/pgrs-residuos</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/categoria/inventario-asv</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/categoria/fauna-flora</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/categoria/esg-compliance</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anjosbrandao.eco.br/blog/compensacao-ambiental-inema-reserva-legal-tcra</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anjosbrandao.eco.br/blog/gerenciamento-areas-contaminadas-gac-inema-bahia</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anjosbrandao.eco.br/blog/licenciamento-dragagem-obras-portuarias-inema-bahia</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anjosbrandao.eco.br/blog/plano-emergencia-individual-pei-pae-bahia-inema</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anjosbrandao.eco.br/blog/licenca-unificada-lu-rap-inema-bahia-prazos</loc>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/outorga-recursos-hidricos-inema-bahia-captacao</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/bioengenharia-solos-prad-recuperacao-taludes-cavas</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/pca-rca-licenciamento-mineracao-industria-inema</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/logistica-reversa-dmr-sinir-residuos-bahia</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/monitoramento-afugentamento-fauna-linhas-transmissao-inema</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/auditoria-ambiental-compulsoria-cepram-inema-plano-acao</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/governanca-esg-mitigacao-riscos-ambientais</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/guia-licenciamento-ambiental-inema-bahia</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/passagem-de-fauna-monitoramento-obras-infraestrutura</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/pgrs-construcao-civil-reducao-custos-conformidade</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/licenciamento-ambiental-energia-solar-eolica-bahia</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/inventario-florestal-asv-supressao-vegetal-segura</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/resgate-de-germoplasma-flora-nativa-prad-inema</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/renovacao-licenca-operacao-lo-prazos-documentos-inema</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/inventario-florestal-continuo-manejo-reducao-custos</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/resgate-fauna-supressao-vegetal-requisitos-inema</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/economia-circular-pgrs-industria-pesada-quimica</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/due-diligence-ambiental-compra-terrenos-loteamentos</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/corredores-ecologicos-planejamento-loteamentos-residenciais</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.anjosbrandao.eco.br/blog/mtr-online-gestao-residuos-perigosos-classe-1</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

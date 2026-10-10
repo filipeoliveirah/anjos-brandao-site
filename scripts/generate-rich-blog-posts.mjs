@@ -5,6 +5,7 @@ import { POST_8, POST_9, POST_10 } from './posts-8-to-10.mjs'
 import { POST_11, POST_12, POST_13, POST_14 } from './posts-11-to-14.mjs'
 import { POST_15, POST_16, POST_17 } from './posts-15-to-17.mjs'
 import { POST_18, POST_19, POST_20 } from './posts-18-to-20.mjs'
+import { POST_21, POST_22, POST_23, POST_24, POST_25 } from './posts-21-to-25.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -667,12 +668,22 @@ export const RAW_RICH_POSTS = [
   POST_18,
   POST_19,
   POST_20,
+  POST_21,
+  POST_22,
+  POST_23,
+  POST_24,
+  POST_25,
 ]
 
 // ==========================================
 // ORDENAÇÃO ALTERNADA: Cenário / Paisagem ↔ Pessoas em Campo
 // ==========================================
 const ALTERNATING_ORDER = [
+  "post-21", // [Cenário] Compensação de Reserva Legal e TCRA
+  "post-22", // [Pessoas] Gerenciamento de Áreas Contaminadas (GAC)
+  "post-23", // [Cenário] Dragagem Portuária e Baía de Todos os Santos
+  "post-24", // [Pessoas] Simulado de Emergência PEI / PAE
+  "post-25", // [Cenário] Licença Unificada e RAP Industrial
   "post-15", // [Cenário] Outorga de Recursos Hídricos no INEMA
   "post-16", // [Pessoas] Bioengenharia de Solos e PRAD
   "post-17", // [Cenário] PCA e RCA em Mineração e Indústria
@@ -695,7 +706,7 @@ const ALTERNATING_ORDER = [
   "post-6",  // [Pessoas] MTR Online e Resíduos Perigosos
 ]
 
-const baseDate = new Date("2026-10-04T18:00:00Z")
+const baseDate = new Date("2026-10-10T18:00:00Z")
 const rawMap = new Map(RAW_RICH_POSTS.map(p => [p._id, p]))
 
 export const RICH_POSTS = ALTERNATING_ORDER.map((id, index) => {
@@ -709,4 +720,5 @@ export const RICH_POSTS = ALTERNATING_ORDER.map((id, index) => {
   cloned.featured = index === 0
   return cloned
 })
+
 
