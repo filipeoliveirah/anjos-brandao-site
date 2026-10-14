@@ -1,4 +1,5 @@
-import { useState, useEffect, FormEvent, ChangeEvent } from 'react'
+import { useState, useEffect, useRef, FormEvent, ChangeEvent } from 'react'
+import { captureLeadAttribution, recordLeadSuccess } from '../../../lib/leadAttribution'
 import Button from '../Button/Button'
 import styles from './LeadForm.module.css'
 
@@ -72,7 +73,9 @@ export function validatePhone(phone: string): string | null {
 export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solicitação' }: LeadFormProps) {
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [emailSent, setEmailSent] = useState(false)
+  const [submitError, setSubmitError] = useState('')
+  const submitting = useRef(false)
+  const pendingRequest = useRef<{ fingerprint: string; body: Record<string, unknown> } | null>(null)
   const [formData, setFormData] = useState({
     nome: '',
     empresa: '',
@@ -152,6 +155,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+    if (submitting.current || submitted) return
 
     const errNome = validateNomeCompleto(formData.nome)
     const errEmpresa = validateEmpresa(formData.empresa)
@@ -164,43 +168,48 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
       return
     }
 
+    submitting.current = true
     setIsSubmitting(true)
+    setSubmitError('')
 
-    // 1. Disparar eventos de conversão no Google Ads e GTM
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', 'generate_lead', {
-        event_category: 'engagement',
-        event_label: formData.demanda,
-      });
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-17024846270/mPfECNeE2OsaEL6TirY_'
-      });
+    const fingerprint = JSON.stringify(formData)
+    if (!pendingRequest.current || pendingRequest.current.fingerprint !== fingerprint) {
+      pendingRequest.current = {
+        fingerprint,
+        body: {
+          ...formData,
+          request_id: crypto.randomUUID(),
+          submitted_at: new Date().toISOString(),
+          attribution: captureLeadAttribution(),
+          page_path: window.location.pathname,
+          registroTeste: new URLSearchParams(window.location.search).get('measurement_test') === '1',
+        },
+      }
     }
-
-    // 2. Enviar e-mail de notificação em background via Resend API
+    // Reuse the whole snapshot on retry: Resend checks both the key and payload.
+    const request = pendingRequest.current.body
     try {
       const response = await fetch('/api/send-lead', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(request),
+        signal: AbortSignal.timeout(15000),
       })
-
-      if (response.ok) {
-        setEmailSent(true)
+      const result = await response.json()
+      if (!response.ok || result.success !== true || typeof result.id !== 'string' || !result.id) {
+        throw new Error('Solicitação não confirmada pelo servidor')
       }
-    } catch (err) {
-      console.warn('⚠️ Erro ao enviar e-mail via Resend:', err)
+      setSubmitted(true)
+      // GTM owns the Ads/GA4/Meta tags; only this accepted-request event feeds them.
+      recordLeadSuccess(result.id, String(request.demanda), String(request.page_path), result.registroTeste === true || request.registroTeste === true)
+    } catch {
+      setSubmitError('Não conseguimos confirmar o envio. Tente novamente ou fale conosco pelo WhatsApp.')
     } finally {
+      submitting.current = false
       setIsSubmitting(false)
     }
-
-    // 3. Abrir WhatsApp com a mensagem estruturada
-    const whatsappUrl = getWhatsAppUrl()
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
-
-    setSubmitted(true)
   }
 
   if (submitted) {
@@ -209,7 +218,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
       <div className={styles.success}>
         <h4>✓ Solicitação registrada com sucesso!</h4>
         <p>
-          Registramos sua solicitação de <strong>{formData.demanda}</strong> para a empresa <strong>{cleanEmpresa}</strong>. {emailSent ? 'Um e-mail com os detalhes do seu projeto foi encaminhado à nossa equipe técnica.' : 'Os dados da sua solicitação foram processados com sucesso.'} Para iniciar o atendimento direto com nossos consultores no WhatsApp, clique no botão abaixo:
+          Sua solicitação de <strong>{formData.demanda}</strong> para a empresa <strong>{cleanEmpresa}</strong> foi encaminhada por e-mail à nossa equipe técnica. Para iniciar o atendimento direto com nossos consultores no WhatsApp, clique no botão abaixo:
         </p>
 
         <div className={styles.successActions}>
@@ -234,7 +243,8 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
           className={styles.resetBtn}
           onClick={() => {
             setSubmitted(false)
-            setEmailSent(false)
+            setSubmitError('')
+            pendingRequest.current = null
             setTouched({})
             setErrors({})
           }}
@@ -254,6 +264,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
           id="nome"
           required
           autoComplete="name"
+          maxLength={150}
           placeholder="Ex: João da Silva"
           value={formData.nome}
           onChange={(e) => handleChange('nome', e.target.value)}
@@ -272,6 +283,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
             id="empresa"
             required
             autoComplete="organization"
+            maxLength={200}
             placeholder="Ex: Construtora Exemplo"
             value={formData.empresa}
             onChange={(e) => handleChange('empresa', e.target.value)}
@@ -321,6 +333,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
         <textarea
           id="mensagem"
           rows={3}
+          maxLength={4000}
           placeholder="Conte resumidamente o local, fase ou objetivo da obra..."
           value={formData.mensagem}
           onChange={(e) => handleChange('mensagem', e.target.value)}
@@ -336,6 +349,14 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
       >
         {isSubmitting ? 'Registrando solicitação...' : ctaText}
       </Button>
+      {submitError && (
+        <div role="alert" className={styles.errorText}>
+          <p>{submitError}</p>
+          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className={styles.emailFallbackLink}>
+            Conversar pelo WhatsApp
+          </a>
+        </div>
+      )}
     </form>
   )
 }
