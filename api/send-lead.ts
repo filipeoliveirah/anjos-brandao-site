@@ -1,8 +1,16 @@
+const ATTRIBUTION_FIELDS = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'landing_page', 'referrer', 'captured_at']
+const DEMANDAS = ['Licenciamento Ambiental', 'PGRS', 'Inventário Florestal', 'ASV', 'Fauna e Flora', 'Outra demanda']
+
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]!))
+}
+
 export default async function handler(req: any, res: any) {
   // Configuração de CORS
   res.setHeader('Access-Control-Allow-Credentials', 'true')
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS')
+  res.setHeader('Cache-Control', 'no-store')
   res.setHeader(
     'Access-Control-Allow-Headers',
     'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
@@ -18,11 +26,41 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const { nome, empresa, telefone, demanda, mensagem } = req.body || {}
-
-    if (!nome || !empresa || !telefone) {
-      return res.status(400).json({ error: 'Campos obrigatórios ausentes (nome, empresa, telefone).' })
+    const body = req.body || {}
+    const { nome, empresa, telefone, demanda, mensagem, request_id, submitted_at, attribution, page_path } = body
+    if (typeof nome !== 'string' || typeof empresa !== 'string' || typeof telefone !== 'string' ||
+        nome.length > 150 || empresa.length > 200 || telefone.length > 30 ||
+        (mensagem !== undefined && (typeof mensagem !== 'string' || mensagem.length > 4000)) ||
+        (demanda !== undefined && !DEMANDAS.includes(demanda))) {
+      return res.status(400).json({ error: 'Dados de contato inválidos.' })
     }
+
+    const plainNome = nome.replace(/<[^>]*>?/gm, '').trim()
+    const plainEmpresa = empresa.replace(/<[^>]*>?/gm, '').trim()
+    const waCleanNumber = telefone.replace(/\D/g, '')
+    if (plainNome.split(/\s+/).filter((part: string) => part.length >= 2).length < 2 ||
+        plainEmpresa.length < 2 || !/^\d{10,11}$/.test(waCleanNumber) ||
+        Number(waCleanNumber.slice(0, 2)) < 11 ||
+        (waCleanNumber.length === 11 && waCleanNumber[2] !== '9')) {
+      return res.status(400).json({ error: 'Informe nome completo, empresa e telefone com DDD.' })
+    }
+    if (request_id !== undefined && (typeof request_id !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(request_id))) {
+      return res.status(400).json({ error: 'Identificador de solicitação inválido.' })
+    }
+    if (request_id && (typeof submitted_at !== 'string' || !/^\d{4}-\d{2}-\d{2}T[\d:.]+Z$/.test(submitted_at) || !Number.isFinite(Date.parse(submitted_at)))) {
+      return res.status(400).json({ error: 'Horário da solicitação inválido.' })
+    }
+    const requestId = request_id || crypto.randomUUID()
+    const submittedAt = request_id ? submitted_at : new Date().toISOString()
+    const cleanAttribution: Record<string, string> = {}
+    for (const key of ATTRIBUTION_FIELDS) {
+      const value = attribution?.[key]
+      if (typeof value === 'string' && value.length <= 1024 && !/[\u0000-\u001f]/.test(value)) {
+        cleanAttribution[key] = value
+      }
+    }
+    const pagePath = typeof page_path === 'string' && /^\/[a-zA-Z0-9/_-]*$/.test(page_path) && page_path.length <= 200 ? page_path : ''
+    const isTest = body.registroTeste === true || /TESTE INTERNO/i.test(mensagem || '')
 
     const apiKey = process.env.RESEND_API_KEY
     if (!apiKey) {
@@ -30,17 +68,24 @@ export default async function handler(req: any, res: any) {
       return res.status(500).json({ error: 'Configuração de e-mail não disponível' })
     }
     const toEmail = process.env.RESEND_TO_EMAIL || 'contato@anjosbrandao.eco.br'
-    const fromEmail = process.env.RESEND_FROM_EMAIL || 'Anjos Brandão <onboarding@resend.dev>'
+    const configuredFrom = process.env.RESEND_FROM_EMAIL
+    const fromEmail = configuredFrom && !/onboarding@resend\.dev/i.test(configuredFrom)
+      ? configuredFrom
+      : 'Anjos Brandão Soluções Ambientais <contato@anjosbrandao.eco.br>'
 
-    const cleanNome = String(nome).replace(/<[^>]*>?/gm, '').trim()
-    const cleanEmpresa = String(empresa).replace(/<[^>]*>?/gm, '').trim()
-    const cleanTelefone = String(telefone).trim()
-    const cleanDemanda = String(demanda || 'Licenciamento Ambiental').replace(/<[^>]*>?/gm, '').trim()
-    const cleanMensagem = mensagem ? String(mensagem).replace(/<[^>]*>?/gm, '').trim() : 'Não informado'
+    const cleanNome = escapeHtml(plainNome)
+    const cleanEmpresa = escapeHtml(plainEmpresa)
+    const cleanTelefone = escapeHtml(telefone.trim())
+    const plainDemanda = demanda || 'Licenciamento Ambiental'
+    const plainMensagem = mensagem ? mensagem.replace(/<[^>]*>?/gm, '').trim() : 'Não informado'
+    const cleanDemanda = escapeHtml(plainDemanda)
+    const cleanMensagem = escapeHtml(plainMensagem)
 
-    const now = new Date().toLocaleString('pt-BR', { timeZone: 'America/Bahia' })
-    const waCleanNumber = cleanTelefone.replace(/\D/g, '')
+    // A stable timestamp keeps Resend's idempotent retry payload identical.
+    const now = new Date(submittedAt).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
     const waLink = `https://wa.me/55${waCleanNumber}`
+    const sourceFields = { request_id: requestId, page_path: pagePath, registro_teste: String(isTest), ...cleanAttribution }
+    const sourceHtml = Object.entries(sourceFields).map(([key, value]) => `<div><strong>${escapeHtml(key)}:</strong> ${escapeHtml(value || 'Não informado')}</div>`).join('\n')
 
     const htmlContent = `
 <!DOCTYPE html>
@@ -104,6 +149,11 @@ export default async function handler(req: any, res: any) {
         <div class="value" style="font-size: 14px; color: #555555; font-weight: normal;">${now}</div>
       </div>
 
+      <div class="field-group">
+        <div class="label">Identificação e origem da solicitação</div>
+        <div class="value-msg">${sourceHtml}</div>
+      </div>
+
       <a href="${waLink}" target="_blank" class="btn-wa">
         💬 Responder ${cleanNome} no WhatsApp (${cleanTelefone})
       </a>
@@ -121,26 +171,37 @@ export default async function handler(req: any, res: any) {
       headers: {
         'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
+        'Idempotency-Key': `ambiental-lead/${requestId}`,
       },
+      signal: AbortSignal.timeout(8000),
       body: JSON.stringify({
         from: fromEmail,
         to: [toEmail],
         reply_to: toEmail,
-        subject: `[Novo Lead] ${cleanDemanda} — ${cleanEmpresa} (${cleanNome})`,
+        subject: `${isTest ? '[TESTE INTERNO]' : '[Novo Lead]'} ${plainDemanda} — ${plainEmpresa} (${plainNome})`.replace(/[\r\n]/g, ' '),
         html: htmlContent,
+        text: [
+          `Solicitação de ${plainDemanda}`,
+          `Nome: ${plainNome}`,
+          `Empresa: ${plainEmpresa}`,
+          `Telefone: ${telefone.trim()}`,
+          `Mensagem: ${plainMensagem}`,
+          `Horário informado pelo formulário: ${submittedAt}`,
+          ...Object.entries(sourceFields).map(([key, value]) => `${key}: ${value || 'Não informado'}`),
+        ].join('\n'),
       }),
     })
 
     const data = await response.json()
 
-    if (!response.ok) {
-      console.error('❌ Erro da API Resend:', data)
-      return res.status(response.status).json({ error: 'Erro ao despachar e-mail via Resend', details: data })
+    if (!response.ok || typeof data.id !== 'string' || !data.id) {
+      console.error('Erro de envio Resend', response.status)
+      return res.status(response.status === 429 ? 429 : 502).json({ error: 'Não foi possível confirmar o envio. Tente novamente.' })
     }
 
-    return res.status(200).json({ success: true, id: data.id })
-  } catch (error: any) {
-    console.error('❌ Erro no handler de envio:', error)
-    return res.status(500).json({ error: 'Erro interno ao processar envio', details: error.message })
+    return res.status(200).json({ success: true, id: data.id, leadId: requestId, registroTeste: isTest, recordedIn: 'resend' })
+  } catch {
+    console.error('Não foi possível confirmar o envio ao Resend.')
+    return res.status(502).json({ error: 'Não foi possível confirmar o envio. Tente novamente.' })
   }
 }
