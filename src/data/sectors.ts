@@ -11,9 +11,9 @@ export const sectors: Sector[] = [
     id: 'construcao-civil',
     title: 'Construção civil',
     subtitle: 'Loteamentos · edificações · urbanização',
-    timeframe: 'LP · LI · LO · PGRS',
+    timeframe: 'LP · LI · LO · PGRCC',
     description:
-      'Licenciamento integral integrado ao cronograma de obra e comercialização, com gestão de resíduos de construção e acompanhamento de condicionantes até a entrega.',
+      'Licenciamento ambiental, elaboração de PGRCC e acompanhamento de condicionantes para obras em implantação ou já iniciadas.',
   },
   {
     id: 'infraestrutura',
@@ -29,7 +29,7 @@ export const sectors: Sector[] = [
     subtitle: 'Plantas · pátios · logística',
     timeframe: 'LO · PGRS · auditorias',
     description:
-      'Gestão de Licença de Operação em regime contínuo, com auditorias periódicas, protocolos de movimentação e rastreabilidade detalhada de resíduos.',
+      'Renovação de Licença de Operação, elaboração e atualização de PGRS e atendimento a condicionantes e pendências documentais da indústria.',
   },
   {
     id: 'energia',

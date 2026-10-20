@@ -320,7 +320,7 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
           onChange={(e) => handleChange('demanda', e.target.value)}
         >
           <option value="Licenciamento Ambiental">Licenciamento Ambiental (LP, LI, LO)</option>
-          <option value="PGRS">PGRS — Plano de Gerenciamento de Resíduos Sólidos</option>
+          <option value="PGRS">PGRS / PGRCC — Elaboração ou atualização do plano</option>
           <option value="Inventário Florestal">Inventário Florestal</option>
           <option value="ASV">ASV — Autorização de Supressão Vegetal</option>
           <option value="Fauna e Flora">Resgate e Monitoramento de Fauna e Flora</option>
@@ -329,12 +329,16 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
       </div>
 
       <div className={styles.field}>
-        <label htmlFor="mensagem">Detalhes do projeto (opcional)</label>
+        <label htmlFor="mensagem">Atividade, município e pendência (opcional)</label>
         <textarea
           id="mensagem"
           rows={3}
           maxLength={4000}
-          placeholder="Conte resumidamente o local, fase ou objetivo da obra..."
+          placeholder={formData.demanda === 'PGRS'
+            ? 'Informe a atividade ou o tipo de obra, o município, se já possui PGRS/PGRCC e o prazo da exigência.'
+            : formData.demanda === 'Licenciamento Ambiental'
+              ? 'Informe a atividade, o município, a situação da licença e o prazo de vencimento ou da notificação.'
+              : 'Informe a atividade ou o tipo de obra, o município, a pendência e o prazo, se houver.'}
           value={formData.mensagem}
           onChange={(e) => handleChange('mensagem', e.target.value)}
         ></textarea>

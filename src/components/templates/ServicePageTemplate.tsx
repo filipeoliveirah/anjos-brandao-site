@@ -89,6 +89,7 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
           <p className={`subhead ${styles.eyebrow}`}>Serviço técnico especializado</p>
           <h1 className={styles.h1}>{service.title}</h1>
           <p className={styles.heroSubhead}>{service.subhead}</p>
+          {service.scopeNote && <p className={styles.scopeNote}>{service.scopeNote}</p>}
           <div className={styles.ctaRow}>
             <Button variant="primary" href="#formulario" className={styles.heroCtaBtn}>{service.ctaText}</Button>
             <a className={styles.detailsLink} href="#detalhes">Ver detalhes técnicos ↓</a>
