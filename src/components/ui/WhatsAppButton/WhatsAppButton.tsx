@@ -1,6 +1,14 @@
 import styles from './WhatsAppButton.module.css'
 
 export default function WhatsAppButton() {
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname.replace(/\/$/, '') : ''
+  const messages: Record<string, string> = {
+    '/pgrs': 'Olá! Preciso de uma avaliação para elaboração ou atualização de PGRS/PGRCC.\nEmpresa e atividade: \nMunicípio: \nJá possui um plano? \nExigência recebida e prazo: ',
+    '/licenciamento-ambiental': 'Olá! Preciso de uma avaliação de licenciamento ambiental.\nEmpresa e atividade: \nMunicípio: \nSituação da licença: \nVencimento ou prazo da notificação: ',
+  }
+  const message = messages[currentPath]
+  const whatsappUrl = `https://wa.me/5571996150067${message ? `?text=${encodeURIComponent(message)}` : ''}`
+
   const handleWhatsAppClick = () => {
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', 'conversion', {
@@ -13,7 +21,7 @@ export default function WhatsAppButton() {
     <div className={styles.whatsapp}>
       <a
         className={styles.whatsappLink}
-        href="https://wa.me/5571996150067"
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp"

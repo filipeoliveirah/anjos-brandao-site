@@ -19,9 +19,9 @@ export const services: Service[] = [
   },
   {
     id: 'pgrs',
-    title: 'PGRS e resíduos',
+    title: 'Elaboração de PGRS e PGRCC',
     description:
-      'Plano de Gerenciamento de Resíduos Sólidos com rastreabilidade detalhada, protocolos de movimentação e destinação adequada, do canteiro de obras à operação industrial.',
+      'Elaboração e atualização de planos técnicos para empresas e obras, com avaliação das exigências do licenciamento, das condicionantes e dos documentos pendentes.',
   },
   {
     id: 'esg',
@@ -53,6 +53,7 @@ export interface ServiceDetail {
   slug: string
   title: string
   subhead: string
+  scopeNote?: string
   description: string
   heroImage: string
   ctaText: string
@@ -68,16 +69,17 @@ export const detailedServices: Record<string, ServiceDetail> = {
     id: 'licenciamento',
     slug: 'licenciamento-ambiental',
     title: 'Licenciamento Ambiental',
-    subhead: 'Condução integral das etapas de LP, LI e LO junto aos órgãos reguladores',
+    subhead: 'Licença vencida, renovação próxima ou exigência pendente? Avaliamos a situação da sua empresa e os documentos necessários.',
     description:
-      'Coordenamos processos completos de Licenciamento Ambiental Prévia (LP), de Instalação (LI) e de Operação (LO) perante IBAMA, INEMA e órgãos municipais, reduzindo prazos e garantindo segurança jurídica.',
+      'Consultoria para licenciamento, renovação e regularização ambiental de empresas na Bahia. Avaliação de licenças, condicionantes e documentos pendentes.',
     heroImage: '/images/services/hero-licenciamento.jpg',
     ctaText: 'Avaliar o processo de licenciamento',
     quandoNecessario: [
-      'Implantação de novos empreendimentos industriais, logísticos ou habitacionais.',
+      'Empresa em funcionamento ou obra iniciada com pendência de regularização ambiental.',
+      'Licença vencida ou próxima do vencimento, com necessidade de avaliar a renovação.',
       'Ampliação ou modificação de capacidade produtiva e área construída.',
-      'Renovação periódica da Licença de Operação (LO) ou regularização ambiental.',
       'Atendimento a notificações e exigências de órgãos como INEMA e IBAMA.',
+      'Exigência ambiental relacionada a alvará, financiamento ou continuidade da operação.',
     ],
     comoAtuamos: [
       'Análise prévia de viabilidade ambiental e enquadramento regulatório.',
@@ -88,7 +90,7 @@ export const detailedServices: Record<string, ServiceDetail> = {
     entregaveis: [
       'Estudo de Impacto Ambiental (EIA/RIMA) ou Relatório de Controle Ambiental (RCA).',
       'Plano de Controle Ambiental (PCA) e Programas de Monitoramento.',
-      'Protocolos formais de emissão de LP, LI e LO.',
+      'Comprovantes dos protocolos realizados no processo, conforme o escopo contratado.',
       'Relatórios periódicos de cumprimento de condicionantes.',
     ],
     setoresAtendidos: ['Indústria', 'Construção Civil', 'Logística', 'Infraestrutura', 'Energia'],
@@ -101,12 +103,12 @@ export const detailedServices: Record<string, ServiceDetail> = {
       {
         question: 'Quanto tempo leva a emissão de uma licença ambiental?',
         answer:
-          'O prazo varia de acordo com o enquadramento do empreendimento e a complexidade do órgão (ex: INEMA/IBAMA). Processos simplificados levam de 60 a 90 dias, enquanto estudos complexos (EIA/RIMA) demandam de 6 a 12 meses.',
+          'O prazo depende da atividade, dos estudos necessários, da documentação e da análise do órgão responsável. Na avaliação inicial, definimos as etapas do trabalho e as pendências conhecidas. A decisão e o prazo de emissão cabem ao órgão licenciador.',
       },
       {
-        question: 'O que acontece se a operação funcionar sem Licença de Operação (LO)?',
+        question: 'Minha empresa já funciona e tem uma pendência ambiental. Por onde começar?',
         answer:
-          'Operar sem LO válida é infração administrativa gravíssima sujeita a multas diárias, embargo imediato da atividade e responsabilização civil e criminal dos administradores.',
+          'Informe a atividade, o município, a situação da licença e o prazo de qualquer notificação recebida. Com os documentos disponíveis, nossa equipe avalia o enquadramento e o trabalho necessário para conduzir a regularização. A contratação da consultoria não substitui a autorização do órgão competente.',
       },
     ],
   },
@@ -114,41 +116,47 @@ export const detailedServices: Record<string, ServiceDetail> = {
   pgrs: {
     id: 'pgrs',
     slug: 'pgrs',
-    title: 'PGRS - Plano de Gerenciamento de Resíduos Sólidos',
-    subhead: 'Gestão, classificação e rastreabilidade total de resíduos da obra à operação',
+    title: 'Elaboração de PGRS na Bahia',
+    subhead: 'PGRS solicitado no licenciamento ou desatualizado? Avaliamos a pendência e elaboramos o plano para sua empresa.',
+    scopeNote: 'Atendimento para elaboração e revisão de planos técnicos, incluindo PGRCC para obras. Coleta e transporte de resíduos são contratações separadas.',
     description:
-      'Desenvolvemos e implantamos o PGRS de acordo com a Política Nacional de Resíduos Sólidos (Lei 12.305/2010), assegurando destinação correta, redução de custos e rastreabilidade total.',
+      'Elaboração e atualização de PGRS para empresas e PGRCC para obras na Bahia. Informe a atividade, o município e a exigência para solicitar uma avaliação técnica.',
     heroImage: '/images/services/hero-pgrs.jpg',
-    ctaText: 'Solicitar análise do empreendimento',
+    ctaText: 'Solicitar avaliação do PGRS',
     quandoNecessario: [
-      'Empreendimentos geradores de resíduos industriais, de saúde ou da construção civil (PGRCC).',
-      'Condicionante obrigatória para emissão ou renovação de Licença de Operação.',
-      'Regularização perante a vigilância sanitária e secretarias municipais de meio ambiente.',
-      'Auditorias ambientais de clientes, investidores e certificações ISO 14001.',
+      'PGRS solicitado em um processo de licenciamento, renovação ou atendimento de condicionante.',
+      'Empresa em funcionamento que precisa elaborar ou atualizar o plano.',
+      'Obra iniciada com exigência de PGRCC ou necessidade de revisar o plano existente.',
+      'Pendência documental apontada em notificação, auditoria ou solicitação de cliente.',
     ],
     comoAtuamos: [
-      'Inventário quantitativo e qualitativo de resíduos gerados na fonte.',
-      'Mapeamento dos fluxos internos de segregação, acondicionamento e armazenamento temporário.',
-      'Homologação e auditoria técnica de prestadores de transporte e destinação final.',
-      'Treinamento das equipes operacionais e elaboração dos MTRs (Manifesto de Transporte de Resíduos).',
+      'Avaliamos a atividade, o município, os documentos disponíveis e a exigência recebida.',
+      'Levantamos os resíduos gerados e os procedimentos adotados na empresa ou na obra.',
+      'Elaboramos ou revisamos o plano, com definição de procedimentos e responsabilidades.',
+      'Entregamos o documento técnico e orientamos a equipe sobre as medidas previstas no plano.',
     ],
     entregaveis: [
-      'Documento técnico do PGRS com ART registrada no CREA.',
-      'Manual prático de segregação de resíduos para canteiro/planta.',
-      'Relatório de Rastreabilidade e MTRs validados.',
-      'Declaração de Movimentação de Resíduos para o órgão ambiental.',
+      'PGRS ou PGRCC elaborado ou atualizado conforme o escopo contratado.',
+      'Caracterização dos resíduos e descrição dos procedimentos previstos no plano.',
+      'Orientações para a implantação e registro de pendências identificadas.',
+      'Responsabilidade técnica conforme o serviço e as atribuições do profissional habilitado.',
     ],
     setoresAtendidos: ['Indústria', 'Construção Civil', 'Logística'],
     faq: [
       {
-        question: 'Quem é obrigado a ter o PGRS?',
+        question: 'Este atendimento inclui coleta ou retirada de resíduos?',
         answer:
-          'Todas as indústrias, geradores de resíduos de construção civil, mineradoras, serviços de saúde, e estabelecimentos comerciais que gerem resíduos perigosos ou volumosos.',
+          'O atendimento desta página é para elaboração ou atualização do Plano de Gerenciamento de Resíduos Sólidos (PGRS) e do PGRCC para obras. Coleta, transporte e destinação são serviços contratados separadamente com prestadores habilitados.',
       },
       {
-        question: 'Qual a frequência de atualização do PGRS?',
+        question: 'Já tenho um plano. É possível atualizar?',
         answer:
-          'O PGRS deve ser revisado anualmente ou sempre que houver alteração significativa nos processos produtivos ou no volume de resíduos gerados.',
+          'Sim. Envie o plano existente, as mudanças na atividade e qualquer exigência recebida. Avaliamos o que precisa ser revisado e apresentamos o escopo antes da contratação.',
+      },
+      {
+        question: 'Quais informações preciso enviar para solicitar uma proposta?',
+        answer:
+          'Informe a atividade da empresa ou o tipo de obra, o município, se já existe um plano e o prazo informado pelo órgão ou solicitante. Se houver uma notificação ou exigência documental, envie também esse documento à equipe.',
       },
     ],
   },
