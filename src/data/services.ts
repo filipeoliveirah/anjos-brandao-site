@@ -202,9 +202,10 @@ export const detailedServices: Record<string, ServiceDetail> = {
     id: 'autorizacao-supressao-vegetal',
     slug: 'autorizacao-supressao-vegetal',
     title: 'ASV - Autorização de Supressão Vegetal',
-    subhead: 'Aprovação legal para limpeza de terreno e manejo florestal em canteiros de obras',
+    subhead: 'Exigência de ASV para sua obra? Avaliamos a área, os documentos e as pendências do processo.',
+    scopeNote: 'A emissão da autorização e o prazo de análise dependem do órgão competente. O escopo da consultoria é definido após a avaliação técnica.',
     description:
-      'Conduzimos todo o processo de aprovação da ASV perante INEMA e órgãos licenciadores, garantindo a liberação das frentes de obra com acompanhamento técnico contínuo.',
+      'Assessoria técnica para pedidos de ASV e atendimento de exigências ambientais na Bahia. Informe a área, o município, a etapa da obra e o prazo recebido.',
     heroImage: '/images/services/hero-asv.jpg',
     ctaText: 'Verificar documentação necessária',
     quandoNecessario: [
@@ -215,19 +216,19 @@ export const detailedServices: Record<string, ServiceDetail> = {
     comoAtuamos: [
       'Submissão do Inventário Florestal e Plano de Supressão Vegetal.',
       'Coordenação de vistoria técnica do órgão regulador.',
-      'Acompanhamento in loco durante a supressão para garantia de limites georreferenciados.',
+      'Acompanhamento técnico durante a supressão autorizada, conforme os limites definidos e o escopo contratado.',
     ],
     entregaveis: [
-      'Portaria de concessão da ASV emitida pelo órgão.',
-      'Relatórios de acompanhamento da supressão.',
-      'Comprovantes de destinação do material vegetal.',
+      'Documentação técnica e comprovantes dos protocolos realizados, conforme o escopo contratado.',
+      'Relatórios de acompanhamento técnico previstos no serviço contratado.',
+      'Orientações sobre registros de destinação do material vegetal, quando aplicáveis.',
     ],
     setoresAtendidos: ['Infraestrutura', 'Construção Civil', 'Energia', 'Logística'],
     faq: [
       {
         question: 'Qual a validade de uma ASV?',
         answer:
-          'Geralmente o prazo da ASV é vinculado ao cronograma de instalação da obra (LI), podendo variar de 1 a 3 anos com possibilidade de prorrogação mediante justificativa técnica.',
+          'A validade e as condições constam da autorização emitida. Para avaliar o vencimento ou a necessidade de prorrogação, envie o documento e o cronograma atualizado à nossa equipe.',
       },
     ],
   },
