@@ -8,6 +8,7 @@ import { POST_18, POST_19, POST_20 } from './posts-18-to-20.mjs'
 import { POST_21, POST_22, POST_23, POST_24, POST_25 } from './posts-21-to-25.mjs'
 import { POST_26, POST_27, POST_28, POST_29, POST_30 } from './posts-26-to-30.mjs'
 import { POST_31, POST_32, POST_33 } from './posts-31-to-33.mjs'
+import { POST_34, POST_35, POST_36 } from './posts-34-to-36.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -683,12 +684,18 @@ export const RAW_RICH_POSTS = [
   POST_31,
   POST_32,
   POST_33,
+  POST_34,
+  POST_35,
+  POST_36,
 ]
 
 // ==========================================
 // ORDENAÇÃO ALTERNADA: Cenário / Paisagem ↔ Pessoas em Campo
 // ==========================================
 const ALTERNATING_ORDER = [
+  "post-34", // [Cenário] COP31 e calendário do SBCE (Portaria 3.199/2026)
+  "post-35", // [Cenário] Queima controlada suspensa na Bahia (Portaria INEMA 35.277)
+  "post-36", // [Cenário] Lei Geral do Licenciamento e o julgamento no STF
   "post-31", // [Cenário] CEFIR e CAR na Bahia
   "post-32", // [Cenário] Lançamento de Efluentes CONAMA 430
   "post-33", // [Cenário] Inventário de GEE, SBCE e CVM 193
