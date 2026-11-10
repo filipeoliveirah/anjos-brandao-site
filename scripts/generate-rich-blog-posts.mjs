@@ -6,6 +6,8 @@ import { POST_11, POST_12, POST_13, POST_14 } from './posts-11-to-14.mjs'
 import { POST_15, POST_16, POST_17 } from './posts-15-to-17.mjs'
 import { POST_18, POST_19, POST_20 } from './posts-18-to-20.mjs'
 import { POST_21, POST_22, POST_23, POST_24, POST_25 } from './posts-21-to-25.mjs'
+import { POST_26, POST_27, POST_28, POST_29, POST_30 } from './posts-26-to-30.mjs'
+import { POST_31, POST_32, POST_33 } from './posts-31-to-33.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -673,12 +675,28 @@ export const RAW_RICH_POSTS = [
   POST_23,
   POST_24,
   POST_25,
+  POST_26,
+  POST_27,
+  POST_28,
+  POST_29,
+  POST_30,
+  POST_31,
+  POST_32,
+  POST_33,
 ]
 
 // ==========================================
 // ORDENAÇÃO ALTERNADA: Cenário / Paisagem ↔ Pessoas em Campo
 // ==========================================
 const ALTERNATING_ORDER = [
+  "post-31", // [Cenário] CEFIR e CAR na Bahia
+  "post-32", // [Cenário] Lançamento de Efluentes CONAMA 430
+  "post-33", // [Cenário] Inventário de GEE, SBCE e CVM 193
+  "post-26", // [Cenário] EIA/RIMA e Audiência Pública no INEMA
+  "post-27", // [Cenário] TCFA, CTF e RAPP do IBAMA
+  "post-28", // [Cenário] Postos e Tanques de Combustível CONAMA 273
+  "post-29", // [Cenário] Emissões Atmosféricas e Ruído
+  "post-30", // [Cenário] Licenciamento Municipal e APP Urbana
   "post-21", // [Cenário] Compensação de Reserva Legal e TCRA
   "post-22", // [Pessoas] Gerenciamento de Áreas Contaminadas (GAC)
   "post-23", // [Cenário] Dragagem Portuária e Baía de Todos os Santos
@@ -706,7 +724,7 @@ const ALTERNATING_ORDER = [
   "post-6",  // [Pessoas] MTR Online e Resíduos Perigosos
 ]
 
-const baseDate = new Date("2026-10-10T18:00:00Z")
+const baseDate = new Date("2026-11-10T18:00:00Z")
 const rawMap = new Map(RAW_RICH_POSTS.map(p => [p._id, p]))
 
 export const RICH_POSTS = ALTERNATING_ORDER.map((id, index) => {

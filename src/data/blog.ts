@@ -142,13 +142,2913 @@ export const INITIAL_CATEGORIES: Category[] = [
 
 export const INITIAL_POSTS: PostDetail[] = [
   {
+    _id: 'post-31',
+    title: "CEFIR e CAR na Bahia: o Cadastro do Imóvel Rural é Condição para a ASV, o Crédito Rural e a Regularização",
+    slug: "cefir-car-bahia-imovel-rural-asv-reserva-legal",
+    excerpt: "O INEMA só autoriza supressão de vegetação, e o banco só libera crédito rural, para imóvel inscrito no CEFIR. Veja o que o cadastro exige na Bahia.",
+    publishedAt: '2026-11-10T18:00:00.000Z',
+    estimatedReadTime: 9,
+    featured: true,
+    mainImageUrl: '/images/blog/post-31-cefir-car-imovel-rural-bahia.webp',
+    mainImageAlt: "Vista aérea de imóvel rural na Bahia com área de cultivo, remanescente de vegetação nativa e mata ciliar ao longo de um curso d'água",
+    mainImageCaption: "Imóvel rural com Reserva Legal e Área de Preservação Permanente delimitadas, informações que precisam constar no CEFIR.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[2], INITIAL_CATEGORIES[0]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/inventario-florestal-asv-supressao-vegetal-segura"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "CAR na Bahia",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " é feito pelo CEFIR, o Cadastro Estadual Florestal de Imóveis Rurais, e a inscrição regular é condição legal para três atos que produtores rurais, loteadores e empreendedores de energia e mineração precisam com frequência: a Autorização de Supressão de Vegetação (ASV), o acesso ao crédito rural e a regularização de passivos de Reserva Legal e de Área de Preservação Permanente. O cadastro é declaratório, mas as informações declaradas são cruzadas pelo INEMA com imagens de satélite, com o cadastro de outros imóveis e com os limites de unidades de conservação. Um CEFIR com erro de perímetro ou sem Reserva Legal delimitada costuma aparecer justamente quando o empreendedor pede a "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Autorização de Supressão de Vegetação",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ", e o pedido fica parado até a correção."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A base legal é o art. 29 da Lei nº 12.651/2012, o Código Florestal, que criou o Cadastro Ambiental Rural como registro público eletrônico obrigatório para todos os imóveis rurais, e o Decreto federal nº 7.830/2012, que instituiu o SICAR. Na Bahia, a Lei Estadual nº 10.431/2006 e o Decreto Estadual nº 15.180/2014 disciplinam a gestão das florestas, o CEFIR e o Programa de Regularização Ambiental (PRA). O CEFIR é preenchido no SEIA, o sistema estadual de informações ambientais, e os dados são enviados ao SICAR, o que dá ao imóvel o número do CAR federal."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "O que o CEFIR registra",
+                "text": "Perímetro georreferenciado do imóvel, Áreas de Preservação Permanente, Reserva Legal proposta ou averbada, remanescentes de vegetação nativa, áreas de uso restrito, áreas rurais consolidadas até 22 de julho de 2008, servidões administrativas e a situação de cada passivo ambiental. O responsável pelas informações é o proprietário ou possuidor, mesmo quando o cadastro é feito por um técnico contratado."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Por que o CAR na Bahia Condiciona a ASV"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/inventario-florestal-continuo-manejo-reducao-custos"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O art. 26 do Código Florestal estabelece que a supressão de vegetação nativa para uso alternativo do solo depende do cadastramento do imóvel no CAR e de autorização prévia do órgão estadual. Na prática, o pedido de ASV no INEMA começa pela conferência do CEFIR: o técnico verifica se a área a suprimir está fora de APP, se a Reserva Legal do imóvel está delimitada e preservada, e se não há sobreposição com outro imóvel, terra indígena, território quilombola ou unidade de conservação. Qualquer inconsistência gera exigência antes da análise do "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "inventário florestal",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e do plano de supressão."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Também não se autoriza nova supressão em imóvel com área abandonada ou com desmatamento irregular posterior a 22 de julho de 2008 sem que o passivo seja tratado antes, conforme o art. 28 do Código Florestal. Por isso, o diagnóstico do CEFIR deve preceder o cronograma de obra: um parque solar, uma linha de transmissão ou um loteamento que dependa de ASV em imóvel arrendado herda os problemas do cadastro do proprietário da terra."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "As inconsistências que mais travam pedidos de ASV na Bahia são recorrentes e podem ser identificadas antes do protocolo:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Perímetro desenhado sobre imagem desatualizada ou sem georreferenciamento compatível com a matrícula e com o SIGEF do INCRA."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Sobreposição com imóveis vizinhos, gerada quando cada confrontante cadastra a divisa por conta própria."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Reserva Legal declarada sobre área sem vegetação nativa, ou sobre APP sem atender às condições do art. 15 do Código Florestal."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "APP de nascentes, olhos d'água e cursos d'água intermitentes não delimitada, comum no semiárido baiano."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Área consolidada declarada sem prova de uso anterior a 22 de julho de 2008, como imagens históricas ou documentos de produção."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Reserva Legal: Percentual, Localização e Compensação"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Todo imóvel rural na Bahia deve manter "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Reserva Legal de 20% da área",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ", porque o estado está fora da Amazônia Legal, nos termos do art. 12 do Código Florestal. A localização é proposta pelo proprietário no CEFIR e aprovada pelo INEMA, considerando o plano de bacia hidrográfica, o zoneamento ecológico econômico, a formação de corredores ecológicos com outras reservas e áreas protegidas, e as áreas de maior importância para a biodiversidade, conforme o art. 14. Em regiões de Caatinga e Cerrado do oeste baiano, a escolha da área tem impacto direto no valor produtivo do imóvel, e uma proposta mal fundamentada costuma ser alterada pelo órgão."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/compensacao-ambiental-inema-reserva-legal-tcra"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O imóvel que tinha déficit de Reserva Legal em 22 de julho de 2008 pode regularizar por recomposição, por regeneração natural ou por compensação, como prevê o art. 66. A compensação pode ser feita com Cota de Reserva Ambiental, arrendamento de área sob servidão ambiental, doação ao poder público de área em unidade de conservação pendente de regularização fundiária, ou cadastro de outra área equivalente no mesmo bioma. O detalhamento desses instrumentos, incluindo o Termo de Compromisso de Recuperação Ambiental, está no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "compensação de Reserva Legal e TCRA",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Áreas Consolidadas e o Marco de 22 de Julho de 2008"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Código Florestal permite a continuidade de atividades agrossilvipastoris, de ecoturismo e de turismo rural em "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "áreas rurais consolidadas",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " em APP, desde que a ocupação seja anterior a 22 de julho de 2008 e que o imóvel recomponha faixas mínimas de vegetação. O art. 61-A fixa essas faixas ao longo de cursos d'água pelo tamanho do imóvel em módulos fiscais: 5 metros para imóveis de até 1 módulo, 8 metros de 1 a 2 módulos, 15 metros de 2 a 4 módulos, e faixas maiores, definidas no PRA, para imóveis acima de 4 módulos. O tamanho do módulo fiscal é fixado pelo INCRA para cada município, e o enquadramento errado altera a obrigação de recomposição."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A adesão ao PRA, prevista no art. 59, permite assinar termo de compromisso com o INEMA para recompor APP e Reserva Legal em prazo definido. Enquanto o termo é cumprido, o proprietário não pode ser autuado por infrações cometidas antes de 22 de julho de 2008 relativas à supressão irregular nessas áreas, e as multas já aplicadas podem ser convertidas em serviços de recuperação. As regras de prazo para adesão foram alteradas pela Lei nº 13.887/2019 e pela Lei nº 14.595/2023, e a situação de cada imóvel deve ser conferida antes de assumir qualquer compromisso."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "Cadastro inscrito não é cadastro aprovado",
+                "text": "O recibo de inscrição comprova apenas que o imóvel foi declarado. A situação ativa, pendente ou cancelada depende da análise do órgão, e informação falsa ou omissa no cadastro é infração prevista no art. 82 do Decreto nº 6.514/2008 e crime previsto no art. 69-A da Lei nº 9.605/1998. Retificar o CEFIR antes da análise custa menos do que responder a uma notificação depois dela."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Crédito Rural, Compra e Venda e Arrendamento"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O art. 78-A do Código Florestal proíbe as instituições financeiras de conceder crédito agrícola, em qualquer modalidade, a proprietários de imóveis rurais que não estejam inscritos no CAR. Bancos públicos e cooperativas de crédito consultam a situação do cadastro na análise da proposta, e um CEFIR com sobreposição a área embargada ou a unidade de conservação pode bloquear o financiamento da safra."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/due-diligence-ambiental-compra-terrenos-loteamentos"
+                      },
+                      {
+                            "_key": "link_1",
+                            "_type": "link",
+                            "href": "/blog/licenciamento-ambiental-energia-solar-eolica-bahia"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Na compra de terra, o art. 2º, § 2º, do Código Florestal define que as obrigações de recompor APP e Reserva Legal têm natureza real e passam ao novo proprietário. Quem compra o imóvel compra também o passivo florestal, por isso a análise do CEFIR, do histórico de imagens e de eventuais autos de infração deve fazer parte da "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "investigação ambiental na compra de terrenos",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ". No arrendamento para "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "parques solares e eólicos",
+                            "marks": [
+                                  "link_1"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ", o contrato deve atribuir ao proprietário o dever de manter o cadastro regular e prever o que acontece se a Reserva Legal precisar ser relocada para viabilizar o projeto."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Como Organizar a Regularização do Imóvel"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Levantar matrícula, georreferenciamento certificado no SIGEF e recibos de CEFIR ou CAR anteriores, inclusive de imóveis desmembrados."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Comparar o perímetro declarado com imagens históricas, para identificar uso consolidado anterior a 2008 e supressões posteriores."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Delimitar APP, Reserva Legal e remanescentes em campo, com vistoria técnica e registro fotográfico georreferenciado."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Retificar o cadastro, propor a localização da Reserva Legal e, quando houver déficit, escolher entre recompor, regenerar ou compensar."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Só então protocolar ASV, licença ou adesão ao PRA, com o cadastro coerente com os estudos apresentados."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que a Anjos Brandão faz pelo seu imóvel rural"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Nossa equipe faz o diagnóstico do CAR na Bahia pelo CEFIR, a vistoria de campo, a retificação do cadastro e a proposta de Reserva Legal, e conduz o pedido de ASV ou a adesão ao PRA no INEMA. Se o seu projeto depende de supressão de vegetação ou de crédito rural, "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "fale com a equipe técnica da Anjos Brandão",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " antes de protocolar e evite que o cadastro trave o cronograma."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "CEFIR e CAR na Bahia: Condição para ASV e Crédito Rural",
+      metaDescription: "O INEMA só autoriza supressão, e o banco só libera crédito rural, para imóvel inscrito no CEFIR. Entenda Reserva Legal, APP, PRA e retificação.",
+      keywords: ["car na bahia","cefir inema","cadastro ambiental rural bahia","reserva legal bahia","asv e car","programa de regularização ambiental bahia","consultoria ambiental bahia"],
+    },
+  },
+  {
+    _id: 'post-32',
+    title: "Lançamento de Efluentes na Bahia: Padrões da CONAMA 430/2011, Outorga de Diluição e Automonitoramento",
+    slug: "lancamento-efluentes-conama-430-outorga-inema-bahia",
+    excerpt: "Todo lançamento de efluente em rio, mar ou rede pública tem padrão, licença e monitoramento obrigatórios. Veja o que a CONAMA 430/2011 e o INEMA exigem.",
+    publishedAt: '2026-11-08T18:00:00.000Z',
+    estimatedReadTime: 9,
+    featured: false,
+    mainImageUrl: '/images/blog/post-32-lancamento-efluentes-conama-430-bahia.webp',
+    mainImageAlt: "Estação de tratamento de efluentes industriais com tanques de aeração e decantador vistos do alto, em área industrial na Bahia",
+    mainImageCaption: "Estação de tratamento de efluentes industriais, sujeita aos padrões de lançamento da Resolução CONAMA nº 430/2011.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[0], INITIAL_CATEGORIES[1]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "lançamento de efluentes",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " de indústrias, frigoríficos, laticínios, hospitais, condomínios, lavanderias e canteiros de obra só é permitido quando atende aos padrões da Resolução CONAMA nº 430/2011, às condições da licença ambiental e, no caso de despejo direto em rio, à outorga de direito de uso de recursos hídricos. São três obrigações distintas, analisadas por setores diferentes do INEMA, e a falta de qualquer uma delas basta para uma autuação. Na fiscalização, o efluente é a evidência mais fácil de coletar: uma amostra no ponto de lançamento, analisada em laboratório, mostra se a empresa cumpre ou não o que declarou."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A base legal combina a Resolução CONAMA nº 357/2005, que classifica os corpos d'água e fixa os padrões de qualidade de cada classe, e a Resolução CONAMA nº 430/2011, que complementa a anterior e define as condições e os padrões de lançamento. A Lei nº 9.433/1997 inclui o lançamento de efluentes entre os usos sujeitos a outorga, e a Lei Estadual nº 11.612/2009 organiza a Política Estadual de Recursos Hídricos da Bahia. A Lei Estadual nº 10.431/2006 vincula o sistema de tratamento ao licenciamento no INEMA."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "Padrões gerais de lançamento da CONAMA 430/2011",
+                "text": "pH entre 5 e 9; temperatura inferior a 40 °C; materiais sedimentáveis até 1 mL/L em teste de uma hora no cone Imhoff; vazão máxima de até 1,5 vez a vazão média do período diário de atividade; óleos minerais até 20 mg/L; óleos vegetais e gorduras animais até 50 mg/L; ausência de materiais flutuantes; e remoção mínima de 60% da DBO, além dos limites de metais e compostos orgânicos listados na própria resolução."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Padrão de Lançamento e Padrão do Corpo Receptor"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Atender aos limites da tabela da CONAMA 430/2011 não encerra a obrigação. O efluente também não pode fazer o rio, o estuário ou o mar ultrapassar os padrões de qualidade da classe em que o corpo d'água está enquadrado pela CONAMA 357/2005. Um efluente dentro do padrão de lançamento pode ser recusado se o rio receptor tiver pouca vazão no período seco, situação comum em bacias do semiárido baiano. Por isso o INEMA pode exigir estudo de autodepuração e de zona de mistura, e fixar na licença limites mais restritivos do que os da resolução federal."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A resolução também exige que o efluente não cause efeito tóxico aos organismos aquáticos do corpo receptor, com critérios de ecotoxicidade definidos pelo órgão ambiental. Para indústrias químicas, petroquímicas e de celulose do Polo de Camaçari e do Recôncavo, os ensaios de toxicidade aguda e crônica costumam constar como condicionante específica da Licença de Operação."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Esgoto Sanitário, Rede Pública e Fossas"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Para efluentes de sistemas de tratamento de esgoto sanitário, a CONAMA 430/2011 fixa padrões próprios: pH entre 5 e 9, temperatura inferior a 40 °C, DBO máxima de 120 mg/L, que só pode ser ultrapassada quando o sistema comprova remoção mínima de 60%, substâncias solúveis em hexano até 100 mg/L e ausência de materiais flutuantes. Condomínios, hotéis, shoppings e canteiros fora de área atendida por rede precisam operar a estação dentro desses limites."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Quando o efluente vai para a rede coletora, o lançamento é indireto e as regras passam a ser as da concessionária, a Embasa na maior parte do estado, com parâmetros de recebimento orientados pela ABNT NBR 9800. Efluente industrial com óleo, metais ou carga orgânica alta precisa de pré-tratamento antes da rede. Em áreas sem rede, o sistema com tanque séptico e unidade complementar deve seguir a ABNT NBR 7229 e a ABNT NBR 13969, com dimensionamento, distância de poços e manutenção documentados."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Outorga de Lançamento no INEMA"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/outorga-recursos-hidricos-inema-bahia-captacao"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O art. 12, inciso III, da Lei nº 9.433/1997 sujeita à outorga o lançamento em corpo d'água de esgotos e demais resíduos líquidos com fim de diluição, transporte ou disposição final. A outorga de lançamento é calculada pela vazão de diluição: o volume do rio necessário para que a carga do efluente seja absorvida sem violar a classe. Em bacias com muitos usuários, a disponibilidade para diluição pode estar esgotada, e o projeto precisa de tratamento mais eficiente, reúso ou outro ponto de lançamento. O processo de outorga, os prazos e a relação com a captação estão no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "outorga de recursos hídricos no INEMA",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Automonitoramento e Declaração de Carga Poluidora"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/renovacao-licenca-operacao-lo-prazos-documentos-inema"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Licença de Operação",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " de uma atividade com efluente define o ponto de coleta, os parâmetros, a frequência das análises e a forma de envio dos resultados ao INEMA. O automonitoramento precisa ser feito por laboratório com acreditação na ABNT NBR ISO/IEC 17025 para os parâmetros analisados, com cadeia de custódia das amostras. Resultados fora do padrão que não são comunicados, ou relatórios entregues fora do prazo, aparecem na "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "renovação da Licença de Operação",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " como descumprimento de condicionante."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/tcfa-ctf-rapp-ibama-obrigacoes-federais-bahia"
+                      },
+                      {
+                            "_key": "link_1",
+                            "_type": "link",
+                            "href": "/blog/economia-circular-pgrs-industria-pesada-quimica"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Resolução CONAMA nº 357/2005, em seu art. 46, exige que o responsável por fonte poluidora de recursos hídricos apresente ao órgão ambiental, até 31 de março de cada ano, a declaração de carga poluidora referente ao ano anterior, com a caracterização qualitativa e quantitativa do efluente. Os dados devem ser coerentes com o automonitoramento, com o "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Relatório Anual de Atividades do IBAMA",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e com o inventário de resíduos, porque o lodo da estação de tratamento é resíduo sólido e segue o "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Plano de Gerenciamento de Resíduos Sólidos",
+                            "marks": [
+                                  "link_1"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Ponto de coleta identificado, com caixa de inspeção acessível antes do lançamento e medidor de vazão aferido."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Plano de amostragem com parâmetros e frequência da licença, assinado por responsável técnico."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Laudos de laboratório acreditado, guardados pelo prazo de validade da licença e enviados no SEIA conforme a condicionante."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Registro de manutenção da estação e de destinação do lodo, com Manifesto de Transporte de Resíduos quando aplicável."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Plano de ação para resultado fora do padrão, com comunicação ao INEMA e medida corretiva documentada."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "Lançamento fora do padrão é infração e pode ser crime",
+                "text": "O Decreto nº 6.514/2008, arts. 61 e 62, prevê multa de R$ 5.000,00 a R$ 50.000.000,00 para poluição e para lançamento de resíduos líquidos em desacordo com as exigências legais. O art. 54, § 2º, inciso V, da Lei nº 9.605/1998 tipifica como crime a poluição causada por lançamento em desacordo com leis ou regulamentos, com pena de reclusão de 1 a 5 anos, e a responsabilidade alcança a empresa e os gestores que deram causa."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Obras e Atividades Temporárias"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/pgrs-construcao-civil-reducao-custos-conformidade"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Canteiros de obra geram efluente sanitário, água de lavagem de betoneiras e caminhões, drenagem com sedimentos e, em obras de infraestrutura, água de rebaixamento de lençol. Cada fluxo precisa de destino definido na Licença de Instalação: banheiros químicos com destinação comprovada, bacias de decantação para lavagem de betoneira com reúso da água, e controle de sedimentos antes da drenagem natural. O carreamento de solo para rios e mangues é uma das autuações mais frequentes em obras na Região Metropolitana de Salvador, e a "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "gestão de resíduos no canteiro",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " deve tratar efluentes e sólidos no mesmo plano."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que a Anjos Brandão faz pelos seus efluentes"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Fazemos o diagnóstico dos fluxos de efluente, o enquadramento do corpo receptor, o pedido de outorga de lançamento, o plano de automonitoramento e a gestão das condicionantes junto ao INEMA. Se a sua licença tem exigência de efluente ou se a renovação está próxima, "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "fale com a equipe técnica da Anjos Brandão",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e revise o sistema antes da próxima fiscalização."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Efluentes na Bahia: CONAMA 430/2011, Outorga e Monitoramento",
+      metaDescription: "Padrões de lançamento da CONAMA 430/2011, outorga de diluição no INEMA, automonitoramento e declaração de carga poluidora para empresas na Bahia.",
+      keywords: ["lançamento de efluentes","conama 430/2011","outorga de lançamento de efluentes bahia","automonitoramento de efluentes","declaração de carga poluidora","tratamento de efluentes industriais bahia","consultoria ambiental bahia"],
+    },
+  },
+  {
+    _id: 'post-33',
+    title: "Inventário de Gases de Efeito Estufa: o que a Lei 15.042/2024 e a Resolução CVM 193 Exigem das Empresas na Bahia",
+    slug: "inventario-gases-efeito-estufa-sbce-lei-15042-cvm-193-bahia",
+    excerpt: "A Lei 15.042/2024 obriga quem emite mais de 10 mil tCO2e por ano a monitorar e relatar emissões. Veja as obrigações e o impacto em fornecedores na Bahia.",
+    publishedAt: '2026-11-06T18:00:00.000Z',
+    estimatedReadTime: 9,
+    featured: false,
+    mainImageUrl: '/images/blog/post-33-inventario-gee-sbce-bahia.webp',
+    mainImageAlt: "Complexo industrial com chaminés e unidades de processo vistas ao entardecer, em polo industrial na Bahia",
+    mainImageCaption: "Instalação industrial cujas emissões de gases de efeito estufa entram no inventário corporativo e no Sistema Brasileiro de Comércio de Emissões.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[4], INITIAL_CATEGORIES[0]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "inventário de gases de efeito estufa",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " passou a ser obrigação legal para os maiores emissores do país com a Lei nº 15.042/2024, que instituiu o Sistema Brasileiro de Comércio de Emissões de Gases de Efeito Estufa (SBCE). Ao mesmo tempo, a Resolução CVM nº 193/2023 tornou obrigatório, para companhias abertas, o relatório de informações financeiras relacionadas à sustentabilidade, que inclui as emissões da cadeia de fornecedores. O efeito chega a empresas de médio porte na Bahia por dois caminhos: pela lei, quando a instalação ultrapassa os limites de emissão, e pelo contrato, quando um cliente listado em bolsa passa a exigir dados de emissões de quem lhe fornece produtos e serviços."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Lei nº 15.042/2024 regulamenta o mercado regulado de carbono previsto na Política Nacional sobre Mudança do Clima, a Lei nº 12.187/2009. Na Bahia, a Lei Estadual nº 12.050/2011 instituiu a Política sobre Mudança do Clima do estado. A metodologia de cálculo segue a ABNT NBR ISO 14064-1 e as especificações do Programa Brasileiro GHG Protocol, e a verificação por terceira parte segue a ABNT NBR ISO 14064-3."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "Quem está sujeito ao SBCE",
+                "text": "Operadores responsáveis por instalações ou fontes que emitam acima de 10.000 toneladas de CO2 equivalente por ano devem apresentar plano de monitoramento e enviar relato anual de emissões e remoções. Acima de 25.000 tCO2e por ano, além do relato, o operador deve fazer a conciliação periódica de obrigações, entregando cotas de emissão equivalentes ao que emitiu. A produção primária agropecuária não está entre as atividades reguladas."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Implantação em Fases e o que Já Deve Ser Feito"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A lei prevê implantação gradual do "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Sistema Brasileiro de Comércio de Emissões",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ": primeiro a regulamentação pelo órgão gestor, depois a operação dos instrumentos de relato, um período em que os operadores apenas monitoram e relatam, e só então o primeiro Plano Nacional de Alocação, que distribui as Cotas Brasileiras de Emissões. O calendário de cada fase depende de atos do órgão gestor e deve ser acompanhado. O ponto prático é que o primeiro relato obrigatório vai exigir dados históricos confiáveis, e uma empresa que nunca fez inventário não monta essa base em poucos meses."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O descumprimento das obrigações de monitoramento, relato e conciliação está sujeito a sanções administrativas próprias do SBCE, incluindo multa calculada sobre o faturamento bruto do operador, além das sanções da legislação ambiental quando houver informação falsa. Empresas próximas do limite de 10.000 tCO2e precisam medir antes de concluir que estão fora: caldeiras a óleo ou gás, fornos, geradores a diesel, frota própria e processos com emissão química podem somar esse volume em uma única planta."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Escopos 1, 2 e 3: o que Entra no Inventário"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Escopo 1, emissões diretas: combustão em caldeiras, fornos, geradores e frota própria, emissões de processo, tratamento de efluentes e resíduos na própria planta, e vazamento de gases refrigerantes."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Escopo 2, energia comprada: eletricidade consumida, calculada pelo fator médio de emissão do Sistema Interligado Nacional publicado pelo Ministério da Ciência, Tecnologia e Inovação, ou por contratos de energia renovável com rastreabilidade."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Escopo 3, cadeia de valor: transporte terceirizado, resíduos enviados a aterro, viagens, insumos comprados e uso dos produtos vendidos. É o escopo que clientes listados em bolsa pedem aos fornecedores."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/tcfa-ctf-rapp-ibama-obrigacoes-federais-bahia"
+                      },
+                      {
+                            "_key": "link_1",
+                            "_type": "link",
+                            "href": "/blog/logistica-reversa-dmr-sinir-residuos-bahia"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O inventário é feito por ano civil, com limites organizacionais definidos por controle operacional ou participação societária, e cada fonte precisa de dado de atividade documentado, como nota fiscal de combustível, conta de energia e manifesto de resíduos, multiplicado por fator de emissão reconhecido. A coerência com os dados já entregues aos órgãos ambientais é verificada: o consumo de combustível declarado no "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Relatório Anual de Atividades do IBAMA",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e os volumes de resíduos do "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "SINIR e da DMR",
+                            "marks": [
+                                  "link_1"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " devem bater com o inventário."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Resolução CVM 193 e a Pressão sobre Fornecedores"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Resolução CVM nº 193/2023 adotou no Brasil as normas do ISSB, internalizadas pelos pronunciamentos CBPS 01 e CBPS 02, que tratam de informações de sustentabilidade e de clima. A divulgação foi voluntária a partir dos exercícios iniciados em 2024 e passou a ser obrigatória para companhias abertas a partir dos exercícios iniciados em 1º de janeiro de 2026, com asseguração por auditor independente. O CBPS 02 exige a divulgação das emissões de escopos 1, 2 e 3, o que leva as companhias a pedir dados de emissão a transportadoras, empreiteiras, fornecedores de insumos e prestadores de serviços ambientais."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/governanca-esg-mitigacao-riscos-ambientais"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Na Bahia, isso alcança fornecedores do Polo de Camaçari, de mineradoras, de geradoras de energia e de concessionárias. Questionários de homologação de fornecedores já incluem perguntas sobre inventário de emissões, metas de redução e verificação externa, e a resposta passa a contar na pontuação comercial. A integração dessas exigências com a gestão de riscos está no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "governança ESG e mitigação de riscos ambientais",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "Emissões de gases de efeito estufa não são emissões atmosféricas da licença",
+                "text": "O monitoramento de chaminé exigido pelo INEMA mede poluentes locais, como material particulado, óxidos de enxofre e de nitrogênio, comparados aos limites da licença. O inventário de gases de efeito estufa mede CO2, metano, óxido nitroso e gases fluorados em toneladas de CO2 equivalente por ano. São obrigações distintas, com metodologias distintas, e uma não substitui a outra."
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/emissoes-atmosfericas-ruido-monitoramento-conama-491-nbr-10151"
+                      },
+                      {
+                            "_key": "link_1",
+                            "_type": "link",
+                            "href": "/blog/auditoria-ambiental-compulsoria-cepram-inema-plano-acao"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Os dois controles usam, porém, os mesmos dados de operação, e faz sentido organizá-los juntos. O programa de "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "monitoramento de emissões atmosféricas e ruído",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " fornece medições de combustão e consumo de combustível que alimentam o escopo 1, e a "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "auditoria ambiental compulsória",
+                            "marks": [
+                                  "link_1"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " pode verificar a consistência dos registros."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Como Estruturar o Primeiro Inventário"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Definir limites organizacionais e operacionais: quais CNPJs, plantas, filiais e fontes entram no inventário."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Levantar dados de atividade de pelo menos um ano civil completo, com documento de origem para cada número."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Calcular escopos 1 e 2 com fatores reconhecidos e estimar o escopo 3 pelas categorias mais relevantes para o negócio."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Verificar se alguma instalação ultrapassa 10.000 tCO2e por ano e, se ultrapassar, preparar o plano de monitoramento exigido pelo SBCE."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Submeter o inventário à verificação de organismo acreditado pelo Inmetro quando o cliente, o banco ou a regulamentação exigirem."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Definir metas de redução coerentes com as ações já previstas, como eficiência energética, troca de combustível e redução de resíduos para aterro."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que a Anjos Brandão faz pelo seu inventário"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Nossa equipe estrutura o inventário de gases de efeito estufa, organiza os dados de atividade com os registros ambientais já existentes, avalia o enquadramento no SBCE e prepara a empresa para verificação e para os questionários de clientes. Se um cliente pediu seus dados de emissão ou se a sua planta pode estar perto do limite, "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "fale com a equipe técnica da Anjos Brandão",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e comece pelo diagnóstico."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Inventário de GEE: SBCE (Lei 15.042/2024) e CVM 193",
+      metaDescription: "A Lei 15.042/2024 obriga grandes emissores a relatar emissões, e a CVM 193 leva a exigência a fornecedores. Veja escopos, limites e primeiros passos.",
+      keywords: ["inventário de gases de efeito estufa","sbce lei 15.042/2024","mercado regulado de carbono brasil","resolução cvm 193","escopo 3 fornecedores","ghg protocol bahia","consultoria ambiental bahia"],
+    },
+  },
+  {
+    _id: 'post-26',
+    title: "EIA/RIMA e Audiência Pública no INEMA: Quando São Exigidos e Como Evitar Atrasos na LP",
+    slug: "eia-rima-audiencia-publica-inema-bahia-licenca-previa",
+    excerpt: "Entenda quando o INEMA exige EIA/RIMA, como funciona a audiência pública e o que trava a Licença Prévia de grandes empreendimentos na Bahia. Fale conosco.",
+    publishedAt: '2026-11-04T18:00:00.000Z',
+    estimatedReadTime: 12,
+    featured: false,
+    mainImageUrl: '/images/blog/post-26-eia-rima-audiencia-publica-inema-bahia.webp',
+    mainImageAlt: "Vista aérea de área de implantação de grande empreendimento industrial na Bahia, com vegetação nativa e corpo hídrico no entorno",
+    mainImageCaption: "Área de influência direta de empreendimento sujeito a EIA/RIMA, com remanescentes de vegetação e corpo hídrico a serem avaliados nos estudos.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[0], INITIAL_CATEGORIES[4]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/guia-licenciamento-ambiental-inema-bahia"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "EIA/RIMA no INEMA",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " é a etapa mais longa, mais cara e mais exposta ao público de todo o licenciamento ambiental na Bahia. Mineração, parques eólicos de grande porte, terminais portuários, rodovias, linhas de transmissão acima de 230 kV, polos industriais e loteamentos acima de determinados limites de área entram no rito de significativo impacto e precisam apresentar o Estudo de Impacto Ambiental e o respectivo Relatório de Impacto Ambiental antes de obter a Licença Prévia. Conhecer o rito evita dois erros frequentes: contratar o estudo errado e subestimar o tempo de tramitação, que no rito de EIA/RIMA chega a 12 meses de análise, sem contar as exigências complementares. A visão geral das três licenças está no nosso "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "guia do licenciamento ambiental no INEMA",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A base legal começa na Resolução CONAMA nº 001/1986, que criou o EIA/RIMA, passa pela Resolução CONAMA nº 237/1997, que fixou prazos e competências, e pela Resolução CONAMA nº 009/1987, que regula a audiência pública. Na Bahia, a Lei Estadual nº 10.431/2006 e o Decreto Estadual nº 14.024/2012 definem quais classes de empreendimento exigem o estudo e como o INEMA conduz o processo no SEIA. A Lei Complementar nº 140/2011 define quando a competência é estadual, federal (IBAMA) ou municipal."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "Quem está sujeito a EIA/RIMA na Bahia",
+                "text": "Em regra, empreendimentos enquadrados nas Classes 5 e 6 da matriz de porte e potencial poluidor do CEPRAM, além das atividades listadas no Anexo da Resolução CONAMA nº 001/1986: rodovias, ferrovias, portos, aeroportos, oleodutos, linhas de transmissão acima de 230 kV, usinas acima de 10 MW, extração mineral, aterros de resíduos perigosos, distritos industriais e projetos urbanísticos acima de 100 hectares."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Diferença entre EIA/RIMA, RCA e RAP"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/licenca-unificada-lu-rap-inema-bahia-prazos"
+                      },
+                      {
+                            "_key": "link_1",
+                            "_type": "link",
+                            "href": "/blog/pca-rca-licenciamento-mineracao-industria-inema"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A confusão entre os estudos é a primeira causa de devolução de processo no SEIA. O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Relatório Ambiental Preliminar (RAP)",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " atende empreendimentos de menor impacto no rito da Licença Unificada. O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Relatório de Controle Ambiental (RCA)",
+                            "marks": [
+                                  "link_1"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " atende empreendimentos de médio impacto na LP. O EIA/RIMA é reservado ao significativo impacto e tem exigências que os outros estudos não têm: alternativas locacionais e tecnológicas, inclusive a alternativa de não executar o projeto, diagnóstico ambiental completo da área de influência, prognóstico com e sem o empreendimento, e um relatório em linguagem acessível, o RIMA, que será lido por comunidades, prefeituras e Ministério Público."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Termo de Referência do INEMA"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Nenhum EIA começa sem o Termo de Referência (TR) emitido pelo INEMA para aquele empreendimento. O TR lista o conteúdo mínimo do estudo, os meios a diagnosticar (físico, biótico e socioeconômico), a extensão das áreas de influência e os programas ambientais esperados. O empreendedor que inicia o estudo antes do TR, com base em modelos de outros processos, costuma receber exigência de complementação integral, porque o INEMA define caso a caso itens como número de campanhas sazonais de fauna, malha de amostragem de solo e água e abrangência do levantamento socioeconômico."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Diagnóstico do meio físico: clima, geologia, geomorfologia, pedologia, recursos hídricos superficiais e subterrâneos, qualidade do ar e ruído de fundo."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Diagnóstico do meio biótico: flora com inventário florestal e fitossociologia, fauna terrestre e aquática em pelo menos duas campanhas (estação seca e chuvosa), espécies ameaçadas e áreas protegidas no entorno."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Diagnóstico do meio socioeconômico: uso e ocupação do solo, comunidades tradicionais, patrimônio arqueológico (com anuência do IPHAN), infraestrutura pública e dinâmica econômica local."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Identificação e avaliação dos impactos com matriz de significância, medidas mitigadoras, compensatórias e programas de monitoramento."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Como Funciona a Audiência Pública"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "audiência pública no licenciamento ambiental",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " é regulada pela Resolução CONAMA nº 009/1987. Depois que o RIMA é disponibilizado para consulta, há prazo de 45 dias para que o Ministério Público, entidade civil ou grupo de 50 ou mais cidadãos solicite a audiência. O INEMA também pode convocá-la por iniciativa própria, o que é a regra para empreendimentos com interferência em comunidades. Se a audiência for solicitada e não for realizada, a licença emitida é nula."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Na prática, a audiência é um evento presencial no município afetado, com apresentação do empreendedor e da equipe que elaborou o estudo, seguida de perguntas e manifestações registradas em ata. As manifestações compõem o processo e o parecer técnico do INEMA precisa respondê-las. Projetos que chegam à audiência sem ter conversado antes com associações de moradores, colônias de pescadores e prefeituras costumam enfrentar sessões longas, pedidos de nova audiência e judicialização."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "O que mais atrasa a LP com EIA/RIMA",
+                "text": "Diagnóstico de fauna com uma única campanha, área de influência subdimensionada, ausência de anuência do IPHAN e da FUNAI ou Fundação Palmares quando há comunidade tradicional, e alternativas locacionais apresentadas apenas para cumprir formalidade, sem comparação técnica real. Cada um desses itens gera ofício de complementação e reinicia a contagem do prazo de análise."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Prazos, Compensação e Condicionantes"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Resolução CONAMA nº 237/1997 fixa 12 meses para a análise de processos com EIA/RIMA, contados a partir do protocolo completo, e o prazo é suspenso enquanto o empreendedor atende exigências. Somados a elaboração do estudo (6 a 12 meses, conforme as campanhas sazonais) e a audiência, o ciclo da LP de um grande projeto na Bahia dificilmente fica abaixo de 18 meses. Esse prazo precisa constar no cronograma financeiro desde o início."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/compensacao-ambiental-inema-reserva-legal-tcra"
+                      },
+                      {
+                            "_key": "link_1",
+                            "_type": "link",
+                            "href": "/blog/renovacao-licenca-operacao-lo-prazos-documentos-inema"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Todo empreendimento licenciado com EIA/RIMA está sujeito à compensação ambiental do SNUC, prevista no art. 36 da Lei nº 9.985/2000, com valor de até 0,5% do investimento conforme o grau de impacto calculado pelo órgão, destinado a unidades de conservação. Ela não se confunde com a "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "compensação florestal por supressão de vegetação",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ", que é calculada por área suprimida. A LP sai com condicionantes que, se não forem atendidas, bloqueiam o pedido da LI; o acompanhamento dessas obrigações está detalhado no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "renovação de licença e gestão de condicionantes",
+                            "marks": [
+                                  "link_1"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que a Anjos Brandão faz nesse rito"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Nossa equipe coordena o EIA/RIMA desde o pedido do Termo de Referência, monta as equipes de campo por meio, conduz a interlocução com as comunidades antes da audiência pública e responde às exigências do INEMA dentro do prazo. Se o seu projeto se enquadra no rito de significativo impacto, "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "fale com a equipe técnica da Anjos Brandão",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e receba uma avaliação de enquadramento e cronograma antes de contratar os estudos."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "EIA/RIMA e Audiência Pública no INEMA: Guia para a LP",
+      metaDescription: "Entenda quando o INEMA exige EIA/RIMA, como funciona a audiência pública e o que trava a Licença Prévia de grandes empreendimentos na Bahia. Fale conosco.",
+      keywords: ["eia/rima no inema","audiência pública no licenciamento ambiental","estudo de impacto ambiental bahia","termo de referência inema","licença prévia grande empreendimento bahia","compensação ambiental snuc","consultoria ambiental bahia"],
+    },
+  },
+  {
+    _id: 'post-27',
+    title: "TCFA, CTF e RAPP do IBAMA: Obrigações Federais que Indústrias e Canteiros na Bahia Não Podem Ignorar",
+    slug: "tcfa-ctf-rapp-ibama-obrigacoes-federais-bahia",
+    excerpt: "Guia do Cadastro Técnico Federal, da Taxa de Controle e Fiscalização Ambiental e do Relatório Anual do IBAMA. Prazos, multas e Certificado de Regularidade.",
+    publishedAt: '2026-11-02T18:00:00.000Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-27-tcfa-ctf-rapp-ibama-obrigacoes-bahia.webp',
+    mainImageAlt: "Planta industrial de médio porte na Bahia vista do alto, com galpões, pátio de resíduos e área administrativa",
+    mainImageCaption: "Indústria sujeita ao Cadastro Técnico Federal e ao recolhimento trimestral da TCFA.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[4], INITIAL_CATEGORIES[0]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Cadastro Técnico Federal do IBAMA",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " é a obrigação ambiental mais esquecida por empresas que já têm a licença estadual em dia. A licença do INEMA autoriza a operação; o cadastro federal, a Taxa de Controle e Fiscalização Ambiental (TCFA) e o Relatório Anual de Atividades Potencialmente Poluidoras (RAPP) são obrigações paralelas, com calendário próprio e penalidades próprias. Uma empresa pode estar com a LO válida e, ao mesmo tempo, impedida de participar de licitação ou obter financiamento porque o Certificado de Regularidade do IBAMA está vencido."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A base legal é o art. 17 da Lei nº 6.938/1981, que instituiu o Cadastro Técnico Federal de Atividades Potencialmente Poluidoras ou Utilizadoras de Recursos Ambientais (CTF/APP), e o art. 17-B, incluído pela Lei nº 10.165/2000, que criou a TCFA. A Instrução Normativa IBAMA nº 13/2021 regula o cadastro e o RAPP é disciplinado pela Instrução Normativa IBAMA nº 6/2014. As infrações estão no Decreto nº 6.514/2008."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "Quem precisa se inscrever no CTF/APP",
+                "text": "Toda pessoa física ou jurídica que exerce atividade listada no Anexo VIII da Lei nº 6.938/1981: indústria de transformação, extração mineral, transporte e armazenamento de produtos perigosos, geração de energia, serviços de saúde com resíduos infectantes, comércio de combustíveis, construção civil de grande porte, entre outras. A inscrição é feita no sistema do IBAMA e precede a emissão de qualquer licença, porque o INEMA e os municípios exigem o Certificado de Regularidade no protocolo."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A TCFA: Cálculo, Prazos e Pagamento"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "TCFA do IBAMA",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " é devida trimestralmente e o valor depende de duas variáveis: o porte da empresa (microempresa, pequeno, médio ou grande porte, pela receita bruta anual) e o grau de potencial de poluição e utilização de recursos naturais da atividade (pequeno, médio ou alto, pelo Anexo VIII). Microempresas são isentas. Para empresas de grande porte com atividade de alto potencial poluidor, o valor trimestral chega a milhares de reais, o que torna relevante o enquadramento correto do porte e da atividade principal."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Vencimento: último dia útil de cada trimestre civil (março, junho, setembro e dezembro). A guia é emitida pelo próprio contribuinte no sistema do IBAMA."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Atraso: juros e multa de mora, inscrição em dívida ativa da União e perda do Certificado de Regularidade."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Estados com convênio com o IBAMA podem cobrar taxa estadual compensável com parte da TCFA; é preciso verificar a situação vigente na Bahia antes de recolher em duplicidade."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O RAPP: Relatório Anual até 31 de Março"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/logistica-reversa-dmr-sinir-residuos-bahia"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "RAPP do IBAMA",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " é a declaração anual das atividades exercidas no ano anterior, entregue entre 1º de janeiro e 31 de março. O conteúdo varia com a atividade: consumo de matérias-primas e combustíveis, geração e destinação de resíduos sólidos, emissões atmosféricas, efluentes líquidos, produtos químicos utilizados e, para transportadores, cargas perigosas movimentadas. Os dados precisam coincidir com os registros do "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "SINIR e da DMR estadual",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e com os laudos entregues ao INEMA, porque os órgãos cruzam informações."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A omissão ou o envio com dados falsos é infração prevista no art. 81 do Decreto nº 6.514/2008, com multa de R$ 1.000,00 a R$ 100.000,00. Mais frequente do que a multa é o efeito indireto: o Certificado de Regularidade deixa de ser emitido enquanto o RAPP estiver pendente, e sem ele a empresa não protocola renovação de licença, não habilita em licitação pública e não libera financiamento em banco de fomento."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "O Certificado de Regularidade vale apenas 3 meses",
+                "text": "O CR é emitido pelo sistema do IBAMA quando cadastro, TCFA e RAPP estão em dia, e expira em 90 dias. Empresas que só o consultam na véspera de um protocolo descobrem pendências de anos anteriores. A conferência precisa ser trimestral, junto com o pagamento da taxa."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Atividades Secundárias, Filiais e Canteiros de Obra"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/licenciamento-postos-combustivel-tanques-conama-273-bahia"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Dois erros de cadastro geram passivo silencioso. O primeiro é declarar apenas a atividade principal: uma indústria que também armazena combustível em tanque aéreo, transporta resíduos perigosos com frota própria ou opera caldeira precisa cadastrar cada atividade, e a TCFA é calculada pela de maior potencial poluidor. O segundo é esquecer filiais: cada CNPJ de estabelecimento com atividade listada tem cadastro, taxa e relatório próprios. Canteiros de obra de infraestrutura com central de concreto, usina de asfalto ou base de abastecimento entram nessa regra, como detalhado no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "licenciamento de postos e tanques de combustível",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Quando o IBAMA Licencia e Quando Apenas Cadastra"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O cadastro no CTF/APP não transfere o licenciamento para o IBAMA. A competência para licenciar continua definida pela Lei Complementar nº 140/2011: o IBAMA licencia empreendimentos localizados em mais de um estado, no mar territorial, em terras indígenas e unidades de conservação federais, além de atividades nucleares e de outras hipóteses listadas no art. 7º; todo o restante fica com o INEMA ou com o município habilitado. Assim, uma cimenteira em Camaçari tem licença estadual, cadastro federal, TCFA federal e RAPP federal ao mesmo tempo, e cada um desses documentos é cobrado por um órgão diferente. A confusão entre cadastro e licença leva empresas a acreditarem que a inscrição no IBAMA dispensa a licença estadual, ou o contrário, e ambos os erros resultam em autuação."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Há ainda cadastros específicos que convivem com o CTF/APP e costumam ser esquecidos: o Cadastro Técnico Federal de Atividades e Instrumentos de Defesa Ambiental (CTF/AIDA), obrigatório para consultorias, laboratórios e profissionais que elaboram estudos ambientais, e o registro no Sistema Nacional de Controle da Origem dos Produtos Florestais (SINAFLOR) para quem transporta, armazena ou processa madeira nativa, inclusive a proveniente de supressão autorizada em canteiro de obra. A empresa que contrata um estudo deve exigir do consultor o CTF/AIDA ativo, porque o INEMA recusa documentos assinados por responsável técnico sem cadastro."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Rotina mínima de conformidade federal"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Trimestral: emitir e pagar a guia da TCFA e conferir o Certificado de Regularidade."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Anual, até 31 de março: entregar o RAPP com dados conciliados com o SINIR, a DMR e os laudos de efluentes e emissões."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Sempre que houver mudança: atualizar porte, atividades, endereço e responsável técnico no cadastro em até 30 dias."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Antes de qualquer protocolo no INEMA, licitação ou financiamento: emitir CR válido."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Anjos Brandão mantém o calendário federal e estadual dos clientes em uma única matriz de obrigações, com conciliação dos dados entre RAPP, SINIR e condicionantes de licença. Se a sua empresa nunca conferiu a situação no IBAMA, "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "solicite um diagnóstico de regularidade federal",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " antes do próximo vencimento trimestral."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "TCFA, CTF e RAPP do IBAMA: Guia de Obrigações Federais",
+      metaDescription: "Guia do Cadastro Técnico Federal, da Taxa de Controle e Fiscalização Ambiental e do Relatório Anual do IBAMA. Prazos, multas e Certificado de Regularidade.",
+      keywords: ["cadastro técnico federal do ibama","tcfa do ibama","rapp do ibama","certificado de regularidade ibama","taxa de controle e fiscalização ambiental","obrigações ambientais federais indústria","consultoria ambiental bahia"],
+    },
+  },
+  {
+    _id: 'post-28',
+    title: "Licenciamento de Postos e Tanques de Combustível na Bahia: CONAMA 273, Estanqueidade e Passivo de Solo",
+    slug: "licenciamento-postos-combustivel-tanques-conama-273-bahia",
+    excerpt: "Guia do licenciamento de postos, bases de abastecimento de canteiro e tanques aéreos na Bahia pela CONAMA 273. Testes, laudos e investigação de passivo.",
+    publishedAt: '2026-10-31T18:00:00.000Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-28-licenciamento-postos-tanques-combustivel-bahia.webp',
+    mainImageAlt: "Tanques aéreos de combustível com bacia de contenção e canaletas de drenagem em base de abastecimento de canteiro de obras na Bahia",
+    mainImageCaption: "Base de abastecimento com tanques aéreos, bacia de contenção e separador de água e óleo, itens exigidos no licenciamento.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[0], INITIAL_CATEGORIES[4]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "licenciamento de postos de combustível na Bahia",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e das bases de abastecimento de canteiros e indústrias segue um rito próprio, definido pela Resolução CONAMA nº 273/2000, que tornou obrigatório o licenciamento de toda instalação com sistema de armazenamento de combustível, subterrâneo ou aéreo, e fixou exigências técnicas que não existem para outras atividades: teste de estanqueidade, laudo de conformidade dos tanques, monitoramento de vazamento e investigação de passivo no solo. Posto de revenda, ponto de abastecimento de frota, base de canteiro de obra e tanque de óleo diesel de gerador industrial estão todos nessa regra."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Além da CONAMA 273/2000, aplicam-se a Resolução CONAMA nº 319/2002, as normas ABNT NBR 13786 (classificação do posto conforme o entorno), NBR 13784 (sistemas de detecção de vazamento), NBR 17505 (armazenamento de líquidos inflamáveis e combustíveis) e, para passivo, a Resolução CONAMA nº 420/2009. Na Bahia, a competência pode ser do INEMA ou do município habilitado para atividades de impacto local, conforme a Resolução CEPRAM nº 4.327/2013 e suas atualizações. Em Salvador, o licenciamento de postos tramita na SEDUR."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "Classes de posto pela NBR 13786",
+                "text": "A norma classifica a instalação de 0 a 3 conforme a sensibilidade do entorno em um raio de 100 metros: presença de poços de captação, corpos d’água, galerias, redes de drenagem, edificações com subsolo. Quanto maior a classe, mais exigentes são os sistemas de detecção, as paredes dos tanques (parede dupla) e o monitoramento. O enquadramento errado é a primeira causa de indeferimento."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Documentos e Projetos Exigidos no Licenciamento"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Projeto do sistema de armazenamento com planta baixa, cortes, memorial descritivo e ART do responsável técnico, indicando tanques, tubulações, câmaras de contenção, canaletas e separador de água e óleo (SAO)."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Certificado de conformidade dos tanques e equipamentos no âmbito do INMETRO, com laudo de instalação assinado pela empresa montadora."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Teste de estanqueidade de tanques e linhas pela NBR 13784, na instalação, na renovação de licença e sempre que houver suspeita de vazamento."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Plano de gerenciamento de resíduos com destinação de óleo usado, borra de SAO, embalagens e EPIs contaminados, com MTR no SINIR, seguindo as regras de rastreabilidade do SINIR e da DMR."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/gerenciamento-areas-contaminadas-gac-inema-bahia"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Para instalações existentes, o INEMA e os municípios exigem ainda a investigação de passivo ambiental: avaliação preliminar e, quando há indício, investigação confirmatória com sondagens e análise de hidrocarbonetos (BTEX, PAH e TPH) em solo e água subterrânea. O rito completo está no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "gerenciamento de áreas contaminadas",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ". Posto antigo com tanque de parede simples enterrado há mais de 15 anos raramente passa sem alguma intervenção."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Bases de Abastecimento em Canteiros de Obra"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/plano-emergencia-individual-pei-pae-bahia-inema"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "base de abastecimento de canteiro",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " é tratada pelo órgão como instalação de armazenamento e precisa constar na Licença de Instalação da obra ou ter licença própria, conforme o volume. As exigências mínimas são tanque aéreo certificado, bacia de contenção com capacidade de 110% do maior tanque, piso impermeável na área de abastecimento, canaletas direcionadas para separador de água e óleo, kit de contenção de vazamento e registro de abastecimento por equipamento. O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Plano de Emergência Individual",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " precisa contemplar o cenário de vazamento na base e o simulado anual."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Na desmobilização do canteiro, a remoção dos tanques exige limpeza, desgaseificação por empresa habilitada, laudo de ausência de contaminação do solo sob a base e destinação dos resíduos com CDF. Sem esse encerramento documentado, o passivo fica com a construtora e aparece anos depois, na venda do terreno ou em fiscalização."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "Vazamento é obrigação de comunicar",
+                "text": "Qualquer vazamento ou indício, como perda de estoque não explicada, odor em poço vizinho ou produto em galeria pluvial, deve ser comunicado ao órgão ambiental imediatamente. A omissão agrava a penalidade e transfere para o empreendedor o custo integral da remediação, mesmo que o vazamento tenha origem em equipamento com certificado válido."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Tanques Subterrâneos: Parede Dupla, Monitoramento Intersticial e Troca"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Para postos de revenda, o sistema de armazenamento subterrâneo de combustível (SASC) é o item de maior risco e de maior custo. A CONAMA 273/2000 e a NBR 13786 exigem, conforme a classe da instalação, tanques jaquetados de parede dupla com monitoramento intersticial, tubulações de parede dupla, câmaras de contenção sob bombas e filtros, válvulas de retenção e sistema de detecção de vazamento com registro contínuo. Tanques de parede simples instalados antes da resolução são tolerados apenas com teste de estanqueidade periódico aprovado; a reprovação obriga a substituição imediata, com remoção do tanque antigo, laudo de solo sob a cava e destinação do equipamento como resíduo."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O monitoramento ambiental do posto inclui, em muitas licenças, poços de observação de água subterrânea a jusante dos tanques, com coleta semestral e análise de BTEX e TPH, e a medição de fase livre com interface óleo e água. Resultado acima dos valores de investigação da CONAMA 420/2009 dispara o gerenciamento de área contaminada e, dependendo do caso, a comunicação à concessionária de água quando há poço de abastecimento no raio de influência. O custo de um ciclo de investigação e remediação em posto urbano costuma superar o valor dos próprios tanques, o que torna a prevenção, com equipamento certificado e teste em dia, a decisão econômica mais simples do setor."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Renovação da Licença e Condicionantes Típicas"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/renovacao-licenca-operacao-lo-prazos-documentos-inema"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Licença de Operação de posto ou base de abastecimento é renovada com teste de estanqueidade recente, laudo de monitoramento dos poços de observação (quando exigidos), comprovante de destinação de resíduos e certificado de manutenção do SAO. A renovação deve ser protocolada com 120 dias de antecedência, como detalhado no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "renovação de Licença de Operação",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ". Postos também recolhem a TCFA federal e entregam o RAPP, por constarem no Anexo VIII da Lei nº 6.938/1981."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Como a Anjos Brandão conduz o processo"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Fazemos o enquadramento de classe pela NBR 13786, elaboramos o projeto ambiental da instalação, acompanhamos os testes de estanqueidade e a investigação de passivo e conduzimos o protocolo no INEMA ou no município. Para construtoras, estruturamos a base de abastecimento desde a LI da obra e o encerramento documentado na desmobilização. "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Fale com a nossa equipe",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " antes de instalar ou renovar."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Licenciamento de Postos e Tanques na Bahia: CONAMA 273",
+      metaDescription: "Guia do licenciamento de postos, bases de abastecimento de canteiro e tanques aéreos na Bahia pela CONAMA 273. Testes, laudos e investigação de passivo.",
+      keywords: ["licenciamento de postos de combustível na bahia","conama 273 licenciamento","base de abastecimento de canteiro","teste de estanqueidade nbr 13784","tanque aéreo de combustível licenciamento","passivo ambiental posto de combustível","consultoria ambiental bahia"],
+    },
+  },
+  {
+    _id: 'post-29',
+    title: "Emissões Atmosféricas e Ruído: Monitoramento de Chaminés, Poeira e NBR 10151 como Condicionante de LO na Bahia",
+    slug: "emissoes-atmosfericas-ruido-monitoramento-conama-491-nbr-10151",
+    excerpt: "Como atender às condicionantes de emissões atmosféricas e ruído do INEMA: CONAMA 382, 436 e 491, NBR 10151, amostragem de chaminé e controle de poeira.",
+    publishedAt: '2026-10-29T18:00:00.000Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-29-emissoes-atmosfericas-ruido-monitoramento-bahia.webp',
+    mainImageAlt: "Chaminé industrial com plataforma de amostragem e estação de monitoramento da qualidade do ar em planta na Bahia ao amanhecer",
+    mainImageCaption: "Plataforma de amostragem isocinética em chaminé e estação de monitoramento no entorno, itens típicos de condicionante de LO.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[4], INITIAL_CATEGORIES[0]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "monitoramento de emissões atmosféricas",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e de ruído é a condicionante de Licença de Operação que mais gera auto de infração em indústrias, cimenteiras, usinas de asfalto, centrais de concreto, mineradoras e termelétricas na Bahia. Diferente dos resíduos, que deixam rastro documental, a emissão só existe no momento da medição; sem laudo válido no prazo, o INEMA presume o descumprimento. Este guia reúne as normas aplicáveis, o que a condicionante costuma exigir e os erros de amostragem que invalidam o relatório."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "As referências são a Resolução CONAMA nº 382/2006 (limites de emissão para fontes fixas novas), a Resolução CONAMA nº 436/2011 (fontes fixas existentes), a Resolução CONAMA nº 491/2018 (padrões de qualidade do ar, que substituiu a CONAMA 003/1990), a Resolução CONAMA nº 001/1990 para ruído, que remete à ABNT NBR 10151, e a Resolução CONAMA nº 418/2009 para fumaça preta de veículos a diesel. Na Bahia, o Decreto Estadual nº 14.024/2012 incorpora esses limites e o INEMA exige a Declaração Anual de Carga Poluidora no SEIA."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "Fonte fixa, fonte fugitiva e qualidade do ar",
+                "text": "Fonte fixa é a chaminé, o duto ou o exaustor com ponto definido de lançamento, medida em concentração (mg/Nm³). Fonte fugitiva é a poeira de vias, pilhas, britadores e transferência de correias, controlada por aspersão, enclausuramento e cobertura. Qualidade do ar é o que se mede no entorno, em estações de PTS, PM10 e PM2,5, e responde ao conjunto das fontes. A condicionante de LO costuma exigir os três."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Amostragem em Chaminé: O que Invalida o Laudo"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "amostragem isocinética de chaminé",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " segue os métodos da CETESB e as normas ABNT NBR 10700, 10701, 11966 e 12019, que definem a localização do ponto de amostragem, o número de pontos de travessa e as condições de operação durante a coleta. O INEMA e os laboratórios acreditados pelo INMETRO (ISO 17025) rejeitam laudos quando:"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A plataforma de amostragem está a menos de 8 diâmetros a jusante e 2 diâmetros a montante de qualquer perturbação do fluxo (curva, redução, ventilador)."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A coleta foi feita com a fonte abaixo de 80% da capacidade nominal, o que subestima a emissão."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Os parâmetros não correspondem ao combustível e ao processo: material particulado, NOx, SOx e CO para caldeiras; dioxinas e furanos e metais para coprocessamento; compostos orgânicos voláteis para pintura e solventes."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Falta a correção para a base de oxigênio de referência exigida pela CONAMA 382 para cada tipo de fonte."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Poeira Fugitiva: Mineração, Britagem e Canteiros"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/pca-rca-licenciamento-mineracao-industria-inema"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Em pedreiras, cavas, usinas de asfalto e obras de terraplenagem, a poeira é a reclamação de vizinhança mais frequente e o motivo mais comum de notificação. A condicionante típica exige aspersão de vias com caminhão-pipa ou aspersores fixos, enclausuramento de britadores e peneiras com filtro de manga, cobertura de pilhas e caçambas, lavador de rodas na saída e estações de PTS e PM10 em pelo menos dois pontos a sotavento. Os limites de qualidade do ar da CONAMA 491/2018 são progressivos, com padrões intermediários (PI-1 a PI-3) até o padrão final (PF), e o INEMA pode exigir o padrão mais restritivo em área sensível. As exigências de projeto estão no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "PCA em mineração e indústria",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Ruído: NBR 10151 e Vizinhança"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "medição de ruído pela NBR 10151",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " é feita no limite da propriedade ou no ponto receptor, em período diurno e noturno, com medidor de nível sonoro calibrado e correção para tons puros e impulsivos. Os limites da versão 2019 da norma variam com o tipo de área: 50 dB(A) diurno e 45 dB(A) noturno em área estritamente residencial, 55 e 50 em área mista predominantemente residencial, 60 e 55 em área mista com vocação comercial, e 70 e 60 em área predominantemente industrial. A Resolução CONAMA nº 001/1990 torna esses limites obrigatórios para fins de licenciamento."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O erro mais comum é medir apenas o nível da fonte sem o ruído de fundo com a fonte desligada; sem essa referência, não há como atribuir o excedente ao empreendimento. Canteiros com obra noturna, geradores e bate-estacas precisam de medição específica e, em muitos municípios da Região Metropolitana de Salvador, de autorização da prefeitura para horário estendido."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "Periodicidade e validade dos laudos",
+                "text": "A condicionante de LO define a periodicidade: trimestral ou semestral para chaminés, mensal ou contínua para qualidade do ar em área sensível, semestral para ruído. Laudo fora do prazo, sem acreditação do laboratório ou sem ART é tratado como ausente. O conjunto é consolidado na Declaração Anual de Carga Poluidora no SEIA e cruzado com o RAPP do IBAMA."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Fumaça Preta e Frota a Diesel"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Frotas de caminhões, máquinas de terraplenagem e geradores a diesel também são fontes de emissão sujeitas a controle. A Resolução CONAMA nº 418/2009 obriga os programas de inspeção e a medição de opacidade ou de fumaça preta pela Escala de Ringelmann, com limite de padrão 2 em operação. O INEMA costuma incluir na LI de grandes obras a exigência de inspeção semestral da frota com relatório por equipamento, e a fiscalização em canteiro aplica o cartão de Ringelmann na hora. Manutenção de bicos injetores, filtro de ar e regulagem de bomba são as medidas de menor custo; a substituição de equipamentos antigos por motores com padrão de emissão mais recente resolve o problema de forma definitiva e conta ponto nas auditorias de governança."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Para geradores de canteiro e de indústria, além da emissão há o ruído: um grupo gerador sem enclausuramento acústico produz entre 95 e 105 dB(A) a um metro, e excede o limite noturno de área residencial a mais de 100 metros de distância. Container acústico, atenuador no escape e posicionamento na face oposta à vizinhança são medidas de projeto, e o plano de monitoramento deve prever medição específica com o gerador em carga."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Da Medição à Gestão"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/auditoria-ambiental-compulsoria-cepram-inema-plano-acao"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Medir não resolve emissão. Quando o laudo aponta excedente, o INEMA exige plano de ação com prazo: troca de filtro, ajuste de queima, retrofit de ciclone para filtro de manga, barreira acústica ou mudança de turno. Empresas que tratam o laudo como mero protocolo descobrem o problema na renovação da LO, quando já não há tempo para intervir, como discutido no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "auditoria ambiental compulsória do CEPRAM",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que a Anjos Brandão entrega"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Elaboramos o plano de monitoramento conforme a condicionante, contratamos e acompanhamos laboratórios acreditados, conferimos a conformidade metodológica antes do protocolo e consolidamos os resultados na Declaração de Carga Poluidora. Se a sua LO tem condicionante de emissões ou ruído com prazo próximo, "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "fale com a nossa equipe",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " para revisar o cronograma de medições."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Emissões Atmosféricas e Ruído: Condicionantes de LO na Bahia",
+      metaDescription: "Como atender às condicionantes de emissões atmosféricas e ruído do INEMA: CONAMA 382, 436 e 491, NBR 10151, amostragem de chaminé e controle de poeira.",
+      keywords: ["monitoramento de emissões atmosféricas","medição de ruído nbr 10151","amostragem isocinética de chaminé","conama 491 qualidade do ar","controle de poeira mineração bahia","condicionante de licença de operação inema","consultoria ambiental bahia"],
+    },
+  },
+  {
+    _id: 'post-30',
+    title: "Licenciamento Ambiental Municipal e APP Urbana em Salvador e Região Metropolitana: Competências e Limites",
+    slug: "licenciamento-ambiental-municipal-app-urbana-salvador-rms",
+    excerpt: "Quando o licenciamento é da prefeitura e não do INEMA, como funciona a SEDUR em Salvador e o que vale para APP em área urbana consolidada na Bahia.",
+    publishedAt: '2026-10-27T18:00:00.000Z',
+    estimatedReadTime: 11,
+    featured: false,
+    mainImageUrl: '/images/blog/post-30-licenciamento-municipal-app-urbana-salvador-rms.webp',
+    mainImageAlt: "Vista aérea de bairro em expansão na Região Metropolitana de Salvador com mata ciliar preservada ao longo de um riacho urbano",
+    mainImageCaption: "Faixa de APP urbana ao longo de curso d’água em área de expansão residencial na Região Metropolitana de Salvador.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[0], INITIAL_CATEGORIES[2]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "licenciamento ambiental municipal na Bahia",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " é a porta de entrada da maior parte dos empreendimentos imobiliários, comerciais e de serviços em Salvador, Lauro de Freitas, Camaçari, Simões Filho e demais municípios da Região Metropolitana. Desde a Lei Complementar nº 140/2011, as atividades de impacto local são licenciadas pela prefeitura, e protocolar no órgão errado custa meses: o INEMA devolve o processo por incompetência e o município reinicia a análise do zero. Este guia explica como a competência é definida, como funciona o rito em Salvador e quais regras de Área de Preservação Permanente valem em zona urbana."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/guia-licenciamento-ambiental-inema-bahia"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O art. 9º da LC 140/2011 atribui aos municípios o licenciamento de atividades de impacto local, definidas pelo Conselho Estadual de Meio Ambiente. Na Bahia, a Resolução CEPRAM nº 4.327/2013, atualizada pela Resolução CEPRAM nº 4.579/2018, lista essas atividades por porte e enquadra os municípios conforme sua estrutura: só licencia quem tem órgão ambiental capacitado e conselho municipal em funcionamento. O que ultrapassa o impacto local, atinge mais de um município ou incide em unidade de conservação estadual permanece com o INEMA, conforme o "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "guia do licenciamento no INEMA",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "Como saber se o licenciamento é municipal",
+                "text": "Três perguntas resolvem a maioria dos casos: a atividade está na lista de impacto local da Resolução CEPRAM vigente, dentro do porte indicado? O município está habilitado e tem conselho ativo? O empreendimento está fora de unidade de conservação estadual ou federal e não interfere em mais de um município? Três respostas afirmativas indicam competência municipal. Em dúvida, a consulta formal de enquadramento evita o protocolo errado."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Rito em Salvador: SEDUR, PDDU e LOUOS"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Em Salvador, o "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "licenciamento ambiental na SEDUR",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " segue a Lei Municipal nº 8.915/2015 (Política Municipal de Meio Ambiente) e está integrado ao licenciamento urbanístico. Antes da licença ambiental, o empreendedor precisa de compatibilidade com o Plano Diretor (Lei nº 9.069/2016) e com a Lei de Ordenamento do Uso e Ocupação do Solo (Lei nº 9.148/2016), que definem zonas, índices e as áreas de proteção municipais, como o Sistema de Áreas de Valor Ambiental e Cultural (SAVAM). O rito municipal tem modalidades próprias, que vão da Licença Ambiental Simplificada e da Licença Unificada até o rito trifásico para empreendimentos maiores."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Empreendimentos residenciais e comerciais de médio porte: licença municipal, com estudo ambiental simplificado e, quando há supressão, autorização de corte de árvores municipal ou ASV estadual, conforme o porte."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Loteamentos e condomínios acima do porte de impacto local: competência do INEMA, com RCA ou EIA/RIMA, no rito trifásico estadual."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Atividades com resíduos perigosos, tanques de combustível ou lançamento em corpo hídrico: verificação caso a caso, porque alguns itens permanecem estaduais mesmo em empreendimento de impacto local."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "APP em Área Urbana: O que Vale"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "APP urbana na Bahia",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " segue a Lei nº 12.651/2012, o Código Florestal, que se aplica integralmente em zona urbana: 30 metros em cada margem de curso d’água com até 10 metros de largura, 50 metros ao redor de nascentes, faixas crescentes conforme a largura do rio, além de topos de morro, encostas acima de 45 graus e restingas. O STJ consolidou no Tema Repetitivo 1.010, em 2021, que a faixa do Código Florestal prevalece sobre a faixa menor de 15 metros da Lei de Parcelamento do Solo Urbano, o que afetou projetos antigos de loteamento em toda a Região Metropolitana."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/compensacao-ambiental-inema-reserva-legal-tcra"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Lei nº 14.285/2021 abriu uma exceção: em área urbana consolidada, o município pode fixar, por lei própria, faixas de APP diferentes ao longo de cursos d’água, desde que ouvido o conselho de meio ambiente e sem ocupação de área de risco. Poucos municípios baianos editaram essa lei até agora, e enquanto não editam vale a regra federal. A intervenção em APP urbana só é autorizada nas hipóteses de utilidade pública, interesse social ou baixo impacto do art. 8º do Código Florestal, com a "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "compensação florestal correspondente",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "Riacho canalizado ou intermitente continua gerando APP",
+                "text": "Curso d’água tamponado, canalizado ou que só corre na estação chuvosa mantém a faixa de preservação, salvo decisão expressa do órgão com base em laudo hidrológico. Projetos que ignoram drenagens pequenas no levantamento topográfico são embargados na fiscalização e o licenciamento volta ao início com nova poligonal."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Municípios da RMS: Estruturas Diferentes, Ritos Diferentes"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Região Metropolitana de Salvador reúne municípios com graus muito distintos de estrutura ambiental. Salvador, Camaçari e Lauro de Freitas têm secretarias com corpo técnico próprio, conselhos ativos e sistemas de protocolo eletrônico, e licenciam a lista completa de impacto local. Municípios menores, como alguns do Recôncavo e do Litoral Norte, licenciam apenas parte da lista ou devolvem ao INEMA atividades que não têm condição de analisar. Isso significa que o mesmo galpão logístico pode ter licença municipal em Simões Filho e estadual em um município vizinho, e que o cronograma do projeto precisa considerar o órgão real, não a regra geral. Antes do protocolo, vale confirmar na Resolução CEPRAM vigente e no site do município se a atividade está habilitada ali."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/outorga-recursos-hidricos-inema-bahia-captacao"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Outro ponto de atrito é o lançamento de efluentes e a drenagem. Mesmo em empreendimento de competência municipal, o lançamento de efluente tratado em corpo hídrico depende de outorga do INEMA, e a ligação à rede da EMBASA depende de anuência da concessionária, com padrão de lançamento próprio. O artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "outorga de recursos hídricos",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " detalha essa interface. Projetos que chegam à prefeitura sem definir o destino do efluente recebem exigência logo na análise prévia."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Supressão Vegetal, Fauna e Vizinhança no Rito Municipal"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/resgate-fauna-supressao-vegetal-requisitos-inema"
+                      },
+                      {
+                            "_key": "link_1",
+                            "_type": "link",
+                            "href": "/blog/corredores-ecologicos-planejamento-loteamentos-residenciais"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Mesmo no licenciamento municipal, a supressão de vegetação nativa em estágio médio ou avançado de Mata Atlântica depende de autorização com base na Lei nº 11.428/2006, com inventário florestal e, conforme o porte, "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "resgate de fauna",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ". Em bairros consolidados, a prefeitura costuma exigir ainda o Estudo de Impacto de Vizinhança (EIV), previsto no Estatuto da Cidade, com análise de tráfego, sombreamento, ventilação e infraestrutura. Integrar os três estudos, ambiental, florestal e urbanístico, em um único cronograma evita que a licença de um trave o outro. Em loteamentos, o desenho de "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "corredores ecológicos",
+                            "marks": [
+                                  "link_1"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " ao longo das APPs acelera a aprovação e valoriza o produto."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que a Anjos Brandão faz no licenciamento municipal"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Fazemos a consulta de enquadramento de competência, o levantamento das APPs com topografia e hidrografia em SIRGAS 2000, o estudo ambiental no formato exigido pela prefeitura e a articulação com o INEMA quando parte do processo permanece estadual. Se o seu empreendimento está em Salvador ou na Região Metropolitana, "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "fale com a nossa equipe",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " antes do protocolo."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Licenciamento Municipal e APP Urbana em Salvador e RMS",
+      metaDescription: "Quando o licenciamento é da prefeitura e não do INEMA, como funciona a SEDUR em Salvador e o que vale para APP em área urbana consolidada na Bahia.",
+      keywords: ["licenciamento ambiental municipal na bahia","licenciamento ambiental na sedur","app urbana na bahia","lei complementar 140 competência municipal","resolução cepram 4327 impacto local","app área urbana consolidada código florestal","consultoria ambiental salvador"],
+    },
+  },
+  {
     _id: 'post-21',
     title: "Compensação Ambiental no INEMA: Guia de Reserva Legal e TCRA",
     slug: "compensacao-ambiental-inema-reserva-legal-tcra",
     excerpt: "Aprenda como regularizar Reserva Legal e compensação ambiental no INEMA via CAR e TCRA na Bahia. Evite multas e valide sua ASV. Fale conosco!",
-    publishedAt: '2026-10-10T18:00:00.000Z',
+    publishedAt: '2026-10-25T18:00:00.000Z',
     estimatedReadTime: 12,
-    featured: true,
+    featured: false,
     mainImageUrl: '/images/blog/post-21-compensacao-reserva-legal-car-inema.webp',
     mainImageAlt: "Paisagem preservada de Reserva Legal e recomposição florestal georreferenciada na Bahia",
     mainImageCaption: "Mosaico de vegetação nativa conservada e áreas de recomposição florestal averbadas no CAR junto ao INEMA.",
@@ -653,7 +3553,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Gerenciamento de Áreas Contaminadas: Guia do GAC no INEMA",
     slug: "gerenciamento-areas-contaminadas-gac-inema-bahia",
     excerpt: "Guia do gerenciamento de áreas contaminadas no INEMA segundo a CONAMA 420. Da avaliação preliminar à remediação na Bahia. Consulte nossos peritos.",
-    publishedAt: '2026-10-08T18:00:00.000Z',
+    publishedAt: '2026-10-23T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-22-gerenciamento-areas-contaminadas-gac-inema.webp',
@@ -1075,7 +3975,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Licenciamento de Dragagem e Obras Portuárias na Bahia: Ritos",
     slug: "licenciamento-dragagem-obras-portuarias-inema-bahia",
     excerpt: "Entenda os ritos do licenciamento de dragagem e obras portuárias no INEMA e Marinha. Gestão de sedimentos e conformidade na Bahia. Fale conosco!",
-    publishedAt: '2026-10-06T18:00:00.000Z',
+    publishedAt: '2026-10-21T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-23-licenciamento-dragagem-obras-portuarias-bahia.webp',
@@ -1455,7 +4355,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Plano de Emergência Individual (PEI): Ritos e Exigências",
     slug: "plano-emergencia-individual-pei-pae-bahia-inema",
     excerpt: "Elabore o Plano de Emergência Individual (PEI) e PAE no INEMA e CBMBA na Bahia para transporte e depósitos químicos. Evite autuações. Fale conosco!",
-    publishedAt: '2026-10-04T18:00:00.000Z',
+    publishedAt: '2026-10-19T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-24-plano-emergencia-individual-pei-pae-bahia.webp',
@@ -1865,7 +4765,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Licença Unificada (LU) no INEMA: Como Reduzir Prazos via RAP",
     slug: "licenca-unificada-lu-rap-inema-bahia-prazos",
     excerpt: "Descubra quando solicitar a Licença Unificada (LU) no INEMA e acelere sua implantação na Bahia com RAP de alta precisão técnica. Agende sua análise!",
-    publishedAt: '2026-10-02T18:00:00.000Z',
+    publishedAt: '2026-10-17T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-25-licenca-unificada-lu-rap-inema-bahia.webp',
@@ -2240,7 +5140,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Outorga de Uso de Recursos Hídricos no INEMA: Guia para Captação Superficial e Subterrânea sem Risco de Embargo",
     slug: "outorga-recursos-hidricos-inema-bahia-captacao",
     excerpt: "Aprenda como regularizar poços tubulares e captação superficial no INEMA. Guia sobre testes de bombeamento, vazão ecológica Q90 e condicionantes no SEIA.",
-    publishedAt: '2026-09-30T18:00:00.000Z',
+    publishedAt: '2026-10-15T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-15-outorga-recursos-hidricos-inema.webp',
@@ -2777,7 +5677,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Bioengenharia de Solos e PRAD: Técnicas Vivas para Estabilização de Taludes e Recuperação de Cavas na Bahia",
     slug: "bioengenharia-solos-prad-recuperacao-taludes-cavas",
     excerpt: "Descubra como aliar biomantas antierosivas, hidrossemeadura e espécies nativas para estabilizar taludes e cumprir condicionantes de PRAD no INEMA.",
-    publishedAt: '2026-09-28T18:00:00.000Z',
+    publishedAt: '2026-10-13T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-16-bioengenharia-solos-prad-taludes.webp',
@@ -3360,7 +6260,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "PCA e RCA no Licenciamento de Mineração e Indústria no INEMA: Como Antecipar a LI",
     slug: "pca-rca-licenciamento-mineracao-industria-inema",
     excerpt: "Elaboração técnica de PCA e RCA no INEMA para mineradoras e indústrias na Bahia. Controle de emissões e efluentes para destravar LI. Fale com a equipe.",
-    publishedAt: '2026-09-26T18:00:00.000Z',
+    publishedAt: '2026-10-11T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-17-pca-rca-licenciamento-mineracao-inema.webp',
@@ -3939,7 +6839,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Logística Reversa e DMR no SINIR: Guia de Conformidade Legal para Geradores e Transportadores",
     slug: "logistica-reversa-dmr-sinir-residuos-bahia",
     excerpt: "Gestão de logística reversa e declaração de DMR no SINIR na Bahia. Rastreabilidade com MTR online e conformidade com o INEMA. Solicite suporte técnico.",
-    publishedAt: '2026-09-24T18:00:00.000Z',
+    publishedAt: '2026-10-09T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-18-logistica-reversa-dmr-sinir-residuos.webp',
@@ -4482,7 +7382,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Monitoramento e Afugentamento de Fauna em Linhas de Transmissão (LT): Faixas de Servidão",
     slug: "monitoramento-afugentamento-fauna-linhas-transmissao-inema",
     excerpt: "Monitore a fauna em linhas de transmissão na Bahia com rigor. Protocolos de afugentamento, avifauna e cumprimento de condicionantes do INEMA. Saiba mais.",
-    publishedAt: '2026-09-22T18:00:00.000Z',
+    publishedAt: '2026-10-07T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-19-monitoramento-fauna-linhas-transmissao.webp',
@@ -5059,7 +7959,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Auditoria Ambiental Compulsória do CEPRAM na Bahia: Escopo, PAC e Conformidade de LO",
     slug: "auditoria-ambiental-compulsoria-cepram-inema-plano-acao",
     excerpt: "Saiba como realizar a auditoria ambiental CEPRAM na Bahia sem riscos. Escopo de conformidade de LO e Plano de Ação Corretiva (PAC). Solicite proposta.",
-    publishedAt: '2026-09-20T18:00:00.000Z',
+    publishedAt: '2026-10-05T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-20-auditoria-ambiental-cepram-inema.webp',
@@ -5662,7 +8562,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Governança ESG e Mitigação de Riscos Ambientais em Obras e Indústrias na Bahia",
     slug: "governanca-esg-mitigacao-riscos-ambientais",
     excerpt: "Descubra como a governança ESG e a gestão integrada de passivos blindam grandes obras e indústrias contra embargos e atraem crédito verde na Bahia.",
-    publishedAt: '2026-09-18T18:00:00.000Z',
+    publishedAt: '2026-10-03T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-10-esg-governanca-riscos.webp',
@@ -6245,7 +9145,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Guia do Licenciamento Ambiental no INEMA (Bahia): Da LP à LO sem embargos",
     slug: "guia-licenciamento-ambiental-inema-bahia",
     excerpt: "Guia definitivo sobre o licenciamento ambiental no INEMA na Bahia. Conheça as etapas LP, LI e LO, prazos, estudos exigidos e como evitar embargos na sua obra.",
-    publishedAt: '2026-09-16T18:00:00.000Z',
+    publishedAt: '2026-10-01T18:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-1-licenciamento-inema.webp',
@@ -6749,7 +9649,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Passagem de Fauna em Rodovias e Grandes Obras: Estratégias e Exigências do INEMA",
     slug: "passagem-de-fauna-monitoramento-obras-infraestrutura",
     excerpt: "Guia técnico sobre passagens de fauna, viadutos verdes e monitoramento biótico em rodovias na Bahia. Evite embargos com engenharia ambiental integrada.",
-    publishedAt: '2026-09-14T18:00:00.000Z',
+    publishedAt: '2026-09-29T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-8-passagem-fauna-infraestrutura.webp',
@@ -7364,7 +10264,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "PGRS na Construção Civil: Como Reduzir Custos e Garantir Conformidade",
     slug: "pgrs-construcao-civil-reducao-custos-conformidade",
     excerpt: "Aprenda a estruturar o PGRS na construção civil, classificar resíduos Classe A a D conforme o CONAMA 307 e economizar na destinação de RCC.",
-    publishedAt: '2026-09-12T18:00:00.000Z',
+    publishedAt: '2026-09-27T18:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-2-pgrs-construcao-civil.webp',
@@ -7808,7 +10708,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Licenciamento Ambiental de Parques Solares e Eólicos na Bahia: Ritos e Exigências do INEMA",
     slug: "licenciamento-ambiental-energia-solar-eolica-bahia",
     excerpt: "Guia prático do licenciamento de parques solares e eólicos na Bahia. Conheça as etapas no SEIA, estudos bióticos e evite atrasos. Fale conosco.",
-    publishedAt: '2026-09-10T18:00:00.000Z',
+    publishedAt: '2026-09-25T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-11-energia-solar-eolica-inema.webp',
@@ -8389,7 +11289,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Inventário Florestal e ASV: Estratégias para Supressão Vegetal Segura",
     slug: "inventario-florestal-asv-supressao-vegetal-segura",
     excerpt: "Guia completo de inventário florestal e Autorização de Supressão Vegetal (ASV) no INEMA. Evite embargos com levantamento fitossociológico de precisão.",
-    publishedAt: '2026-09-08T18:00:00.000Z',
+    publishedAt: '2026-09-23T18:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-3-inventario-florestal-asv.webp',
@@ -8813,7 +11713,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Resgate de Germoplasma e Flora Nativa: Da Coleta ao Cumprimento de PRAD no INEMA",
     slug: "resgate-de-germoplasma-flora-nativa-prad-inema",
     excerpt: "Veja como estruturar o resgate de flora nativa e o cumprimento de PRAD para atender com rigor às exigências do INEMA na Bahia. Fale conosco.",
-    publishedAt: '2026-09-06T18:00:00.000Z',
+    publishedAt: '2026-09-21T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-9-resgate-germoplasma-flora-prad.webp',
@@ -9380,7 +12280,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Renovação de Licença de Operação (LO): Prazos, Documentos e Como Evitar a Paralisação de Atividades",
     slug: "renovacao-licenca-operacao-lo-prazos-documentos-inema",
     excerpt: "Guia prático para renovação da Licença de Operação (LO) no INEMA. Conheça a regra dos 120 dias da LC 140/2011, documentos e condicionantes.",
-    publishedAt: '2026-09-04T18:00:00.000Z',
+    publishedAt: '2026-09-19T18:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-4-renovacao-licenca-lo.webp',
@@ -9834,7 +12734,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Inventário Florestal Contínuo e Manejo: Redução de Custos de Compensação",
     slug: "inventario-florestal-continuo-manejo-reducao-custos",
     excerpt: "Saiba como o inventário florestal contínuo otimiza o traçado de obras, reduz taxas de corte e custos de compensação no INEMA. Fale com especialistas.",
-    publishedAt: '2026-09-02T18:00:00.000Z',
+    publishedAt: '2026-09-17T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-12-inventario-florestal-continuo.webp',
@@ -10371,7 +13271,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Resgate de Fauna e Supressão Vegetal em Obras: Requisitos Legais, Equipe de Campo e Protocolos",
     slug: "resgate-fauna-supressao-vegetal-requisitos-inema",
     excerpt: "Como estruturar o resgate e afugentamento de fauna na supressão vegetal de obras. Protocolos de campo, salvamento de flora e exigências do INEMA.",
-    publishedAt: '2026-08-31T18:00:00.000Z',
+    publishedAt: '2026-09-15T18:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-5-resgate-fauna-supressao.webp',
@@ -10875,7 +13775,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Economia Circular e PGRS na Indústria Química e Pesada: Guia Prático",
     slug: "economia-circular-pgrs-industria-pesada-quimica",
     excerpt: "Aprenda como aplicar a economia circular e otimizar o PGRS na indústria química e pesada, transformando resíduos industriais em ativos na Bahia.",
-    publishedAt: '2026-08-29T18:00:00.000Z',
+    publishedAt: '2026-09-13T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-13-economia-circular-pgrs-industria.webp',
@@ -11422,7 +14322,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Due Diligence Ambiental na Compra de Terrenos: Como Identificar Passivos e Evitar Embargos",
     slug: "due-diligence-ambiental-compra-terrenos-loteamentos",
     excerpt: "Descubra como a Due Diligence Ambiental na compra de terrenos evita passivos milionários, contaminações e embargos em loteamentos e indústrias.",
-    publishedAt: '2026-08-27T18:00:00.000Z',
+    publishedAt: '2026-09-11T18:00:00.000Z',
     estimatedReadTime: 11,
     featured: false,
     mainImageUrl: '/images/blog/post-7-due-diligence-terrenos.webp',
@@ -11856,7 +14756,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Corredores Ecológicos em Loteamentos: Guia Urbanismo Verde",
     slug: "corredores-ecologicos-planejamento-loteamentos-residenciais",
     excerpt: "Veja como o projeto de corredores ecológicos em loteamentos acelera a aprovação ambiental no INEMA e valoriza o empreendimento. Fale com a equipe.",
-    publishedAt: '2026-08-25T18:00:00.000Z',
+    publishedAt: '2026-09-09T18:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-14-corredores-ecologicos-urbanos.webp',
@@ -12413,7 +15313,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "MTR Online e Gestão de Resíduos Classe I (Perigosos): Guia Prático para Canteiros e Indústrias",
     slug: "mtr-online-gestao-residuos-perigosos-classe-1",
     excerpt: "Guia passo a passo para emissão de MTR Online no SINIR e gestão de resíduos perigosos Classe 1. Evite multas em canteiros e indústrias na Bahia.",
-    publishedAt: '2026-08-23T18:00:00.000Z',
+    publishedAt: '2026-09-07T18:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-6-mtr-residuos-perigosos.webp',
