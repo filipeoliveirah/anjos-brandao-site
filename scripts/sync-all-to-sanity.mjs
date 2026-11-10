@@ -77,6 +77,7 @@ function ensureKeys(body) {
         _type: 'block',
         listItem: 'bullet',
         style: 'normal',
+        ...(block.markDefs?.length ? { markDefs: block.markDefs } : {}),
         children: (block.children || []).map((child, cIdx) => ({
           _key: child._key || `span_${bIdx}_${cIdx}_${Math.random().toString(36).slice(2, 7)}`,
           _type: 'span',
@@ -90,6 +91,7 @@ function ensureKeys(body) {
       _key: bKey,
       _type: block._type || 'block',
       style: block.style || 'normal',
+      ...(block.markDefs?.length ? { markDefs: block.markDefs } : {}),
       children: (block.children || []).map((child, cIdx) => ({
         _key: child._key || `span_${bIdx}_${cIdx}_${Math.random().toString(36).slice(2, 7)}`,
         _type: 'span',
@@ -217,6 +219,10 @@ async function runSync() {
       _ref: categoryIds[idx],
     }))
 
+    if (post.mainImageUrl && !(post.mainImageUrl in imageMap)) {
+      const rel = post.mainImageUrl.replace(/^\//, '')
+      imageMap[post.mainImageUrl] = await uploadImage(rel, path.basename(rel))
+    }
     const uploadedImg = imageMap[post.mainImageUrl]
 
     const formattedDoc = {
