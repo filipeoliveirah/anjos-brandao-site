@@ -9,6 +9,7 @@ import { POST_21, POST_22, POST_23, POST_24, POST_25 } from './posts-21-to-25.mj
 import { POST_26, POST_27, POST_28, POST_29, POST_30 } from './posts-26-to-30.mjs'
 import { POST_31, POST_32, POST_33 } from './posts-31-to-33.mjs'
 import { POST_34, POST_35, POST_36 } from './posts-34-to-36.mjs'
+import { POST_37, POST_38, POST_39 } from './posts-37-to-39.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -687,12 +688,18 @@ export const RAW_RICH_POSTS = [
   POST_34,
   POST_35,
   POST_36,
+  POST_37,
+  POST_38,
+  POST_39,
 ]
 
 // ==========================================
 // ORDENAÇÃO ALTERNADA: Cenário / Paisagem ↔ Pessoas em Campo
 // ==========================================
 const ALTERNATING_ORDER = [
+  "post-37", // [Cenário] Chuvas extremas e plano de emergência (protocolo COP31)
+  "post-38", // [Cenário] Loteamento sem registro e Lei 6.766/1979
+  "post-39", // [Cenário] Supressão de Mata Atlântica, Lei 11.428/2006
   "post-34", // [Cenário] COP31 e calendário do SBCE (Portaria 3.199/2026)
   "post-35", // [Cenário] Queima controlada suspensa na Bahia (Portaria INEMA 35.277)
   "post-36", // [Cenário] Lei Geral do Licenciamento e o julgamento no STF
@@ -731,7 +738,7 @@ const ALTERNATING_ORDER = [
   "post-6",  // [Pessoas] MTR Online e Resíduos Perigosos
 ]
 
-const baseDate = new Date("2026-11-10T18:00:00Z")
+const baseDate = new Date("2026-11-16T18:00:00Z")
 const rawMap = new Map(RAW_RICH_POSTS.map(p => [p._id, p]))
 
 export const RICH_POSTS = ALTERNATING_ORDER.map((id, index) => {
