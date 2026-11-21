@@ -8,16 +8,34 @@ interface LeadFormProps {
   ctaText?: string
 }
 
-// Máscara de telefone celular/fixo do Brasil: (XX) XXXXX-XXXX ou (XX) XXXX-XXXX
-export function formatBRPhone(value: string): string {
-  const digits = value.replace(/\D/g, '').slice(0, 11)
-  if (digits.length === 0) return ''
-  if (digits.length <= 2) return `(${digits}`
-  if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`
-  if (digits.length <= 10) {
-    return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`
+// Keep the country prefix while editing; normalize it only for the existing API.
+function splitBRPhone(value: string): { digits: string; international: boolean } | null {
+  const text = value.trim()
+  if (!/^\+?[\d\s().-]*$/.test(text)) return null
+  const digits = text.replace(/\D/g, '')
+  if (text.startsWith('+')) {
+    if (!digits.startsWith('55')) return null
+    return { digits: digits.slice(2), international: true }
   }
-  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7, 11)}`
+  if (digits.length > 11 && digits.startsWith('55')) {
+    return { digits: digits.slice(2), international: true }
+  }
+  return { digits, international: false }
+}
+
+// No digit limit here: invalid or incomplete input must remain editable in full.
+export function formatBRPhone(value: string): string {
+  const parsed = splitBRPhone(value)
+  if (!parsed || parsed.digits.length > 11) return value
+  const { digits, international } = parsed
+  const prefix = international ? '+55 ' : ''
+  if (digits.length === 0) return prefix.trim()
+  if (digits.length <= 2) return `${prefix}(${digits}`
+  if (digits.length <= 6) return `${prefix}(${digits.slice(0, 2)}) ${digits.slice(2)}`
+  if (digits.length <= 10) {
+    return `${prefix}(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`
+  }
+  return `${prefix}(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`
 }
 
 // Higienização contra XSS e injeção de scripts / tags
@@ -53,10 +71,14 @@ export function validateEmpresa(empresa: string): string | null {
 }
 
 export function validatePhone(phone: string): string | null {
-  const digits = phone.replace(/\D/g, '')
-  if (!digits) {
+  if (!phone.trim()) {
     return 'Por favor, informe seu WhatsApp ou telefone.'
   }
+  const parsed = splitBRPhone(phone)
+  if (!parsed) {
+    return 'Informe um telefone brasileiro com DDD, com ou sem +55.'
+  }
+  const { digits } = parsed
   if (digits.length < 10 || digits.length > 11) {
     return 'Informe um número com DDD completo (ex: (71) 99615-0067).'
   }
@@ -66,6 +88,9 @@ export function validatePhone(phone: string): string | null {
   }
   if (digits.length === 11 && digits[2] !== '9') {
     return 'Número de celular com 11 dígitos deve começar com 9 após o DDD.'
+  }
+  if (digits.length === 10 && !/^[2-6]$/.test(digits[2])) {
+    return 'Confira o número: telefone fixo tem 8 dígitos e celular tem 9, além do DDD.'
   }
   return null
 }
@@ -178,6 +203,8 @@ export default function LeadForm({ defaultDemanda = '', ctaText = 'Enviar Solici
         fingerprint,
         body: {
           ...formData,
+          // The API already expects DDD + number, without the optional country code.
+          telefone: formatBRPhone(splitBRPhone(formData.telefone)!.digits),
           request_id: crypto.randomUUID(),
           submitted_at: new Date().toISOString(),
           attribution: captureLeadAttribution(),

@@ -44,7 +44,7 @@ test('the actual form waits for success, preserves fields after error, and reuse
   await act(() => { submit() })
   assert.equal(requests.length, 0, 'invalid form must not reach the server')
 
-  for (const [id, value] of [['nome', 'João Teste'], ['empresa', 'Empresa Teste'], ['telefone', '71996150067']]) {
+  for (const [id, value] of [['nome', 'João Teste'], ['empresa', 'Empresa Teste'], ['telefone', '+55 (71) 99615-0067']]) {
     const input = element.querySelector(`#${id}`)
     await act(() => {
       Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(input, value)
@@ -57,6 +57,7 @@ test('the actual form waits for success, preserves fields after error, and reuse
   assert.equal(element.querySelector('button[type=submit]').disabled, true)
   assert.equal(window.dataLayer.length, 0, 'must not emit a success event while awaiting the server')
   assert.equal(requests[0].attribution.gclid, 'AbC_123')
+  assert.equal(requests[0].telefone, '(71) 99615-0067', 'the optional country code must be normalized for the unchanged API')
 
   await act(() => { respond(502, { error: 'Unavailable' }) })
   assert.ok(element.querySelector('[role=alert]'))
