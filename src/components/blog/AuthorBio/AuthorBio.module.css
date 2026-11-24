@@ -81,6 +81,26 @@
   color: #1F3628;
 }
 
+.name a {
+  color: inherit;
+}
+
+.name a:hover {
+  color: var(--ab-green);
+}
+
+.profileLink {
+  margin-top: 0.8rem;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ab-green);
+}
+
+.profileLink:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 600px) {
   .bioBox {
     flex-direction: column;

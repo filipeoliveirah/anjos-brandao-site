@@ -23,6 +23,7 @@ const STATIC_ROUTES = [
   { path: 'blog/categoria/inventario-asv', priority: '0.8', changefreq: 'weekly' },
   { path: 'blog/categoria/fauna-flora', priority: '0.8', changefreq: 'weekly' },
   { path: 'blog/categoria/esg-compliance', priority: '0.8', changefreq: 'weekly' },
+  { path: 'blog/autores/patricia-brandao', priority: '0.6', changefreq: 'monthly' },
 ]
 
 const FALLBACK_BLOG_SLUGS = RICH_POSTS.map((p) => p.slug)

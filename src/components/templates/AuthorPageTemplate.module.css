@@ -1,0 +1,137 @@
+.heroInner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.photo {
+  width: 220px;
+  height: 220px;
+  min-width: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--ab-green-lt, #8FB096);
+}
+
+.role {
+  font-family: var(--font-primary, sans-serif);
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.6rem;
+}
+
+.registry {
+  font-family: var(--font-primary, sans-serif);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 2rem;
+}
+
+.linkedin {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border: 1px solid var(--ab-green-lt, #8FB096);
+  border-radius: 9999px;
+  font-family: var(--font-primary, sans-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ab-green-lt, #8FB096) !important;
+}
+
+.linkedin:hover {
+  background: var(--ab-green-lt, #8FB096);
+  color: var(--ab-graphite, #1E1F22) !important;
+}
+
+.profile {
+  padding: 6rem 0 2rem;
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 6rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-primary, sans-serif);
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ab-green, #3B6951);
+  margin: 0 0 1.6rem;
+}
+
+.bio {
+  font-size: 2rem;
+  line-height: 1.7;
+  color: var(--ab-graphite, #1E1F22);
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0 0 3.6rem;
+  padding: 0;
+}
+
+.list li {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 1.6rem;
+  color: var(--ab-graphite, #1E1F22);
+}
+
+.list li span {
+  font-size: 1.4rem;
+  color: var(--ab-concrete, #5F6368);
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tags li {
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  background: #ECE9DF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 1.4rem;
+  color: var(--ab-graphite, #1E1F22);
+}
+
+.postsTitle {
+  font-family: var(--font-primary, sans-serif);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--ab-graphite, #1E1F22);
+  margin: 0 0 3.2rem;
+}
+
+@media (max-width: 900px) {
+  .heroInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.4rem;
+  }
+
+  .photo {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+  }
+
+  .profileGrid {
+    grid-template-columns: 1fr;
+    gap: 3.6rem;
+  }
+}

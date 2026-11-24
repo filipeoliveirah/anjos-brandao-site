@@ -11,6 +11,7 @@ import { POST_31, POST_32, POST_33 } from './posts-31-to-33.mjs'
 import { POST_34, POST_35, POST_36 } from './posts-34-to-36.mjs'
 import { POST_37, POST_38, POST_39 } from './posts-37-to-39.mjs'
 import { POST_40, POST_41, POST_42 } from './posts-40-to-42.mjs'
+import { DEFAULT_AUTHOR } from './enrich-helpers.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -757,6 +758,7 @@ export const RICH_POSTS = ALTERNATING_ORDER.map((id, index) => {
   const postDate = new Date(baseDate.getTime() - index * 86400000 * 2)
   cloned.publishedAt = postDate.toISOString()
   cloned.featured = index === 0
+  cloned.author = DEFAULT_AUTHOR
   return cloned
 })
 

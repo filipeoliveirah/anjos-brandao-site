@@ -60,10 +60,12 @@ const initialPostsCode = RICH_POSTS.map((post) => {
     mainImageAlt: ${JSON.stringify(post.mainImageAlt)},
     mainImageCaption: ${JSON.stringify(post.mainImageCaption)},
     author: {
-      name: '${post.author.name}',
-      role: '${post.author.role}',
-      bio: '${post.author.bio}',
-      linkedin: '${post.author.linkedin}',
+      name: ${JSON.stringify(post.author.name)},
+      ${post.author.slug ? `slug: ${JSON.stringify(post.author.slug)},` : ''}
+      role: ${JSON.stringify(post.author.role)},
+      bio: ${JSON.stringify(post.author.bio)},
+      linkedin: ${JSON.stringify(post.author.linkedin)},
+      ${post.author.avatarUrl ? `avatarUrl: ${JSON.stringify(post.author.avatarUrl)},` : ''}
     },
     categories: ${categoriesCode},
     body: ${JSON.stringify(post.body, null, 6).replace(/^/gm, '    ').trim()},

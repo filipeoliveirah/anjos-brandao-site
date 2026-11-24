@@ -4,6 +4,7 @@ import LeadForm from '../ui/LeadForm/LeadForm'
 import PortableTextRenderer from '../blog/PortableTextRenderer/PortableTextRenderer'
 import TableOfContents from '../blog/TableOfContents/TableOfContents'
 import AuthorBio from '../blog/AuthorBio/AuthorBio'
+import { authorPagePath } from '../../data/authors'
 import PostCard from '../blog/PostCard/PostCard'
 import { PostDetail } from '../../types/blog'
 import { urlForImage } from '../../lib/sanity'
@@ -39,6 +40,8 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
     if (built) imageUrl = built.width(1400).height(700).auto('format').url()
   }
 
+  const authorPath = authorPagePath(post.author?.slug)
+
   // Schema.org BlogPosting
   const schemaArticle = {
     '@context': 'https://schema.org',
@@ -56,7 +59,8 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
       '@type': 'Person',
       name: post.author?.name || 'Anjos Brandão',
       jobTitle: post.author?.role,
-      url: post.author?.linkedin || BASE_URL,
+      url: authorPath ? `${BASE_URL}${authorPath}` : post.author?.linkedin || BASE_URL,
+      ...(post.author?.linkedin ? { sameAs: [post.author.linkedin] } : {}),
     },
     publisher: {
       '@type': 'Organization',
@@ -130,7 +134,11 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
                     className={styles.authorAvatar}
                   />
                 )}
-                <span>{post.author?.name}</span>
+                {authorPath ? (
+                  <a href={authorPath} rel="author">{post.author?.name}</a>
+                ) : (
+                  <span>{post.author?.name}</span>
+                )}
               </div>
               <span className={styles.metaDot}>•</span>
               <time dateTime={post.publishedAt} className={styles.metaItem}>

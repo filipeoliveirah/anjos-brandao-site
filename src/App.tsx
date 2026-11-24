@@ -12,6 +12,8 @@ import ServicePageTemplate from './components/templates/ServicePageTemplate'
 import BlogListTemplate from './components/templates/BlogListTemplate'
 import BlogPostTemplate from './components/templates/BlogPostTemplate'
 import CategoryPageTemplate from './components/templates/CategoryPageTemplate'
+import AuthorPageTemplate from './components/templates/AuthorPageTemplate'
+import { getAuthorProfile } from './data/authors'
 import WhatsAppButton from './components/ui/WhatsAppButton/WhatsAppButton'
 import { detailedServices } from './data/services'
 import { getAllPosts, getAllCategories, getPostBySlug, INITIAL_CATEGORIES } from './data/blog'
@@ -199,7 +201,10 @@ export default function App() {
   const isBlogList = cleanPath === 'blog'
   const isBlogCategory = cleanPath.startsWith('blog/categoria/')
   const blogCategorySlug = isBlogCategory ? cleanPath.replace(/^blog\/categoria\//, '') : ''
-  const isBlogPost = cleanPath.startsWith('blog/') && !isBlogCategory
+  const isBlogAuthor = cleanPath.startsWith('blog/autores/')
+  const blogAuthorSlug = isBlogAuthor ? cleanPath.replace(/^blog\/autores\//, '') : ''
+  const currentAuthor = isBlogAuthor ? getAuthorProfile(blogAuthorSlug) : null
+  const isBlogPost = cleanPath.startsWith('blog/') && !isBlogCategory && !isBlogAuthor
   const blogPostSlug = isBlogPost ? cleanPath.replace(/^blog\//, '') : ''
   const activeService = detailedServices[cleanPath]
 
@@ -211,7 +216,7 @@ export default function App() {
 
   // Carregar dados de Blog
   useEffect(() => {
-    if (isBlogList || isBlogCategory) {
+    if (isBlogList || isBlogCategory || isBlogAuthor) {
       setBlogLoading(true)
       Promise.all([getAllPosts(), getAllCategories()]).then(([posts, categories]) => {
         setBlogPosts(posts)
@@ -225,7 +230,7 @@ export default function App() {
         setBlogLoading(false)
       })
     }
-  }, [isBlogList, isBlogCategory, isBlogPost, blogPostSlug])
+  }, [isBlogList, isBlogCategory, isBlogAuthor, isBlogPost, blogPostSlug])
 
   // Gerenciamento dinâmico de SEO / Meta Tags
   useEffect(() => {
@@ -241,6 +246,27 @@ export default function App() {
 
       // Open Graph
       updateMetaTag('meta[property="og:type"]', 'content', 'article')
+      updateMetaTag('meta[property="og:title"]', 'content', pageTitle)
+      updateMetaTag('meta[property="og:description"]', 'content', pageDesc)
+      updateMetaTag('meta[property="og:url"]', 'content', pageUrl)
+      updateMetaTag('meta[property="og:image"]', 'content', pageImage)
+
+      // Twitter
+      updateMetaTag('meta[name="twitter:title"]', 'content', pageTitle)
+      updateMetaTag('meta[name="twitter:description"]', 'content', pageDesc)
+      updateMetaTag('meta[name="twitter:image"]', 'content', pageImage)
+    } else if (isBlogAuthor && currentAuthor) {
+      const pageTitle = `${currentAuthor.name}, ${currentAuthor.role} | Blog Anjos Brandão`
+      const pageDesc = `${currentAuthor.name}, bióloga (${currentAuthor.registry}) e ${currentAuthor.role.toLowerCase()} da ${currentAuthor.organization}. Formação, áreas de atuação e artigos publicados.`
+      const pageUrl = `${BASE_URL}/blog/autores/${currentAuthor.slug}`
+      const pageImage = `${BASE_URL}${currentAuthor.photoUrl.replace(/\.webp$/, '.jpg')}`
+
+      document.title = pageTitle
+      updateMetaTag('meta[name="description"]', 'content', pageDesc)
+      updateMetaTag('link[rel="canonical"]', 'href', pageUrl)
+
+      // Open Graph
+      updateMetaTag('meta[property="og:type"]', 'content', 'profile')
       updateMetaTag('meta[property="og:title"]', 'content', pageTitle)
       updateMetaTag('meta[property="og:description"]', 'content', pageDesc)
       updateMetaTag('meta[property="og:url"]', 'content', pageUrl)
@@ -335,7 +361,7 @@ export default function App() {
       updateMetaTag('meta[name="twitter:description"]', 'content', homeDesc)
       updateMetaTag('meta[name="twitter:image"]', 'content', homeImage)
     }
-  }, [isBlogList, isBlogCategory, currentCategory, isBlogPost, currentPost, activeService, pathname])
+  }, [isBlogList, isBlogCategory, currentCategory, isBlogAuthor, currentAuthor, isBlogPost, currentPost, activeService, pathname])
 
   // Renderização Condicional de Rotas
   return (
@@ -386,11 +412,29 @@ export default function App() {
         )
       )}
 
+      {isBlogAuthor && (
+        currentAuthor ? (
+          <AuthorPageTemplate author={currentAuthor} posts={blogPosts} loading={blogLoading} />
+        ) : (
+          <div style={{ minHeight: '100vh', background: 'var(--ab-offwhite)' }}>
+            <Header />
+            <div style={{ paddingTop: '20rem', textAlign: 'center', fontFamily: 'Gothic A1, sans-serif' }}>
+              <h2>Autor não encontrado</h2>
+              <p style={{ marginTop: '2rem' }}>
+                <a href="/blog" style={{ color: 'var(--ab-green)', fontWeight: 700 }}>
+                  ← Voltar para o Blog
+                </a>
+              </p>
+            </div>
+          </div>
+        )
+      )}
+
       {isBlogList && <BlogListTemplate posts={blogPosts} categories={blogCategories} />}
 
       {activeService && <ServicePageTemplate service={activeService} />}
 
-      {!isBlogPost && !isBlogCategory && !isBlogList && !activeService && (
+      {!isBlogPost && !isBlogCategory && !isBlogAuthor && !isBlogList && !activeService && (
         <>
           <Header />
           <main id="content">

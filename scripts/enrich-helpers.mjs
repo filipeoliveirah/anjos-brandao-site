@@ -77,11 +77,14 @@ function pLink(segments) {
   }
 }
 
+// Autora de todos os artigos do blog (página em /blog/autores/patricia-brandao)
 const DEFAULT_AUTHOR = {
-  name: 'Coordenação Técnica Anjos Brandão',
-  role: 'Equipe de Engenharia e Consultoria Ambiental',
-  bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
-  linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+  name: 'Patrícia Brandão',
+  slug: 'patricia-brandao',
+  role: 'Diretora Técnica · CRBio 122.212/08-D',
+  bio: 'Patrícia Brandão é bióloga, gestora ambiental e pós-graduada em Ecologia e Biodiversidade. Na Anjos Brandão Soluções Ambientais, coordena o planejamento e o acompanhamento de projetos ambientais, unindo conhecimento técnico e orientação prática para ajudar empresas a organizar suas demandas e atender às exigências ambientais.',
+  linkedin: 'https://www.linkedin.com/in/j%C3%A1rdina-brand%C3%A3o',
+  avatarUrl: '/images/autores/patricia-brandao.webp',
 }
 
 export { p, h2, h3, bullet, callout, pLink, DEFAULT_AUTHOR }

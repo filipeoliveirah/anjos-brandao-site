@@ -3,6 +3,9 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { createClient } from '@sanity/client'
 import { RICH_POSTS } from './generate-rich-blog-posts.mjs'
+import { DEFAULT_AUTHOR } from './enrich-helpers.mjs'
+
+const AUTHOR_ID = 'author-patricia-brandao'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -106,7 +109,6 @@ async function runSync() {
   console.log(`🚀 [Sanity Sync] Conectando ao projeto ${projectId} (${dataset})...`)
 
   // 1. Upload de Imagens dos Serviços e Blog
-  const avatarAsset = await uploadImage('images/profile-pic.webp', 'profile-pic.webp')
   const imgPost1 = await uploadImage('images/blog/post-1-licenciamento-inema.webp', 'post-1-licenciamento-inema.webp')
   const imgPost2 = await uploadImage('images/blog/post-2-pgrs-construcao-civil.webp', 'post-2-pgrs-construcao-civil.webp')
   const imgPost3 = await uploadImage('images/blog/post-3-inventario-florestal-asv.webp', 'post-3-inventario-florestal-asv.webp')
@@ -163,20 +165,21 @@ async function runSync() {
 
   // 2. Criar / Atualizar Autor
   console.log('👤 Sincronizando autor...')
+  const authorAvatarAsset = await uploadImage('images/autores/patricia-brandao.jpg', 'patricia-brandao.jpg')
   const authorDoc = {
-    _id: 'author-coordenacao-tecnica',
+    _id: AUTHOR_ID,
     _type: 'author',
-    name: 'Coordenação Técnica Anjos Brandão',
-    slug: { _type: 'slug', current: 'coordenacao-tecnica' },
-    role: 'Equipe de Engenharia e Consultoria Ambiental',
-    bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
-    linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
-    ...(avatarAsset
+    name: DEFAULT_AUTHOR.name,
+    slug: { _type: 'slug', current: DEFAULT_AUTHOR.slug },
+    role: DEFAULT_AUTHOR.role,
+    bio: DEFAULT_AUTHOR.bio,
+    linkedin: DEFAULT_AUTHOR.linkedin,
+    ...(authorAvatarAsset
       ? {
           avatar: {
             _type: 'image',
-            asset: { _type: 'reference', _ref: avatarAsset._id },
-            alt: 'Coordenação Técnica Anjos Brandão',
+            asset: { _type: 'reference', _ref: authorAvatarAsset._id },
+            alt: 'Patrícia Brandão, diretora técnica da Anjos Brandão Soluções Ambientais',
           },
         }
       : {}),
@@ -234,7 +237,7 @@ async function runSync() {
       publishedAt: post.publishedAt,
       estimatedReadTime: post.estimatedReadTime,
       featured: post.featured || false,
-      author: { _type: 'reference', _ref: 'author-coordenacao-tecnica' },
+      author: { _type: 'reference', _ref: AUTHOR_ID },
       categories: postCategories,
       ...(uploadedImg
         ? {
