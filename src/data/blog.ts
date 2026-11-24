@@ -6,12 +6,13 @@ import { Post, PostDetail, Category } from '../types/blog'
 // ==========================================
 
 export const POSTS_QUERY = `
-  *[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
+  *[_type == "post" && defined(slug.current) && publishedAt <= now()] | order(publishedAt desc) {
     _id,
     title,
     "slug": slug.current,
     excerpt,
     publishedAt,
+    "modifiedAt": modifiedAt,
     estimatedReadTime,
     featured,
     mainImage,
@@ -36,12 +37,13 @@ export const POSTS_QUERY = `
 `
 
 export const RECENT_POSTS_QUERY = `
-  *[_type == "post" && defined(slug.current)] | order(publishedAt desc)[0...3] {
+  *[_type == "post" && defined(slug.current) && publishedAt <= now()] | order(publishedAt desc)[0...3] {
     _id,
     title,
     "slug": slug.current,
     excerpt,
     publishedAt,
+    "modifiedAt": modifiedAt,
     estimatedReadTime,
     featured,
     mainImage,
@@ -68,6 +70,7 @@ export const POST_BY_SLUG_QUERY = `
     "slug": slug.current,
     excerpt,
     publishedAt,
+    "modifiedAt": modifiedAt,
     estimatedReadTime,
     featured,
     mainImage,
@@ -96,12 +99,13 @@ export const POST_BY_SLUG_QUERY = `
       keywords,
       canonicalUrl
     },
-    "relatedPosts": *[_type == "post" && slug.current != $slug] | order(publishedAt desc)[0...3] {
+    "relatedPosts": *[_type == "post" && slug.current != $slug && publishedAt <= now()] | order(publishedAt desc)[0...3] {
       _id,
       title,
       "slug": slug.current,
       excerpt,
       publishedAt,
+      "modifiedAt": modifiedAt,
       estimatedReadTime,
       "mainImageUrl": mainImage.asset->url,
       "mainImageAlt": mainImage.alt,
@@ -19997,18 +20001,22 @@ export const INITIAL_POSTS: PostDetail[] = [
 // Service Functions with Sanity + Fallback
 // ==========================================
 
+function publishedPosts<T extends Post>(posts: T[]): T[] {
+  return posts.filter((post) => Date.parse(post.publishedAt) <= Date.now())
+}
+
 export async function getAllPosts(): Promise<Post[]> {
   if (isSanityConfigured && sanityClient) {
     try {
       const posts = await sanityClient.fetch<Post[]>(POSTS_QUERY)
       if (posts && posts.length > 0) {
-        return posts
+        return publishedPosts(posts)
       }
     } catch (err) {
       console.warn('Falha ao buscar posts no Sanity, usando dados locais de fallback:', err)
     }
   }
-  return INITIAL_POSTS
+  return publishedPosts(INITIAL_POSTS)
 }
 
 export async function getRecentPosts(limit = 3): Promise<Post[]> {
@@ -20016,13 +20024,13 @@ export async function getRecentPosts(limit = 3): Promise<Post[]> {
     try {
       const posts = await sanityClient.fetch<Post[]>(RECENT_POSTS_QUERY)
       if (posts && posts.length > 0) {
-        return posts.slice(0, limit)
+        return publishedPosts(posts).slice(0, limit)
       }
     } catch (err) {
       console.warn('Falha ao buscar posts recentes no Sanity, usando dados locais de fallback:', err)
     }
   }
-  return INITIAL_POSTS.slice(0, limit)
+  return publishedPosts(INITIAL_POSTS).slice(0, limit)
 }
 
 export async function getPostBySlug(slug: string): Promise<PostDetail | null> {
@@ -20030,17 +20038,17 @@ export async function getPostBySlug(slug: string): Promise<PostDetail | null> {
     try {
       const post = await sanityClient.fetch<PostDetail>(POST_BY_SLUG_QUERY, { slug })
       if (post) {
-        return post
+        return Date.parse(post.publishedAt) <= Date.now() ? post : null
       }
     } catch (err) {
       console.warn(`Falha ao buscar post slug "${slug}" no Sanity:`, err)
     }
   }
-  const local = INITIAL_POSTS.find((p) => p.slug === slug)
+  const local = publishedPosts(INITIAL_POSTS).find((p) => p.slug === slug)
   if (local) {
     return {
       ...local,
-      relatedPosts: INITIAL_POSTS.filter((p) => p.slug !== slug).slice(0, 3),
+      relatedPosts: publishedPosts(INITIAL_POSTS).filter((p) => p.slug !== slug).slice(0, 3),
     }
   }
   return null

@@ -1,3 +1,4 @@
+import { blogPagePath, BLOG_PAGE_SIZE } from '../../lib/blogRoutes'
 import { useState, useMemo } from 'react'
 import Header from '../layout/Header/Header'
 import PostCard from '../blog/PostCard/PostCard'
@@ -10,15 +11,16 @@ import styles from './AuthorPageTemplate.module.css'
 
 interface AuthorPageTemplateProps {
   author: AuthorProfile
+  initialPage?: number
   posts: Post[]
   loading: boolean
 }
 
-const ITEMS_PER_PAGE = 6
+const ITEMS_PER_PAGE = BLOG_PAGE_SIZE
 const BASE_URL = 'https://www.anjosbrandao.eco.br'
 
-export default function AuthorPageTemplate({ author, posts, loading }: AuthorPageTemplateProps) {
-  const [currentPage, setCurrentPage] = useState<number>(1)
+export default function AuthorPageTemplate({ author, posts, loading, initialPage = 1 }: AuthorPageTemplateProps) {
+  const [currentPage, setCurrentPage] = useState<number>(initialPage)
 
   const authorPosts = useMemo(
     () => posts.filter((post) => post.author?.slug === author.slug),
@@ -36,7 +38,8 @@ export default function AuthorPageTemplate({ author, posts, loading }: AuthorPag
     document.getElementById('artigos-autora')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  const canonicalUrl = `${BASE_URL}/blog/autores/${author.slug}`
+  const profileUrl = `${BASE_URL}/blog/autores/${author.slug}`
+  const canonicalUrl = `${BASE_URL}${blogPagePath(`/blog/autores/${author.slug}`, initialPage)}`
 
   const schemaProfile = {
     '@context': 'https://schema.org',
@@ -44,12 +47,12 @@ export default function AuthorPageTemplate({ author, posts, loading }: AuthorPag
     url: canonicalUrl,
     mainEntity: {
       '@type': 'Person',
-      '@id': `${canonicalUrl}#pessoa`,
+      '@id': `${profileUrl}#pessoa`,
       name: author.name,
       jobTitle: author.role,
       description: author.bio,
       image: `${BASE_URL}${author.photoUrl.replace(/\.webp$/, '.jpg')}`,
-      url: canonicalUrl,
+      url: profileUrl,
       sameAs: [author.linkedin],
       worksFor: {
         '@type': 'Organization',
@@ -91,8 +94,8 @@ export default function AuthorPageTemplate({ author, posts, loading }: AuthorPag
 
   return (
     <div className={base.page}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaProfile) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaProfile).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs).replace(/</g, '\\u003c') }} />
 
       <Header />
 
@@ -178,6 +181,7 @@ export default function AuthorPageTemplate({ author, posts, loading }: AuthorPag
                   currentPage={currentPage}
                   totalPages={totalPages}
                   onPageChange={handlePageChange}
+                  pageHref={(page) => blogPagePath(`/blog/autores/${author.slug}`, page)}
                   totalItems={authorPosts.length}
                   itemsPerPage={ITEMS_PER_PAGE}
                 />

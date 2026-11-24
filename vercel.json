@@ -2,10 +2,23 @@
   "rewrites": [
     {
       "source": "/((?!assets/|images/|api/|.*\\..*).*)",
-      "destination": "/index.html"
+      "destination": "/"
     }
   ],
   "headers": [
+    {
+      "source": "/rss.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/rss+xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=3600"
+        }
+      ]
+    },
     {
       "source": "/(assets|images)/(.*)",
       "headers": [
@@ -49,6 +62,29 @@
           "value": "strict-origin-when-cross-origin"
         }
       ]
+    }
+  ],
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/blog/categoria/florestal-fauna",
+      "destination": "/blog/categoria/fauna-flora",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categoria/residuos-solidos",
+      "destination": "/blog/categoria/pgrs-residuos",
+      "permanent": true
+    },
+    {
+      "source": "/blog/resgate-fauna-supressao-vegetal-obras",
+      "destination": "/blog/resgate-fauna-supressao-vegetal-requisitos-inema",
+      "permanent": true
+    },
+    {
+      "source": "/blog/inventario-florestal-asv-guia-completo",
+      "destination": "/blog/inventario-florestal-asv-supressao-vegetal-segura",
+      "permanent": true
     }
   ]
 }

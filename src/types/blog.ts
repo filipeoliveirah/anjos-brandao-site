@@ -30,6 +30,7 @@ export interface Post {
   slug: string
   excerpt: string
   publishedAt: string
+  modifiedAt?: string
   estimatedReadTime?: number
   featured?: boolean
   mainImage?: any

@@ -28,6 +28,8 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
       })
     : ''
 
+  const modifiedAt = post.modifiedAt && Date.parse(post.modifiedAt) > Date.parse(post.publishedAt) && Date.parse(post.modifiedAt) <= Date.now() ? post.modifiedAt : undefined
+
   const canonicalUrl = post.seo?.canonicalUrl || `${BASE_URL}/blog/${post.slug}`
   const primaryCategory = post.categories?.[0]
   const readTime = post.estimatedReadTime || 5
@@ -54,7 +56,7 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
     description: post.excerpt,
     image: [imageUrl.startsWith('http') ? imageUrl : `${BASE_URL}${imageUrl}`],
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    dateModified: modifiedAt || post.publishedAt,
     author: {
       '@type': 'Person',
       name: post.author?.name || 'Anjos Brandão',
@@ -95,8 +97,8 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
 
   return (
     <div className={styles.page}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaArticle) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaArticle).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs).replace(/</g, '\\u003c') }} />
 
       <Header />
 
@@ -144,6 +146,9 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
               <time dateTime={post.publishedAt} className={styles.metaItem}>
                 {formattedDate}
               </time>
+              {modifiedAt && (
+                <span className={styles.metaItem}>Atualizado em <time dateTime={modifiedAt}>{new Date(modifiedAt).toLocaleDateString('pt-BR')}</time></span>
+              )}
               <span className={styles.metaDot}>•</span>
               <span className={styles.metaItem}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

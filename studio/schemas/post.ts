@@ -35,6 +35,12 @@ export default {
       validation: (Rule: any) => Rule.required(),
     },
     {
+      name: 'modifiedAt',
+      title: 'Última atualização editorial relevante',
+      type: 'datetime',
+      description: 'Preencher somente quando o conteúdo for efetivamente atualizado. Não alterar a data original de publicação nem renovar datas em redeploys.',
+    },
+    {
       name: 'author',
       title: 'Autor / Responsável Técnico',
       type: 'reference',

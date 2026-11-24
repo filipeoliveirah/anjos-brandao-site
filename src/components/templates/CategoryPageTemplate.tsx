@@ -1,3 +1,4 @@
+import { blogPagePath, BLOG_PAGE_SIZE } from '../../lib/blogRoutes'
 import { useState, useMemo } from 'react'
 import Header from '../layout/Header/Header'
 import PostCard from '../blog/PostCard/PostCard'
@@ -8,20 +9,22 @@ import styles from './CategoryPageTemplate.module.css'
 
 interface CategoryPageTemplateProps {
   category: Category
+  initialPage?: number
   posts: Post[]
   allCategories: Category[]
 }
 
-const ITEMS_PER_PAGE = 6
+const ITEMS_PER_PAGE = BLOG_PAGE_SIZE
 const BASE_URL = 'https://www.anjosbrandao.eco.br'
 
 export default function CategoryPageTemplate({
   category,
   posts,
   allCategories,
+  initialPage = 1,
 }: CategoryPageTemplateProps) {
   const [searchQuery, setSearchQuery] = useState<string>('')
-  const [currentPage, setCurrentPage] = useState<number>(1)
+  const [currentPage, setCurrentPage] = useState<number>(initialPage)
 
   // Filtrar posts pertencentes a esta categoria
   const categoryPosts = useMemo(() => {
@@ -62,7 +65,7 @@ export default function CategoryPageTemplate({
     }
   }
 
-  const canonicalUrl = `${BASE_URL}/blog/categoria/${category.slug}`
+  const canonicalUrl = `${BASE_URL}${blogPagePath(`/blog/categoria/${category.slug}`, initialPage)}`
 
   const schemaBreadcrumbs = {
     '@context': 'https://schema.org',
@@ -84,8 +87,8 @@ export default function CategoryPageTemplate({
 
   return (
     <div className={styles.page}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaCollection) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaCollection).replace(/</g, '\\u003c') }} />
 
       <Header />
 
@@ -174,6 +177,7 @@ export default function CategoryPageTemplate({
                   currentPage={currentPage}
                   totalPages={totalPages}
                   onPageChange={handlePageChange}
+                  pageHref={searchQuery.trim() ? undefined : (page) => blogPagePath(`/blog/categoria/${category.slug}`, page)}
                   totalItems={filteredPosts.length}
                   itemsPerPage={ITEMS_PER_PAGE}
                 />
