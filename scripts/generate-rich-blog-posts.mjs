@@ -10,6 +10,7 @@ import { POST_26, POST_27, POST_28, POST_29, POST_30 } from './posts-26-to-30.mj
 import { POST_31, POST_32, POST_33 } from './posts-31-to-33.mjs'
 import { POST_34, POST_35, POST_36 } from './posts-34-to-36.mjs'
 import { POST_37, POST_38, POST_39 } from './posts-37-to-39.mjs'
+import { POST_40, POST_41, POST_42 } from './posts-40-to-42.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -657,7 +658,7 @@ export const RAW_RICH_POSTS = [
   },
 
   // ==========================================
-  // ARTIGOS 8 a 20: 100% CLAUDE-SEO E ALTA DENSIDADE (≥ 1.000 PALAVRAS CADA)
+  // ARTIGOS 8 a 20: ALTA DENSIDADE TÉCNICA (≥ 1.000 PALAVRAS CADA)
   // ==========================================
   POST_8,
   POST_9,
@@ -691,12 +692,18 @@ export const RAW_RICH_POSTS = [
   POST_37,
   POST_38,
   POST_39,
+  POST_40,
+  POST_41,
+  POST_42,
 ]
 
 // ==========================================
 // ORDENAÇÃO ALTERNADA: Cenário / Paisagem ↔ Pessoas em Campo
 // ==========================================
 const ALTERNATING_ORDER = [
+  "post-40", // [Cenário] SEIA fora do ar de 7/12 a 4/1 (Portaria INEMA 35.647/2026)
+  "post-41", // [Cenário] Pesquisa mineral exige licença ambiental (Itarantim)
+  "post-42", // [Cenário] Unidade de conservação e zona de amortecimento (Lei 15.190/2025)
   "post-37", // [Cenário] Chuvas extremas e plano de emergência (protocolo COP31)
   "post-38", // [Cenário] Loteamento sem registro e Lei 6.766/1979
   "post-39", // [Cenário] Supressão de Mata Atlântica, Lei 11.428/2006
@@ -738,7 +745,7 @@ const ALTERNATING_ORDER = [
   "post-6",  // [Pessoas] MTR Online e Resíduos Perigosos
 ]
 
-const baseDate = new Date("2026-11-16T18:00:00Z")
+const baseDate = new Date("2026-11-24T12:00:00Z")
 const rawMap = new Map(RAW_RICH_POSTS.map(p => [p._id, p]))
 
 export const RICH_POSTS = ALTERNATING_ORDER.map((id, index) => {

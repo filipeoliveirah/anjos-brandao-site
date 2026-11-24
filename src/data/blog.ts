@@ -142,13 +142,1469 @@ export const INITIAL_CATEGORIES: Category[] = [
 
 export const INITIAL_POSTS: PostDetail[] = [
   {
+    _id: 'post-40',
+    title: "SEIA Fora do Ar de 7 de Dezembro a 4 de Janeiro: Prazos Suspensos, Licenças Prorrogadas e o que Protocolar Antes no INEMA",
+    slug: "seia-suspenso-novo-seia-prazos-licencas-inema",
+    excerpt: "O INEMA suspende o SEIA e os prazos por 27 dias a partir de 7 de dezembro para implantar o Novo SEIA. Veja o que muda e o que protocolar antes da parada.",
+    publishedAt: '2026-11-24T12:00:00.000Z',
+    estimatedReadTime: 9,
+    featured: true,
+    mainImageUrl: '/images/blog/post-40-seia-suspenso-novo-seia-prazos-licencas-inema.webp',
+    mainImageAlt: "Mesa de trabalho de consultoria ambiental com pastas de processos, mapas e plantas de licenciamento",
+    mainImageCaption: "Processos, licenças e cadastros que dependem do SEIA precisam ser organizados antes de 7 de dezembro.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[0]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Sistema Estadual de Informações Ambientais e de Recursos Hídricos (SEIA), usado para licenciamento, autorizações, outorgas e cadastros ambientais na Bahia, ficará fora do ar a partir de "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "7 de dezembro de 2026",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ". A "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Portaria INEMA nº 35.647/2026",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ", de 9 de novembro e publicada no Diário Oficial do Estado de 10 de novembro, suspende os prazos administrativos do INEMA por 27 dias corridos a partir dessa data, retoma a contagem em 4 de janeiro de 2027 pelo período que faltava e prorroga automaticamente, até 4 de janeiro, as licenças, outorgas e autorizações cuja validade terminar durante a suspensão. A parada serve para migrar os dados do sistema atual para o Novo SEIA, com entrada em produção prevista para 4 de janeiro de 2027."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O INEMA também publicou a página \"Novo SEIA: notícias e orientações\", em 12 de novembro, e uma página de perguntas e respostas sobre a migração. Em 23 de novembro, segundo a assessoria do INEMA, os servidores começaram o ciclo de capacitação para operar o novo sistema. Este artigo explica o que a suspensão alcança, o que fica de fora e o que uma empresa licenciada na Bahia deve resolver antes de 7 de dezembro."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "A Portaria INEMA nº 35.647/2026 em resumo",
+                "text": "Art. 1º: suspensão dos prazos administrativos por 27 dias corridos, a partir de 7 de dezembro de 2026, incluídos os prazos de renovação de licença, licenciamento, outorga, autorizações e respostas a notificações. Retomada em 4 de janeiro de 2027, pelo período remanescente, considerado o tempo transcorrido até 6 de dezembro. A suspensão não alcança condicionantes de caráter permanente nem notificações que determinem medidas emergenciais ou imediatas. Art. 2º: licenças, outorgas e autorizações que expirarem durante a suspensão ficam prorrogadas até 4 de janeiro de 2027. Casos excepcionais são decididos pela Diretoria Geral do INEMA."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que Fica Indisponível Durante a Parada"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Segundo a página de perguntas e respostas do INEMA, durante a migração podem ficar indisponíveis a solicitação e o acompanhamento de processos, os requerimentos de licenciamento e de autorizações, os pedidos de outorga, as consultas e atualizações de cadastros e os serviços do CEFIR, o Cadastro Estadual Florestal de Imóveis Rurais. Na prática, quem precisar abrir um processo, juntar um documento, responder a uma notificação ou consultar o andamento de um pedido entre 7 de dezembro e 4 de janeiro não terá o sistema para isso."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/cefir-car-bahia-imovel-rural-asv-reserva-legal"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O CEFIR passa por uma mudança própria. De acordo com a assessoria do INEMA, na mesma data o cadastro estadual migra para o SICAR, o Sistema Nacional de Cadastro Ambiental Rural, mantido pelo governo federal, com estabilização estimada em três semanas. O Cadastro Ambiental Rural é obrigatório para todos os imóveis rurais pelo art. 29 da Lei nº 12.651/2012, o Código Florestal, e é exigido em pedidos de supressão de vegetação, em financiamentos rurais e na regularização de Reserva Legal. O funcionamento do CEFIR e sua relação com a "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "autorização de supressão de vegetação",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " estão explicados em outro artigo do blog."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Até 24 de novembro, o INEMA não havia divulgado um canal alternativo específico para protocolos durante a parada. A orientação oficial é antecipar tudo o que depender do sistema."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que a Suspensão de Prazos Alcança"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Pelo § 1º do art. 1º da portaria, a suspensão vale para os prazos dos procedimentos de renovação de licença, licenciamento, outorga e autorizações e para as respostas a notificações expedidas nesses processos. Um prazo suspenso não recomeça do zero: a contagem para em 7 de dezembro e volta a correr em 4 de janeiro pelo número de dias que ainda faltava. Uma empresa notificada a apresentar complementação de informações em 30 dias, que já tenha usado 20 dias até 6 de dezembro, terá os 10 dias restantes a partir de 4 de janeiro."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Prazos para responder a notificações e pedidos de complementação de informações em processos de licenciamento e outorga."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Prazos para apresentar estudos, relatórios e documentos solicitados pelo órgão no curso do processo."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Licenças, outorgas e autorizações cuja validade terminar entre 7 de dezembro e 4 de janeiro, que ficam prorrogadas até 4 de janeiro de 2027."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A prorrogação tem data certa para acabar. Uma licença que venceria em 20 de dezembro passa a valer até 4 de janeiro, e não mais do que isso, se não houver pedido de renovação em andamento. A partir de 5 de janeiro, a atividade estaria operando sem licença, o que configura infração administrativa e pode configurar o crime do art. 60 da Lei nº 9.605/1998, que pune quem faz funcionar estabelecimento potencialmente poluidor sem licença do órgão ambiental competente."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Renovação de Licença: a Regra dos 120 Dias Continua Valendo"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Lei Complementar nº 140/2011, no art. 14, § 4º, determina que a renovação de licenças ambientais seja requerida com antecedência mínima de 120 dias da expiração do prazo de validade. Quando o pedido é feito dentro desse prazo, a licença fica automaticamente prorrogada até a manifestação definitiva do órgão ambiental. A portaria do INEMA não altera essa regra. Ela apenas protege as licenças que vencerem no período da parada, e por pouco tempo."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/renovacao-licenca-operacao-lo-prazos-documentos-inema"
+                      },
+                      {
+                            "_key": "link_1",
+                            "_type": "link",
+                            "href": "/blog/outorga-recursos-hidricos-inema-bahia-captacao"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Por isso, o ponto mais importante para as empresas é conferir agora a data de vencimento de cada licença e outorga. Quem tem licença vencendo entre dezembro de 2026 e abril de 2027 deve verificar se a renovação já foi protocolada e, se não foi, protocolar antes de 7 de dezembro. Os documentos e o roteiro da renovação estão no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "renovação da licença de operação no INEMA",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ". Para a outorga de uso de recursos hídricos, a lógica é a mesma, e o artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "outorga de captação no INEMA",
+                            "marks": [
+                                  "link_1"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " detalha o processo."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que Resolver Antes de 7 de Dezembro"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A lista abaixo reúne as providências que dependem do SEIA e que uma empresa licenciada na Bahia deve tomar nas duas semanas que antecedem a parada. Ela vale para indústrias, construtoras, empreendimentos de energia, mineração, agronegócio e loteamentos."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Fazer o inventário de licenças, outorgas, autorizações e cadastros da empresa, com número do processo, data de emissão, data de vencimento e condicionantes em aberto."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Protocolar as renovações de licenças e outorgas que vencem nos próximos 120 dias, para garantir a prorrogação automática prevista na Lei Complementar nº 140/2011."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Responder notificações e pedidos de complementação que estejam abertos, sem esperar a suspensão dos prazos."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Baixar e arquivar cópias das licenças, portarias, pareceres, relatórios de condicionantes e comprovantes de protocolo, para consulta durante a parada e para conferência depois da migração."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Atualizar o CEFIR dos imóveis rurais e conferir se o cadastro está ativo, já que ele migra para o SICAR na mesma data."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Antecipar pedidos de autorização de supressão de vegetação e de outras autorizações necessárias para obras previstas para dezembro e janeiro."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Registrar no controle interno da empresa que os prazos ficam suspensos de 7 de dezembro a 4 de janeiro, com a nova data de cada prazo processual."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/inventario-florestal-asv-supressao-vegetal-segura"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Obras que começariam em dezembro e que ainda dependem de licença de instalação ou de autorização de supressão merecem atenção especial. Sem o sistema, não há como protocolar o pedido nem acompanhar a análise, e o cronograma da obra pode ficar parado até janeiro. O artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "inventário florestal e ASV",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " mostra o que é exigido para a supressão."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Condicionantes Continuam Obrigatórias"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O § 3º do art. 1º da portaria é expresso: a suspensão não alcança o cumprimento de condicionantes de caráter permanente nem os prazos de notificações que determinem medidas emergenciais ou imediatas de monitoramento, prevenção ou mitigação de impactos. As obrigações de operação da licença continuam: monitoramento de efluentes, controle de emissões, gerenciamento de resíduos, programas ambientais e demais condicionantes continuam sendo executados normalmente. O que pode mudar é apenas a forma de entregar ao órgão relatórios que seriam enviados pelo sistema durante a parada. A recomendação é manter os registros datados e enviar os relatórios assim que o Novo SEIA estiver disponível, ou antes de 7 de dezembro, quando possível."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Lei Estadual nº 10.431/2006, que institui a Política de Meio Ambiente da Bahia, e o Decreto Estadual nº 14.024/2012, que a regulamenta, sustentam as condicionantes das licenças emitidas pelo INEMA. O descumprimento de condicionante é infração autônoma, mesmo que nenhum dano ambiental tenha ocorrido, e a fiscalização não depende do sistema estar no ar."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Depois de 4 de Janeiro: Conferir a Migração"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Segundo o INEMA, o Novo SEIA foi organizado em 29 módulos e vai integrar serviços de licenciamento, fiscalização, recursos hídricos e cadastros, com ligação a outras plataformas do governo. Uma migração desse porte exige conferência. Assim que o sistema entrar em produção, a empresa deve acessar seus processos e confirmar se estão corretos os dados do empreendimento, os números dos processos, as licenças vigentes, as condicionantes e os prazos que voltaram a correr."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Conferir se todos os processos da empresa aparecem no Novo SEIA, com a mesma numeração e situação."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Comparar as licenças e outorgas exibidas com as cópias arquivadas antes da parada."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Recalcular os prazos processuais a partir de 4 de janeiro e registrar qualquer divergência por escrito ao INEMA."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Atualizar os acessos dos responsáveis técnicos e dos representantes legais cadastrados no sistema."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "Atenção ao cronograma",
+                "text": "O INEMA informa que as datas podem ser ajustadas. Acompanhe a página \"Novo SEIA: notícias e orientações\" e não deixe para a última semana de novembro o que depende do sistema. Uma licença que vence na parada só está protegida até 4 de janeiro de 2027; depois dessa data, vale a regra geral de renovação da Lei Complementar nº 140/2011."
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/guia-licenciamento-ambiental-inema-bahia"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Para quem está começando um licenciamento agora, o "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "guia do licenciamento ambiental no INEMA",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " resume as modalidades de licença e as etapas do processo na Bahia."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Anjos Brandão Organiza o Seu Calendário Antes da Parada"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A equipe técnica da Anjos Brandão faz o levantamento das licenças, outorgas e cadastros da sua empresa, protocola renovações e respostas pendentes antes de 7 de dezembro e acompanha a migração dos processos para o Novo SEIA. "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Fale com a nossa equipe",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e revise hoje os prazos da sua empresa."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "SEIA Fora do Ar de 7/12 a 4/1: Prazos e Licenças no INEMA",
+      metaDescription: "A Portaria INEMA 35.647/2026 suspende prazos por 27 dias e prorroga licenças até 4/1/2027. Veja o que protocolar no SEIA antes de 7 de dezembro.",
+      keywords: ["seia inema suspensão","novo seia bahia","portaria inema 35.647","prazos licenciamento inema dezembro","renovação de licença ambiental bahia","cefir sicar migração","consultoria ambiental bahia"],
+    },
+  },
+  {
+    _id: 'post-41',
+    title: "Pesquisa Mineral Exige Licença Ambiental: a Liminar de Itarantim e o que o Alvará da ANM Não Autoriza",
+    slug: "pesquisa-mineral-licenca-ambiental-inema-itarantim",
+    excerpt: "A Justiça suspendeu pesquisa de terras raras sem licença ambiental em serras de Itarantim, na Bahia. Veja o que o alvará da ANM autoriza e o que exige licença.",
+    publishedAt: '2026-11-22T12:00:00.000Z',
+    estimatedReadTime: 9,
+    featured: false,
+    mainImageUrl: '/images/blog/post-41-pesquisa-mineral-licenca-ambiental-inema-itarantim.webp',
+    mainImageAlt: "Sonda de pesquisa mineral instalada em encosta de serra com vegetação nativa e curso d’água ao fundo",
+    mainImageCaption: "Sondagens, acessos e uso de água em campanha de pesquisa mineral dependem de licença e autorizações ambientais.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[0], INITIAL_CATEGORIES[2]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "pesquisa mineral exige licença ambiental",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ", e o alvará de pesquisa emitido pela Agência Nacional de Mineração (ANM) não substitui essa licença. Em 13 de novembro de 2026, a Justiça da Bahia concedeu liminar em ação civil pública do Ministério Público do Estado da Bahia (MPBA) e determinou que quatro empresas de um mesmo grupo econômico, ligadas a um projeto de terras raras, parassem imediatamente as atividades de pesquisa, prospecção e intervenção em serras da zona rural de Itarantim, no sudoeste do estado. A decisão foi divulgada pelo MPBA em 20 de novembro."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Segundo o Ministério Público, as atividades ocorriam nas serras de Mandim e Água Vermelha e nas regiões de Três Pontas, Palmeiras, Córgão e Jundiá, áreas transformadas em monumentos naturais pela Lei Municipal nº 010, de 28 de agosto de 2025, sem licença ambiental válida. O caso reúne três pontos que toda empresa de mineração precisa conferir antes de levar uma sonda a campo: a licença ambiental da pesquisa, as unidades de conservação na área e as restrições criadas por lei municipal."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "O que a liminar determinou, segundo o MPBA",
+                "text": "Paralisação imediata de pesquisa, prospecção, intervenções e extração nas áreas. Retirada de máquinas, equipamentos e veículos em até 5 dias. Restabelecimento do fluxo natural dos cursos d’água afetados. Apresentação, em até 15 dias, de inventário georreferenciado das intervenções feitas desde 2023. Multa de R$ 50 mil por dia, por empresa, em caso de descumprimento. Trata-se de decisão liminar, sujeita a recurso."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Caso de Itarantim"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Na ação civil pública, o Ministério Público sustenta que os trabalhos ameaçavam nascentes e mananciais que abastecem Itarantim e cursos d’água da bacia do Rio Pardo, e que as empresas não atenderam a uma notificação municipal para suspender as atividades. A lei municipal que criou os monumentos naturais, segundo o MPBA, proíbe qualquer atividade de exploração mineral nessas áreas, inclusive pesquisa e prospecção. O jornal Brasil de Fato, em reportagem de 23 de novembro, informou que a decisão registra que as empresas não tinham licenciamento ambiental do INEMA e que o alvará de pesquisa da ANM não as dispensava de cumprir a legislação estadual e municipal."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A decisão é provisória e o processo continua. O interesse do caso para as empresas não está no desfecho, mas no que ele mostra sobre a ordem das autorizações na mineração: título minerário, licença ambiental e respeito às restrições territoriais são exigências independentes, e a falta de qualquer uma delas permite que a atividade seja paralisada."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que o Alvará de Pesquisa da ANM Autoriza"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Código de Mineração, Decreto-Lei nº 227/1967, define a pesquisa mineral como a execução dos trabalhos necessários à definição da jazida, à sua avaliação e à determinação da viabilidade do seu aproveitamento econômico. Esses trabalhos incluem levantamentos geológicos, geoquímicos e geofísicos, abertura de escavações, sondagens e ensaios de beneficiamento. A autorização de pesquisa, formalizada no alvará, é outorgada pela ANM e confere ao titular o direito de pesquisar a área para fins minerários."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O alvará é um título minerário. Ele resolve a relação entre a empresa e a União, proprietária dos recursos minerais pelo art. 20, IX, da Constituição. Ele não avalia o impacto ambiental das sondagens, não autoriza supressão de vegetação, não concede direito de uso de água e não afasta restrições de uso do solo. Essas matérias são do órgão ambiental, do órgão gestor de recursos hídricos e do município."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Alvará de pesquisa: título emitido pela ANM que autoriza a pesquisa mineral na área requerida."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Guia de Utilização: autorização da ANM para extração de substâncias minerais antes da concessão de lavra, em caráter excepcional, observada a legislação ambiental, nos termos do art. 22, § 2º, do Código de Mineração."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Licença ambiental: emitida pelo órgão ambiental competente, que na Bahia é, em regra, o INEMA, conforme a Lei Complementar nº 140/2011."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Outorga e autorização de supressão: exigidas quando a campanha usa água de rios ou poços ou abre acessos e praças de sondagem em vegetação nativa."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Quando a Pesquisa Mineral Exige Licença Ambiental"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Resolução CONAMA nº 237/1997 relaciona, no Anexo 1, as atividades sujeitas ao licenciamento ambiental, e inclui a pesquisa mineral com guia de utilização no grupo de extração e tratamento de minerais. A lista é exemplificativa: o art. 2º da mesma resolução submete ao licenciamento qualquer empreendimento ou atividade capaz de causar degradação ambiental. Uma campanha de sondagem com abertura de acessos, praças de perfuração, uso de água, geração de lama de perfuração e circulação de máquinas em área de nascentes se enquadra nessa hipótese."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Constituição, no art. 225, § 2º, obriga quem explora recursos minerais a recuperar o meio ambiente degradado, de acordo com solução técnica exigida pelo órgão público competente. Na Bahia, a Lei Estadual nº 10.431/2006 e o Decreto Estadual nº 14.024/2012 definem o enquadramento das atividades e as modalidades de licença emitidas pelo INEMA. A consulta prévia ao órgão, com a descrição da campanha, indica se a atividade exige licença, autorização específica ou se está dispensada."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/pca-rca-licenciamento-mineracao-industria-inema"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Pesquisar sem licença tem consequência penal. O art. 55 da Lei nº 9.605/1998 tipifica como crime executar pesquisa, lavra ou extração de recursos minerais sem a competente autorização, permissão, concessão ou licença, ou em desacordo com a obtida, com pena de detenção de seis meses a um ano e multa. Se houver dano a unidade de conservação, aplica-se também o art. 40 da mesma lei. Os documentos exigidos no licenciamento da mineração, como PCA e RCA, estão explicados no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "licenciamento de mineração no INEMA",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Unidade de Conservação Municipal Também Restringe a Mineração"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O Monumento Natural é uma das categorias de unidade de conservação de proteção integral previstas no art. 8º da Lei nº 9.985/2000, a Lei do SNUC. Seu objetivo, pelo art. 12, é preservar sítios naturais raros, singulares ou de grande beleza cênica, e ele pode ser formado por áreas particulares, desde que o uso da terra pelos proprietários seja compatível com esse objetivo. Unidades de proteção integral admitem apenas uso indireto dos recursos naturais, o que, em regra, exclui a pesquisa com sondagens e a lavra."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/unidade-conservacao-zona-amortecimento-licenciamento"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Municípios podem criar unidades de conservação, e muitas serras, lagoas e cachoeiras da Bahia estão protegidas por leis municipais que não aparecem nas bases federais. Por isso, a investigação da área antes da pesquisa deve incluir as unidades federais, estaduais e municipais e suas zonas de amortecimento. O tema é tratado em detalhe no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "unidade de conservação e zona de amortecimento no licenciamento",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Terras Raras na Bahia e o Aumento dos Pedidos de Pesquisa"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Os minerais de terras raras, usados em ímãs permanentes de motores elétricos e turbinas eólicas, passaram a atrair investimento de pesquisa em vários estados, e a Bahia está entre eles. Mais pedidos de pesquisa significam mais campanhas de campo em áreas rurais, muitas delas em serras com nascentes, vegetação de Mata Atlântica ou Caatinga e comunidades próximas. Quanto maior o interesse econômico, maior a atenção do Ministério Público, dos municípios e dos órgãos ambientais sobre a forma como essas campanhas são feitas."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que Conferir Antes da Campanha de Campo"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Levantar unidades de conservação federais, estaduais e municipais, zonas de amortecimento, áreas de preservação permanente e leis municipais de uso do solo na poligonal do alvará."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Consultar o INEMA sobre o enquadramento da campanha e obter a licença ou a manifestação de dispensa antes de mobilizar equipamentos."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Pedir outorga ou dispensa de outorga para a água usada nas sondagens e autorização de supressão de vegetação para acessos e praças de perfuração."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Comunicar o município e registrar as respostas, principalmente quando houver notificação ou lei local sobre a área."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Planejar o controle da lama de perfuração, dos resíduos e da drenagem, e a recuperação das áreas de sondagem ao final da campanha."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/bioengenharia-solos-prad-recuperacao-taludes-cavas"
+                      },
+                      {
+                            "_key": "link_1",
+                            "_type": "link",
+                            "href": "/blog/inventario-florestal-asv-supressao-vegetal-segura"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A recuperação das áreas abertas para sondagem e acessos pode exigir Plano de Recuperação de Áreas Degradadas. Técnicas de estabilização de taludes e revegetação estão no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "bioengenharia de solos e PRAD",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ", e a supressão de vegetação para acessos segue o roteiro do artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "inventário florestal e ASV",
+                            "marks": [
+                                  "link_1"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "Título minerário não é licença",
+                "text": "Alvará de pesquisa, Guia de Utilização e concessão de lavra são atos da ANM. Nenhum deles dispensa a licença ambiental, a outorga de recursos hídricos, a autorização de supressão de vegetação ou o respeito a unidades de conservação e leis municipais. A falta de qualquer um desses atos permite a paralisação da atividade, multa administrativa e responsabilização penal."
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Pesquisa Mineral com Licença e Sem Surpresa no Campo"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Anjos Brandão faz o diagnóstico territorial da área do alvará, identifica unidades de conservação e restrições municipais, conduz o licenciamento da campanha de pesquisa no INEMA, a outorga e a ASV e acompanha a recuperação das áreas de sondagem. "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Fale com a nossa equipe técnica",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " antes de mobilizar a sonda."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Pesquisa Mineral Exige Licença Ambiental: Caso Itarantim",
+      metaDescription: "A Justiça suspendeu pesquisa de terras raras sem licença em Itarantim (BA). Veja o que o alvará da ANM autoriza e quando a pesquisa exige licença do INEMA.",
+      keywords: ["pesquisa mineral licença ambiental","alvará de pesquisa anm licença","terras raras itarantim","licenciamento mineração inema","guia de utilização licenciamento","monumento natural mineração","consultoria ambiental bahia"],
+    },
+  },
+  {
+    _id: 'post-42',
+    title: "Unidade de Conservação no Licenciamento: o Órgão Gestor Agora se Manifesta, e a Zona de Amortecimento Continua Valendo",
+    slug: "unidade-conservacao-zona-amortecimento-licenciamento",
+    excerpt: "Com a Lei Geral do Licenciamento, o órgão gestor da unidade de conservação deixou de autorizar a licença e passou a se manifestar. Veja o que mudou e o que continua.",
+    publishedAt: '2026-11-20T12:00:00.000Z',
+    estimatedReadTime: 9,
+    featured: false,
+    mainImageUrl: '/images/blog/post-42-unidade-conservacao-zona-amortecimento-licenciamento.webp',
+    mainImageAlt: "Vista aérea de serra com vegetação nativa preservada e limite com área agrícola e estrada ao fundo",
+    mainImageCaption: "O entorno de uma unidade de conservação pode estar sujeito a normas e restrições específicas da zona de amortecimento.",
+    author: {
+      name: 'Coordenação Técnica Anjos Brandão',
+      role: 'Equipe de Engenharia e Consultoria Ambiental',
+      bio: 'Especialistas em coordenação ambiental integrada para construção civil, infraestrutura e indústria em toda a Bahia.',
+      linkedin: 'https://www.linkedin.com/company/anjos-brandao-solucoes-ambientais',
+    },
+    categories: [INITIAL_CATEGORIES[0], INITIAL_CATEGORIES[3]],
+    body: [
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Na "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "unidade de conservação, o licenciamento",
+                            "marks": [
+                                  "strong"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " mudou de regra com a Lei nº 15.190/2025, a Lei Geral do Licenciamento Ambiental. Antes, o licenciamento de empreendimento de significativo impacto que afetasse uma unidade de conservação ou sua zona de amortecimento só podia ser concedido com autorização do órgão responsável pela administração da unidade. Agora, esse órgão participa do processo como autoridade envolvida: ele se manifesta, em prazo definido, e a manifestação não vincula a decisão do órgão licenciador."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/pesquisa-mineral-licenca-ambiental-inema-itarantim"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A mudança não eliminou as restrições das unidades de conservação. O plano de manejo, as proibições da Lei nº 9.985/2000, a Lei do SNUC, a compensação ambiental e o crime de dano a unidade de conservação continuam valendo. O caso das serras de Itarantim, em que a Justiça da Bahia suspendeu uma pesquisa de terras raras em áreas transformadas em monumentos naturais por lei municipal, mostra que a presença de uma unidade pode paralisar uma atividade. O caso está no artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "pesquisa mineral e licença ambiental",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": ". Este guia explica as regras atuais e o que o empreendedor deve verificar antes de pedir a licença."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "info",
+                "title": "O que mudou com a Lei nº 15.190/2025",
+                "text": "Art. 61: nova redação do art. 36, § 3º, da Lei nº 9.985/2000, sem a exigência de autorização do órgão gestor; a unidade afetada continua beneficiária da compensação ambiental. Art. 3º, III: o órgão gestor é autoridade envolvida e pode se manifestar sobre os impactos. Arts. 43, III, e 44, III: a participação ocorre quando houver unidade de conservação ou zona de amortecimento na área diretamente afetada, exceto APA. Art. 42, I, e art. 44, § 6º: a manifestação não vincula a decisão. Art. 44, § 4º: a ausência de manifestação no prazo não impede o andamento do licenciamento nem a emissão da licença."
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Unidade de Conservação e Zona de Amortecimento: os Conceitos"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Lei do SNUC divide as unidades de conservação em dois grupos. As de proteção integral, listadas no art. 8º, são a Estação Ecológica, a Reserva Biológica, o Parque, o Monumento Natural e o Refúgio de Vida Silvestre, e admitem apenas o uso indireto dos recursos naturais. As de uso sustentável incluem a Área de Proteção Ambiental (APA), a Área de Relevante Interesse Ecológico, a Floresta Nacional, a Reserva Extrativista, a Reserva de Fauna, a Reserva de Desenvolvimento Sustentável e a Reserva Particular do Patrimônio Natural (RPPN). Unidades podem ser criadas pela União, pelos estados e pelos municípios."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A zona de amortecimento é definida no art. 2º, XVIII, da lei como o entorno de uma unidade de conservação, onde as atividades humanas estão sujeitas a normas e restrições específicas, com o propósito de minimizar os impactos negativos sobre a unidade. Pelo art. 25, todas as unidades devem ter zona de amortecimento, exceto a APA e a RPPN. Os limites e as regras dessa zona são fixados no ato de criação da unidade ou depois, em geral no plano de manejo."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O art. 28 proíbe, nas unidades de conservação, quaisquer alterações, atividades ou modalidades de uso em desacordo com seus objetivos, com o plano de manejo e com seus regulamentos. É essa regra, e não o licenciamento, que impede atividades incompatíveis dentro das unidades de proteção integral."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que Mudou: de Autorização para Manifestação"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A redação original do art. 36, § 3º, da Lei do SNUC dizia que, quando o empreendimento afetasse unidade de conservação específica ou sua zona de amortecimento, o licenciamento só poderia ser concedido mediante autorização do órgão responsável por sua administração. A Resolução CONAMA nº 428/2010 regulamentava esse procedimento. O art. 61 da Lei nº 15.190/2025 deu nova redação ao parágrafo, que passou a tratar apenas da compensação: a unidade afetada, mesmo que não seja de proteção integral, deve ser uma das beneficiárias da compensação ambiental."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Em lugar da autorização, a lei criou a figura da autoridade envolvida, definida no art. 3º, III, como o órgão que pode se manifestar no licenciamento sobre os impactos do empreendimento em terras indígenas, territórios quilombolas, patrimônio cultural e unidades de conservação. Os dispositivos sobre o caráter não vinculante e sobre o andamento do processo sem manifestação foram vetados na sanção da lei e restabelecidos depois que o Congresso Nacional derrubou o veto."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Termo de referência: as autoridades envolvidas têm até 30 dias para se manifestar, prorrogáveis por 15 dias com justificativa (art. 43, § 1º). Sem manifestação, o órgão licenciador usa o termo de referência padrão da autoridade."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Estudos ambientais: o prazo é de até 90 dias para manifestação sobre o EIA/Rima e de até 30 dias nos demais casos, com prorrogação de até 30 e 15 dias, respectivamente (art. 44, §§ 2º e 3º)."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Manifestação fora do prazo: é avaliada na fase em que o processo estiver (art. 44, § 5º)."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Condicionantes propostas sem justificativa técnica: o órgão licenciador pode pedir que a autoridade justifique ou reconsidere em 10 dias (art. 44, § 7º)."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/lei-geral-licenciamento-15190-stf-adi-empresas-bahia"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A lei está em vigor e produz efeitos desde fevereiro de 2026. Ações no Supremo Tribunal Federal questionam ou defendem dispositivos da lei, e a redução da participação de órgãos como a Funai e a Fundação Palmares está entre os pontos impugnados. Uma decisão do STF pode alterar o regime descrito neste artigo. O andamento das ações está resumido no artigo sobre a "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Lei Geral do Licenciamento e o STF",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": "."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que Não Mudou"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "As proibições do art. 28 da Lei do SNUC e as regras do plano de manejo continuam valendo dentro das unidades e, quando definidas, na zona de amortecimento."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Licença por Adesão e Compromisso não pode ser usada para atividades no interior de unidades de conservação, exceto em APA (art. 22, IV, \"e\", da Lei nº 15.190/2025, incluído pela Lei nº 15.300/2025)."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A unidade afetada continua beneficiária da compensação ambiental dos empreendimentos de significativo impacto (art. 36 da Lei do SNUC)."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Causar dano direto ou indireto a unidade de conservação é crime, com pena de reclusão de um a cinco anos (art. 40 da Lei nº 9.605/1998)."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A competência para licenciar dentro de unidades segue a Lei Complementar nº 140/2011: a União licencia em unidades federais, o estado em unidades estaduais e o município em unidades municipais, exceto em APA."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Na prática, a manifestação do órgão gestor deixou de ser um veto, mas continua pesando. Ela deve ser considerada pelo órgão licenciador, pode resultar em condicionantes e fica registrada no processo, à disposição do Ministério Público e do Judiciário. Um empreendimento licenciado contra uma manifestação técnica fundamentada do órgão gestor fica mais exposto a ações civis públicas."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Unidades de Conservação na Bahia"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Bahia tem unidades federais, como o Parque Nacional da Chapada Diamantina, administrado pelo ICMBio; unidades estaduais, administradas pelo INEMA, entre elas várias APAs no litoral; e um número crescente de unidades municipais criadas por lei local, como os monumentos naturais de Itarantim. As unidades municipais são as mais difíceis de identificar, porque nem sempre constam das bases federais e estaduais. Uma área que parece livre no mapa nacional pode estar dentro de um monumento natural ou de um parque municipal."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "h2",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O que Verificar Antes de Pedir a Licença"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Consultar o Cadastro Nacional de Unidades de Conservação, mantido pelo Ministério do Meio Ambiente, as bases do INEMA e a legislação do município onde fica o empreendimento."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Identificar a categoria de cada unidade próxima, o órgão gestor, o ato de criação e se existe zona de amortecimento definida."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Ler o plano de manejo e o zoneamento da unidade, que podem proibir ou condicionar a atividade pretendida."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Incluir no cronograma os prazos de manifestação das autoridades envolvidas: 30 dias no termo de referência e até 90 dias no EIA/Rima, mais prorrogações."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Apresentar o projeto ao órgão gestor antes do protocolo, para incorporar medidas de mitigação e reduzir o risco de condicionantes e contestações."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "bullet",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Prever a compensação ambiental e o controle de impactos indiretos, como drenagem, ruído, iluminação, tráfego e supressão de vegetação no entorno."
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/blog/eia-rima-audiencia-publica-inema-bahia-licenca-previa"
+                      },
+                      {
+                            "_key": "link_1",
+                            "_type": "link",
+                            "href": "/blog/compensacao-ambiental-inema-reserva-legal-tcra"
+                      },
+                      {
+                            "_key": "link_2",
+                            "_type": "link",
+                            "href": "/blog/corredores-ecologicos-planejamento-loteamentos-residenciais"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "O roteiro do "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "EIA/RIMA e da audiência pública no INEMA",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " e as regras de "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "compensação ambiental",
+                            "marks": [
+                                  "link_1"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " estão em outros artigos do blog. Para loteamentos próximos a fragmentos de vegetação, o artigo sobre "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "corredores ecológicos",
+                            "marks": [
+                                  "link_2"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " mostra como integrar a conexão entre áreas protegidas ao projeto."
+                      }
+                ]
+          },
+          {
+                "_type": "callout",
+                "type": "alert",
+                "title": "Manifestação não vinculante não é dispensa",
+                "text": "A Lei nº 15.190/2025 retirou a exigência de autorização do órgão gestor, mas não liberou atividades dentro de unidades de conservação nem afastou o plano de manejo, a zona de amortecimento, a compensação ambiental e a responsabilidade penal por dano. Leis municipais que criam unidades também precisam ser verificadas, porque podem proibir atividades na área."
+          },
+          {
+                "_type": "block",
+                "style": "h3",
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "Diagnóstico Territorial Antes do Projeto"
+                      }
+                ]
+          },
+          {
+                "_type": "block",
+                "style": "normal",
+                "markDefs": [
+                      {
+                            "_key": "link_0",
+                            "_type": "link",
+                            "href": "/#contato"
+                      }
+                ],
+                "children": [
+                      {
+                            "_type": "span",
+                            "text": "A Anjos Brandão identifica as unidades de conservação federais, estaduais e municipais e as zonas de amortecimento que alcançam a sua área, analisa os planos de manejo e conduz o diálogo com os órgãos gestores e o licenciamento no INEMA. "
+                      },
+                      {
+                            "_type": "span",
+                            "text": "Fale com a nossa equipe técnica",
+                            "marks": [
+                                  "link_0"
+                            ]
+                      },
+                      {
+                            "_type": "span",
+                            "text": " antes de definir o local do empreendimento."
+                      }
+                ]
+          }
+    ],
+    seo: {
+      metaTitle: "Unidade de Conservação no Licenciamento: Lei 15.190/2025",
+      metaDescription: "A Lei Geral do Licenciamento trocou a autorização do órgão gestor da UC por manifestação não vinculante. Veja prazos, zona de amortecimento e o que continua.",
+      keywords: ["unidade de conservação licenciamento","zona de amortecimento licenciamento","lei 15.190 unidade de conservação","autorização órgão gestor uc","snuc art 36 compensação","monumento natural bahia","consultoria ambiental bahia"],
+    },
+  },
+  {
     _id: 'post-37',
     title: "Chuvas Extremas e Plano de Emergência na Indústria: o Protocolo Lançado na COP31 e as Obrigações na Bahia",
     slug: "plano-emergencia-chuvas-extremas-industria-cop31-bahia",
     excerpt: "SESI e Ministério da Saúde lançaram na COP31 um protocolo para chuvas e tempestades na indústria. Veja o que a NR-1 e a licença ambiental já exigem na Bahia.",
-    publishedAt: '2026-11-16T18:00:00.000Z',
+    publishedAt: '2026-11-18T12:00:00.000Z',
     estimatedReadTime: 9,
-    featured: true,
+    featured: false,
     mainImageUrl: '/images/blog/post-37-chuvas-extremas-plano-emergencia-industria.webp',
     mainImageAlt: "Pátio industrial alagado sob céu carregado de chuva, com galpões, tanques de armazenamento e canaletas de drenagem transbordando",
     mainImageCaption: "Drenagem, contenção de tanques e armazenamento de resíduos definem o dano ambiental de uma chuva extrema dentro da planta.",
@@ -646,7 +2102,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Loteamento Sem Registro Não Pode Vender Lotes: a Lei 6.766/1979 e o Licenciamento na Bahia",
     slug: "loteamento-sem-licenca-venda-lotes-lei-6766-bahia",
     excerpt: "Reportagem sobre pré-venda de 400 lotes na Chapada Diamantina expõe a regra: sem aprovação, licença e registro, loteamento não pode vender nem reservar lotes.",
-    publishedAt: '2026-11-14T18:00:00.000Z',
+    publishedAt: '2026-11-16T12:00:00.000Z',
     estimatedReadTime: 9,
     featured: false,
     mainImageUrl: '/images/blog/post-38-loteamento-licenca-registro-lei-6766.webp',
@@ -1098,7 +2554,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Supressão de Mata Atlântica na Bahia: Estágio Sucessional, Autorização e Compensação pela Lei 11.428/2006",
     slug: "supressao-mata-atlantica-lei-11428-estagio-sucessional-bahia",
     excerpt: "Na Mata Atlântica, o estágio de regeneração define se a supressão é permitida. Veja a Lei 11.428/2006, a CONAMA 5/1994 da Bahia e a compensação obrigatória.",
-    publishedAt: '2026-11-12T18:00:00.000Z',
+    publishedAt: '2026-11-14T12:00:00.000Z',
     estimatedReadTime: 9,
     featured: false,
     mainImageUrl: '/images/blog/post-39-mata-atlantica-supressao-estagio-sucessional.webp',
@@ -1580,7 +3036,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "COP31 em Antalya e a Portaria 3.199/2026: o Calendário do Mercado Regulado de Carbono para Empresas na Bahia",
     slug: "cop31-antalya-sbce-portaria-3199-mercado-carbono-bahia",
     excerpt: "A COP31 começou em 9 de novembro e o SBCE já tem calendário: o primeiro grupo de setores entrega plano de monitoramento em 2027. Veja o que muda na Bahia.",
-    publishedAt: '2026-11-10T18:00:00.000Z',
+    publishedAt: '2026-11-12T12:00:00.000Z',
     estimatedReadTime: 9,
     featured: false,
     mainImageUrl: '/images/blog/post-34-cop31-sbce-mercado-carbono-bahia.webp',
@@ -2028,7 +3484,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Queima Controlada Suspensa na Bahia até 31 de Dezembro: o que a Portaria INEMA nº 35.277/2026 Proíbe e Como Evitar Autuação",
     slug: "queima-controlada-suspensa-bahia-portaria-inema-35277-dqc",
     excerpt: "O INEMA suspendeu a Declaração de Queima Controlada até 31/12/2026. Veja o que a portaria proíbe, as multas por hectare e como proteger o imóvel e a obra.",
-    publishedAt: '2026-11-08T18:00:00.000Z',
+    publishedAt: '2026-11-10T12:00:00.000Z',
     estimatedReadTime: 9,
     featured: false,
     mainImageUrl: '/images/blog/post-35-queima-controlada-suspensa-bahia.webp',
@@ -2432,7 +3888,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Lei Geral do Licenciamento Ambiental em Vigor e em Julgamento no STF: o que Vale Hoje para Empresas na Bahia",
     slug: "lei-geral-licenciamento-15190-stf-adi-empresas-bahia",
     excerpt: "A Lei 15.190/2025 está em vigor e nenhum dispositivo foi suspenso, mas o STF julga cinco ações contra ela. Veja o que vale hoje e como licenciar com segurança.",
-    publishedAt: '2026-11-06T18:00:00.000Z',
+    publishedAt: '2026-11-08T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-36-lei-geral-licenciamento-stf.webp',
@@ -2845,7 +4301,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "CEFIR e CAR na Bahia: o Cadastro do Imóvel Rural é Condição para a ASV, o Crédito Rural e a Regularização",
     slug: "cefir-car-bahia-imovel-rural-asv-reserva-legal",
     excerpt: "O INEMA só autoriza supressão de vegetação, e o banco só libera crédito rural, para imóvel inscrito no CEFIR. Veja o que o cadastro exige na Bahia.",
-    publishedAt: '2026-11-04T18:00:00.000Z',
+    publishedAt: '2026-11-06T12:00:00.000Z',
     estimatedReadTime: 9,
     featured: false,
     mainImageUrl: '/images/blog/post-31-cefir-car-imovel-rural-bahia.webp',
@@ -3302,7 +4758,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Lançamento de Efluentes na Bahia: Padrões da CONAMA 430/2011, Outorga de Diluição e Automonitoramento",
     slug: "lancamento-efluentes-conama-430-outorga-inema-bahia",
     excerpt: "Todo lançamento de efluente em rio, mar ou rede pública tem padrão, licença e monitoramento obrigatórios. Veja o que a CONAMA 430/2011 e o INEMA exigem.",
-    publishedAt: '2026-11-02T18:00:00.000Z',
+    publishedAt: '2026-11-04T12:00:00.000Z',
     estimatedReadTime: 9,
     featured: false,
     mainImageUrl: '/images/blog/post-32-lancamento-efluentes-conama-430-bahia.webp',
@@ -3688,7 +5144,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Inventário de Gases de Efeito Estufa: o que a Lei 15.042/2024 e a Resolução CVM 193 Exigem das Empresas na Bahia",
     slug: "inventario-gases-efeito-estufa-sbce-lei-15042-cvm-193-bahia",
     excerpt: "A Lei 15.042/2024 obriga quem emite mais de 10 mil tCO2e por ano a monitorar e relatar emissões. Veja as obrigações e o impacto em fornecedores na Bahia.",
-    publishedAt: '2026-10-31T18:00:00.000Z',
+    publishedAt: '2026-11-02T12:00:00.000Z',
     estimatedReadTime: 9,
     featured: false,
     mainImageUrl: '/images/blog/post-33-inventario-gee-sbce-bahia.webp',
@@ -4082,7 +5538,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "EIA/RIMA e Audiência Pública no INEMA: Quando São Exigidos e Como Evitar Atrasos na LP",
     slug: "eia-rima-audiencia-publica-inema-bahia-licenca-previa",
     excerpt: "Entenda quando o INEMA exige EIA/RIMA, como funciona a audiência pública e o que trava a Licença Prévia de grandes empreendimentos na Bahia. Fale conosco.",
-    publishedAt: '2026-10-29T18:00:00.000Z',
+    publishedAt: '2026-10-31T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-26-eia-rima-audiencia-publica-inema-bahia.webp',
@@ -4426,7 +5882,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "TCFA, CTF e RAPP do IBAMA: Obrigações Federais que Indústrias e Canteiros na Bahia Não Podem Ignorar",
     slug: "tcfa-ctf-rapp-ibama-obrigacoes-federais-bahia",
     excerpt: "Guia do Cadastro Técnico Federal, da Taxa de Controle e Fiscalização Ambiental e do Relatório Anual do IBAMA. Prazos, multas e Certificado de Regularidade.",
-    publishedAt: '2026-10-27T18:00:00.000Z',
+    publishedAt: '2026-10-29T12:00:00.000Z',
     estimatedReadTime: 11,
     featured: false,
     mainImageUrl: '/images/blog/post-27-tcfa-ctf-rapp-ibama-obrigacoes-bahia.webp',
@@ -4761,7 +6217,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Licenciamento de Postos e Tanques de Combustível na Bahia: CONAMA 273, Estanqueidade e Passivo de Solo",
     slug: "licenciamento-postos-combustivel-tanques-conama-273-bahia",
     excerpt: "Guia do licenciamento de postos, bases de abastecimento de canteiro e tanques aéreos na Bahia pela CONAMA 273. Testes, laudos e investigação de passivo.",
-    publishedAt: '2026-10-25T18:00:00.000Z',
+    publishedAt: '2026-10-27T12:00:00.000Z',
     estimatedReadTime: 11,
     featured: false,
     mainImageUrl: '/images/blog/post-28-licenciamento-postos-tanques-combustivel-bahia.webp',
@@ -5073,7 +6529,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Emissões Atmosféricas e Ruído: Monitoramento de Chaminés, Poeira e NBR 10151 como Condicionante de LO na Bahia",
     slug: "emissoes-atmosfericas-ruido-monitoramento-conama-491-nbr-10151",
     excerpt: "Como atender às condicionantes de emissões atmosféricas e ruído do INEMA: CONAMA 382, 436 e 491, NBR 10151, amostragem de chaminé e controle de poeira.",
-    publishedAt: '2026-10-23T18:00:00.000Z',
+    publishedAt: '2026-10-25T12:00:00.000Z',
     estimatedReadTime: 11,
     featured: false,
     mainImageUrl: '/images/blog/post-29-emissoes-atmosfericas-ruido-monitoramento-bahia.webp',
@@ -5398,7 +6854,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Licenciamento Ambiental Municipal e APP Urbana em Salvador e Região Metropolitana: Competências e Limites",
     slug: "licenciamento-ambiental-municipal-app-urbana-salvador-rms",
     excerpt: "Quando o licenciamento é da prefeitura e não do INEMA, como funciona a SEDUR em Salvador e o que vale para APP em área urbana consolidada na Bahia.",
-    publishedAt: '2026-10-21T18:00:00.000Z',
+    publishedAt: '2026-10-23T12:00:00.000Z',
     estimatedReadTime: 11,
     featured: false,
     mainImageUrl: '/images/blog/post-30-licenciamento-municipal-app-urbana-salvador-rms.webp',
@@ -5745,7 +7201,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Compensação Ambiental no INEMA: Guia de Reserva Legal e TCRA",
     slug: "compensacao-ambiental-inema-reserva-legal-tcra",
     excerpt: "Aprenda como regularizar Reserva Legal e compensação ambiental no INEMA via CAR e TCRA na Bahia. Evite multas e valide sua ASV. Fale conosco!",
-    publishedAt: '2026-10-19T18:00:00.000Z',
+    publishedAt: '2026-10-21T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-21-compensacao-reserva-legal-car-inema.webp',
@@ -6252,7 +7708,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Gerenciamento de Áreas Contaminadas: Guia do GAC no INEMA",
     slug: "gerenciamento-areas-contaminadas-gac-inema-bahia",
     excerpt: "Guia do gerenciamento de áreas contaminadas no INEMA segundo a CONAMA 420. Da avaliação preliminar à remediação na Bahia. Consulte nossos peritos.",
-    publishedAt: '2026-10-17T18:00:00.000Z',
+    publishedAt: '2026-10-19T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-22-gerenciamento-areas-contaminadas-gac-inema.webp',
@@ -6674,7 +8130,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Licenciamento de Dragagem e Obras Portuárias na Bahia: Ritos",
     slug: "licenciamento-dragagem-obras-portuarias-inema-bahia",
     excerpt: "Entenda os ritos do licenciamento de dragagem e obras portuárias no INEMA e Marinha. Gestão de sedimentos e conformidade na Bahia. Fale conosco!",
-    publishedAt: '2026-10-15T18:00:00.000Z',
+    publishedAt: '2026-10-17T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-23-licenciamento-dragagem-obras-portuarias-bahia.webp',
@@ -7054,7 +8510,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Plano de Emergência Individual (PEI): Ritos e Exigências",
     slug: "plano-emergencia-individual-pei-pae-bahia-inema",
     excerpt: "Elabore o Plano de Emergência Individual (PEI) e PAE no INEMA e CBMBA na Bahia para transporte e depósitos químicos. Evite autuações. Fale conosco!",
-    publishedAt: '2026-10-13T18:00:00.000Z',
+    publishedAt: '2026-10-15T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-24-plano-emergencia-individual-pei-pae-bahia.webp',
@@ -7464,7 +8920,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Licença Unificada (LU) no INEMA: Como Reduzir Prazos via RAP",
     slug: "licenca-unificada-lu-rap-inema-bahia-prazos",
     excerpt: "Descubra quando solicitar a Licença Unificada (LU) no INEMA e acelere sua implantação na Bahia com RAP de alta precisão técnica. Agende sua análise!",
-    publishedAt: '2026-10-11T18:00:00.000Z',
+    publishedAt: '2026-10-13T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-25-licenca-unificada-lu-rap-inema-bahia.webp',
@@ -7839,7 +9295,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Outorga de Uso de Recursos Hídricos no INEMA: Guia para Captação Superficial e Subterrânea sem Risco de Embargo",
     slug: "outorga-recursos-hidricos-inema-bahia-captacao",
     excerpt: "Aprenda como regularizar poços tubulares e captação superficial no INEMA. Guia sobre testes de bombeamento, vazão ecológica Q90 e condicionantes no SEIA.",
-    publishedAt: '2026-10-09T18:00:00.000Z',
+    publishedAt: '2026-10-11T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-15-outorga-recursos-hidricos-inema.webp',
@@ -8376,7 +9832,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Bioengenharia de Solos e PRAD: Técnicas Vivas para Estabilização de Taludes e Recuperação de Cavas na Bahia",
     slug: "bioengenharia-solos-prad-recuperacao-taludes-cavas",
     excerpt: "Descubra como aliar biomantas antierosivas, hidrossemeadura e espécies nativas para estabilizar taludes e cumprir condicionantes de PRAD no INEMA.",
-    publishedAt: '2026-10-07T18:00:00.000Z',
+    publishedAt: '2026-10-09T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-16-bioengenharia-solos-prad-taludes.webp',
@@ -8959,7 +10415,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "PCA e RCA no Licenciamento de Mineração e Indústria no INEMA: Como Antecipar a LI",
     slug: "pca-rca-licenciamento-mineracao-industria-inema",
     excerpt: "Elaboração técnica de PCA e RCA no INEMA para mineradoras e indústrias na Bahia. Controle de emissões e efluentes para destravar LI. Fale com a equipe.",
-    publishedAt: '2026-10-05T18:00:00.000Z',
+    publishedAt: '2026-10-07T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-17-pca-rca-licenciamento-mineracao-inema.webp',
@@ -9538,7 +10994,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Logística Reversa e DMR no SINIR: Guia de Conformidade Legal para Geradores e Transportadores",
     slug: "logistica-reversa-dmr-sinir-residuos-bahia",
     excerpt: "Gestão de logística reversa e declaração de DMR no SINIR na Bahia. Rastreabilidade com MTR online e conformidade com o INEMA. Solicite suporte técnico.",
-    publishedAt: '2026-10-03T18:00:00.000Z',
+    publishedAt: '2026-10-05T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-18-logistica-reversa-dmr-sinir-residuos.webp',
@@ -10081,7 +11537,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Monitoramento e Afugentamento de Fauna em Linhas de Transmissão (LT): Faixas de Servidão",
     slug: "monitoramento-afugentamento-fauna-linhas-transmissao-inema",
     excerpt: "Monitore a fauna em linhas de transmissão na Bahia com rigor. Protocolos de afugentamento, avifauna e cumprimento de condicionantes do INEMA. Saiba mais.",
-    publishedAt: '2026-10-01T18:00:00.000Z',
+    publishedAt: '2026-10-03T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-19-monitoramento-fauna-linhas-transmissao.webp',
@@ -10658,7 +12114,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Auditoria Ambiental Compulsória do CEPRAM na Bahia: Escopo, PAC e Conformidade de LO",
     slug: "auditoria-ambiental-compulsoria-cepram-inema-plano-acao",
     excerpt: "Saiba como realizar a auditoria ambiental CEPRAM na Bahia sem riscos. Escopo de conformidade de LO e Plano de Ação Corretiva (PAC). Solicite proposta.",
-    publishedAt: '2026-09-29T18:00:00.000Z',
+    publishedAt: '2026-10-01T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-20-auditoria-ambiental-cepram-inema.webp',
@@ -11261,7 +12717,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Governança ESG e Mitigação de Riscos Ambientais em Obras e Indústrias na Bahia",
     slug: "governanca-esg-mitigacao-riscos-ambientais",
     excerpt: "Descubra como a governança ESG e a gestão integrada de passivos blindam grandes obras e indústrias contra embargos e atraem crédito verde na Bahia.",
-    publishedAt: '2026-09-27T18:00:00.000Z',
+    publishedAt: '2026-09-29T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-10-esg-governanca-riscos.webp',
@@ -11844,7 +13300,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Guia do Licenciamento Ambiental no INEMA (Bahia): Da LP à LO sem embargos",
     slug: "guia-licenciamento-ambiental-inema-bahia",
     excerpt: "Guia definitivo sobre o licenciamento ambiental no INEMA na Bahia. Conheça as etapas LP, LI e LO, prazos, estudos exigidos e como evitar embargos na sua obra.",
-    publishedAt: '2026-09-25T18:00:00.000Z',
+    publishedAt: '2026-09-27T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-1-licenciamento-inema.webp',
@@ -12348,7 +13804,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Passagem de Fauna em Rodovias e Grandes Obras: Estratégias e Exigências do INEMA",
     slug: "passagem-de-fauna-monitoramento-obras-infraestrutura",
     excerpt: "Guia técnico sobre passagens de fauna, viadutos verdes e monitoramento biótico em rodovias na Bahia. Evite embargos com engenharia ambiental integrada.",
-    publishedAt: '2026-09-23T18:00:00.000Z',
+    publishedAt: '2026-09-25T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-8-passagem-fauna-infraestrutura.webp',
@@ -12963,7 +14419,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "PGRS na Construção Civil: Como Reduzir Custos e Garantir Conformidade",
     slug: "pgrs-construcao-civil-reducao-custos-conformidade",
     excerpt: "Aprenda a estruturar o PGRS na construção civil, classificar resíduos Classe A a D conforme o CONAMA 307 e economizar na destinação de RCC.",
-    publishedAt: '2026-09-21T18:00:00.000Z',
+    publishedAt: '2026-09-23T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-2-pgrs-construcao-civil.webp',
@@ -13407,7 +14863,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Licenciamento Ambiental de Parques Solares e Eólicos na Bahia: Ritos e Exigências do INEMA",
     slug: "licenciamento-ambiental-energia-solar-eolica-bahia",
     excerpt: "Guia prático do licenciamento de parques solares e eólicos na Bahia. Conheça as etapas no SEIA, estudos bióticos e evite atrasos. Fale conosco.",
-    publishedAt: '2026-09-19T18:00:00.000Z',
+    publishedAt: '2026-09-21T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-11-energia-solar-eolica-inema.webp',
@@ -13988,7 +15444,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Inventário Florestal e ASV: Estratégias para Supressão Vegetal Segura",
     slug: "inventario-florestal-asv-supressao-vegetal-segura",
     excerpt: "Guia completo de inventário florestal e Autorização de Supressão Vegetal (ASV) no INEMA. Evite embargos com levantamento fitossociológico de precisão.",
-    publishedAt: '2026-09-17T18:00:00.000Z',
+    publishedAt: '2026-09-19T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-3-inventario-florestal-asv.webp',
@@ -14412,7 +15868,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Resgate de Germoplasma e Flora Nativa: Da Coleta ao Cumprimento de PRAD no INEMA",
     slug: "resgate-de-germoplasma-flora-nativa-prad-inema",
     excerpt: "Veja como estruturar o resgate de flora nativa e o cumprimento de PRAD para atender com rigor às exigências do INEMA na Bahia. Fale conosco.",
-    publishedAt: '2026-09-15T18:00:00.000Z',
+    publishedAt: '2026-09-17T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-9-resgate-germoplasma-flora-prad.webp',
@@ -14979,7 +16435,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Renovação de Licença de Operação (LO): Prazos, Documentos e Como Evitar a Paralisação de Atividades",
     slug: "renovacao-licenca-operacao-lo-prazos-documentos-inema",
     excerpt: "Guia prático para renovação da Licença de Operação (LO) no INEMA. Conheça a regra dos 120 dias da LC 140/2011, documentos e condicionantes.",
-    publishedAt: '2026-09-13T18:00:00.000Z',
+    publishedAt: '2026-09-15T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-4-renovacao-licenca-lo.webp',
@@ -15433,7 +16889,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Inventário Florestal Contínuo e Manejo: Redução de Custos de Compensação",
     slug: "inventario-florestal-continuo-manejo-reducao-custos",
     excerpt: "Saiba como o inventário florestal contínuo otimiza o traçado de obras, reduz taxas de corte e custos de compensação no INEMA. Fale com especialistas.",
-    publishedAt: '2026-09-11T18:00:00.000Z',
+    publishedAt: '2026-09-13T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-12-inventario-florestal-continuo.webp',
@@ -15970,7 +17426,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Resgate de Fauna e Supressão Vegetal em Obras: Requisitos Legais, Equipe de Campo e Protocolos",
     slug: "resgate-fauna-supressao-vegetal-requisitos-inema",
     excerpt: "Como estruturar o resgate e afugentamento de fauna na supressão vegetal de obras. Protocolos de campo, salvamento de flora e exigências do INEMA.",
-    publishedAt: '2026-09-09T18:00:00.000Z',
+    publishedAt: '2026-09-11T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-5-resgate-fauna-supressao.webp',
@@ -16474,7 +17930,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Economia Circular e PGRS na Indústria Química e Pesada: Guia Prático",
     slug: "economia-circular-pgrs-industria-pesada-quimica",
     excerpt: "Aprenda como aplicar a economia circular e otimizar o PGRS na indústria química e pesada, transformando resíduos industriais em ativos na Bahia.",
-    publishedAt: '2026-09-07T18:00:00.000Z',
+    publishedAt: '2026-09-09T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-13-economia-circular-pgrs-industria.webp',
@@ -17021,7 +18477,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Due Diligence Ambiental na Compra de Terrenos: Como Identificar Passivos e Evitar Embargos",
     slug: "due-diligence-ambiental-compra-terrenos-loteamentos",
     excerpt: "Descubra como a Due Diligence Ambiental na compra de terrenos evita passivos milionários, contaminações e embargos em loteamentos e indústrias.",
-    publishedAt: '2026-09-05T18:00:00.000Z',
+    publishedAt: '2026-09-07T12:00:00.000Z',
     estimatedReadTime: 11,
     featured: false,
     mainImageUrl: '/images/blog/post-7-due-diligence-terrenos.webp',
@@ -17455,7 +18911,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "Corredores Ecológicos em Loteamentos: Guia Urbanismo Verde",
     slug: "corredores-ecologicos-planejamento-loteamentos-residenciais",
     excerpt: "Veja como o projeto de corredores ecológicos em loteamentos acelera a aprovação ambiental no INEMA e valoriza o empreendimento. Fale com a equipe.",
-    publishedAt: '2026-09-03T18:00:00.000Z',
+    publishedAt: '2026-09-05T12:00:00.000Z',
     estimatedReadTime: 12,
     featured: false,
     mainImageUrl: '/images/blog/post-14-corredores-ecologicos-urbanos.webp',
@@ -18012,7 +19468,7 @@ export const INITIAL_POSTS: PostDetail[] = [
     title: "MTR Online e Gestão de Resíduos Classe I (Perigosos): Guia Prático para Canteiros e Indústrias",
     slug: "mtr-online-gestao-residuos-perigosos-classe-1",
     excerpt: "Guia passo a passo para emissão de MTR Online no SINIR e gestão de resíduos perigosos Classe 1. Evite multas em canteiros e indústrias na Bahia.",
-    publishedAt: '2026-09-01T18:00:00.000Z',
+    publishedAt: '2026-09-03T12:00:00.000Z',
     estimatedReadTime: 10,
     featured: false,
     mainImageUrl: '/images/blog/post-6-mtr-residuos-perigosos.webp',
