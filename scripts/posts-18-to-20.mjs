@@ -181,7 +181,7 @@ export const POST_19 = {
     p('Campanhas periódicas de fiscalização sob os cabos para validar a eficácia dos desviadores:'),
     bullet('Transectos padronizados a pé sob a faixa de servidão inspecionando o solo sob os vãos de torres.'),
     bullet('Cálculo da taxa de remoção por carniceiros (scavengers): Experimentos com carcaças de controle para estimar quantos animais mortos são consumidos por urubus e raposas antes da passagem da equipe.'),
-    bullet('Calibração da eficiência do observador para corrigir estatisticamente o número real de colisões.'),
+    bullet('Ajuste da eficiência do observador para corrigir estatisticamente o número real de colisões.'),
 
     h2('Conexão com Projetos de Passagens de Fauna e Conectividade'),
     pLink([

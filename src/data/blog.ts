@@ -11974,7 +11974,7 @@ export const INITIAL_POSTS: PostDetail[] = [
                 "children": [
                       {
                             "_type": "span",
-                            "text": "Calibração da eficiência do observador para corrigir estatisticamente o número real de colisões."
+                            "text": "Ajuste da eficiência do observador para corrigir estatisticamente o número real de colisões."
                       }
                 ]
           },
