@@ -18,6 +18,8 @@ import WhatsAppButton from './components/ui/WhatsAppButton/WhatsAppButton'
 import { detailedServices } from './data/services'
 import { getAllPosts, getAllCategories, getPostBySlug, INITIAL_CATEGORIES } from './data/blog'
 import { Post, PostDetail, Category } from './types/blog'
+import type { BlogSnapshot } from './types/blogSnapshot'
+import { parseBlogPath } from './lib/blogRoutes'
 
 const BASE_URL = 'https://www.anjosbrandao.eco.br'
 
@@ -79,13 +81,13 @@ export function scrollToAnchor(targetId: string, smooth = true) {
   setTimeout(doScroll, 20)
 }
 
-export default function App() {
-  const [loaded, setLoaded] = useState(false)
-  const [pathname, setPathname] = useState(window.location.pathname)
+export default function App({ initialData }: { initialData?: BlogSnapshot }) {
+  const [loaded, setLoaded] = useState(Boolean(initialData))
+  const [pathname, setPathname] = useState(initialData?.pathname || (typeof window !== 'undefined' ? window.location.pathname : '/'))
 
-  const [blogPosts, setBlogPosts] = useState<Post[]>([])
-  const [blogCategories, setBlogCategories] = useState<Category[]>([])
-  const [currentPost, setCurrentPost] = useState<PostDetail | null>(null)
+  const [blogPosts, setBlogPosts] = useState<Post[]>(initialData?.posts || [])
+  const [blogCategories, setBlogCategories] = useState<Category[]>(initialData?.categories || [])
+  const [currentPost, setCurrentPost] = useState<PostDetail | null>(initialData?.post || null)
   const [blogLoading, setBlogLoading] = useState(false)
 
   useEffect(() => {
@@ -118,7 +120,7 @@ export default function App() {
 
     const handleLinkClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement).closest('a')
-      if (!target) return
+      if (!target || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || target.hasAttribute('download')) return
       const href = target.getAttribute('href')
       if (!href) return
 
@@ -197,7 +199,8 @@ export default function App() {
     }
   }, [pathname])
 
-  const cleanPath = pathname.replace(/^\//, '').replace(/\/$/, '')
+  const { basePath, page: blogPage } = parseBlogPath(pathname)
+  const cleanPath = basePath.replace(/^\//, '').replace(/\/$/, '')
   const isBlogList = cleanPath === 'blog'
   const isBlogCategory = cleanPath.startsWith('blog/categoria/')
   const blogCategorySlug = isBlogCategory ? cleanPath.replace(/^blog\/categoria\//, '') : ''
@@ -217,7 +220,7 @@ export default function App() {
   // Carregar dados de Blog
   useEffect(() => {
     if (isBlogList || isBlogCategory || isBlogAuthor) {
-      setBlogLoading(true)
+      setBlogLoading(blogPosts.length === 0)
       Promise.all([getAllPosts(), getAllCategories()]).then(([posts, categories]) => {
         setBlogPosts(posts)
         setBlogCategories(categories)
@@ -234,10 +237,10 @@ export default function App() {
 
   // Gerenciamento dinâmico de SEO / Meta Tags
   useEffect(() => {
-    if (isBlogPost && currentPost) {
+    if (isBlogPost && currentPost?.slug === blogPostSlug) {
       const pageTitle = currentPost.seo?.metaTitle || `${currentPost.title} | Blog Anjos Brandão`
       const pageDesc = currentPost.seo?.metaDescription || currentPost.excerpt
-      const pageUrl = `${BASE_URL}/blog/${currentPost.slug}`
+      const pageUrl = currentPost.seo?.canonicalUrl || `${BASE_URL}/blog/${currentPost.slug}`
       const pageImage = currentPost.seo?.shareImageUrl || currentPost.mainImageUrl || `${BASE_URL}/images/hero-bg-3000.webp`
 
       document.title = pageTitle
@@ -256,9 +259,9 @@ export default function App() {
       updateMetaTag('meta[name="twitter:description"]', 'content', pageDesc)
       updateMetaTag('meta[name="twitter:image"]', 'content', pageImage)
     } else if (isBlogAuthor && currentAuthor) {
-      const pageTitle = `${currentAuthor.name}, ${currentAuthor.role} | Blog Anjos Brandão`
+      const pageTitle = `${currentAuthor.name}, ${currentAuthor.role}${blogPage > 1 ? ` · Página ${blogPage}` : ''} | Blog Anjos Brandão`
       const pageDesc = `${currentAuthor.name}, bióloga (${currentAuthor.registry}) e ${currentAuthor.role.toLowerCase()} da ${currentAuthor.organization}. Formação, áreas de atuação e artigos publicados.`
-      const pageUrl = `${BASE_URL}/blog/autores/${currentAuthor.slug}`
+      const pageUrl = `${BASE_URL}${pathname.replace(/\/$/, '')}`
       const pageImage = `${BASE_URL}${currentAuthor.photoUrl.replace(/\.webp$/, '.jpg')}`
 
       document.title = pageTitle
@@ -277,9 +280,9 @@ export default function App() {
       updateMetaTag('meta[name="twitter:description"]', 'content', pageDesc)
       updateMetaTag('meta[name="twitter:image"]', 'content', pageImage)
     } else if (isBlogCategory && currentCategory) {
-      const pageTitle = `${currentCategory.title} · Artigos e Publicações | Anjos Brandão`
+      const pageTitle = `${currentCategory.title}${blogPage > 1 ? ` · Página ${blogPage}` : ''} · Artigos e Publicações | Anjos Brandão`
       const pageDesc = currentCategory.description || `Artigos técnicos, guias e análises sobre ${currentCategory.title} na Bahia.`
-      const pageUrl = `${BASE_URL}/blog/categoria/${currentCategory.slug}`
+      const pageUrl = `${BASE_URL}${pathname.replace(/\/$/, '')}`
       const pageImage = `${BASE_URL}/images/hero-bg-3000.webp`
 
       document.title = pageTitle
@@ -298,9 +301,9 @@ export default function App() {
       updateMetaTag('meta[name="twitter:description"]', 'content', pageDesc)
       updateMetaTag('meta[name="twitter:image"]', 'content', pageImage)
     } else if (isBlogList) {
-      const pageTitle = 'Blog & Publicações Técnicas | Anjos Brandão Soluções Ambientais'
+      const pageTitle = `Blog & Publicações Técnicas${blogPage > 1 ? ` · Página ${blogPage}` : ''} | Anjos Brandão Soluções Ambientais`
       const pageDesc = 'Artigos, análises e guias práticos sobre licenciamento ambiental no INEMA, PGRS, ASV, inventário florestal e ESG na Bahia.'
-      const pageUrl = `${BASE_URL}/blog`
+      const pageUrl = `${BASE_URL}${pathname.replace(/\/$/, '')}`
       const pageImage = `${BASE_URL}/images/hero-bg-3000.webp`
 
       document.title = pageTitle
@@ -369,8 +372,8 @@ export default function App() {
       <Preloader visible={!loaded} />
 
       {isBlogPost && (
-        currentPost ? (
-          <BlogPostTemplate post={currentPost} />
+        currentPost?.slug === blogPostSlug ? (
+          <BlogPostTemplate key={currentPost.slug} post={currentPost} />
         ) : (
           <div style={{ minHeight: '100vh', background: 'var(--ab-offwhite)' }}>
             <Header />
@@ -391,6 +394,8 @@ export default function App() {
       {isBlogCategory && (
         currentCategory ? (
           <CategoryPageTemplate
+            key={pathname}
+            initialPage={blogPage}
             category={currentCategory}
             posts={blogPosts}
             allCategories={blogCategories}
@@ -414,7 +419,7 @@ export default function App() {
 
       {isBlogAuthor && (
         currentAuthor ? (
-          <AuthorPageTemplate author={currentAuthor} posts={blogPosts} loading={blogLoading} />
+          <AuthorPageTemplate key={pathname} initialPage={blogPage} author={currentAuthor} posts={blogPosts} loading={blogLoading} />
         ) : (
           <div style={{ minHeight: '100vh', background: 'var(--ab-offwhite)' }}>
             <Header />
@@ -430,7 +435,7 @@ export default function App() {
         )
       )}
 
-      {isBlogList && <BlogListTemplate posts={blogPosts} categories={blogCategories} />}
+      {isBlogList && <BlogListTemplate key={pathname} initialPage={blogPage} posts={blogPosts} categories={blogCategories} />}
 
       {activeService && <ServicePageTemplate service={activeService} />}
 

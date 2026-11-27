@@ -7,9 +7,10 @@
     "test": "node --test tests/*.test.mjs",
     "check:api": "tsc --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --types node api/send-lead.ts",
     "dev": "vite --port 5174",
-    "build": "node scripts/generate-sitemap.mjs && tsc && vite build",
+    "build": "tsc && vite build && node scripts/generate-blog.mjs",
     "preview": "vite preview",
-    "seed:sanity": "node scripts/seed-sanity.mjs"
+    "seed:sanity": "node scripts/seed-sanity.mjs",
+    "test:blog:output": "npm run build && node --test tests/blog-output.check.mjs"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.4",

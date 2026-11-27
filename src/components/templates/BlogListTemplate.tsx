@@ -1,3 +1,4 @@
+import { blogPagePath, BLOG_PAGE_SIZE } from '../../lib/blogRoutes'
 import { useState, useMemo, useEffect } from 'react'
 import Header from '../layout/Header/Header'
 import PostCard from '../blog/PostCard/PostCard'
@@ -7,22 +8,23 @@ import { Post, Category } from '../../types/blog'
 import styles from './BlogListTemplate.module.css'
 
 interface BlogListTemplateProps {
+  initialPage?: number
   posts: Post[]
   categories: Category[]
   initialCategory?: string
 }
 
-const ITEMS_PER_PAGE = 6
+const ITEMS_PER_PAGE = BLOG_PAGE_SIZE
 
-export default function BlogListTemplate({ posts, categories, initialCategory = 'all' }: BlogListTemplateProps) {
+export default function BlogListTemplate({ posts, categories, initialCategory = 'all', initialPage = 1 }: BlogListTemplateProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory)
   const [searchQuery, setSearchQuery] = useState<string>('')
-  const [currentPage, setCurrentPage] = useState<number>(1)
+  const [currentPage, setCurrentPage] = useState<number>(initialPage)
 
   useEffect(() => {
     setSelectedCategory(initialCategory)
-    setCurrentPage(1)
-  }, [initialCategory])
+    setCurrentPage(initialPage)
+  }, [initialCategory, initialPage])
 
   const filteredPosts = useMemo(() => {
     return posts.filter((post) => {
@@ -80,13 +82,13 @@ export default function BlogListTemplate({ posts, categories, initialCategory = 
     '@type': 'CollectionPage',
     name: 'Blog Técnico e Regulatório · Anjos Brandão',
     description: 'Artigos, análises e guias sobre licenciamento ambiental, PGRS, ASV, inventário florestal e ESG na Bahia.',
-    url: 'https://www.anjosbrandao.eco.br/blog',
+    url: `https://www.anjosbrandao.eco.br${blogPagePath('/blog', initialPage)}`,
   }
 
   return (
     <div className={styles.page}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaCollection) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaCollection).replace(/</g, '\\u003c') }} />
 
       <Header />
 
@@ -139,11 +141,6 @@ export default function BlogListTemplate({ posts, categories, initialCategory = 
                 <a
                   href="/blog"
                   className={`${styles.pill} ${selectedCategory === 'all' ? styles.pillActive : ''}`}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    window.history.pushState({}, '', '/blog')
-                    handleCategoryChange('all')
-                  }}
                   role="tab"
                   aria-selected={selectedCategory === 'all'}
                 >
@@ -157,11 +154,6 @@ export default function BlogListTemplate({ posts, categories, initialCategory = 
                       key={category.slug}
                       href={`/blog/categoria/${category.slug}`}
                       className={`${styles.pill} ${isSelected ? styles.pillActive : ''}`}
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.history.pushState({}, '', `/blog/categoria/${category.slug}`)
-                        handleCategoryChange(category.slug)
-                      }}
                       role="tab"
                       aria-selected={isSelected}
                     >
@@ -190,6 +182,7 @@ export default function BlogListTemplate({ posts, categories, initialCategory = 
                   currentPage={currentPage}
                   totalPages={totalPages}
                   onPageChange={handlePageChange}
+                  pageHref={searchQuery.trim() ? undefined : (page) => blogPagePath(`/blog`, page)}
                   totalItems={filteredPosts.length}
                   itemsPerPage={ITEMS_PER_PAGE}
                 />
@@ -229,6 +222,7 @@ export default function BlogListTemplate({ posts, categories, initialCategory = 
               </Button>
             </div>
             <div className={styles.footerBottom}>
+              <p><a href="https://www.anjosbrandao.eco.br/rss.xml">Assinar o RSS do blog</a></p>
               <p>© {new Date().getFullYear()} Anjos Brandão · Coordenação Ambiental Integrada</p>
             </div>
           </div>

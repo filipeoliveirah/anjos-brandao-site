@@ -1,105 +1,17 @@
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-import { createClient } from '@sanity/client'
-import { RICH_POSTS } from './generate-rich-blog-posts.mjs'
+export const BASE_URL = 'https://www.anjosbrandao.eco.br'
+export const xmlEscape = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' })[char])
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-
-const BASE_URL = 'https://www.anjosbrandao.eco.br'
-const SITEMAP_PATH = path.resolve(__dirname, '../public/sitemap.xml')
-
-const STATIC_ROUTES = [
-  { path: '', priority: '1.0', changefreq: 'weekly' },
-  { path: 'licenciamento-ambiental', priority: '0.9', changefreq: 'monthly' },
-  { path: 'pgrs', priority: '0.9', changefreq: 'monthly' },
-  { path: 'inventario-florestal', priority: '0.9', changefreq: 'monthly' },
-  { path: 'autorizacao-supressao-vegetal', priority: '0.9', changefreq: 'monthly' },
-  { path: 'resgate-fauna-flora', priority: '0.9', changefreq: 'monthly' },
-  { path: 'blog', priority: '0.9', changefreq: 'daily' },
-  { path: 'blog/categoria/licenciamento-ambiental', priority: '0.8', changefreq: 'weekly' },
-  { path: 'blog/categoria/pgrs-residuos', priority: '0.8', changefreq: 'weekly' },
-  { path: 'blog/categoria/inventario-asv', priority: '0.8', changefreq: 'weekly' },
-  { path: 'blog/categoria/fauna-flora', priority: '0.8', changefreq: 'weekly' },
-  { path: 'blog/categoria/esg-compliance', priority: '0.8', changefreq: 'weekly' },
-  { path: 'blog/autores/patricia-brandao', priority: '0.6', changefreq: 'monthly' },
-]
-
-const FALLBACK_BLOG_SLUGS = RICH_POSTS.map((p) => p.slug)
-
-async function fetchSanityPosts() {
-  const projectId = process.env.VITE_SANITY_PROJECT_ID
-  const dataset = process.env.VITE_SANITY_DATASET || 'production'
-
-  if (!projectId || projectId === 'your-project-id' || projectId === 'undefined') {
-    return FALLBACK_BLOG_SLUGS.map((slug) => ({
-      slug,
-      updatedAt: new Date().toISOString().split('T')[0],
-    }))
-  }
-
-  try {
-    const client = createClient({
-      projectId,
-      dataset,
-      apiVersion: '2024-03-01',
-      useCdn: false,
-    })
-
-    const posts = await client.fetch(`*[_type == "post" && defined(slug.current)] {
-      "slug": slug.current,
-      "_updatedAt": _updatedAt
-    }`)
-
-    return posts.map((p) => ({
-      slug: p.slug,
-      updatedAt: p._updatedAt ? p._updatedAt.split('T')[0] : new Date().toISOString().split('T')[0],
-    }))
-  } catch (err) {
-    console.warn('⚠️ [Sitemap] Aviso: Não foi possível conectar ao Sanity durante o build, usando slugs padrão:', err.message)
-    return FALLBACK_BLOG_SLUGS.map((slug) => ({
-      slug,
-      updatedAt: new Date().toISOString().split('T')[0],
-    }))
-  }
+export function generateSitemap(posts, routes) {
+  const dated = new Map(posts.filter((p) => p.modifiedAt && Date.parse(p.modifiedAt) >= Date.parse(p.publishedAt) && Date.parse(p.modifiedAt) <= Date.now()).map((p) => [`/blog/${p.slug}`, p.modifiedAt]))
+  // Omit unknown modification dates. A redeploy is not a content update.
+  const urls = routes.map((route) => `  <url><loc>${xmlEscape(`${BASE_URL}${route}`)}</loc>${dated.has(route) ? `<lastmod>${xmlEscape(dated.get(route))}</lastmod>` : ''}</url>`)
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`
 }
 
-async function generateSitemap() {
-  console.log('🗺️ [Sitemap] Gerando sitemap dinâmico...')
-  const today = new Date().toISOString().split('T')[0]
-  const blogPosts = await fetchSanityPosts()
-
-  const staticUrls = STATIC_ROUTES.map(
-    (route) => `  <url>
-    <loc>${BASE_URL}/${route.path}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${route.changefreq}</changefreq>
-    <priority>${route.priority}</priority>
-  </url>`
-  ).join('\n')
-
-  const blogUrls = blogPosts.map(
-    (post) => `  <url>
-    <loc>${BASE_URL}/blog/${post.slug}</loc>
-    <lastmod>${post.updatedAt || today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>`
-  ).join('\n')
-
-  const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-${staticUrls}
-${blogUrls}
-</urlset>
-`
-
-  fs.writeFileSync(SITEMAP_PATH, xmlContent.trim(), 'utf-8')
-  console.log(`✅ [Sitemap] Sitemap gerado com sucesso com ${STATIC_ROUTES.length + blogPosts.length} URLs em ${SITEMAP_PATH}`)
+export function generateRss(posts) {
+  const items = posts.map((post) => {
+    const link = post.seo?.canonicalUrl || `${BASE_URL}/blog/${post.slug}`
+    return `  <item><title>${xmlEscape(post.title)}</title><link>${xmlEscape(link)}</link><guid isPermaLink="true">${xmlEscape(link)}</guid><description>${xmlEscape(post.excerpt)}</description><pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate></item>`
+  })
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anjos Brandão — Blog Ambiental</title><link>${BASE_URL}/blog</link><description>Artigos, análises e guias ambientais para empresas na Bahia.</description><language>pt-br</language><atom:link href="${BASE_URL}/rss.xml" rel="self" type="application/rss+xml"/>\n${items.join('\n')}\n</channel></rss>\n`
 }
-
-generateSitemap()

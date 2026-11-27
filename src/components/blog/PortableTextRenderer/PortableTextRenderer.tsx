@@ -1,5 +1,6 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import { urlForImage } from '../../../lib/sanity'
+import { LEGACY_BLOG_PATHS } from '../../../lib/blogRoutes'
 import { slugify, extractTextFromBlock } from '../../../utils/toc'
 import styles from './PortableTextRenderer.module.css'
 
@@ -32,10 +33,11 @@ const portableTextComponents: PortableTextComponents = {
     em: ({ children }) => <em>{children}</em>,
     code: ({ children }) => <code>{children}</code>,
     link: ({ value, children }) => {
-      const isExternal = (value?.href || '').startsWith('http')
+      const href = LEGACY_BLOG_PATHS[value?.href] || value?.href
+      const isExternal = (href || '').startsWith('http')
       return (
         <a
-          href={value?.href}
+          href={href}
           target={value?.blank || isExternal ? '_blank' : undefined}
           rel={value?.blank || isExternal ? 'noopener noreferrer' : undefined}
         >
@@ -107,7 +109,7 @@ export default function PortableTextRenderer({ value }: PortableTextRendererProp
 
   return (
     <div className={styles.content}>
-      <PortableText value={value} components={portableTextComponents} />
+      <PortableText value={value.map((block) => block.style === 'bullet' ? { ...block, style: 'normal', listItem: 'bullet' } : block)} components={portableTextComponents} />
     </div>
   )
 }

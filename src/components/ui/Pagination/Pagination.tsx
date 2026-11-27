@@ -1,6 +1,8 @@
+import type { ReactNode } from 'react'
 import styles from './Pagination.module.css'
 
 interface PaginationProps {
+  pageHref?: (page: number) => string
   currentPage: number
   totalPages: number
   onPageChange: (page: number) => void
@@ -10,6 +12,7 @@ interface PaginationProps {
 }
 
 export default function Pagination({
+  pageHref,
   currentPage,
   totalPages,
   onPageChange,
@@ -62,89 +65,25 @@ export default function Pagination({
     }
   }
 
+  const control = (page: number, label: string, className: string, children: ReactNode, disabled = false, active = false) => (
+    pageHref && !disabled ? (
+      <a href={pageHref(page)} className={className} aria-label={label} aria-current={active ? 'page' : undefined}>{children}</a>
+    ) : (
+      <button type="button" onClick={() => handlePageClick(page)} disabled={disabled} className={className} aria-label={label} aria-current={active ? 'page' : undefined}>{children}</button>
+    )
+  )
+
   return (
     <nav className={`${styles.paginationContainer} ${className}`} aria-label="Navegação entre páginas do blog">
-      {totalItems !== undefined && (
-        <div className={styles.info}>
-          Mostrando página <strong>{currentPage}</strong> de <strong>{totalPages}</strong> ({totalItems} publicações)
-        </div>
-      )}
-
+      {totalItems !== undefined && <div className={styles.info}>Mostrando página <strong>{currentPage}</strong> de <strong>{totalPages}</strong> ({totalItems} publicações)</div>}
       <ul className={styles.paginationList}>
-        {/* Botão Anterior */}
-        <li>
-          <button
-            onClick={() => handlePageClick(currentPage - 1)}
-            disabled={currentPage === 1}
-            className={`${styles.navBtn} ${styles.prevBtn}`}
-            aria-label="Página anterior"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
-            <span>Anterior</span>
-          </button>
-        </li>
-
-        {/* Números das Páginas */}
-        {getPageNumbers().map((page, index) => {
-          if (typeof page === 'string') {
-            return (
-              <li key={`ellipsis-${index}`} className={styles.ellipsisItem} aria-hidden="true">
-                <span className={styles.ellipsis}>…</span>
-              </li>
-            )
-          }
-
-          const isActive = page === currentPage
-          return (
-            <li key={page}>
-              <button
-                onClick={() => handlePageClick(page)}
-                className={`${styles.pageBtn} ${isActive ? styles.pageBtnActive : ''}`}
-                aria-current={isActive ? 'page' : undefined}
-                aria-label={`Ir para a página ${page}`}
-              >
-                {page}
-              </button>
-            </li>
-          )
-        })}
-
-        {/* Botão Próxima */}
-        <li>
-          <button
-            onClick={() => handlePageClick(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className={`${styles.navBtn} ${styles.nextBtn}`}
-            aria-label="Próxima página"
-          >
-            <span>Próxima</span>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
-        </li>
+        <li>{control(currentPage - 1, 'Página anterior', `${styles.navBtn} ${styles.prevBtn}`, '← Anterior', currentPage === 1)}</li>
+        {getPageNumbers().map((page) => typeof page === 'string' ? (
+          <li key={page} className={styles.ellipsisItem} aria-hidden="true"><span className={styles.ellipsis}>…</span></li>
+        ) : (
+          <li key={page}>{control(page, `Ir para a página ${page}`, `${styles.pageBtn} ${page === currentPage ? styles.pageBtnActive : ''}`, page, false, page === currentPage)}</li>
+        ))}
+        <li>{control(currentPage + 1, 'Próxima página', `${styles.navBtn} ${styles.nextBtn}`, 'Próxima →', currentPage === totalPages)}</li>
       </ul>
     </nav>
   )
